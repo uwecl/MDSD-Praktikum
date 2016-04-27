@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ComponentBasedSystem/src" modelPluginID="ComponentBasedSystem"
+    modelName="ComponentBasedSystem" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>componentBasedSystem.ecore</foreignModel>
+  <genPackages prefix="ComponentBasedSystem" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#/">
+    <genDataTypes ecoreDataType="componentBasedSystem.ecore#//Simple"/>
+    <genDataTypes ecoreDataType="componentBasedSystem.ecore#//Complex"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//ComponentBasedSystem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/viewpoint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/interface"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//ViewPoint">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ViewPoint/viewtype"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//ViewType"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//SystemIndependentVP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//SystemIndependentVP/repositoryvt"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//AssemblyVP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AssemblyVP/assemblyvt"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//DeploymentVP">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DeploymentVP/allocationvt"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DeploymentVP/environmentvt"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//RepositoryVT">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//RepositoryVT/component"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//RepositoryVT/interface"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//AssemblyVT"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//EnvironmentVT">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//EnvironmentVT/container"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//EnvironmentVT/link"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//AllocationVT"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Component">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Component/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/behaviourdescription"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Interface">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Interface/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Interface/signature"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//CompositeComponent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//CompositeComponent/component"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Container">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Container/name"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Link/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Link/container"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Signature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Signature/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Signature/newAttribute"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Signature/parameter"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Parameter">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Parameter/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Parameter/type"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//AssemblyContext">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//AssemblyContext/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AssemblyContext/componentbasedsystem"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AssemblyContext/role"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/allocationcontext"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//AllocationContext">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/container"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/allocationcontext"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/component"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Role"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//RequiredRole"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//ProvidedRole"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//AssemblyConnector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AssemblyConnector/providedrole"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AssemblyConnector/requiredrole"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//DelegationConnector">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DelegationConnector/role"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DelegationConnector/interface"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//BehaviourDescription"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//InternalAction"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//ExternalCall"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Loop"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Branch"/>
+  </genPackages>
+</genmodel:GenModel>

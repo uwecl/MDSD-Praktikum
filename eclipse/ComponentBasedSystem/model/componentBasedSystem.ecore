@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="componentBasedSystem" nsURI="http://www.example.org/componentBasedSystem"
+    nsPrefix="componentBasedSystem">
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentBasedSystem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewpoint" lowerBound="3"
+        upperBound="3" eType="#//ViewPoint"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
+        upperBound="-1" eType="#//Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ViewPoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="viewtype" lowerBound="1"
+        upperBound="2" eType="#//ViewType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ViewType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SystemIndependentVP" eSuperTypes="#//ViewPoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repositoryvt" lowerBound="1"
+        eType="#//RepositoryVT"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssemblyVP" eSuperTypes="#//ViewPoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyvt" lowerBound="1"
+        eType="#//AssemblyVT"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DeploymentVP" eSuperTypes="#//ViewPoint">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allocationvt" lowerBound="1"
+        eType="#//AllocationVT"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentvt" lowerBound="1"
+        eType="#//EnvironmentVT"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RepositoryVT" eSuperTypes="#//ViewType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
+        eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-1"
+        eType="#//Interface" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssemblyVT" eSuperTypes="#//ViewType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="EnvironmentVT" eSuperTypes="#//ViewType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" upperBound="-1"
+        eType="#//Container" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" upperBound="-1" eType="#//Link"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllocationVT" eSuperTypes="#//ViewType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Component">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="behaviourdescription" upperBound="-1"
+        eType="#//BehaviourDescription" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Interface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signature" upperBound="-1"
+        eType="#//Signature" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CompositeComponent" eSuperTypes="#//Component">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
+        upperBound="-1" eType="#//Component" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Container">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" lowerBound="2"
+        upperBound="-1" eType="#//Container"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Signature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="newAttribute" eType="#//Complex"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
+        eType="#//Parameter" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="Simple" instanceTypeName="newDataType2"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="Complex" instanceTypeName="newDataType2"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parameter">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Complex"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AssemblyContext">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentbasedsystem" upperBound="-1"
+        eType="#//ComponentBasedSystem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" upperBound="-1"
+        eType="#//Role"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AllocationContext">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="container" lowerBound="1"
+        eType="#//Container"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allocationcontext" lowerBound="1"
+        eType="#//AssemblyContext"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
+        eType="#//Component">
+      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
+        <details key="name" value="component"/>
+        <details key="namespace" value=""/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RequiredRole" eSuperTypes="#//Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ProvidedRole" eSuperTypes="#//Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AssemblyConnector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" lowerBound="1"
+        eType="#//ProvidedRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredrole" lowerBound="1"
+        eType="#//RequiredRole"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DelegationConnector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" eType="#//Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
+        eType="#//Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BehaviourDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalAction" eSuperTypes="#//BehaviourDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalCall" eSuperTypes="#//BehaviourDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//BehaviourDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Branch" eSuperTypes="#//BehaviourDescription"/>
+</ecore:EPackage>
