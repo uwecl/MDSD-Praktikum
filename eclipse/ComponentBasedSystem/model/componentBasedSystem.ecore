@@ -72,15 +72,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Signature">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="returnType" eType="#//Complex"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameter" upperBound="-1"
         eType="#//Parameter" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="returntype" lowerBound="1"
+        eType="#//ReturnType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="Simple" instanceTypeName="newDataType2"/>
-  <eClassifiers xsi:type="ecore:EDataType" name="Complex" instanceTypeName="newDataType2"/>
   <eClassifiers xsi:type="ecore:EClass" name="Parameter">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//Complex"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parametertype" lowerBound="1"
+        eType="#//ParameterType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AssemblyContext">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -121,4 +121,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="ExternalCall" eSuperTypes="#//BehaviourDescription"/>
   <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//BehaviourDescription"/>
   <eClassifiers xsi:type="ecore:EClass" name="Branch" eSuperTypes="#//BehaviourDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Simple" eSuperTypes="#//ParameterType #//ReturnType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Complex" eSuperTypes="#//ParameterType #//ReturnType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParameterType" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Void" eSuperTypes="#//ReturnType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ReturnType" eSuperTypes="#//Type"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Type">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>
