@@ -35,7 +35,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//EnvironmentVT/container"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//EnvironmentVT/link"/>
     </genClasses>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//AllocationVT"/>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//AllocationVT">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationVT/allocationcontext"/>
+    </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Component">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Component/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/behaviourdescription"/>
