@@ -1449,9 +1449,9 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="__7WA8AyeEeaG_-j8ES1r6g" name="newAttribute : Complex" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="componentBasedSystem.ecore#//Signature/newAttribute"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="componentBasedSystem.ecore#//Signature/newAttribute"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="__7WA8AyeEeaG_-j8ES1r6g" name="returnType : Complex" tooltipText="">
+          <target xmi:type="ecore:EAttribute" href="componentBasedSystem.ecore#//Signature/returnType"/>
+          <semanticElements xmi:type="ecore:EAttribute" href="componentBasedSystem.ecore#//Signature/returnType"/>
           <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_IenNEAygEeaG_-j8ES1r6g" labelAlignment="LEFT">
             <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
           </ownedStyle>

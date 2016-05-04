@@ -56,7 +56,7 @@
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Signature">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Signature/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Signature/newAttribute"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Signature/returnType"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Signature/parameter"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Parameter">
