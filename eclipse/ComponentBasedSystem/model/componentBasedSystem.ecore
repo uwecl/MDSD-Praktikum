@@ -47,7 +47,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="behaviourdescription" upperBound="-1"
-        eType="#//BehaviourDescription" containment="true"/>
+        eType="#//behaviourDescription/BehaviourDescription" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="provided" lowerBound="1"
         eType="#//Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="required" upperBound="-1"
@@ -116,11 +116,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
         eType="#//Interface"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BehaviourDescription"/>
-  <eClassifiers xsi:type="ecore:EClass" name="InternalAction" eSuperTypes="#//BehaviourDescription"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExternalCall" eSuperTypes="#//BehaviourDescription"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//BehaviourDescription"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Branch" eSuperTypes="#//BehaviourDescription"/>
   <eSubpackages name="dataTypes">
     <eClassifiers xsi:type="ecore:EClass" name="Simple" eSuperTypes="#//dataTypes/ParameterType #//dataTypes/ReturnType"/>
     <eClassifiers xsi:type="ecore:EClass" name="Complex" eSuperTypes="#//dataTypes/ReturnType #//dataTypes/ParameterType"/>
@@ -130,5 +125,12 @@
     <eClassifiers xsi:type="ecore:EClass" name="Type">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="behaviourDescription">
+    <eClassifiers xsi:type="ecore:EClass" name="BehaviourDescription"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalAction" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ExternalCall" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Branch" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
   </eSubpackages>
 </ecore:EPackage>

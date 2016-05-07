@@ -3,7 +3,8 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ComponentBasedSystem/src" modelPluginID="ComponentBasedSystem"
     modelName="ComponentBasedSystem" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+    usedGenPackages="#//componentBasedSystem/dataTypes" operationReflection="true"
+    importOrganizing="true">
   <foreignModel>componentBasedSystem.ecore</foreignModel>
   <genPackages prefix="ComponentBasedSystem" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#/">
     <genClasses ecoreClass="componentBasedSystem.ecore#//ComponentBasedSystem">
@@ -87,11 +88,6 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DelegationConnector/role"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DelegationConnector/interface"/>
     </genClasses>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//BehaviourDescription"/>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//InternalAction"/>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//ExternalCall"/>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//Loop"/>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//Branch"/>
     <nestedGenPackages prefix="DataTypes" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#//dataTypes">
       <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/Simple"/>
       <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/Complex"/>
@@ -101,6 +97,14 @@
       <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/Type">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//dataTypes/Type/name"/>
       </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="BehaviourDescription" disposableProviderFactory="true"
+        ecorePackage="componentBasedSystem.ecore#//behaviourDescription">
+      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/BehaviourDescription"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/InternalAction"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/ExternalCall"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/Loop"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/Branch"/>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>
