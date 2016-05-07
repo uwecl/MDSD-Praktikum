@@ -3,46 +3,8 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="componentBasedSystem" nsURI="http://www.example.org/componentBasedSystem"
     nsPrefix="componentBasedSystem">
   <eClassifiers xsi:type="ecore:EClass" name="ComponentBasedSystem">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="viewpoint" lowerBound="3"
-        upperBound="3" eType="#//ViewPoint"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
         upperBound="-1" eType="#//Interface"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ViewPoint">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="viewtype" lowerBound="1"
-        upperBound="2" eType="#//ViewType"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ViewType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SystemIndependentVP" eSuperTypes="#//ViewPoint">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="repositoryvt" lowerBound="1"
-        eType="#//RepositoryVT"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AssemblyVP" eSuperTypes="#//ViewPoint">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyvt" lowerBound="1"
-        eType="#//AssemblyVT"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DeploymentVP" eSuperTypes="#//ViewPoint">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="allocationvt" lowerBound="1"
-        eType="#//AllocationVT"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentvt" lowerBound="1"
-        eType="#//EnvironmentVT"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="RepositoryVT" eSuperTypes="#//ViewType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" upperBound="-1"
-        eType="#//Component" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-1"
-        eType="#//Interface" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AssemblyVT" eSuperTypes="#//ViewType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="EnvironmentVT" eSuperTypes="#//ViewType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="container" upperBound="-1"
-        eType="#//Container" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="link" upperBound="-1" eType="#//Link"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AllocationVT" eSuperTypes="#//ViewType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="allocationcontext" upperBound="-1"
-        eType="#//AllocationContext" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
