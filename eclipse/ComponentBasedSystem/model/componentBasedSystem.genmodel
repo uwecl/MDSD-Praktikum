@@ -92,13 +92,15 @@
     <genClasses ecoreClass="componentBasedSystem.ecore#//ExternalCall"/>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Loop"/>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Branch"/>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//Simple"/>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//Complex"/>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//ParameterType"/>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//Void"/>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//ReturnType"/>
-    <genClasses ecoreClass="componentBasedSystem.ecore#//Type">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Type/name"/>
-    </genClasses>
+    <nestedGenPackages prefix="DataTypes" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#//dataTypes">
+      <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/Simple"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/Complex"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/ParameterType"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/Void"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/ReturnType"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/Type">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//dataTypes/Type/name"/>
+      </genClasses>
+    </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>
