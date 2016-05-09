@@ -23,8 +23,8 @@
         eType="#//Signature" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeComponent" eSuperTypes="#//Component">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
-        upperBound="-1" eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assemblycontext" lowerBound="2"
+        upperBound="-1" eType="#//AssemblyContext" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Container">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

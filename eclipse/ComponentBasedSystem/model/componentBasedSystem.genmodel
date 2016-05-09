@@ -22,7 +22,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Interface/signature"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//CompositeComponent">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//CompositeComponent/component"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//CompositeComponent/assemblycontext"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Container">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Container/name"/>
