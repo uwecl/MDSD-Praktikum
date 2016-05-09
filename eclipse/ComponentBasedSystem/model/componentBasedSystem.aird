@@ -438,22 +438,6 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5YPPxBQyEea9uN1tFvK4rg" id="(0.5,0.5)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_5YPPxRQyEea9uN1tFvK4rg" id="(0.5,0.9245283018867925)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_MIHZ0BQ0Eea9uN1tFvK4rg" type="4001" element="_KtGNUBQ0Eea9uN1tFvK4rg" source="_ooON0AygEeaG_-j8ES1r6g" target="_MIFkoBQ0Eea9uN1tFvK4rg">
-            <children xmi:type="notation:Node" xmi:id="_MIHZ1BQ0Eea9uN1tFvK4rg" type="6001">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MIHZ1RQ0Eea9uN1tFvK4rg" x="-8" y="22"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_MIHZ1hQ0Eea9uN1tFvK4rg" type="6002">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MIHZ1xQ0Eea9uN1tFvK4rg" x="-10"/>
-            </children>
-            <children xmi:type="notation:Node" xmi:id="_MIHZ2BQ0Eea9uN1tFvK4rg" type="6003">
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MIHZ2RQ0Eea9uN1tFvK4rg" x="-30" y="-6"/>
-            </children>
-            <styles xmi:type="notation:ConnectorStyle" xmi:id="_MIHZ0RQ0Eea9uN1tFvK4rg" routing="Rectilinear"/>
-            <styles xmi:type="notation:FontStyle" xmi:id="_MIHZ0hQ0Eea9uN1tFvK4rg" fontColor="7490599" fontName=".SF NS Text" fontHeight="8"/>
-            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_MIHZ0xQ0Eea9uN1tFvK4rg" points="[4, -49, -14, 81]$[4, -110, -14, 20]"/>
-            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MIIA4BQ0Eea9uN1tFvK4rg" id="(0.5,0.5)"/>
-            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_MIIA4RQ0Eea9uN1tFvK4rg" id="(0.5,0.7101449275362319)"/>
-          </edges>
           <edges xmi:type="notation:Edge" xmi:id="_MIIA4hQ0Eea9uN1tFvK4rg" type="4001" element="_KtG0YBQ0Eea9uN1tFvK4rg" source="_D17f0AyiEeaG_-j8ES1r6g" target="_MIFkoBQ0Eea9uN1tFvK4rg">
             <children xmi:type="notation:Node" xmi:id="_MIIA5hQ0Eea9uN1tFvK4rg" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_MIIA5xQ0Eea9uN1tFvK4rg" x="-31" y="-11"/>
@@ -715,7 +699,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ooCAkAygEeaG_-j8ES1r6g" name="AssemblyContext" tooltipText="" outgoingEdges="_KtGNUBQ0Eea9uN1tFvK4rg _pBiccBYGEeabd-JVHEB4mQ" incomingEdges="_xBvdgAygEeaG_-j8ES1r6g _YsbPMBYGEeabd-JVHEB4mQ" width="12" height="10">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ooCAkAygEeaG_-j8ES1r6g" name="AssemblyContext" tooltipText="" outgoingEdges="_pBiccBYGEeabd-JVHEB4mQ" incomingEdges="_xBvdgAygEeaG_-j8ES1r6g _YsbPMBYGEeabd-JVHEB4mQ" width="12" height="10">
         <target xmi:type="ecore:EClass" href="componentBasedSystem.ecore#//AssemblyContext"/>
         <semanticElements xmi:type="ecore:EClass" href="componentBasedSystem.ecore#//AssemblyContext"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -923,7 +907,7 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']/@containerMappings[name='Dropped%20Package']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@additionalLayers[name='Package']/@containerMappings[name='Dropped%20Package']"/>
-        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Ks0ggBQ0Eea9uN1tFvK4rg" name="Role" tooltipText="" incomingEdges="_KtGNUBQ0Eea9uN1tFvK4rg _KtG0YBQ0Eea9uN1tFvK4rg" width="12" height="10">
+        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_Ks0ggBQ0Eea9uN1tFvK4rg" name="Role" tooltipText="" incomingEdges="_KtG0YBQ0Eea9uN1tFvK4rg" width="12" height="10">
           <target xmi:type="ecore:EClass" href="componentBasedSystem.ecore#//roles/Role"/>
           <semanticElements xmi:type="ecore:EClass" href="componentBasedSystem.ecore#//roles/Role"/>
           <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -934,20 +918,6 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
         </ownedDiagramElements>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_KtGNUBQ0Eea9uN1tFvK4rg" name="[1..*] role" sourceNode="_ooCAkAygEeaG_-j8ES1r6g" targetNode="_Ks0ggBQ0Eea9uN1tFvK4rg">
-        <target xmi:type="ecore:EReference" href="componentBasedSystem.ecore#//AssemblyContext/role"/>
-        <semanticElements xmi:type="ecore:EReference" href="componentBasedSystem.ecore#//AssemblyContext/role"/>
-        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_KtGNURQ0Eea9uN1tFvK4rg" description="_SReLEAycEeaG_-j8ES1r6g" routingStyle="manhattan" strokeColor="0,0,0">
-          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_KtGNUhQ0Eea9uN1tFvK4rg" showIcon="false">
-            <customFeatures>labelSize</customFeatures>
-            <labelFormat>bold</labelFormat>
-          </centerLabelStyle>
-          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_KtGNUxQ0Eea9uN1tFvK4rg" showIcon="false" labelColor="39,76,114">
-            <customFeatures>labelSize</customFeatures>
-          </endLabelStyle>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_KtG0YBQ0Eea9uN1tFvK4rg" name="[1..1] role" sourceNode="_D1s2UAyiEeaG_-j8ES1r6g" targetNode="_Ks0ggBQ0Eea9uN1tFvK4rg">
         <target xmi:type="ecore:EReference" href="componentBasedSystem.ecore#//DelegationConnector/role"/>

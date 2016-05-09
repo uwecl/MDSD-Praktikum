@@ -48,8 +48,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AssemblyContext">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" upperBound="-1"
-        eType="#//roles/Role"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
         eType="#//Component"/>
   </eClassifiers>
