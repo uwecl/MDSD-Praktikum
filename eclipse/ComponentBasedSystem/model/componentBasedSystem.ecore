@@ -50,19 +50,14 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" upperBound="-1"
         eType="#//roles/Role"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
+        eType="#//Component"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AllocationContext">
     <eStructuralFeatures xsi:type="ecore:EReference" name="container" lowerBound="1"
         eType="#//Container"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allocationcontext" lowerBound="1"
         eType="#//AssemblyContext"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
-        eType="#//Component">
-      <eAnnotations source="http:///org/eclipse/emf/ecore/util/ExtendedMetaData">
-        <details key="name" value="component"/>
-        <details key="namespace" value=""/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DelegationConnector">
     <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" eType="#//roles/Role"/>

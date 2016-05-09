@@ -43,12 +43,12 @@
     <genClasses ecoreClass="componentBasedSystem.ecore#//AssemblyContext">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//AssemblyContext/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AssemblyContext/role"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AssemblyContext/component"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/allocationcontext"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//AllocationContext">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/container"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/allocationcontext"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/component"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//DelegationConnector">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DelegationConnector/role"/>
