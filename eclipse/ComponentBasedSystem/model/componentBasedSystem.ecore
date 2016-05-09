@@ -5,6 +5,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="ComponentBasedSystem">
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
         upperBound="-1" eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assemblycontext" upperBound="-1"
+        eType="#//AssemblyContext" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -46,8 +48,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AssemblyContext">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="componentbasedsystem" upperBound="-1"
-        eType="#//ComponentBasedSystem" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" upperBound="-1"
         eType="#//roles/Role"/>
   </eClassifiers>
