@@ -58,6 +58,10 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Environment/container"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Environment/link"/>
     </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Repository">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Repository/interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Repository/component"/>
+    </genClasses>
     <nestedGenPackages prefix="DataTypes" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#//dataTypes">
       <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/Simple"/>
       <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/Complex"/>
