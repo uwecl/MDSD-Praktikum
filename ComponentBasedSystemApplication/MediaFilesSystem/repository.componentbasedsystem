@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<componentBasedSystem:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem">
+<componentBasedSystem:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem">
   <interface name="HTTP">
     <signature name="HTTPDownload"/>
     <signature name="HTTPUpload"/>
@@ -20,4 +20,5 @@
   <component name="DigitalWatermarking" provided="//@interface.1"/>
   <component name="DBCache" provided="//@interface.2" required="//@interface.2"/>
   <component name="PoolingAudioDB" provided="//@interface.2"/>
+  <component xsi:type="componentBasedSystem:CompositeComponent" name="MediaStore" provided="//@interface.3" required="//@interface.2"/>
 </componentBasedSystem:Repository>
