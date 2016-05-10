@@ -10,6 +10,7 @@
     <genClasses ecoreClass="componentBasedSystem.ecore#//ComponentBasedSystem">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/interface"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/assemblycontext"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/environment"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Component">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Component/name"/>
@@ -52,6 +53,10 @@
     <genClasses ecoreClass="componentBasedSystem.ecore#//DelegationConnector">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DelegationConnector/role"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DelegationConnector/interface"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Environment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Environment/container"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Environment/link"/>
     </genClasses>
     <nestedGenPackages prefix="DataTypes" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#//dataTypes">
       <genClasses ecoreClass="componentBasedSystem.ecore#//dataTypes/Simple"/>
