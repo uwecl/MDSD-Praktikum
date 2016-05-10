@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <componentBasedSystem:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem">
-  <interface name="HTTP"/>
-  <interface name="Sound"/>
-  <interface name="AudioDB"/>
-  <interface name="MediaStore"/>
+  <interface name="HTTP">
+    <signature name="HTTPDownload"/>
+    <signature name="HTTPUpload"/>
+  </interface>
+  <interface name="Sound">
+    <signature name="watermark"/>
+  </interface>
+  <interface name="AudioDB">
+    <signature name="queryDB"/>
+    <signature name="addFile()"/>
+  </interface>
+  <interface name="MediaStore">
+    <signature name="download"/>
+    <signature name="upload"/>
+  </interface>
   <component name="WebGUI" provided="//@interface.0" required="//@interface.3"/>
   <component name="MediaManager" provided="//@interface.3" required="//@interface.1 //@interface.2"/>
   <component name="DigitalWatermarking" provided="//@interface.1"/>
