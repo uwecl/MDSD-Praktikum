@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ComponentBasedSystem -->
+      <package
+            uri="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem"
+            class="componentBasedSystem.ComponentBasedSystemPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ComponentBasedSystem -->
+      <package
+            uri="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/dataTypes"
+            class="componentBasedSystem.dataTypes.DataTypesPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ComponentBasedSystem -->
+      <package
+            uri="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/behaviourDescription"
+            class="componentBasedSystem.behaviourDescription.BehaviourDescriptionPackage"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated ComponentBasedSystem -->
+      <package
+            uri="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/roles"
+            class="componentBasedSystem.roles.RolesPackage"/>
+   </extension>
+
+</plugin>
