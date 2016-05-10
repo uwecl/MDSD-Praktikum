@@ -5,6 +5,7 @@
   <semanticResources>../ComponentBasedSystem.genmodel</semanticResources>
   <semanticResources>../componentBasedSystem.ecore</semanticResources>
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
+  <semanticResources>ComponentBasedSystem.genmodel</semanticResources>
   <ownedViews xmi:type="viewpoint:DRepresentationContainer" xmi:id="_OY-zYAyYEeaG_-j8ES1r6g">
     <ownedRepresentations xmi:type="diagram:DSemanticDiagram" xmi:id="_OZmecAyYEeaG_-j8ES1r6g" name="componentBasedSystem">
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_OZmecQyYEeaG_-j8ES1r6g" source="DANNOTATION_CUSTOMIZATION_KEY">
