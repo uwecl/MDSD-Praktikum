@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<componentBasedSystem:ComponentBasedSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem">
+  <assemblycontext name="WebGUI"/>
+  <assemblycontext name="MediaStore"/>
+  <assemblycontext name="MediaManager"/>
+  <assemblycontext name="DBCache"/>
+  <assemblycontext name="DigitalWatermarking"/>
+  <assemblycontext name="PoolingAudioDB"/>
+</componentBasedSystem:ComponentBasedSystem>
