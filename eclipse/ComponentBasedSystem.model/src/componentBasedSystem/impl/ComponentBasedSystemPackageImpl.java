@@ -507,7 +507,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getAllocationContext_Allocationcontext() {
+	public EReference getAllocationContext_Assemblycontext() {
 		return (EReference)allocationContextEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -679,7 +679,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 
 		allocationContextEClass = createEClass(ALLOCATION_CONTEXT);
 		createEReference(allocationContextEClass, ALLOCATION_CONTEXT__CONTAINER);
-		createEReference(allocationContextEClass, ALLOCATION_CONTEXT__ALLOCATIONCONTEXT);
+		createEReference(allocationContextEClass, ALLOCATION_CONTEXT__ASSEMBLYCONTEXT);
 
 		delegationConnectorEClass = createEClass(DELEGATION_CONNECTOR);
 		createEReference(delegationConnectorEClass, DELEGATION_CONNECTOR__ROLE);
@@ -779,7 +779,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 
 		initEClass(allocationContextEClass, AllocationContext.class, "AllocationContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAllocationContext_Container(), this.getContainer(), null, "container", null, 1, 1, AllocationContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getAllocationContext_Allocationcontext(), this.getAssemblyContext(), null, "allocationcontext", null, 1, 1, AllocationContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAllocationContext_Assemblycontext(), this.getAssemblyContext(), null, "assemblycontext", null, 1, 1, AllocationContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(delegationConnectorEClass, DelegationConnector.class, "DelegationConnector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDelegationConnector_Role(), theRolesPackage.getRole(), null, "role", null, 1, 1, DelegationConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

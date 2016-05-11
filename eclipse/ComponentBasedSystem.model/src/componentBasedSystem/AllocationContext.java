@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link componentBasedSystem.AllocationContext#getContainer <em>Container</em>}</li>
- *   <li>{@link componentBasedSystem.AllocationContext#getAllocationcontext <em>Allocationcontext</em>}</li>
+ *   <li>{@link componentBasedSystem.AllocationContext#getAssemblycontext <em>Assemblycontext</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getAllocationContext()
@@ -49,29 +49,29 @@ public interface AllocationContext extends EObject {
 	void setContainer(Container value);
 
 	/**
-	 * Returns the value of the '<em><b>Allocationcontext</b></em>' reference.
+	 * Returns the value of the '<em><b>Assemblycontext</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Allocationcontext</em>' reference isn't clear,
+	 * If the meaning of the '<em>Assemblycontext</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Allocationcontext</em>' reference.
-	 * @see #setAllocationcontext(AssemblyContext)
-	 * @see componentBasedSystem.ComponentBasedSystemPackage#getAllocationContext_Allocationcontext()
+	 * @return the value of the '<em>Assemblycontext</em>' reference.
+	 * @see #setAssemblycontext(AssemblyContext)
+	 * @see componentBasedSystem.ComponentBasedSystemPackage#getAllocationContext_Assemblycontext()
 	 * @model required="true"
 	 * @generated
 	 */
-	AssemblyContext getAllocationcontext();
+	AssemblyContext getAssemblycontext();
 
 	/**
-	 * Sets the value of the '{@link componentBasedSystem.AllocationContext#getAllocationcontext <em>Allocationcontext</em>}' reference.
+	 * Sets the value of the '{@link componentBasedSystem.AllocationContext#getAssemblycontext <em>Assemblycontext</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Allocationcontext</em>' reference.
-	 * @see #getAllocationcontext()
+	 * @param value the new value of the '<em>Assemblycontext</em>' reference.
+	 * @see #getAssemblycontext()
 	 * @generated
 	 */
-	void setAllocationcontext(AssemblyContext value);
+	void setAssemblycontext(AssemblyContext value);
 
 } // AllocationContext

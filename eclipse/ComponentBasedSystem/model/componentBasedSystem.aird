@@ -845,9 +845,9 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xBvdgAygEeaG_-j8ES1r6g" name="[1..1] allocationcontext" sourceNode="_u6XhUAygEeaG_-j8ES1r6g" targetNode="_ooCAkAygEeaG_-j8ES1r6g">
-        <target xmi:type="ecore:EReference" href="componentBasedSystem.ecore#//AllocationContext/allocationcontext"/>
-        <semanticElements xmi:type="ecore:EReference" href="componentBasedSystem.ecore#//AllocationContext/allocationcontext"/>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xBvdgAygEeaG_-j8ES1r6g" name="[1..1] assemblycontext" sourceNode="_u6XhUAygEeaG_-j8ES1r6g" targetNode="_ooCAkAygEeaG_-j8ES1r6g">
+        <target xmi:type="ecore:EReference" href="componentBasedSystem.ecore#//AllocationContext/assemblycontext"/>
+        <semanticElements xmi:type="ecore:EReference" href="componentBasedSystem.ecore#//AllocationContext/assemblycontext"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_yuMYQAygEeaG_-j8ES1r6g" description="_SReLEAycEeaG_-j8ES1r6g" routingStyle="manhattan" strokeColor="0,0,0">
           <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_yuMYQQygEeaG_-j8ES1r6g" showIcon="false">
             <customFeatures>labelSize</customFeatures>

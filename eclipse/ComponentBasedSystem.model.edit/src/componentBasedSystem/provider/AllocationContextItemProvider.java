@@ -58,7 +58,7 @@ public class AllocationContextItemProvider
 			super.getPropertyDescriptors(object);
 
 			addContainerPropertyDescriptor(object);
-			addAllocationcontextPropertyDescriptor(object);
+			addAssemblycontextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -86,19 +86,19 @@ public class AllocationContextItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Allocationcontext feature.
+	 * This adds a property descriptor for the Assemblycontext feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAllocationcontextPropertyDescriptor(Object object) {
+	protected void addAssemblycontextPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_AllocationContext_allocationcontext_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_AllocationContext_allocationcontext_feature", "_UI_AllocationContext_type"),
-				 ComponentBasedSystemPackage.Literals.ALLOCATION_CONTEXT__ALLOCATIONCONTEXT,
+				 getString("_UI_AllocationContext_assemblycontext_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AllocationContext_assemblycontext_feature", "_UI_AllocationContext_type"),
+				 ComponentBasedSystemPackage.Literals.ALLOCATION_CONTEXT__ASSEMBLYCONTEXT,
 				 true,
 				 false,
 				 true,

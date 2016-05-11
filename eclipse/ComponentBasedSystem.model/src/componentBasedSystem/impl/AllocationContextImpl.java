@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link componentBasedSystem.impl.AllocationContextImpl#getContainer <em>Container</em>}</li>
- *   <li>{@link componentBasedSystem.impl.AllocationContextImpl#getAllocationcontext <em>Allocationcontext</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.AllocationContextImpl#getAssemblycontext <em>Assemblycontext</em>}</li>
  * </ul>
  *
  * @generated
@@ -40,14 +40,14 @@ public class AllocationContextImpl extends MinimalEObjectImpl.Container implemen
 	protected componentBasedSystem.Container container;
 
 	/**
-	 * The cached value of the '{@link #getAllocationcontext() <em>Allocationcontext</em>}' reference.
+	 * The cached value of the '{@link #getAssemblycontext() <em>Assemblycontext</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAllocationcontext()
+	 * @see #getAssemblycontext()
 	 * @generated
 	 * @ordered
 	 */
-	protected AssemblyContext allocationcontext;
+	protected AssemblyContext assemblycontext;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -111,16 +111,16 @@ public class AllocationContextImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AssemblyContext getAllocationcontext() {
-		if (allocationcontext != null && allocationcontext.eIsProxy()) {
-			InternalEObject oldAllocationcontext = (InternalEObject)allocationcontext;
-			allocationcontext = (AssemblyContext)eResolveProxy(oldAllocationcontext);
-			if (allocationcontext != oldAllocationcontext) {
+	public AssemblyContext getAssemblycontext() {
+		if (assemblycontext != null && assemblycontext.eIsProxy()) {
+			InternalEObject oldAssemblycontext = (InternalEObject)assemblycontext;
+			assemblycontext = (AssemblyContext)eResolveProxy(oldAssemblycontext);
+			if (assemblycontext != oldAssemblycontext) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ALLOCATIONCONTEXT, oldAllocationcontext, allocationcontext));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ASSEMBLYCONTEXT, oldAssemblycontext, assemblycontext));
 			}
 		}
-		return allocationcontext;
+		return assemblycontext;
 	}
 
 	/**
@@ -128,8 +128,8 @@ public class AllocationContextImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public AssemblyContext basicGetAllocationcontext() {
-		return allocationcontext;
+	public AssemblyContext basicGetAssemblycontext() {
+		return assemblycontext;
 	}
 
 	/**
@@ -137,11 +137,11 @@ public class AllocationContextImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAllocationcontext(AssemblyContext newAllocationcontext) {
-		AssemblyContext oldAllocationcontext = allocationcontext;
-		allocationcontext = newAllocationcontext;
+	public void setAssemblycontext(AssemblyContext newAssemblycontext) {
+		AssemblyContext oldAssemblycontext = assemblycontext;
+		assemblycontext = newAssemblycontext;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ALLOCATIONCONTEXT, oldAllocationcontext, allocationcontext));
+			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ASSEMBLYCONTEXT, oldAssemblycontext, assemblycontext));
 	}
 
 	/**
@@ -155,9 +155,9 @@ public class AllocationContextImpl extends MinimalEObjectImpl.Container implemen
 			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__CONTAINER:
 				if (resolve) return getContainer();
 				return basicGetContainer();
-			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ALLOCATIONCONTEXT:
-				if (resolve) return getAllocationcontext();
-				return basicGetAllocationcontext();
+			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ASSEMBLYCONTEXT:
+				if (resolve) return getAssemblycontext();
+				return basicGetAssemblycontext();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -173,8 +173,8 @@ public class AllocationContextImpl extends MinimalEObjectImpl.Container implemen
 			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__CONTAINER:
 				setContainer((componentBasedSystem.Container)newValue);
 				return;
-			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ALLOCATIONCONTEXT:
-				setAllocationcontext((AssemblyContext)newValue);
+			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ASSEMBLYCONTEXT:
+				setAssemblycontext((AssemblyContext)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -191,8 +191,8 @@ public class AllocationContextImpl extends MinimalEObjectImpl.Container implemen
 			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__CONTAINER:
 				setContainer((componentBasedSystem.Container)null);
 				return;
-			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ALLOCATIONCONTEXT:
-				setAllocationcontext((AssemblyContext)null);
+			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ASSEMBLYCONTEXT:
+				setAssemblycontext((AssemblyContext)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -208,8 +208,8 @@ public class AllocationContextImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__CONTAINER:
 				return container != null;
-			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ALLOCATIONCONTEXT:
-				return allocationcontext != null;
+			case ComponentBasedSystemPackage.ALLOCATION_CONTEXT__ASSEMBLYCONTEXT:
+				return assemblycontext != null;
 		}
 		return super.eIsSet(featureID);
 	}

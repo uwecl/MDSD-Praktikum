@@ -47,7 +47,7 @@
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//AllocationContext">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/container"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/allocationcontext"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//AllocationContext/assemblycontext"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//DelegationConnector">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DelegationConnector/role"/>

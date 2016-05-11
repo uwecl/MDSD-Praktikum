@@ -553,13 +553,13 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int ALLOCATION_CONTEXT__CONTAINER = 0;
 
 	/**
-	 * The feature id for the '<em><b>Allocationcontext</b></em>' reference.
+	 * The feature id for the '<em><b>Assemblycontext</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ALLOCATION_CONTEXT__ALLOCATIONCONTEXT = 1;
+	int ALLOCATION_CONTEXT__ASSEMBLYCONTEXT = 1;
 
 	/**
 	 * The number of structural features of the '<em>Allocation Context</em>' class.
@@ -1099,15 +1099,15 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getAllocationContext_Container();
 
 	/**
-	 * Returns the meta object for the reference '{@link componentBasedSystem.AllocationContext#getAllocationcontext <em>Allocationcontext</em>}'.
+	 * Returns the meta object for the reference '{@link componentBasedSystem.AllocationContext#getAssemblycontext <em>Assemblycontext</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Allocationcontext</em>'.
-	 * @see componentBasedSystem.AllocationContext#getAllocationcontext()
+	 * @return the meta object for the reference '<em>Assemblycontext</em>'.
+	 * @see componentBasedSystem.AllocationContext#getAssemblycontext()
 	 * @see #getAllocationContext()
 	 * @generated
 	 */
-	EReference getAllocationContext_Allocationcontext();
+	EReference getAllocationContext_Assemblycontext();
 
 	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.DelegationConnector <em>Delegation Connector</em>}'.
@@ -1526,12 +1526,12 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference ALLOCATION_CONTEXT__CONTAINER = eINSTANCE.getAllocationContext_Container();
 
 		/**
-		 * The meta object literal for the '<em><b>Allocationcontext</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Assemblycontext</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ALLOCATION_CONTEXT__ALLOCATIONCONTEXT = eINSTANCE.getAllocationContext_Allocationcontext();
+		EReference ALLOCATION_CONTEXT__ASSEMBLYCONTEXT = eINSTANCE.getAllocationContext_Assemblycontext();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.DelegationConnectorImpl <em>Delegation Connector</em>}' class.
