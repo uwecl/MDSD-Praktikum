@@ -2,6 +2,7 @@
  */
 package componentBasedSystem;
 
+import componentBasedSystem.dataTypes.Type;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -18,6 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getInterface <em>Interface</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getAssemblycontext <em>Assemblycontext</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link componentBasedSystem.ComponentBasedSystem#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem()
@@ -82,5 +84,21 @@ public interface ComponentBasedSystem extends EObject {
 	 * @generated
 	 */
 	void setEnvironment(Environment value);
+
+	/**
+	 * Returns the value of the '<em><b>Type</b></em>' containment reference list.
+	 * The list contents are of type {@link componentBasedSystem.dataTypes.Type}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Type</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Type</em>' containment reference list.
+	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem_Type()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Type> getType();
 
 } // ComponentBasedSystem

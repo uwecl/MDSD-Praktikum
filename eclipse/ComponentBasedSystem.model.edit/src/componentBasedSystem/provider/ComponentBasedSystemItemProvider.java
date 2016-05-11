@@ -7,6 +7,7 @@ import componentBasedSystem.ComponentBasedSystem;
 import componentBasedSystem.ComponentBasedSystemFactory;
 import componentBasedSystem.ComponentBasedSystemPackage;
 
+import componentBasedSystem.dataTypes.DataTypesFactory;
 import java.util.Collection;
 import java.util.List;
 
@@ -125,6 +126,7 @@ public class ComponentBasedSystemItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE);
 		}
 		return childrenFeatures;
 	}
@@ -178,6 +180,7 @@ public class ComponentBasedSystemItemProvider
 
 		switch (notification.getFeatureID(ComponentBasedSystem.class)) {
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT:
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__TYPE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -199,6 +202,36 @@ public class ComponentBasedSystemItemProvider
 			(createChildParameter
 				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT,
 				 ComponentBasedSystemFactory.eINSTANCE.createAssemblyContext()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE,
+				 DataTypesFactory.eINSTANCE.createType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE,
+				 DataTypesFactory.eINSTANCE.createParameterType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE,
+				 DataTypesFactory.eINSTANCE.createSimple()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE,
+				 DataTypesFactory.eINSTANCE.createReturnType()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE,
+				 DataTypesFactory.eINSTANCE.createComplex()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE,
+				 DataTypesFactory.eINSTANCE.createVoid()));
 	}
 
 	/**

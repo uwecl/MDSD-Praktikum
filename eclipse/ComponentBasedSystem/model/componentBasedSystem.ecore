@@ -9,6 +9,8 @@
         eType="#//AssemblyContext" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="environment" lowerBound="1"
         eType="#//Environment"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//dataTypes/Type"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -78,13 +80,31 @@
   </eClassifiers>
   <eSubpackages name="dataTypes" nsURI="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/dataTypes"
       nsPrefix="dataTypes">
-    <eClassifiers xsi:type="ecore:EClass" name="Simple" eSuperTypes="#//dataTypes/ParameterType #//dataTypes/ReturnType"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Complex" eSuperTypes="#//dataTypes/ReturnType #//dataTypes/ParameterType"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Simple" eSuperTypes="#//dataTypes/ParameterType #//dataTypes/ReturnType">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="kind" eType="#//dataTypes/simpleTypes"
+          defaultValueLiteral="int"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Complex" eSuperTypes="#//dataTypes/ReturnType #//dataTypes/ParameterType">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="simple" lowerBound="2"
+          upperBound="-1" eType="#//dataTypes/Simple" containment="true"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ParameterType" eSuperTypes="#//dataTypes/Type"/>
     <eClassifiers xsi:type="ecore:EClass" name="Void" eSuperTypes="#//dataTypes/ReturnType"/>
     <eClassifiers xsi:type="ecore:EClass" name="ReturnType" eSuperTypes="#//dataTypes/Type"/>
     <eClassifiers xsi:type="ecore:EClass" name="Type">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EEnum" name="simpleTypes">
+      <eLiterals name="int"/>
+      <eLiterals name="boolean" value="1"/>
+      <eLiterals name="char" value="2"/>
+      <eLiterals name="date" value="3"/>
+      <eLiterals name="double" value="4"/>
+      <eLiterals name="float" value="5"/>
+      <eLiterals name="list" value="6"/>
+      <eLiterals name="long" value="7"/>
+      <eLiterals name="map" value="8"/>
+      <eLiterals name="string" value="9"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="behaviourDescription" nsURI="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/behaviourDescription"

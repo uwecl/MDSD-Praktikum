@@ -4,7 +4,9 @@ package componentBasedSystem.dataTypes;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -149,13 +151,22 @@ public interface DataTypesPackage extends EPackage {
 	int SIMPLE__NAME = PARAMETER_TYPE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Kind</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE__KIND = PARAMETER_TYPE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Simple</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIMPLE_FEATURE_COUNT = PARAMETER_TYPE_FEATURE_COUNT + 0;
+	int SIMPLE_FEATURE_COUNT = PARAMETER_TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Simple</em>' class.
@@ -223,13 +234,22 @@ public interface DataTypesPackage extends EPackage {
 	int COMPLEX__NAME = RETURN_TYPE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Simple</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPLEX__SIMPLE = RETURN_TYPE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Complex</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPLEX_FEATURE_COUNT = RETURN_TYPE_FEATURE_COUNT + 0;
+	int COMPLEX_FEATURE_COUNT = RETURN_TYPE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Complex</em>' class.
@@ -279,6 +299,17 @@ public interface DataTypesPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link componentBasedSystem.dataTypes.simpleTypes <em>simple Types</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see componentBasedSystem.dataTypes.simpleTypes
+	 * @see componentBasedSystem.dataTypes.impl.DataTypesPackageImpl#getsimpleTypes()
+	 * @generated
+	 */
+	int SIMPLE_TYPES = 6;
+
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.dataTypes.Simple <em>Simple</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -289,6 +320,17 @@ public interface DataTypesPackage extends EPackage {
 	EClass getSimple();
 
 	/**
+	 * Returns the meta object for the attribute '{@link componentBasedSystem.dataTypes.Simple#getKind <em>Kind</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Kind</em>'.
+	 * @see componentBasedSystem.dataTypes.Simple#getKind()
+	 * @see #getSimple()
+	 * @generated
+	 */
+	EAttribute getSimple_Kind();
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.dataTypes.Complex <em>Complex</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -297,6 +339,17 @@ public interface DataTypesPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getComplex();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.dataTypes.Complex#getSimple <em>Simple</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Simple</em>'.
+	 * @see componentBasedSystem.dataTypes.Complex#getSimple()
+	 * @see #getComplex()
+	 * @generated
+	 */
+	EReference getComplex_Simple();
 
 	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.dataTypes.ParameterType <em>Parameter Type</em>}'.
@@ -350,6 +403,16 @@ public interface DataTypesPackage extends EPackage {
 	EAttribute getType_Name();
 
 	/**
+	 * Returns the meta object for enum '{@link componentBasedSystem.dataTypes.simpleTypes <em>simple Types</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>simple Types</em>'.
+	 * @see componentBasedSystem.dataTypes.simpleTypes
+	 * @generated
+	 */
+	EEnum getsimpleTypes();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -383,6 +446,14 @@ public interface DataTypesPackage extends EPackage {
 		EClass SIMPLE = eINSTANCE.getSimple();
 
 		/**
+		 * The meta object literal for the '<em><b>Kind</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SIMPLE__KIND = eINSTANCE.getSimple_Kind();
+
+		/**
 		 * The meta object literal for the '{@link componentBasedSystem.dataTypes.impl.ComplexImpl <em>Complex</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -391,6 +462,14 @@ public interface DataTypesPackage extends EPackage {
 		 * @generated
 		 */
 		EClass COMPLEX = eINSTANCE.getComplex();
+
+		/**
+		 * The meta object literal for the '<em><b>Simple</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPLEX__SIMPLE = eINSTANCE.getComplex_Simple();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.dataTypes.impl.ParameterTypeImpl <em>Parameter Type</em>}' class.
@@ -439,6 +518,16 @@ public interface DataTypesPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TYPE__NAME = eINSTANCE.getType_Name();
+
+		/**
+		 * The meta object literal for the '{@link componentBasedSystem.dataTypes.simpleTypes <em>simple Types</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see componentBasedSystem.dataTypes.simpleTypes
+		 * @see componentBasedSystem.dataTypes.impl.DataTypesPackageImpl#getsimpleTypes()
+		 * @generated
+		 */
+		EEnum SIMPLE_TYPES = eINSTANCE.getsimpleTypes();
 
 	}
 

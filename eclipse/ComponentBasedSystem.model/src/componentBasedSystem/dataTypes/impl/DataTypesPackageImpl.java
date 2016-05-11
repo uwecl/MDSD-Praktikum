@@ -16,6 +16,7 @@ import componentBasedSystem.dataTypes.ReturnType;
 import componentBasedSystem.dataTypes.Simple;
 import componentBasedSystem.dataTypes.Type;
 
+import componentBasedSystem.dataTypes.simpleTypes;
 import componentBasedSystem.impl.ComponentBasedSystemPackageImpl;
 
 import componentBasedSystem.roles.RolesPackage;
@@ -24,8 +25,10 @@ import componentBasedSystem.roles.impl.RolesPackageImpl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -76,6 +79,13 @@ public class DataTypesPackageImpl extends EPackageImpl implements DataTypesPacka
 	 * @generated
 	 */
 	private EClass typeEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum simpleTypesEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -163,8 +173,26 @@ public class DataTypesPackageImpl extends EPackageImpl implements DataTypesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getSimple_Kind() {
+		return (EAttribute)simpleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getComplex() {
 		return complexEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComplex_Simple() {
+		return (EReference)complexEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -217,6 +245,15 @@ public class DataTypesPackageImpl extends EPackageImpl implements DataTypesPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getsimpleTypes() {
+		return simpleTypesEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DataTypesFactory getDataTypesFactory() {
 		return (DataTypesFactory)getEFactoryInstance();
 	}
@@ -241,8 +278,10 @@ public class DataTypesPackageImpl extends EPackageImpl implements DataTypesPacka
 
 		// Create classes and their features
 		simpleEClass = createEClass(SIMPLE);
+		createEAttribute(simpleEClass, SIMPLE__KIND);
 
 		complexEClass = createEClass(COMPLEX);
+		createEReference(complexEClass, COMPLEX__SIMPLE);
 
 		parameterTypeEClass = createEClass(PARAMETER_TYPE);
 
@@ -252,6 +291,9 @@ public class DataTypesPackageImpl extends EPackageImpl implements DataTypesPacka
 
 		typeEClass = createEClass(TYPE);
 		createEAttribute(typeEClass, TYPE__NAME);
+
+		// Create enums
+		simpleTypesEEnum = createEEnum(SIMPLE_TYPES);
 	}
 
 	/**
@@ -292,8 +334,10 @@ public class DataTypesPackageImpl extends EPackageImpl implements DataTypesPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(simpleEClass, Simple.class, "Simple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSimple_Kind(), this.getsimpleTypes(), "kind", "int", 0, 1, Simple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(complexEClass, Complex.class, "Complex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComplex_Simple(), this.getSimple(), null, "simple", null, 2, -1, Complex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(parameterTypeEClass, ParameterType.class, "ParameterType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -303,6 +347,19 @@ public class DataTypesPackageImpl extends EPackageImpl implements DataTypesPacka
 
 		initEClass(typeEClass, Type.class, "Type", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getType_Name(), ecorePackage.getEString(), "name", null, 0, 1, Type.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(simpleTypesEEnum, simpleTypes.class, "simpleTypes");
+		addEEnumLiteral(simpleTypesEEnum, simpleTypes.INT);
+		addEEnumLiteral(simpleTypesEEnum, simpleTypes.BOOLEAN);
+		addEEnumLiteral(simpleTypesEEnum, simpleTypes.CHAR);
+		addEEnumLiteral(simpleTypesEEnum, simpleTypes.DATE);
+		addEEnumLiteral(simpleTypesEEnum, simpleTypes.DOUBLE);
+		addEEnumLiteral(simpleTypesEEnum, simpleTypes.FLOAT);
+		addEEnumLiteral(simpleTypesEEnum, simpleTypes.LIST);
+		addEEnumLiteral(simpleTypesEEnum, simpleTypes.LONG);
+		addEEnumLiteral(simpleTypesEEnum, simpleTypes.MAP);
+		addEEnumLiteral(simpleTypesEEnum, simpleTypes.STRING);
 	}
 
 } //DataTypesPackageImpl
