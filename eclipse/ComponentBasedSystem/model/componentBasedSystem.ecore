@@ -16,12 +16,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="behaviourdescription" upperBound="-1"
         eType="#//behaviourDescription/BehaviourDescription" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="provided" lowerBound="1"
-        eType="#//Interface"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="required" upperBound="-1"
-        eType="#//Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="service" lowerBound="1"
         upperBound="-1" eType="#//Service" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredrole" upperBound="-1"
+        eType="#//roles/RequiredRole" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" lowerBound="1"
+        eType="#//roles/ProvidedRole" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Interface">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -126,7 +126,10 @@
   </eSubpackages>
   <eSubpackages name="roles" nsURI="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/roles"
       nsPrefix="roles">
-    <eClassifiers xsi:type="ecore:EClass" name="Role"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Role">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
+          eType="#//Interface"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RequiredRole" eSuperTypes="#//roles/Role"/>
     <eClassifiers xsi:type="ecore:EClass" name="ProvidedRole" eSuperTypes="#//roles/Role"/>
     <eClassifiers xsi:type="ecore:EClass" name="AssemblyConnector">

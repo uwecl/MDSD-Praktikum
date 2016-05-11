@@ -149,31 +149,31 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPONENT__BEHAVIOURDESCRIPTION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Provided</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT__PROVIDED = 2;
-
-	/**
-	 * The feature id for the '<em><b>Required</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT__REQUIRED = 3;
-
-	/**
 	 * The feature id for the '<em><b>Service</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__SERVICE = 4;
+	int COMPONENT__SERVICE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Requiredrole</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__REQUIREDROLE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Providedrole</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__PROVIDEDROLE = 4;
 
 	/**
 	 * The number of structural features of the '<em>Component</em>' class.
@@ -268,24 +268,6 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPOSITE_COMPONENT__BEHAVIOURDESCRIPTION = COMPONENT__BEHAVIOURDESCRIPTION;
 
 	/**
-	 * The feature id for the '<em><b>Provided</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_COMPONENT__PROVIDED = COMPONENT__PROVIDED;
-
-	/**
-	 * The feature id for the '<em><b>Required</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPOSITE_COMPONENT__REQUIRED = COMPONENT__REQUIRED;
-
-	/**
 	 * The feature id for the '<em><b>Service</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -293,6 +275,24 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_COMPONENT__SERVICE = COMPONENT__SERVICE;
+
+	/**
+	 * The feature id for the '<em><b>Requiredrole</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_COMPONENT__REQUIREDROLE = COMPONENT__REQUIREDROLE;
+
+	/**
+	 * The feature id for the '<em><b>Providedrole</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_COMPONENT__PROVIDEDROLE = COMPONENT__PROVIDEDROLE;
 
 	/**
 	 * The feature id for the '<em><b>Assemblycontext</b></em>' containment reference list.
@@ -899,28 +899,6 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getComponent_Behaviourdescription();
 
 	/**
-	 * Returns the meta object for the reference '{@link componentBasedSystem.Component#getProvided <em>Provided</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Provided</em>'.
-	 * @see componentBasedSystem.Component#getProvided()
-	 * @see #getComponent()
-	 * @generated
-	 */
-	EReference getComponent_Provided();
-
-	/**
-	 * Returns the meta object for the reference list '{@link componentBasedSystem.Component#getRequired <em>Required</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Required</em>'.
-	 * @see componentBasedSystem.Component#getRequired()
-	 * @see #getComponent()
-	 * @generated
-	 */
-	EReference getComponent_Required();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.Component#getService <em>Service</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -930,6 +908,28 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComponent_Service();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link componentBasedSystem.Component#getProvidedrole <em>Providedrole</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Providedrole</em>'.
+	 * @see componentBasedSystem.Component#getProvidedrole()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_Providedrole();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.Component#getRequiredrole <em>Requiredrole</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Requiredrole</em>'.
+	 * @see componentBasedSystem.Component#getRequiredrole()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_Requiredrole();
 
 	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.Interface <em>Interface</em>}'.
@@ -1406,28 +1406,28 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference COMPONENT__BEHAVIOURDESCRIPTION = eINSTANCE.getComponent_Behaviourdescription();
 
 		/**
-		 * The meta object literal for the '<em><b>Provided</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT__PROVIDED = eINSTANCE.getComponent_Provided();
-
-		/**
-		 * The meta object literal for the '<em><b>Required</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT__REQUIRED = eINSTANCE.getComponent_Required();
-
-		/**
 		 * The meta object literal for the '<em><b>Service</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference COMPONENT__SERVICE = eINSTANCE.getComponent_Service();
+
+		/**
+		 * The meta object literal for the '<em><b>Providedrole</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__PROVIDEDROLE = eINSTANCE.getComponent_Providedrole();
+
+		/**
+		 * The meta object literal for the '<em><b>Requiredrole</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__REQUIREDROLE = eINSTANCE.getComponent_Requiredrole();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.InterfaceImpl <em>Interface</em>}' class.

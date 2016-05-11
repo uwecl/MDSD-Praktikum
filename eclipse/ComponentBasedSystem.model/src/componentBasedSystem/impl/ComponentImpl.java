@@ -4,11 +4,11 @@ package componentBasedSystem.impl;
 
 import componentBasedSystem.Component;
 import componentBasedSystem.ComponentBasedSystemPackage;
-import componentBasedSystem.Interface;
-
 import componentBasedSystem.Service;
 import componentBasedSystem.behaviourDescription.BehaviourDescription;
 
+import componentBasedSystem.roles.ProvidedRole;
+import componentBasedSystem.roles.RequiredRole;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -23,7 +23,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -36,9 +35,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link componentBasedSystem.impl.ComponentImpl#getName <em>Name</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentImpl#getBehaviourdescription <em>Behaviourdescription</em>}</li>
- *   <li>{@link componentBasedSystem.impl.ComponentImpl#getProvided <em>Provided</em>}</li>
- *   <li>{@link componentBasedSystem.impl.ComponentImpl#getRequired <em>Required</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentImpl#getService <em>Service</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.ComponentImpl#getRequiredrole <em>Requiredrole</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.ComponentImpl#getProvidedrole <em>Providedrole</em>}</li>
  * </ul>
  *
  * @generated
@@ -75,26 +74,6 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	protected EList<BehaviourDescription> behaviourdescription;
 
 	/**
-	 * The cached value of the '{@link #getProvided() <em>Provided</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProvided()
-	 * @generated
-	 * @ordered
-	 */
-	protected Interface provided;
-
-	/**
-	 * The cached value of the '{@link #getRequired() <em>Required</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRequired()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Interface> required;
-
-	/**
 	 * The cached value of the '{@link #getService() <em>Service</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,6 +82,26 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * @ordered
 	 */
 	protected EList<Service> service;
+
+	/**
+	 * The cached value of the '{@link #getRequiredrole() <em>Requiredrole</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequiredrole()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<RequiredRole> requiredrole;
+
+	/**
+	 * The cached value of the '{@link #getProvidedrole() <em>Providedrole</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProvidedrole()
+	 * @generated
+	 * @ordered
+	 */
+	protected ProvidedRole providedrole;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -161,61 +160,66 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Interface getProvided() {
-		if (provided != null && provided.eIsProxy()) {
-			InternalEObject oldProvided = (InternalEObject)provided;
-			provided = (Interface)eResolveProxy(oldProvided);
-			if (provided != oldProvided) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentBasedSystemPackage.COMPONENT__PROVIDED, oldProvided, provided));
-			}
-		}
-		return provided;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Interface basicGetProvided() {
-		return provided;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setProvided(Interface newProvided) {
-		Interface oldProvided = provided;
-		provided = newProvided;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT__PROVIDED, oldProvided, provided));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Interface> getRequired() {
-		if (required == null) {
-			required = new EObjectResolvingEList<Interface>(Interface.class, this, ComponentBasedSystemPackage.COMPONENT__REQUIRED);
-		}
-		return required;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Service> getService() {
 		if (service == null) {
 			service = new EObjectContainmentEList<Service>(Service.class, this, ComponentBasedSystemPackage.COMPONENT__SERVICE);
 		}
 		return service;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProvidedRole getProvidedrole() {
+		return providedrole;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetProvidedrole(ProvidedRole newProvidedrole, NotificationChain msgs) {
+		ProvidedRole oldProvidedrole = providedrole;
+		providedrole = newProvidedrole;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE, oldProvidedrole, newProvidedrole);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProvidedrole(ProvidedRole newProvidedrole) {
+		if (newProvidedrole != providedrole) {
+			NotificationChain msgs = null;
+			if (providedrole != null)
+				msgs = ((InternalEObject)providedrole).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE, null, msgs);
+			if (newProvidedrole != null)
+				msgs = ((InternalEObject)newProvidedrole).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE, null, msgs);
+			msgs = basicSetProvidedrole(newProvidedrole, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE, newProvidedrole, newProvidedrole));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<RequiredRole> getRequiredrole() {
+		if (requiredrole == null) {
+			requiredrole = new EObjectContainmentEList<RequiredRole>(RequiredRole.class, this, ComponentBasedSystemPackage.COMPONENT__REQUIREDROLE);
+		}
+		return requiredrole;
 	}
 
 	/**
@@ -230,6 +234,10 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				return ((InternalEList<?>)getBehaviourdescription()).basicRemove(otherEnd, msgs);
 			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
 				return ((InternalEList<?>)getService()).basicRemove(otherEnd, msgs);
+			case ComponentBasedSystemPackage.COMPONENT__REQUIREDROLE:
+				return ((InternalEList<?>)getRequiredrole()).basicRemove(otherEnd, msgs);
+			case ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE:
+				return basicSetProvidedrole(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -246,13 +254,12 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				return getName();
 			case ComponentBasedSystemPackage.COMPONENT__BEHAVIOURDESCRIPTION:
 				return getBehaviourdescription();
-			case ComponentBasedSystemPackage.COMPONENT__PROVIDED:
-				if (resolve) return getProvided();
-				return basicGetProvided();
-			case ComponentBasedSystemPackage.COMPONENT__REQUIRED:
-				return getRequired();
 			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
 				return getService();
+			case ComponentBasedSystemPackage.COMPONENT__REQUIREDROLE:
+				return getRequiredrole();
+			case ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE:
+				return getProvidedrole();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -273,16 +280,16 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				getBehaviourdescription().clear();
 				getBehaviourdescription().addAll((Collection<? extends BehaviourDescription>)newValue);
 				return;
-			case ComponentBasedSystemPackage.COMPONENT__PROVIDED:
-				setProvided((Interface)newValue);
-				return;
-			case ComponentBasedSystemPackage.COMPONENT__REQUIRED:
-				getRequired().clear();
-				getRequired().addAll((Collection<? extends Interface>)newValue);
-				return;
 			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
 				getService().clear();
 				getService().addAll((Collection<? extends Service>)newValue);
+				return;
+			case ComponentBasedSystemPackage.COMPONENT__REQUIREDROLE:
+				getRequiredrole().clear();
+				getRequiredrole().addAll((Collection<? extends RequiredRole>)newValue);
+				return;
+			case ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE:
+				setProvidedrole((ProvidedRole)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -302,14 +309,14 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 			case ComponentBasedSystemPackage.COMPONENT__BEHAVIOURDESCRIPTION:
 				getBehaviourdescription().clear();
 				return;
-			case ComponentBasedSystemPackage.COMPONENT__PROVIDED:
-				setProvided((Interface)null);
-				return;
-			case ComponentBasedSystemPackage.COMPONENT__REQUIRED:
-				getRequired().clear();
-				return;
 			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
 				getService().clear();
+				return;
+			case ComponentBasedSystemPackage.COMPONENT__REQUIREDROLE:
+				getRequiredrole().clear();
+				return;
+			case ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE:
+				setProvidedrole((ProvidedRole)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -327,12 +334,12 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case ComponentBasedSystemPackage.COMPONENT__BEHAVIOURDESCRIPTION:
 				return behaviourdescription != null && !behaviourdescription.isEmpty();
-			case ComponentBasedSystemPackage.COMPONENT__PROVIDED:
-				return provided != null;
-			case ComponentBasedSystemPackage.COMPONENT__REQUIRED:
-				return required != null && !required.isEmpty();
 			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
 				return service != null && !service.isEmpty();
+			case ComponentBasedSystemPackage.COMPONENT__REQUIREDROLE:
+				return requiredrole != null && !requiredrole.isEmpty();
+			case ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE:
+				return providedrole != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -4,6 +4,8 @@ package componentBasedSystem;
 
 import componentBasedSystem.behaviourDescription.BehaviourDescription;
 
+import componentBasedSystem.roles.ProvidedRole;
+import componentBasedSystem.roles.RequiredRole;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -19,9 +21,9 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link componentBasedSystem.Component#getName <em>Name</em>}</li>
  *   <li>{@link componentBasedSystem.Component#getBehaviourdescription <em>Behaviourdescription</em>}</li>
- *   <li>{@link componentBasedSystem.Component#getProvided <em>Provided</em>}</li>
- *   <li>{@link componentBasedSystem.Component#getRequired <em>Required</em>}</li>
  *   <li>{@link componentBasedSystem.Component#getService <em>Service</em>}</li>
+ *   <li>{@link componentBasedSystem.Component#getRequiredrole <em>Requiredrole</em>}</li>
+ *   <li>{@link componentBasedSystem.Component#getProvidedrole <em>Providedrole</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getComponent()
@@ -72,48 +74,6 @@ public interface Component extends EObject {
 	EList<BehaviourDescription> getBehaviourdescription();
 
 	/**
-	 * Returns the value of the '<em><b>Provided</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Provided</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Provided</em>' reference.
-	 * @see #setProvided(Interface)
-	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponent_Provided()
-	 * @model required="true"
-	 * @generated
-	 */
-	Interface getProvided();
-
-	/**
-	 * Sets the value of the '{@link componentBasedSystem.Component#getProvided <em>Provided</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Provided</em>' reference.
-	 * @see #getProvided()
-	 * @generated
-	 */
-	void setProvided(Interface value);
-
-	/**
-	 * Returns the value of the '<em><b>Required</b></em>' reference list.
-	 * The list contents are of type {@link componentBasedSystem.Interface}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Required</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Required</em>' reference list.
-	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponent_Required()
-	 * @model
-	 * @generated
-	 */
-	EList<Interface> getRequired();
-
-	/**
 	 * Returns the value of the '<em><b>Service</b></em>' containment reference list.
 	 * The list contents are of type {@link componentBasedSystem.Service}.
 	 * <!-- begin-user-doc -->
@@ -128,5 +88,47 @@ public interface Component extends EObject {
 	 * @generated
 	 */
 	EList<Service> getService();
+
+	/**
+	 * Returns the value of the '<em><b>Providedrole</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Providedrole</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Providedrole</em>' containment reference.
+	 * @see #setProvidedrole(ProvidedRole)
+	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponent_Providedrole()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	ProvidedRole getProvidedrole();
+
+	/**
+	 * Sets the value of the '{@link componentBasedSystem.Component#getProvidedrole <em>Providedrole</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Providedrole</em>' containment reference.
+	 * @see #getProvidedrole()
+	 * @generated
+	 */
+	void setProvidedrole(ProvidedRole value);
+
+	/**
+	 * Returns the value of the '<em><b>Requiredrole</b></em>' containment reference list.
+	 * The list contents are of type {@link componentBasedSystem.roles.RequiredRole}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Requiredrole</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Requiredrole</em>' containment reference list.
+	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponent_Requiredrole()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<RequiredRole> getRequiredrole();
 
 } // Component

@@ -15,9 +15,9 @@
     <genClasses ecoreClass="componentBasedSystem.ecore#//Component">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Component/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/behaviourdescription"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/provided"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/required"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/service"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/requiredrole"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/providedrole"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Interface">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Interface/name"/>
@@ -103,7 +103,10 @@
       <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/Branch"/>
     </nestedGenPackages>
     <nestedGenPackages prefix="Roles" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#//roles">
-      <genClasses ecoreClass="componentBasedSystem.ecore#//roles/Role"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//roles/Role">
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference componentBasedSystem.ecore#//roles/Role/interface"/>
+      </genClasses>
       <genClasses ecoreClass="componentBasedSystem.ecore#//roles/RequiredRole"/>
       <genClasses ecoreClass="componentBasedSystem.ecore#//roles/ProvidedRole"/>
       <genClasses ecoreClass="componentBasedSystem.ecore#//roles/AssemblyConnector">

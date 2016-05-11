@@ -148,6 +148,15 @@ public class RolesPackageImpl extends EPackageImpl implements RolesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getRole_Interface() {
+		return (EReference)roleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRequiredRole() {
 		return requiredRoleEClass;
 	}
@@ -217,6 +226,7 @@ public class RolesPackageImpl extends EPackageImpl implements RolesPackage {
 
 		// Create classes and their features
 		roleEClass = createEClass(ROLE);
+		createEReference(roleEClass, ROLE__INTERFACE);
 
 		requiredRoleEClass = createEClass(REQUIRED_ROLE);
 
@@ -250,6 +260,9 @@ public class RolesPackageImpl extends EPackageImpl implements RolesPackage {
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		ComponentBasedSystemPackage theComponentBasedSystemPackage = (ComponentBasedSystemPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentBasedSystemPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
@@ -260,6 +273,7 @@ public class RolesPackageImpl extends EPackageImpl implements RolesPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRole_Interface(), theComponentBasedSystemPackage.getInterface(), null, "interface", null, 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requiredRoleEClass, RequiredRole.class, "RequiredRole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

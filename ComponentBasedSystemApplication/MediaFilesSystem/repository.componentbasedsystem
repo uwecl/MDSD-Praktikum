@@ -29,18 +29,27 @@
       <returntype href="assembly.componentbasedsystem#//@type.0"/>
     </signature>
   </interface>
-  <component name="WebGUI" provided="//@interface.0" required="//@interface.3">
-    <service name="HTTP"/>
+  <component name="WebGUI">
+    <requiredrole interface="//@interface.3"/>
+    <providedrole interface="//@interface.0"/>
   </component>
-  <component name="MediaManager" provided="//@interface.3" required="//@interface.1 //@interface.2"/>
-  <component name="DigitalWatermarking" provided="//@interface.1">
-    <service name="Sound"/>
+  <component name="MediaManager">
+    <requiredrole interface="//@interface.1"/>
+    <requiredrole interface="//@interface.2"/>
+    <providedrole interface="//@interface.3"/>
   </component>
-  <component name="DBCache" provided="//@interface.2" required="//@interface.2">
-    <service name="AudioDB"/>
+  <component name="DBCache">
+    <requiredrole interface="//@interface.2"/>
+    <providedrole interface="//@interface.2"/>
   </component>
-  <component name="PoolingAudioDB" provided="//@interface.2">
-    <service name="AudioDB"/>
+  <component name="DigitalWatermarking">
+    <providedrole interface="//@interface.1"/>
   </component>
-  <component xsi:type="componentBasedSystem:CompositeComponent" name="MediaStore" provided="//@interface.3" required="//@interface.2"/>
+  <component name="PoolingAudioDB">
+    <providedrole interface="//@interface.2"/>
+  </component>
+  <component xsi:type="componentBasedSystem:CompositeComponent" name="MediaStore">
+    <requiredrole interface="//@interface.2"/>
+    <providedrole interface="//@interface.3"/>
+  </component>
 </componentBasedSystem:Repository>

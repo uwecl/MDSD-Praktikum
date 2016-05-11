@@ -9,6 +9,7 @@ import componentBasedSystem.ComponentBasedSystemPackage;
 
 import componentBasedSystem.behaviourDescription.BehaviourDescriptionFactory;
 
+import componentBasedSystem.roles.RolesFactory;
 import java.util.Collection;
 import java.util.List;
 
@@ -66,8 +67,6 @@ public class ComponentItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addProvidedPropertyDescriptor(object);
-			addRequiredPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -95,50 +94,6 @@ public class ComponentItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Provided feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addProvidedPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Component_provided_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Component_provided_feature", "_UI_Component_type"),
-				 ComponentBasedSystemPackage.Literals.COMPONENT__PROVIDED,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Required feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequiredPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Component_required_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Component_required_feature", "_UI_Component_type"),
-				 ComponentBasedSystemPackage.Literals.COMPONENT__REQUIRED,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -152,6 +107,8 @@ public class ComponentItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT__BEHAVIOURDESCRIPTION);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT__SERVICE);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT__REQUIREDROLE);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT__PROVIDEDROLE);
 		}
 		return childrenFeatures;
 	}
@@ -212,6 +169,8 @@ public class ComponentItemProvider
 				return;
 			case ComponentBasedSystemPackage.COMPONENT__BEHAVIOURDESCRIPTION:
 			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
+			case ComponentBasedSystemPackage.COMPONENT__REQUIREDROLE:
+			case ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -258,6 +217,16 @@ public class ComponentItemProvider
 			(createChildParameter
 				(ComponentBasedSystemPackage.Literals.COMPONENT__SERVICE,
 				 ComponentBasedSystemFactory.eINSTANCE.createService()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT__REQUIREDROLE,
+				 RolesFactory.eINSTANCE.createRequiredRole()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT__PROVIDEDROLE,
+				 RolesFactory.eINSTANCE.createProvidedRole()));
 	}
 
 	/**

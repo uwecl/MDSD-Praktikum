@@ -299,7 +299,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComponent_Provided() {
+	public EReference getComponent_Service() {
 		return (EReference)componentEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -308,8 +308,8 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComponent_Required() {
-		return (EReference)componentEClass.getEStructuralFeatures().get(3);
+	public EReference getComponent_Providedrole() {
+		return (EReference)componentEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -317,8 +317,8 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComponent_Service() {
-		return (EReference)componentEClass.getEStructuralFeatures().get(4);
+	public EReference getComponent_Requiredrole() {
+		return (EReference)componentEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -682,9 +682,9 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		componentEClass = createEClass(COMPONENT);
 		createEAttribute(componentEClass, COMPONENT__NAME);
 		createEReference(componentEClass, COMPONENT__BEHAVIOURDESCRIPTION);
-		createEReference(componentEClass, COMPONENT__PROVIDED);
-		createEReference(componentEClass, COMPONENT__REQUIRED);
 		createEReference(componentEClass, COMPONENT__SERVICE);
+		createEReference(componentEClass, COMPONENT__REQUIREDROLE);
+		createEReference(componentEClass, COMPONENT__PROVIDEDROLE);
 
 		interfaceEClass = createEClass(INTERFACE);
 		createEAttribute(interfaceEClass, INTERFACE__NAME);
@@ -786,9 +786,9 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_Behaviourdescription(), theBehaviourDescriptionPackage.getBehaviourDescription(), null, "behaviourdescription", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponent_Provided(), this.getInterface(), null, "provided", null, 1, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponent_Required(), this.getInterface(), null, "required", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_Service(), this.getService(), null, "service", null, 1, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_Requiredrole(), theRolesPackage.getRequiredRole(), null, "requiredrole", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_Providedrole(), theRolesPackage.getProvidedRole(), null, "providedrole", null, 1, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(interfaceEClass, Interface.class, "Interface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInterface_Name(), ecorePackage.getEString(), "name", null, 0, 1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
