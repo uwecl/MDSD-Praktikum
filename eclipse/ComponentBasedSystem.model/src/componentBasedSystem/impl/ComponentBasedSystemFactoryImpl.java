@@ -70,6 +70,7 @@ public class ComponentBasedSystemFactoryImpl extends EFactoryImpl implements Com
 			case ComponentBasedSystemPackage.ENVIRONMENT: return createEnvironment();
 			case ComponentBasedSystemPackage.REPOSITORY: return createRepository();
 			case ComponentBasedSystemPackage.ALLOCATION: return createAllocation();
+			case ComponentBasedSystemPackage.SERVICE: return createService();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -213,6 +214,16 @@ public class ComponentBasedSystemFactoryImpl extends EFactoryImpl implements Com
 	public Allocation createAllocation() {
 		AllocationImpl allocation = new AllocationImpl();
 		return allocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Service createService() {
+		ServiceImpl service = new ServiceImpl();
+		return service;
 	}
 
 	/**

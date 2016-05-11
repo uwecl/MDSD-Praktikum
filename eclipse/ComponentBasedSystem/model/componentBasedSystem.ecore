@@ -20,6 +20,8 @@
         eType="#//Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="required" upperBound="-1"
         eType="#//Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="service" lowerBound="1"
+        upperBound="-1" eType="#//Service" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Interface">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -81,6 +83,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="Allocation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="allocationcontext" lowerBound="1"
         upperBound="-1" eType="#//AllocationContext" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Service">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eSubpackages name="dataTypes" nsURI="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/dataTypes"
       nsPrefix="dataTypes">

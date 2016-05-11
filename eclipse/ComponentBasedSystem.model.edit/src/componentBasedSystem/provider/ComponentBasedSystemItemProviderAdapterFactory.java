@@ -394,6 +394,29 @@ public class ComponentBasedSystemItemProviderAdapterFactory extends ComponentBas
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link componentBasedSystem.Service} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ServiceItemProvider serviceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link componentBasedSystem.Service}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createServiceAdapter() {
+		if (serviceItemProvider == null) {
+			serviceItemProvider = new ServiceItemProvider(this);
+		}
+
+		return serviceItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -506,6 +529,7 @@ public class ComponentBasedSystemItemProviderAdapterFactory extends ComponentBas
 		if (environmentItemProvider != null) environmentItemProvider.dispose();
 		if (repositoryItemProvider != null) repositoryItemProvider.dispose();
 		if (allocationItemProvider != null) allocationItemProvider.dispose();
+		if (serviceItemProvider != null) serviceItemProvider.dispose();
 	}
 
 }

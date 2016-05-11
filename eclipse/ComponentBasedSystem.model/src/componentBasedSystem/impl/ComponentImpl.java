@@ -6,6 +6,7 @@ import componentBasedSystem.Component;
 import componentBasedSystem.ComponentBasedSystemPackage;
 import componentBasedSystem.Interface;
 
+import componentBasedSystem.Service;
 import componentBasedSystem.behaviourDescription.BehaviourDescription;
 
 import java.util.Collection;
@@ -37,6 +38,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link componentBasedSystem.impl.ComponentImpl#getBehaviourdescription <em>Behaviourdescription</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentImpl#getProvided <em>Provided</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentImpl#getRequired <em>Required</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.ComponentImpl#getService <em>Service</em>}</li>
  * </ul>
  *
  * @generated
@@ -91,6 +93,16 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * @ordered
 	 */
 	protected EList<Interface> required;
+
+	/**
+	 * The cached value of the '{@link #getService() <em>Service</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getService()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Service> service;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -199,11 +211,25 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Service> getService() {
+		if (service == null) {
+			service = new EObjectContainmentEList<Service>(Service.class, this, ComponentBasedSystemPackage.COMPONENT__SERVICE);
+		}
+		return service;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ComponentBasedSystemPackage.COMPONENT__BEHAVIOURDESCRIPTION:
 				return ((InternalEList<?>)getBehaviourdescription()).basicRemove(otherEnd, msgs);
+			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
+				return ((InternalEList<?>)getService()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -225,6 +251,8 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				return basicGetProvided();
 			case ComponentBasedSystemPackage.COMPONENT__REQUIRED:
 				return getRequired();
+			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
+				return getService();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -252,6 +280,10 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				getRequired().clear();
 				getRequired().addAll((Collection<? extends Interface>)newValue);
 				return;
+			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
+				getService().clear();
+				getService().addAll((Collection<? extends Service>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -276,6 +308,9 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 			case ComponentBasedSystemPackage.COMPONENT__REQUIRED:
 				getRequired().clear();
 				return;
+			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
+				getService().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -296,6 +331,8 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				return provided != null;
 			case ComponentBasedSystemPackage.COMPONENT__REQUIRED:
 				return required != null && !required.isEmpty();
+			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
+				return service != null && !service.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

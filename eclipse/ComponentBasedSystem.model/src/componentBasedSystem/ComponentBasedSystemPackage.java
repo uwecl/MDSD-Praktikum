@@ -167,13 +167,22 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPONENT__REQUIRED = 3;
 
 	/**
+	 * The feature id for the '<em><b>Service</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__SERVICE = 4;
+
+	/**
 	 * The number of structural features of the '<em>Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 4;
+	int COMPONENT_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -275,6 +284,15 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPOSITE_COMPONENT__REQUIRED = COMPONENT__REQUIRED;
+
+	/**
+	 * The feature id for the '<em><b>Service</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_COMPONENT__SERVICE = COMPONENT__SERVICE;
 
 	/**
 	 * The feature id for the '<em><b>Assemblycontext</b></em>' containment reference list.
@@ -757,6 +775,44 @@ public interface ComponentBasedSystemPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link componentBasedSystem.impl.ServiceImpl <em>Service</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see componentBasedSystem.impl.ServiceImpl
+	 * @see componentBasedSystem.impl.ComponentBasedSystemPackageImpl#getService()
+	 * @generated
+	 */
+	int SERVICE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Service</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SERVICE_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.ComponentBasedSystem <em>Component Based System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -863,6 +919,17 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComponent_Required();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.Component#getService <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Service</em>'.
+	 * @see componentBasedSystem.Component#getService()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_Service();
 
 	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.Interface <em>Interface</em>}'.
@@ -1227,6 +1294,27 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getAllocation_Allocationcontext();
 
 	/**
+	 * Returns the meta object for class '{@link componentBasedSystem.Service <em>Service</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Service</em>'.
+	 * @see componentBasedSystem.Service
+	 * @generated
+	 */
+	EClass getService();
+
+	/**
+	 * Returns the meta object for the attribute '{@link componentBasedSystem.Service#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see componentBasedSystem.Service#getName()
+	 * @see #getService()
+	 * @generated
+	 */
+	EAttribute getService_Name();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1332,6 +1420,14 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT__REQUIRED = eINSTANCE.getComponent_Required();
+
+		/**
+		 * The meta object literal for the '<em><b>Service</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__SERVICE = eINSTANCE.getComponent_Service();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.InterfaceImpl <em>Interface</em>}' class.
@@ -1628,6 +1724,24 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ALLOCATION__ALLOCATIONCONTEXT = eINSTANCE.getAllocation_Allocationcontext();
+
+		/**
+		 * The meta object literal for the '{@link componentBasedSystem.impl.ServiceImpl <em>Service</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see componentBasedSystem.impl.ServiceImpl
+		 * @see componentBasedSystem.impl.ComponentBasedSystemPackageImpl#getService()
+		 * @generated
+		 */
+		EClass SERVICE = eINSTANCE.getService();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute SERVICE__NAME = eINSTANCE.getService_Name();
 
 	}
 

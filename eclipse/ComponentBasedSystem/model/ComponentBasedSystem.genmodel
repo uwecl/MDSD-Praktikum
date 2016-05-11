@@ -17,6 +17,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/behaviourdescription"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/provided"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/required"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Component/service"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Interface">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Interface/name"/>
@@ -63,6 +64,9 @@
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Allocation">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Allocation/allocationcontext"/>
+    </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Service">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Service/name"/>
     </genClasses>
     <nestedGenPackages prefix="DataTypes" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#//dataTypes">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="componentBasedSystem.ecore#//dataTypes/simpleTypes">

@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link componentBasedSystem.Component#getBehaviourdescription <em>Behaviourdescription</em>}</li>
  *   <li>{@link componentBasedSystem.Component#getProvided <em>Provided</em>}</li>
  *   <li>{@link componentBasedSystem.Component#getRequired <em>Required</em>}</li>
+ *   <li>{@link componentBasedSystem.Component#getService <em>Service</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getComponent()
@@ -111,5 +112,21 @@ public interface Component extends EObject {
 	 * @generated
 	 */
 	EList<Interface> getRequired();
+
+	/**
+	 * Returns the value of the '<em><b>Service</b></em>' containment reference list.
+	 * The list contents are of type {@link componentBasedSystem.Service}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Service</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Service</em>' containment reference list.
+	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponent_Service()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<Service> getService();
 
 } // Component

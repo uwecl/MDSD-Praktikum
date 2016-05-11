@@ -16,6 +16,7 @@ import componentBasedSystem.Interface;
 import componentBasedSystem.Link;
 import componentBasedSystem.Parameter;
 import componentBasedSystem.Repository;
+import componentBasedSystem.Service;
 import componentBasedSystem.Signature;
 
 import componentBasedSystem.behaviourDescription.BehaviourDescriptionPackage;
@@ -141,6 +142,13 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * @generated
 	 */
 	private EClass allocationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass serviceEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -302,6 +310,15 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 */
 	public EReference getComponent_Required() {
 		return (EReference)componentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponent_Service() {
+		return (EReference)componentEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -615,6 +632,24 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getService() {
+		return serviceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getService_Name() {
+		return (EAttribute)serviceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ComponentBasedSystemFactory getComponentBasedSystemFactory() {
 		return (ComponentBasedSystemFactory)getEFactoryInstance();
 	}
@@ -649,6 +684,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		createEReference(componentEClass, COMPONENT__BEHAVIOURDESCRIPTION);
 		createEReference(componentEClass, COMPONENT__PROVIDED);
 		createEReference(componentEClass, COMPONENT__REQUIRED);
+		createEReference(componentEClass, COMPONENT__SERVICE);
 
 		interfaceEClass = createEClass(INTERFACE);
 		createEAttribute(interfaceEClass, INTERFACE__NAME);
@@ -695,6 +731,9 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 
 		allocationEClass = createEClass(ALLOCATION);
 		createEReference(allocationEClass, ALLOCATION__ALLOCATIONCONTEXT);
+
+		serviceEClass = createEClass(SERVICE);
+		createEAttribute(serviceEClass, SERVICE__NAME);
 	}
 
 	/**
@@ -749,6 +788,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEReference(getComponent_Behaviourdescription(), theBehaviourDescriptionPackage.getBehaviourDescription(), null, "behaviourdescription", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_Provided(), this.getInterface(), null, "provided", null, 1, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_Required(), this.getInterface(), null, "required", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_Service(), this.getService(), null, "service", null, 1, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(interfaceEClass, Interface.class, "Interface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInterface_Name(), ecorePackage.getEString(), "name", null, 0, 1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -795,6 +835,9 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 
 		initEClass(allocationEClass, Allocation.class, "Allocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getAllocation_Allocationcontext(), this.getAllocationContext(), null, "allocationcontext", null, 1, -1, Allocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getService_Name(), ecorePackage.getEString(), "name", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

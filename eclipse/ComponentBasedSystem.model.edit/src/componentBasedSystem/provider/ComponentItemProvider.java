@@ -4,6 +4,7 @@ package componentBasedSystem.provider;
 
 
 import componentBasedSystem.Component;
+import componentBasedSystem.ComponentBasedSystemFactory;
 import componentBasedSystem.ComponentBasedSystemPackage;
 
 import componentBasedSystem.behaviourDescription.BehaviourDescriptionFactory;
@@ -150,6 +151,7 @@ public class ComponentItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT__BEHAVIOURDESCRIPTION);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT__SERVICE);
 		}
 		return childrenFeatures;
 	}
@@ -209,6 +211,7 @@ public class ComponentItemProvider
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case ComponentBasedSystemPackage.COMPONENT__BEHAVIOURDESCRIPTION:
+			case ComponentBasedSystemPackage.COMPONENT__SERVICE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -250,6 +253,11 @@ public class ComponentItemProvider
 			(createChildParameter
 				(ComponentBasedSystemPackage.Literals.COMPONENT__BEHAVIOURDESCRIPTION,
 				 BehaviourDescriptionFactory.eINSTANCE.createBranch()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT__SERVICE,
+				 ComponentBasedSystemFactory.eINSTANCE.createService()));
 	}
 
 	/**
