@@ -650,8 +650,8 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getService_Name() {
-		return (EAttribute)serviceEClass.getEStructuralFeatures().get(0);
+	public EReference getService_CorrespondingSignatures() {
+		return (EReference)serviceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -743,7 +743,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		createEReference(allocationEClass, ALLOCATION__ALLOCATIONCONTEXT);
 
 		serviceEClass = createEClass(SERVICE);
-		createEAttribute(serviceEClass, SERVICE__NAME);
+		createEReference(serviceEClass, SERVICE__CORRESPONDING_SIGNATURES);
 	}
 
 	/**
@@ -848,7 +848,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEReference(getAllocation_Allocationcontext(), this.getAllocationContext(), null, "allocationcontext", null, 1, -1, Allocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(serviceEClass, Service.class, "Service", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getService_Name(), ecorePackage.getEString(), "name", null, 0, 1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getService_CorrespondingSignatures(), this.getSignature(), null, "correspondingSignatures", null, 1, -1, Service.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

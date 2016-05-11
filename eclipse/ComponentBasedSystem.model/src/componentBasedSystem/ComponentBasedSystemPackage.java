@@ -794,13 +794,13 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int SERVICE = 14;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Corresponding Signatures</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SERVICE__NAME = 0;
+	int SERVICE__CORRESPONDING_SIGNATURES = 0;
 
 	/**
 	 * The number of structural features of the '<em>Service</em>' class.
@@ -1324,15 +1324,15 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EClass getService();
 
 	/**
-	 * Returns the meta object for the attribute '{@link componentBasedSystem.Service#getName <em>Name</em>}'.
+	 * Returns the meta object for the reference list '{@link componentBasedSystem.Service#getCorrespondingSignatures <em>Corresponding Signatures</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see componentBasedSystem.Service#getName()
+	 * @return the meta object for the reference list '<em>Corresponding Signatures</em>'.
+	 * @see componentBasedSystem.Service#getCorrespondingSignatures()
 	 * @see #getService()
 	 * @generated
 	 */
-	EAttribute getService_Name();
+	EReference getService_CorrespondingSignatures();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1764,12 +1764,12 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EClass SERVICE = eINSTANCE.getService();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Corresponding Signatures</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SERVICE__NAME = eINSTANCE.getService_Name();
+		EReference SERVICE__CORRESPONDING_SIGNATURES = eINSTANCE.getService_CorrespondingSignatures();
 
 	}
 

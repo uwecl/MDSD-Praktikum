@@ -30,25 +30,36 @@
     </signature>
   </interface>
   <component name="WebGUI">
+    <service correspondingSignatures="//@interface.0/@signature.0"/>
+    <service correspondingSignatures="//@interface.0/@signature.1"/>
     <requiredrole interface="//@interface.3" name="WebGUI-MediaStore"/>
     <providedrole interface="//@interface.0" name="WebGUI-HTTP"/>
   </component>
   <component name="MediaManager">
+    <service correspondingSignatures="//@interface.3/@signature.1"/>
+    <service correspondingSignatures="//@interface.3/@signature.0"/>
     <requiredrole interface="//@interface.1" name="MediaManager-Sound"/>
     <requiredrole interface="//@interface.2" name="MediaManager-AudioDB"/>
     <providedrole interface="//@interface.3" name="MediaManager-MediaStore"/>
   </component>
   <component name="DBCache">
+    <service correspondingSignatures="//@interface.2/@signature.0"/>
+    <service correspondingSignatures="//@interface.2/@signature.1"/>
     <requiredrole interface="//@interface.2" name="DBCache-AudioDB"/>
     <providedrole interface="//@interface.2" name="DBCache-AudioDB"/>
   </component>
   <component name="DigitalWatermarking">
+    <service correspondingSignatures="//@interface.1/@signature.0"/>
     <providedrole interface="//@interface.1" name="DigitalWatermarking-Sound"/>
   </component>
   <component name="PoolingAudioDB">
+    <service correspondingSignatures="//@interface.2/@signature.0"/>
+    <service correspondingSignatures="//@interface.2/@signature.1"/>
     <providedrole interface="//@interface.2" name="PoolingAudioDB-AudioDB"/>
   </component>
   <component xsi:type="componentBasedSystem:CompositeComponent" name="MediaStore">
+    <service correspondingSignatures="//@interface.3/@signature.0"/>
+    <service correspondingSignatures="//@interface.3/@signature.1"/>
     <requiredrole interface="//@interface.2" name="MediaStore-AudioDB"/>
     <providedrole interface="//@interface.3" name="MediaStore-MediaStore"/>
     <delegationconnector role="//@component.1/@providedrole //@component.5/@providedrole" name="MediaStore-Provided"/>

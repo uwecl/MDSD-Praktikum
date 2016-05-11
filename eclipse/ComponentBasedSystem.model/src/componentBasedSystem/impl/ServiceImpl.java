@@ -5,11 +5,12 @@ package componentBasedSystem.impl;
 import componentBasedSystem.ComponentBasedSystemPackage;
 import componentBasedSystem.Service;
 
-import org.eclipse.emf.common.notify.Notification;
+import componentBasedSystem.Signature;
+import java.util.Collection;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,30 +20,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link componentBasedSystem.impl.ServiceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.ServiceImpl#getCorrespondingSignatures <em>Corresponding Signatures</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ServiceImpl extends MinimalEObjectImpl.Container implements Service {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getCorrespondingSignatures() <em>Corresponding Signatures</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getCorrespondingSignatures()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
+	protected EList<Signature> correspondingSignatures;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -68,20 +60,11 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.SERVICE__NAME, oldName, name));
+	public EList<Signature> getCorrespondingSignatures() {
+		if (correspondingSignatures == null) {
+			correspondingSignatures = new EObjectResolvingEList<Signature>(Signature.class, this, ComponentBasedSystemPackage.SERVICE__CORRESPONDING_SIGNATURES);
+		}
+		return correspondingSignatures;
 	}
 
 	/**
@@ -92,8 +75,8 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ComponentBasedSystemPackage.SERVICE__NAME:
-				return getName();
+			case ComponentBasedSystemPackage.SERVICE__CORRESPONDING_SIGNATURES:
+				return getCorrespondingSignatures();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -103,11 +86,13 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ComponentBasedSystemPackage.SERVICE__NAME:
-				setName((String)newValue);
+			case ComponentBasedSystemPackage.SERVICE__CORRESPONDING_SIGNATURES:
+				getCorrespondingSignatures().clear();
+				getCorrespondingSignatures().addAll((Collection<? extends Signature>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -121,8 +106,8 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ComponentBasedSystemPackage.SERVICE__NAME:
-				setName(NAME_EDEFAULT);
+			case ComponentBasedSystemPackage.SERVICE__CORRESPONDING_SIGNATURES:
+				getCorrespondingSignatures().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -136,26 +121,10 @@ public class ServiceImpl extends MinimalEObjectImpl.Container implements Service
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ComponentBasedSystemPackage.SERVICE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case ComponentBasedSystemPackage.SERVICE__CORRESPONDING_SIGNATURES:
+				return correspondingSignatures != null && !correspondingSignatures.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ServiceImpl

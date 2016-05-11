@@ -289,10 +289,6 @@
           <children xmi:type="notation:Node" xmi:id="_A0jUoBeGEeax85NolwXomA" type="2003" element="_AyllwBeGEeax85NolwXomA">
             <children xmi:type="notation:Node" xmi:id="_A0lw4BeGEeax85NolwXomA" type="5007"/>
             <children xmi:type="notation:Node" xmi:id="_A0m_ABeGEeax85NolwXomA" type="7004">
-              <children xmi:type="notation:Node" xmi:id="_P07HEBeHEeax85NolwXomA" type="3010" element="_PzotoBeHEeax85NolwXomA">
-                <styles xmi:type="notation:FontStyle" xmi:id="_P07HEReHEeax85NolwXomA" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_P07HEheHEeax85NolwXomA"/>
-              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_A0m_AReGEeax85NolwXomA"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_A0m_AheGEeax85NolwXomA"/>
             </children>
@@ -1334,14 +1330,6 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_PzotoBeHEeax85NolwXomA" name="name : EString" tooltipText="">
-          <target xmi:type="ecore:EAttribute" href="componentBasedSystem.ecore#//Service/name"/>
-          <semanticElements xmi:type="ecore:EAttribute" href="componentBasedSystem.ecore#//Service/name"/>
-          <ownedStyle xmi:type="diagram:BundledImage" xmi:id="_RO7m8BeHEeax85NolwXomA" labelAlignment="LEFT">
-            <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
-        </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_VmR3IBeGEeax85NolwXomA" name="[1..*] service" sourceNode="_58pqYAydEeaG_-j8ES1r6g" targetNode="_AyllwBeGEeax85NolwXomA">
         <target xmi:type="ecore:EReference" href="componentBasedSystem.ecore#//Component/service"/>

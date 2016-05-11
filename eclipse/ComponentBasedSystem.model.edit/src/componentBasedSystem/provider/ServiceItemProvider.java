@@ -4,7 +4,6 @@ package componentBasedSystem.provider;
 
 
 import componentBasedSystem.ComponentBasedSystemPackage;
-import componentBasedSystem.Service;
 import java.util.Collection;
 import java.util.List;
 
@@ -20,9 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link componentBasedSystem.Service} object.
@@ -59,29 +56,29 @@ public class ServiceItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addCorrespondingSignaturesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Corresponding Signatures feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addCorrespondingSignaturesPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Service_name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Service_name_feature", "_UI_Service_type"),
-				 ComponentBasedSystemPackage.Literals.SERVICE__NAME,
+				 getString("_UI_Service_correspondingSignatures_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Service_correspondingSignatures_feature", "_UI_Service_type"),
+				 ComponentBasedSystemPackage.Literals.SERVICE__CORRESPONDING_SIGNATURES,
 				 true,
 				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 true,
+				 null,
 				 null,
 				 null));
 	}
@@ -105,10 +102,7 @@ public class ServiceItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Service)object).getName();
-		return label == null || label.length() == 0 ?
-			getString("_UI_Service_type") :
-			getString("_UI_Service_type") + " " + label;
+		return getString("_UI_Service_type");
 	}
 	
 
@@ -122,12 +116,6 @@ public class ServiceItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
-
-		switch (notification.getFeatureID(Service.class)) {
-			case ComponentBasedSystemPackage.SERVICE__NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-		}
 		super.notifyChanged(notification);
 	}
 
