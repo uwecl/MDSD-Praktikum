@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <componentBasedSystem:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem">
   <interface name="HTTP">
-    <signature name="HTTPDownload"/>
-    <signature name="HTTPUpload"/>
+    <signature name="HTTPDownload">
+      <returntype href="assembly.componentbasedsystem#//@type.0"/>
+    </signature>
+    <signature name="HTTPUpload">
+      <returntype href="assembly.componentbasedsystem#//@type.0"/>
+    </signature>
   </interface>
   <interface name="Sound">
-    <signature name="watermark"/>
+    <signature name="watermark">
+      <returntype href="assembly.componentbasedsystem#//@type.0"/>
+    </signature>
   </interface>
   <interface name="AudioDB">
-    <signature name="queryDB"/>
-    <signature name="addFile()"/>
+    <signature name="queryDB">
+      <returntype href="assembly.componentbasedsystem#//@type.0"/>
+    </signature>
+    <signature name="addFile()">
+      <returntype href="assembly.componentbasedsystem#//@type.0"/>
+    </signature>
   </interface>
   <interface name="MediaStore">
-    <signature name="download"/>
-    <signature name="upload"/>
+    <signature name="download">
+      <returntype href="assembly.componentbasedsystem#//@type.0"/>
+    </signature>
+    <signature name="upload">
+      <returntype href="assembly.componentbasedsystem#//@type.0"/>
+    </signature>
   </interface>
   <component name="WebGUI" provided="//@interface.0" required="//@interface.3"/>
   <component name="MediaManager" provided="//@interface.3" required="//@interface.1 //@interface.2"/>

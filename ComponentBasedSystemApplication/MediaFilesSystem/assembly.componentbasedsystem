@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<componentBasedSystem:ComponentBasedSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem">
+<componentBasedSystem:ComponentBasedSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem" xmlns:dataTypes="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/dataTypes">
   <assemblycontext name="WebGUI">
     <component href="repository.componentbasedsystem#//@component.0"/>
   </assemblycontext>
@@ -18,4 +18,5 @@
   <assemblycontext name="PoolingAudioDB">
     <component href="repository.componentbasedsystem#//@component.4"/>
   </assemblycontext>
+  <type xsi:type="dataTypes:Void" name="void"/>
 </componentBasedSystem:ComponentBasedSystem>
