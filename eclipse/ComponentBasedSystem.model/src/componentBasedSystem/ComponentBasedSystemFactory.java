@@ -139,6 +139,15 @@ public interface ComponentBasedSystemFactory extends EFactory {
 	Repository createRepository();
 
 	/**
+	 * Returns a new object of class '<em>Allocation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Allocation</em>'.
+	 * @generated
+	 */
+	Allocation createAllocation();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

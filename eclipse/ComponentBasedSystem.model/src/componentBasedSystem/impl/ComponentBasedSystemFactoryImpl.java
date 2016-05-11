@@ -69,6 +69,7 @@ public class ComponentBasedSystemFactoryImpl extends EFactoryImpl implements Com
 			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR: return createDelegationConnector();
 			case ComponentBasedSystemPackage.ENVIRONMENT: return createEnvironment();
 			case ComponentBasedSystemPackage.REPOSITORY: return createRepository();
+			case ComponentBasedSystemPackage.ALLOCATION: return createAllocation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -202,6 +203,16 @@ public class ComponentBasedSystemFactoryImpl extends EFactoryImpl implements Com
 	public Repository createRepository() {
 		RepositoryImpl repository = new RepositoryImpl();
 		return repository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Allocation createAllocation() {
+		AllocationImpl allocation = new AllocationImpl();
+		return allocation;
 	}
 
 	/**

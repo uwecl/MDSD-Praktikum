@@ -61,6 +61,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Repository/interface"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Repository/component"/>
     </genClasses>
+    <genClasses ecoreClass="componentBasedSystem.ecore#//Allocation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Allocation/allocationcontext"/>
+    </genClasses>
     <nestedGenPackages prefix="DataTypes" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#//dataTypes">
       <genEnums typeSafeEnumCompatible="false" ecoreEnum="componentBasedSystem.ecore#//dataTypes/simpleTypes">
         <genEnumLiterals ecoreEnumLiteral="componentBasedSystem.ecore#//dataTypes/simpleTypes/int"/>

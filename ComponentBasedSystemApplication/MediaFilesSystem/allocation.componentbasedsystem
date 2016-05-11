@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<componentBasedSystem:AllocationContext xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem"/>
+<componentBasedSystem:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem">
+  <allocationcontext/>
+</componentBasedSystem:Allocation>

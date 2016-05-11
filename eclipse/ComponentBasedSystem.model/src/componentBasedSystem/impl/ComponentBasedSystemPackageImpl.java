@@ -2,6 +2,7 @@
  */
 package componentBasedSystem.impl;
 
+import componentBasedSystem.Allocation;
 import componentBasedSystem.AllocationContext;
 import componentBasedSystem.AssemblyContext;
 import componentBasedSystem.Component;
@@ -133,6 +134,13 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * @generated
 	 */
 	private EClass repositoryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass allocationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -589,6 +597,24 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getAllocation() {
+		return allocationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAllocation_Allocationcontext() {
+		return (EReference)allocationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ComponentBasedSystemFactory getComponentBasedSystemFactory() {
 		return (ComponentBasedSystemFactory)getEFactoryInstance();
 	}
@@ -666,6 +692,9 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		repositoryEClass = createEClass(REPOSITORY);
 		createEReference(repositoryEClass, REPOSITORY__INTERFACE);
 		createEReference(repositoryEClass, REPOSITORY__COMPONENT);
+
+		allocationEClass = createEClass(ALLOCATION);
+		createEReference(allocationEClass, ALLOCATION__ALLOCATIONCONTEXT);
 	}
 
 	/**
@@ -763,6 +792,9 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEClass(repositoryEClass, Repository.class, "Repository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRepository_Interface(), this.getInterface(), null, "interface", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRepository_Component(), this.getComponent(), null, "component", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(allocationEClass, Allocation.class, "Allocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getAllocation_Allocationcontext(), this.getAllocationContext(), null, "allocationcontext", null, 1, -1, Allocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

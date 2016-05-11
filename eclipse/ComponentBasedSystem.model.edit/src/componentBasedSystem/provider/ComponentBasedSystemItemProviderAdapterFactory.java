@@ -371,6 +371,29 @@ public class ComponentBasedSystemItemProviderAdapterFactory extends ComponentBas
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link componentBasedSystem.Allocation} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AllocationItemProvider allocationItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link componentBasedSystem.Allocation}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAllocationAdapter() {
+		if (allocationItemProvider == null) {
+			allocationItemProvider = new AllocationItemProvider(this);
+		}
+
+		return allocationItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -482,6 +505,7 @@ public class ComponentBasedSystemItemProviderAdapterFactory extends ComponentBas
 		if (delegationConnectorItemProvider != null) delegationConnectorItemProvider.dispose();
 		if (environmentItemProvider != null) environmentItemProvider.dispose();
 		if (repositoryItemProvider != null) repositoryItemProvider.dispose();
+		if (allocationItemProvider != null) allocationItemProvider.dispose();
 	}
 
 }

@@ -719,6 +719,44 @@ public interface ComponentBasedSystemPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link componentBasedSystem.impl.AllocationImpl <em>Allocation</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see componentBasedSystem.impl.AllocationImpl
+	 * @see componentBasedSystem.impl.ComponentBasedSystemPackageImpl#getAllocation()
+	 * @generated
+	 */
+	int ALLOCATION = 13;
+
+	/**
+	 * The feature id for the '<em><b>Allocationcontext</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATION__ALLOCATIONCONTEXT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Allocation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Allocation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ALLOCATION_OPERATION_COUNT = 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.ComponentBasedSystem <em>Component Based System</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1168,6 +1206,27 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getRepository_Component();
 
 	/**
+	 * Returns the meta object for class '{@link componentBasedSystem.Allocation <em>Allocation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Allocation</em>'.
+	 * @see componentBasedSystem.Allocation
+	 * @generated
+	 */
+	EClass getAllocation();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.Allocation#getAllocationcontext <em>Allocationcontext</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Allocationcontext</em>'.
+	 * @see componentBasedSystem.Allocation#getAllocationcontext()
+	 * @see #getAllocation()
+	 * @generated
+	 */
+	EReference getAllocation_Allocationcontext();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1551,6 +1610,24 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REPOSITORY__COMPONENT = eINSTANCE.getRepository_Component();
+
+		/**
+		 * The meta object literal for the '{@link componentBasedSystem.impl.AllocationImpl <em>Allocation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see componentBasedSystem.impl.AllocationImpl
+		 * @see componentBasedSystem.impl.ComponentBasedSystemPackageImpl#getAllocation()
+		 * @generated
+		 */
+		EClass ALLOCATION = eINSTANCE.getAllocation();
+
+		/**
+		 * The meta object literal for the '<em><b>Allocationcontext</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ALLOCATION__ALLOCATIONCONTEXT = eINSTANCE.getAllocation_Allocationcontext();
 
 	}
 
