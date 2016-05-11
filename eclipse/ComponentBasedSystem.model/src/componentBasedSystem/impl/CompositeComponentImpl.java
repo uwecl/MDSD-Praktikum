@@ -6,6 +6,7 @@ import componentBasedSystem.AssemblyContext;
 import componentBasedSystem.ComponentBasedSystemPackage;
 import componentBasedSystem.CompositeComponent;
 
+import componentBasedSystem.DelegationConnector;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -27,6 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link componentBasedSystem.impl.CompositeComponentImpl#getAssemblycontext <em>Assemblycontext</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.CompositeComponentImpl#getDelegationconnector <em>Delegationconnector</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,6 +43,16 @@ public class CompositeComponentImpl extends ComponentImpl implements CompositeCo
 	 * @ordered
 	 */
 	protected EList<AssemblyContext> assemblycontext;
+
+	/**
+	 * The cached value of the '{@link #getDelegationconnector() <em>Delegationconnector</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDelegationconnector()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DelegationConnector> delegationconnector;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,11 +90,25 @@ public class CompositeComponentImpl extends ComponentImpl implements CompositeCo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<DelegationConnector> getDelegationconnector() {
+		if (delegationconnector == null) {
+			delegationconnector = new EObjectContainmentEList<DelegationConnector>(DelegationConnector.class, this, ComponentBasedSystemPackage.COMPOSITE_COMPONENT__DELEGATIONCONNECTOR);
+		}
+		return delegationconnector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__ASSEMBLYCONTEXT:
 				return ((InternalEList<?>)getAssemblycontext()).basicRemove(otherEnd, msgs);
+			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__DELEGATIONCONNECTOR:
+				return ((InternalEList<?>)getDelegationconnector()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -97,6 +123,8 @@ public class CompositeComponentImpl extends ComponentImpl implements CompositeCo
 		switch (featureID) {
 			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__ASSEMBLYCONTEXT:
 				return getAssemblycontext();
+			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__DELEGATIONCONNECTOR:
+				return getDelegationconnector();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,6 +142,10 @@ public class CompositeComponentImpl extends ComponentImpl implements CompositeCo
 				getAssemblycontext().clear();
 				getAssemblycontext().addAll((Collection<? extends AssemblyContext>)newValue);
 				return;
+			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__DELEGATIONCONNECTOR:
+				getDelegationconnector().clear();
+				getDelegationconnector().addAll((Collection<? extends DelegationConnector>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -129,6 +161,9 @@ public class CompositeComponentImpl extends ComponentImpl implements CompositeCo
 			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__ASSEMBLYCONTEXT:
 				getAssemblycontext().clear();
 				return;
+			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__DELEGATIONCONNECTOR:
+				getDelegationconnector().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -143,6 +178,8 @@ public class CompositeComponentImpl extends ComponentImpl implements CompositeCo
 		switch (featureID) {
 			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__ASSEMBLYCONTEXT:
 				return assemblycontext != null && !assemblycontext.isEmpty();
+			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__DELEGATIONCONNECTOR:
+				return delegationconnector != null && !delegationconnector.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

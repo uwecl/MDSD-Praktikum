@@ -21,6 +21,7 @@ import componentBasedSystem.roles.Role;
 import componentBasedSystem.roles.RolesFactory;
 import componentBasedSystem.roles.RolesPackage;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -157,6 +158,15 @@ public class RolesPackageImpl extends EPackageImpl implements RolesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getRole_Name() {
+		return (EAttribute)roleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRequiredRole() {
 		return requiredRoleEClass;
 	}
@@ -227,6 +237,7 @@ public class RolesPackageImpl extends EPackageImpl implements RolesPackage {
 		// Create classes and their features
 		roleEClass = createEClass(ROLE);
 		createEReference(roleEClass, ROLE__INTERFACE);
+		createEAttribute(roleEClass, ROLE__NAME);
 
 		requiredRoleEClass = createEClass(REQUIRED_ROLE);
 
@@ -274,6 +285,7 @@ public class RolesPackageImpl extends EPackageImpl implements RolesPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(roleEClass, Role.class, "Role", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRole_Interface(), theComponentBasedSystemPackage.getInterface(), null, "interface", null, 1, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRole_Name(), ecorePackage.getEString(), "name", null, 0, 1, Role.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requiredRoleEClass, RequiredRole.class, "RequiredRole", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

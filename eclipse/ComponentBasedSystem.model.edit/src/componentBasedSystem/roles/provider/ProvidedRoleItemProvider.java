@@ -3,6 +3,7 @@
 package componentBasedSystem.roles.provider;
 
 
+import componentBasedSystem.roles.ProvidedRole;
 import java.util.Collection;
 import java.util.List;
 
@@ -62,7 +63,10 @@ public class ProvidedRoleItemProvider extends RoleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ProvidedRole_type");
+		String label = ((ProvidedRole)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ProvidedRole_type") :
+			getString("_UI_ProvidedRole_type") + " " + label;
 	}
 	
 

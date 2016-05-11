@@ -5,6 +5,7 @@ package componentBasedSystem.roles.provider;
 
 import componentBasedSystem.provider.ComponentBasedSystemEditPlugin;
 
+import componentBasedSystem.roles.Role;
 import componentBasedSystem.roles.RolesPackage;
 import java.util.Collection;
 import java.util.List;
@@ -21,7 +22,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link componentBasedSystem.roles.Role} object.
@@ -59,6 +62,7 @@ public class RoleItemProvider
 			super.getPropertyDescriptors(object);
 
 			addInterfacePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -86,6 +90,28 @@ public class RoleItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Role_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Role_name_feature", "_UI_Role_type"),
+				 RolesPackage.Literals.ROLE__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns Role.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -104,7 +130,10 @@ public class RoleItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Role_type");
+		String label = ((Role)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Role_type") :
+			getString("_UI_Role_type") + " " + label;
 	}
 	
 
@@ -118,6 +147,12 @@ public class RoleItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(Role.class)) {
+			case RolesPackage.ROLE__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

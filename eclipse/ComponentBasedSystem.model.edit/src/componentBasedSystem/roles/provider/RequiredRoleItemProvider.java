@@ -3,6 +3,7 @@
 package componentBasedSystem.roles.provider;
 
 
+import componentBasedSystem.roles.RequiredRole;
 import java.util.Collection;
 import java.util.List;
 
@@ -62,7 +63,10 @@ public class RequiredRoleItemProvider extends RoleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_RequiredRole_type");
+		String label = ((RequiredRole)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_RequiredRole_type") :
+			getString("_UI_RequiredRole_type") + " " + label;
 	}
 	
 

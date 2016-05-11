@@ -304,13 +304,22 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPOSITE_COMPONENT__ASSEMBLYCONTEXT = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Delegationconnector</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSITE_COMPONENT__DELEGATIONCONNECTOR = COMPONENT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Composite Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSITE_COMPONENT_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
+	int COMPOSITE_COMPONENT_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Composite Component</em>' class.
@@ -608,7 +617,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int DELEGATION_CONNECTOR = 10;
 
 	/**
-	 * The feature id for the '<em><b>Role</b></em>' reference.
+	 * The feature id for the '<em><b>Role</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -617,13 +626,13 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int DELEGATION_CONNECTOR__ROLE = 0;
 
 	/**
-	 * The feature id for the '<em><b>Interface</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DELEGATION_CONNECTOR__INTERFACE = 1;
+	int DELEGATION_CONNECTOR__NAME = 1;
 
 	/**
 	 * The number of structural features of the '<em>Delegation Connector</em>' class.
@@ -985,6 +994,17 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getCompositeComponent_Assemblycontext();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.CompositeComponent#getDelegationconnector <em>Delegationconnector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Delegationconnector</em>'.
+	 * @see componentBasedSystem.CompositeComponent#getDelegationconnector()
+	 * @see #getCompositeComponent()
+	 * @generated
+	 */
+	EReference getCompositeComponent_Delegationconnector();
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.Container <em>Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1187,10 +1207,10 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EClass getDelegationConnector();
 
 	/**
-	 * Returns the meta object for the reference '{@link componentBasedSystem.DelegationConnector#getRole <em>Role</em>}'.
+	 * Returns the meta object for the reference list '{@link componentBasedSystem.DelegationConnector#getRole <em>Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Role</em>'.
+	 * @return the meta object for the reference list '<em>Role</em>'.
 	 * @see componentBasedSystem.DelegationConnector#getRole()
 	 * @see #getDelegationConnector()
 	 * @generated
@@ -1198,15 +1218,15 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getDelegationConnector_Role();
 
 	/**
-	 * Returns the meta object for the reference '{@link componentBasedSystem.DelegationConnector#getInterface <em>Interface</em>}'.
+	 * Returns the meta object for the attribute '{@link componentBasedSystem.DelegationConnector#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Interface</em>'.
-	 * @see componentBasedSystem.DelegationConnector#getInterface()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see componentBasedSystem.DelegationConnector#getName()
 	 * @see #getDelegationConnector()
 	 * @generated
 	 */
-	EReference getDelegationConnector_Interface();
+	EAttribute getDelegationConnector_Name();
 
 	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.Environment <em>Environment</em>}'.
@@ -1474,6 +1494,14 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference COMPOSITE_COMPONENT__ASSEMBLYCONTEXT = eINSTANCE.getCompositeComponent_Assemblycontext();
 
 		/**
+		 * The meta object literal for the '<em><b>Delegationconnector</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSITE_COMPONENT__DELEGATIONCONNECTOR = eINSTANCE.getCompositeComponent_Delegationconnector();
+
+		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.ContainerImpl <em>Container</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1640,7 +1668,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EClass DELEGATION_CONNECTOR = eINSTANCE.getDelegationConnector();
 
 		/**
-		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Role</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1648,12 +1676,12 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference DELEGATION_CONNECTOR__ROLE = eINSTANCE.getDelegationConnector_Role();
 
 		/**
-		 * The meta object literal for the '<em><b>Interface</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DELEGATION_CONNECTOR__INTERFACE = eINSTANCE.getDelegationConnector_Interface();
+		EAttribute DELEGATION_CONNECTOR__NAME = eINSTANCE.getDelegationConnector_Name();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.EnvironmentImpl <em>Environment</em>}' class.

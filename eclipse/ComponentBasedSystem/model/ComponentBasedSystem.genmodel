@@ -25,6 +25,7 @@
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//CompositeComponent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//CompositeComponent/assemblycontext"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//CompositeComponent/delegationconnector"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Container">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Container/name"/>
@@ -52,7 +53,7 @@
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//DelegationConnector">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DelegationConnector/role"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//DelegationConnector/interface"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//DelegationConnector/name"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Environment">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Environment/container"/>
@@ -106,6 +107,7 @@
       <genClasses ecoreClass="componentBasedSystem.ecore#//roles/Role">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference componentBasedSystem.ecore#//roles/Role/interface"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//roles/Role/name"/>
       </genClasses>
       <genClasses ecoreClass="componentBasedSystem.ecore#//roles/RequiredRole"/>
       <genClasses ecoreClass="componentBasedSystem.ecore#//roles/ProvidedRole"/>

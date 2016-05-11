@@ -4,17 +4,15 @@ package componentBasedSystem.impl;
 
 import componentBasedSystem.ComponentBasedSystemPackage;
 import componentBasedSystem.DelegationConnector;
-import componentBasedSystem.Interface;
-
 import componentBasedSystem.roles.Role;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,31 +23,40 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link componentBasedSystem.impl.DelegationConnectorImpl#getRole <em>Role</em>}</li>
- *   <li>{@link componentBasedSystem.impl.DelegationConnectorImpl#getInterface <em>Interface</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.DelegationConnectorImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DelegationConnectorImpl extends MinimalEObjectImpl.Container implements DelegationConnector {
 	/**
-	 * The cached value of the '{@link #getRole() <em>Role</em>}' reference.
+	 * The cached value of the '{@link #getRole() <em>Role</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getRole()
 	 * @generated
 	 * @ordered
 	 */
-	protected Role role;
+	protected EList<Role> role;
 
 	/**
-	 * The cached value of the '{@link #getInterface() <em>Interface</em>}' reference.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInterface()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected Interface interface_;
+	protected static final String NAME_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,14 +82,9 @@ public class DelegationConnectorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Role getRole() {
-		if (role != null && role.eIsProxy()) {
-			InternalEObject oldRole = (InternalEObject)role;
-			role = (Role)eResolveProxy(oldRole);
-			if (role != oldRole) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentBasedSystemPackage.DELEGATION_CONNECTOR__ROLE, oldRole, role));
-			}
+	public EList<Role> getRole() {
+		if (role == null) {
+			role = new EObjectResolvingEList<Role>(Role.class, this, ComponentBasedSystemPackage.DELEGATION_CONNECTOR__ROLE);
 		}
 		return role;
 	}
@@ -92,8 +94,8 @@ public class DelegationConnectorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Role basicGetRole() {
-		return role;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -101,49 +103,11 @@ public class DelegationConnectorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRole(Role newRole) {
-		Role oldRole = role;
-		role = newRole;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.DELEGATION_CONNECTOR__ROLE, oldRole, role));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Interface getInterface() {
-		if (interface_ != null && interface_.eIsProxy()) {
-			InternalEObject oldInterface = (InternalEObject)interface_;
-			interface_ = (Interface)eResolveProxy(oldInterface);
-			if (interface_ != oldInterface) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentBasedSystemPackage.DELEGATION_CONNECTOR__INTERFACE, oldInterface, interface_));
-			}
-		}
-		return interface_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Interface basicGetInterface() {
-		return interface_;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInterface(Interface newInterface) {
-		Interface oldInterface = interface_;
-		interface_ = newInterface;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.DELEGATION_CONNECTOR__INTERFACE, oldInterface, interface_));
+			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.DELEGATION_CONNECTOR__NAME, oldName, name));
 	}
 
 	/**
@@ -155,11 +119,9 @@ public class DelegationConnectorImpl extends MinimalEObjectImpl.Container implem
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__ROLE:
-				if (resolve) return getRole();
-				return basicGetRole();
-			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__INTERFACE:
-				if (resolve) return getInterface();
-				return basicGetInterface();
+				return getRole();
+			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -169,14 +131,16 @@ public class DelegationConnectorImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__ROLE:
-				setRole((Role)newValue);
+				getRole().clear();
+				getRole().addAll((Collection<? extends Role>)newValue);
 				return;
-			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__INTERFACE:
-				setInterface((Interface)newValue);
+			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -191,10 +155,10 @@ public class DelegationConnectorImpl extends MinimalEObjectImpl.Container implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__ROLE:
-				setRole((Role)null);
+				getRole().clear();
 				return;
-			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__INTERFACE:
-				setInterface((Interface)null);
+			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -209,11 +173,27 @@ public class DelegationConnectorImpl extends MinimalEObjectImpl.Container implem
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__ROLE:
-				return role != null;
-			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__INTERFACE:
-				return interface_ != null;
+				return role != null && !role.isEmpty();
+			case ComponentBasedSystemPackage.DELEGATION_CONNECTOR__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //DelegationConnectorImpl

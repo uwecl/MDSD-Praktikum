@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link componentBasedSystem.CompositeComponent#getAssemblycontext <em>Assemblycontext</em>}</li>
+ *   <li>{@link componentBasedSystem.CompositeComponent#getDelegationconnector <em>Delegationconnector</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getCompositeComponent()
@@ -36,5 +37,21 @@ public interface CompositeComponent extends Component {
 	 * @generated
 	 */
 	EList<AssemblyContext> getAssemblycontext();
+
+	/**
+	 * Returns the value of the '<em><b>Delegationconnector</b></em>' containment reference list.
+	 * The list contents are of type {@link componentBasedSystem.DelegationConnector}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Delegationconnector</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Delegationconnector</em>' containment reference list.
+	 * @see componentBasedSystem.ComponentBasedSystemPackage#getCompositeComponent_Delegationconnector()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<DelegationConnector> getDelegationconnector();
 
 } // CompositeComponent

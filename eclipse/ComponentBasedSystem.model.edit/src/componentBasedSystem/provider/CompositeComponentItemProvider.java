@@ -63,6 +63,7 @@ public class CompositeComponentItemProvider extends ComponentItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPOSITE_COMPONENT__ASSEMBLYCONTEXT);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPOSITE_COMPONENT__DELEGATIONCONNECTOR);
 		}
 		return childrenFeatures;
 	}
@@ -119,6 +120,7 @@ public class CompositeComponentItemProvider extends ComponentItemProvider {
 
 		switch (notification.getFeatureID(CompositeComponent.class)) {
 			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__ASSEMBLYCONTEXT:
+			case ComponentBasedSystemPackage.COMPOSITE_COMPONENT__DELEGATIONCONNECTOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -140,6 +142,11 @@ public class CompositeComponentItemProvider extends ComponentItemProvider {
 			(createChildParameter
 				(ComponentBasedSystemPackage.Literals.COMPOSITE_COMPONENT__ASSEMBLYCONTEXT,
 				 ComponentBasedSystemFactory.eINSTANCE.createAssemblyContext()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPOSITE_COMPONENT__DELEGATIONCONNECTOR,
+				 ComponentBasedSystemFactory.eINSTANCE.createDelegationConnector()));
 	}
 
 }

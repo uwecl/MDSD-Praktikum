@@ -2,6 +2,7 @@
  */
 package componentBasedSystem.roles;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -75,13 +76,22 @@ public interface RolesPackage extends EPackage {
 	int ROLE__INTERFACE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__NAME = 1;
+
+	/**
 	 * The number of structural features of the '<em>Role</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ROLE_FEATURE_COUNT = 1;
+	int ROLE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Role</em>' class.
@@ -110,6 +120,15 @@ public interface RolesPackage extends EPackage {
 	 * @ordered
 	 */
 	int REQUIRED_ROLE__INTERFACE = ROLE__INTERFACE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIRED_ROLE__NAME = ROLE__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Required Role</em>' class.
@@ -147,6 +166,15 @@ public interface RolesPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROVIDED_ROLE__INTERFACE = ROLE__INTERFACE;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROVIDED_ROLE__NAME = ROLE__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Provided Role</em>' class.
@@ -233,6 +261,17 @@ public interface RolesPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRole_Interface();
+
+	/**
+	 * Returns the meta object for the attribute '{@link componentBasedSystem.roles.Role#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see componentBasedSystem.roles.Role#getName()
+	 * @see #getRole()
+	 * @generated
+	 */
+	EAttribute getRole_Name();
 
 	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.roles.RequiredRole <em>Required Role</em>}'.
@@ -326,6 +365,14 @@ public interface RolesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ROLE__INTERFACE = eINSTANCE.getRole_Interface();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROLE__NAME = eINSTANCE.getRole_Name();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.roles.impl.RequiredRoleImpl <em>Required Role</em>}' class.

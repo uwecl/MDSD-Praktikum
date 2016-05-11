@@ -371,6 +371,15 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getCompositeComponent_Delegationconnector() {
+		return (EReference)compositeComponentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getContainer() {
 		return containerEClass;
 	}
@@ -551,8 +560,8 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDelegationConnector_Interface() {
-		return (EReference)delegationConnectorEClass.getEStructuralFeatures().get(1);
+	public EAttribute getDelegationConnector_Name() {
+		return (EAttribute)delegationConnectorEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -692,6 +701,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 
 		compositeComponentEClass = createEClass(COMPOSITE_COMPONENT);
 		createEReference(compositeComponentEClass, COMPOSITE_COMPONENT__ASSEMBLYCONTEXT);
+		createEReference(compositeComponentEClass, COMPOSITE_COMPONENT__DELEGATIONCONNECTOR);
 
 		containerEClass = createEClass(CONTAINER);
 		createEAttribute(containerEClass, CONTAINER__NAME);
@@ -719,7 +729,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 
 		delegationConnectorEClass = createEClass(DELEGATION_CONNECTOR);
 		createEReference(delegationConnectorEClass, DELEGATION_CONNECTOR__ROLE);
-		createEReference(delegationConnectorEClass, DELEGATION_CONNECTOR__INTERFACE);
+		createEAttribute(delegationConnectorEClass, DELEGATION_CONNECTOR__NAME);
 
 		environmentEClass = createEClass(ENVIRONMENT);
 		createEReference(environmentEClass, ENVIRONMENT__CONTAINER);
@@ -796,6 +806,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 
 		initEClass(compositeComponentEClass, CompositeComponent.class, "CompositeComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositeComponent_Assemblycontext(), this.getAssemblyContext(), null, "assemblycontext", null, 2, -1, CompositeComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCompositeComponent_Delegationconnector(), this.getDelegationConnector(), null, "delegationconnector", null, 1, -1, CompositeComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(containerEClass, componentBasedSystem.Container.class, "Container", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getContainer_Name(), ecorePackage.getEString(), "name", null, 0, 1, componentBasedSystem.Container.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -822,8 +833,8 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEReference(getAllocationContext_Assemblycontext(), this.getAssemblyContext(), null, "assemblycontext", null, 1, 1, AllocationContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(delegationConnectorEClass, DelegationConnector.class, "DelegationConnector", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getDelegationConnector_Role(), theRolesPackage.getRole(), null, "role", null, 1, 1, DelegationConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDelegationConnector_Interface(), this.getInterface(), null, "interface", null, 1, 1, DelegationConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDelegationConnector_Role(), theRolesPackage.getRole(), null, "role", null, 2, 2, DelegationConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDelegationConnector_Name(), ecorePackage.getEString(), "name", null, 0, 1, DelegationConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(environmentEClass, Environment.class, "Environment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getEnvironment_Container(), this.getContainer(), null, "container", null, 0, -1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

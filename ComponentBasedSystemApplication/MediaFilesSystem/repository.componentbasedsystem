@@ -30,26 +30,28 @@
     </signature>
   </interface>
   <component name="WebGUI">
-    <requiredrole interface="//@interface.3"/>
-    <providedrole interface="//@interface.0"/>
+    <requiredrole interface="//@interface.3" name="WebGUI-MediaStore"/>
+    <providedrole interface="//@interface.0" name="WebGUI-HTTP"/>
   </component>
   <component name="MediaManager">
-    <requiredrole interface="//@interface.1"/>
-    <requiredrole interface="//@interface.2"/>
-    <providedrole interface="//@interface.3"/>
+    <requiredrole interface="//@interface.1" name="MediaManager-Sound"/>
+    <requiredrole interface="//@interface.2" name="MediaManager-AudioDB"/>
+    <providedrole interface="//@interface.3" name="MediaManager-MediaStore"/>
   </component>
   <component name="DBCache">
-    <requiredrole interface="//@interface.2"/>
-    <providedrole interface="//@interface.2"/>
+    <requiredrole interface="//@interface.2" name="DBCache-AudioDB"/>
+    <providedrole interface="//@interface.2" name="DBCache-AudioDB"/>
   </component>
   <component name="DigitalWatermarking">
-    <providedrole interface="//@interface.1"/>
+    <providedrole interface="//@interface.1" name="DigitalWatermarking-Sound"/>
   </component>
   <component name="PoolingAudioDB">
-    <providedrole interface="//@interface.2"/>
+    <providedrole interface="//@interface.2" name="PoolingAudioDB-AudioDB"/>
   </component>
   <component xsi:type="componentBasedSystem:CompositeComponent" name="MediaStore">
-    <requiredrole interface="//@interface.2"/>
-    <providedrole interface="//@interface.3"/>
+    <requiredrole interface="//@interface.2" name="MediaStore-AudioDB"/>
+    <providedrole interface="//@interface.3" name="MediaStore-MediaStore"/>
+    <delegationconnector role="//@component.1/@providedrole //@component.5/@providedrole" name="MediaStore-Provided"/>
+    <delegationconnector role="//@component.2/@requiredrole.0 //@component.5/@requiredrole.0" name="MediaStore-Required"/>
   </component>
 </componentBasedSystem:Repository>

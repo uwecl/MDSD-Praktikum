@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link componentBasedSystem.roles.Role#getInterface <em>Interface</em>}</li>
+ *   <li>{@link componentBasedSystem.roles.Role#getName <em>Name</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.roles.RolesPackage#getRole()
@@ -48,4 +49,30 @@ public interface Role extends EObject {
 	 * @generated
 	 */
 	void setInterface(Interface value);
+
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see componentBasedSystem.roles.RolesPackage#getRole_Name()
+	 * @model
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link componentBasedSystem.roles.Role#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
 } // Role
