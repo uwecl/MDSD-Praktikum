@@ -88,6 +88,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Service">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="correspondingSignatures"
+        lowerBound="1" upperBound="-1" eType="#//Signature"/>
   </eClassifiers>
   <eSubpackages name="dataTypes" nsURI="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/dataTypes"
       nsPrefix="dataTypes">

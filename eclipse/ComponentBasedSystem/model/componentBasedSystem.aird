@@ -732,6 +732,22 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_vRbksBecEeaxc4FLeVQTwA" id="(0.4306569343065693,0.38405797101449274)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_i__BMhecEeaxc4FLeVQTwA" id="(0.8,0.6545454545454545)"/>
           </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_-VhnQBeiEeaJgqpEazCrYg" type="4001" element="_-URqEBeiEeaJgqpEazCrYg" source="_A0jUoBeGEeax85NolwXomA" target="_8DEu4AyeEeaG_-j8ES1r6g">
+            <children xmi:type="notation:Node" xmi:id="_-ViOUBeiEeaJgqpEazCrYg" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ViOUReiEeaJgqpEazCrYg" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-Vi1YBeiEeaJgqpEazCrYg" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Vi1YReiEeaJgqpEazCrYg" x="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_-Vi1YheiEeaJgqpEazCrYg" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-Vi1YxeiEeaJgqpEazCrYg" x="170" y="29"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_-VhnQReiEeaJgqpEazCrYg" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_-VhnQheiEeaJgqpEazCrYg" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_-VhnQxeiEeaJgqpEazCrYg" points="[60, 21, 606, -120]$[60, 362, 606, 221]$[-711, 362, -165, 221]$[-711, 141, -165, 0]$[-664, 141, -118, 0]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-VjccBeiEeaJgqpEazCrYg" id="(0.0,0.7)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_-VjccReiEeaJgqpEazCrYg" id="(1.0,0.5)"/>
+          </edges>
         </data>
       </ownedAnnotationEntries>
       <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_RBV8wAyYEeaG_-j8ES1r6g" name="ComponentBasedSystem" tooltipText="" outgoingEdges="_2__2kAyeEeaG_-j8ES1r6g _YsbPMBYGEeabd-JVHEB4mQ _tO8B0BaGEeaLmKNpmXa9qA" width="12" height="10">
@@ -854,7 +870,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_8C5vwAyeEeaG_-j8ES1r6g" name="Signature" tooltipText="" outgoingEdges="_hlE7MAygEeaG_-j8ES1r6g _QO8zsBQxEea9uN1tFvK4rg" incomingEdges="_V1JJUAygEeaG_-j8ES1r6g" width="12" height="10">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_8C5vwAyeEeaG_-j8ES1r6g" name="Signature" tooltipText="" outgoingEdges="_hlE7MAygEeaG_-j8ES1r6g _QO8zsBQxEea9uN1tFvK4rg" incomingEdges="_V1JJUAygEeaG_-j8ES1r6g _-URqEBeiEeaJgqpEazCrYg" width="12" height="10">
         <target xmi:type="ecore:EClass" href="componentBasedSystem.ecore#//Signature"/>
         <semanticElements xmi:type="ecore:EClass" href="componentBasedSystem.ecore#//Signature"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1308,7 +1324,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_AyllwBeGEeax85NolwXomA" name="Service" tooltipText="" incomingEdges="_VmR3IBeGEeax85NolwXomA" width="12" height="10">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_AyllwBeGEeax85NolwXomA" name="Service" tooltipText="" outgoingEdges="_-URqEBeiEeaJgqpEazCrYg" incomingEdges="_VmR3IBeGEeax85NolwXomA" width="12" height="10">
         <target xmi:type="ecore:EClass" href="componentBasedSystem.ecore#//Service"/>
         <semanticElements xmi:type="ecore:EClass" href="componentBasedSystem.ecore#//Service"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1411,6 +1427,17 @@
             <labelFormat>bold</labelFormat>
           </centerLabelStyle>
           <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_zpcGwhecEeaxc4FLeVQTwA" labelSize="6" showIcon="false" labelColor="39,76,114"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_-URqEBeiEeaJgqpEazCrYg" name="[1..*] correspondingSignatures" sourceNode="_AyllwBeGEeax85NolwXomA" targetNode="_8C5vwAyeEeaG_-j8ES1r6g">
+        <target xmi:type="ecore:EReference" href="componentBasedSystem.ecore#//Service/correspondingSignatures"/>
+        <semanticElements xmi:type="ecore:EReference" href="componentBasedSystem.ecore#//Service/correspondingSignatures"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_EFgB0BejEeaJgqpEazCrYg" description="_SReLEAycEeaG_-j8ES1r6g" routingStyle="manhattan" strokeColor="0,0,0">
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_EFgB0RejEeaJgqpEazCrYg" showIcon="false">
+            <labelFormat>bold</labelFormat>
+          </centerLabelStyle>
+          <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_EFgB0hejEeaJgqpEazCrYg" labelSize="6" showIcon="false" labelColor="39,76,114"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
       </ownedDiagramElements>
