@@ -6,15 +6,6 @@
   <assemblycontext name="MediaStore">
     <component href="repository.componentbasedsystem#//@component.5"/>
   </assemblycontext>
-  <assemblycontext name="MediaManager">
-    <component href="repository.componentbasedsystem#//@component.1"/>
-  </assemblycontext>
-  <assemblycontext name="DBCache">
-    <component href="repository.componentbasedsystem#//@component.3"/>
-  </assemblycontext>
-  <assemblycontext name="DigitalWatermarking">
-    <component href="repository.componentbasedsystem#//@component.2"/>
-  </assemblycontext>
   <assemblycontext name="PoolingAudioDB">
     <component href="repository.componentbasedsystem#//@component.4"/>
   </assemblycontext>
