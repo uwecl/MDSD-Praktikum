@@ -2,6 +2,11 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="componentBasedSystem" nsURI="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem"
     nsPrefix="componentBasedSystem">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+    <details key="invocationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="settingDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+    <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
+  </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentBasedSystem">
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
         upperBound="-1" eType="#//Interface"/>
@@ -29,6 +34,16 @@
         eType="#//Signature" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeComponent" eSuperTypes="#//Component">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="SameInterfaceDelegated RoleCount"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Ensures that there are as many connectors as there are roles in the composite component"/>
+      </eAnnotations>
+      <details key="SameInterfaceDelegated" value="&#xA;&#x9;&#x9;self.delegationconnector->&#xA;&#x9;&#x9;forAll( d | d.role->includes(providedrole) or d.role->includesAll(requiredrole))"/>
+      <details key="RoleCount" value="&#xA;&#x9;&#x9;self.delegationconnector->size() = self.requiredrole->size() + self.providedrole->size()"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assemblycontext" lowerBound="2"
         upperBound="-1" eType="#//AssemblyContext" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="delegationconnector" lowerBound="1"
@@ -66,6 +81,16 @@
         eType="#//AssemblyContext"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DelegationConnector">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="DelegationConnectorRolesType DelegationConnectorRolesInterface"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Constraint ensures that the interface of the roles are the same"/>
+      </eAnnotations>
+      <details key="DelegationConnectorRolesType" value="&#x9;&#x9; &#xA;&#x9;&#x9;self.role->first().oclType() = self.role->last().oclType()"/>
+      <details key="DelegationConnectorRolesInterface" value="&#x9;&#x9; &#xA;&#x9;&#x9;self.role->first().interface = self.role->last().interface"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="2" upperBound="2"
         eType="#//roles/Role"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -83,6 +108,15 @@
         eType="#//Component" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Allocation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="NestedComponentAllocation"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Constraint prohibits allocation of an assemblyContext (specified in AllocationContext),&#xA;if it is allocated inside a CompositeComponent"/>
+      </eAnnotations>
+      <details key="NestedComponentAllocation" value=" &#xA;&#x9;&#x9;let composites : Collection(CompositeComponent) = &#xA;&#x9;&#x9;self.allocationcontext->select(a | a.assemblycontext.component.oclIsTypeOf(CompositeComponent)).assemblycontext.component.oclAsType(CompositeComponent)&#xA;&#x9;&#x9;in self.allocationcontext.assemblycontext->excludesAll(composites.assemblycontext)"/>
+    </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="allocationcontext" lowerBound="1"
         upperBound="-1" eType="#//AllocationContext" containment="true"/>
   </eClassifiers>
