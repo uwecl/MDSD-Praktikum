@@ -8,6 +8,7 @@ import componentBasedSystem.ComponentBasedSystemFactory;
 import componentBasedSystem.ComponentBasedSystemPackage;
 
 import componentBasedSystem.dataTypes.DataTypesFactory;
+import componentBasedSystem.roles.RolesFactory;
 import java.util.Collection;
 import java.util.List;
 
@@ -127,6 +128,7 @@ public class ComponentBasedSystemItemProvider
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR);
 		}
 		return childrenFeatures;
 	}
@@ -181,6 +183,7 @@ public class ComponentBasedSystemItemProvider
 		switch (notification.getFeatureID(ComponentBasedSystem.class)) {
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT:
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__TYPE:
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -232,6 +235,11 @@ public class ComponentBasedSystemItemProvider
 			(createChildParameter
 				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE,
 				 DataTypesFactory.eINSTANCE.createVoid()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR,
+				 RolesFactory.eINSTANCE.createAssemblyConnector()));
 	}
 
 	/**

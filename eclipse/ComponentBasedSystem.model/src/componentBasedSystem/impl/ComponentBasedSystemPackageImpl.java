@@ -272,6 +272,15 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getComponentBasedSystem_Assemblyconnector() {
+		return (EReference)componentBasedSystemEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getComponent() {
 		return componentEClass;
 	}
@@ -687,6 +696,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT);
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__ENVIRONMENT);
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__TYPE);
+		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR);
 
 		componentEClass = createEClass(COMPONENT);
 		createEAttribute(componentEClass, COMPONENT__NAME);
@@ -792,6 +802,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEReference(getComponentBasedSystem_Assemblycontext(), this.getAssemblyContext(), null, "assemblycontext", null, 0, -1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponentBasedSystem_Environment(), this.getEnvironment(), null, "environment", null, 1, 1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponentBasedSystem_Type(), theDataTypesPackage.getType(), null, "type", null, 0, -1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponentBasedSystem_Assemblyconnector(), theRolesPackage.getAssemblyConnector(), null, "assemblyconnector", null, 0, -1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

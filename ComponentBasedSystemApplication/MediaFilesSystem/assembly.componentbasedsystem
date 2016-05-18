@@ -9,5 +9,22 @@
   <assemblycontext name="PoolingAudioDB">
     <component href="repository.componentbasedsystem#//@component.4"/>
   </assemblycontext>
+  <environment href="environment.componentbasedsystem#/"/>
   <type xsi:type="dataTypes:Void" name="void"/>
+  <assemblyconnector name="MediaStore">
+    <providedrole href="repository.componentbasedsystem#//@component.2/@providedrole"/>
+    <requiredrole href="repository.componentbasedsystem#//@component.0/@requiredrole.0"/>
+  </assemblyconnector>
+  <assemblyconnector name="Sound">
+    <providedrole href="repository.componentbasedsystem#//@component.4/@providedrole"/>
+    <requiredrole href="repository.componentbasedsystem#//@component.3/@requiredrole.0"/>
+  </assemblyconnector>
+  <assemblyconnector name="AudioDB1">
+    <providedrole href="repository.componentbasedsystem#//@component.5/@providedrole"/>
+    <requiredrole href="repository.componentbasedsystem#//@component.3/@requiredrole.1"/>
+  </assemblyconnector>
+  <assemblyconnector name="AudioDB2">
+    <providedrole href="repository.componentbasedsystem#//@component.1/@providedrole"/>
+    <requiredrole href="repository.componentbasedsystem#//@component.2/@requiredrole.0"/>
+  </assemblyconnector>
 </componentBasedSystem:ComponentBasedSystem>

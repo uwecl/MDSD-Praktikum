@@ -16,6 +16,8 @@
         eType="#//Environment"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//dataTypes/Type"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyconnector" upperBound="-1"
+        eType="#//roles/AssemblyConnector" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -175,6 +177,7 @@
           eType="#//roles/ProvidedRole"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="requiredrole" lowerBound="1"
           eType="#//roles/RequiredRole"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

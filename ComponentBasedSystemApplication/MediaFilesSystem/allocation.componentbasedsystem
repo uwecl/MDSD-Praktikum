@@ -6,14 +6,10 @@
   </allocationcontext>
   <allocationcontext>
     <container href="environment.componentbasedsystem#//@container.1"/>
-    <assemblycontext href="repository.componentbasedsystem#//@component.2/@assemblycontext.1"/>
+    <assemblycontext href="assembly.componentbasedsystem#//@assemblycontext.2"/>
   </allocationcontext>
   <allocationcontext>
     <container href="environment.componentbasedsystem#//@container.0"/>
     <assemblycontext href="assembly.componentbasedsystem#//@assemblycontext.0"/>
-  </allocationcontext>
-  <allocationcontext>
-    <container href="environment.componentbasedsystem#//@container.0"/>
-    <assemblycontext href="repository.componentbasedsystem#//@component.2/@assemblycontext.1"/>
   </allocationcontext>
 </componentBasedSystem:Allocation>

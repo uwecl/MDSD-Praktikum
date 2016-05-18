@@ -9,6 +9,7 @@ import componentBasedSystem.Environment;
 import componentBasedSystem.Interface;
 
 import componentBasedSystem.dataTypes.Type;
+import componentBasedSystem.roles.AssemblyConnector;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getAssemblycontext <em>Assemblycontext</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getType <em>Type</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getAssemblyconnector <em>Assemblyconnector</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,6 +84,16 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected EList<Type> type;
+
+	/**
+	 * The cached value of the '{@link #getAssemblyconnector() <em>Assemblyconnector</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAssemblyconnector()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<AssemblyConnector> assemblyconnector;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -181,6 +193,18 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<AssemblyConnector> getAssemblyconnector() {
+		if (assemblyconnector == null) {
+			assemblyconnector = new EObjectContainmentEList<AssemblyConnector>(AssemblyConnector.class, this, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR);
+		}
+		return assemblyconnector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -188,6 +212,8 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				return ((InternalEList<?>)getAssemblycontext()).basicRemove(otherEnd, msgs);
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__TYPE:
 				return ((InternalEList<?>)getType()).basicRemove(otherEnd, msgs);
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
+				return ((InternalEList<?>)getAssemblyconnector()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -209,6 +235,8 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				return basicGetEnvironment();
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__TYPE:
 				return getType();
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
+				return getAssemblyconnector();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -237,6 +265,10 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				getType().clear();
 				getType().addAll((Collection<? extends Type>)newValue);
 				return;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
+				getAssemblyconnector().clear();
+				getAssemblyconnector().addAll((Collection<? extends AssemblyConnector>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -261,6 +293,9 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__TYPE:
 				getType().clear();
 				return;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
+				getAssemblyconnector().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -281,6 +316,8 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				return environment != null;
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__TYPE:
 				return type != null && !type.isEmpty();
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
+				return assemblyconnector != null && !assemblyconnector.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
