@@ -21,7 +21,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getDelegationConnector()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='DelegationConnectorRolesType DelegationConnectorRolesInterface'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot DelegationConnectorRolesType='\t\t \n\t\tself.role->first().oclType() = self.role->last().oclType()' DelegationConnectorRolesInterface='\t\t \n\t\tself.role->first().interface = self.role->last().interface'"
  * @generated
  */
 public interface DelegationConnector extends EObject {

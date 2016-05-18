@@ -18,7 +18,8 @@ import org.eclipse.emf.common.util.EList;
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getCompositeComponent()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='SameInterfaceDelegated RoleCount'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot SameInterfaceDelegated='\n\t\tself.delegationconnector->\n\t\tforAll( d | d.role->includes(providedrole) or d.role->includesAll(requiredrole))' RoleCount='\n\t\tself.delegationconnector->size() = self.requiredrole->size() + self.providedrole->size()'"
  * @generated
  */
 public interface CompositeComponent extends Component {

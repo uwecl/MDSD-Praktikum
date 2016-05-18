@@ -19,7 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getAllocation()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='NestedComponentAllocation'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot NestedComponentAllocation=' \n\t\tlet composites : Collection(CompositeComponent) = \n\t\tself.allocationcontext->select(a | a.assemblycontext.component.oclIsTypeOf(CompositeComponent)).assemblycontext.component.oclAsType(CompositeComponent)\n\t\tin self.allocationcontext.assemblycontext->excludesAll(composites.assemblycontext)'"
  * @generated
  */
 public interface Allocation extends EObject {

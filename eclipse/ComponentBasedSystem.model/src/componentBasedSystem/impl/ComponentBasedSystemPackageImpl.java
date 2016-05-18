@@ -31,11 +31,13 @@ import componentBasedSystem.roles.RolesPackage;
 
 import componentBasedSystem.roles.impl.RolesPackageImpl;
 
+import componentBasedSystem.util.ComponentBasedSystemValidator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
+import org.eclipse.emf.ecore.EValidator;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -212,6 +214,15 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		theDataTypesPackage.initializePackageContents();
 		theBehaviourDescriptionPackage.initializePackageContents();
 		theRolesPackage.initializePackageContents();
+
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theComponentBasedSystemPackage, 
+			 new EValidator.Descriptor() {
+				 public EValidator getEValidator() {
+					 return ComponentBasedSystemValidator.INSTANCE;
+				 }
+			 });
 
 		// Mark meta-data to indicate it can't be changed
 		theComponentBasedSystemPackage.freeze();
@@ -863,6 +874,99 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 
 		// Create resource
 		createResource(eNS_URI);
+
+		// Create annotations
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });	
+		addAnnotation
+		  (compositeComponentEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "SameInterfaceDelegated RoleCount"
+		   });	
+		addAnnotation
+		  (delegationConnectorEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "DelegationConnectorRolesType DelegationConnectorRolesInterface"
+		   });	
+		addAnnotation
+		  (allocationEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "NestedComponentAllocation"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		addAnnotation
+		  (compositeComponentEClass, 
+		   source, 
+		   new String[] {
+			 "SameInterfaceDelegated", "\n\t\tself.delegationconnector->\n\t\tforAll( d | d.role->includes(providedrole) or d.role->includesAll(requiredrole))",
+			 "RoleCount", "\n\t\tself.delegationconnector->size() = self.requiredrole->size() + self.providedrole->size()"
+		   });
+		addAnnotation
+		  (compositeComponentEClass, 
+		   new boolean[] { true },
+		   "http://www.eclipse.org/emf/2002/GenModel",
+		   new String[] {
+			 "documentation", "Ensures that there are as many connectors as there are roles in the composite component"
+		   });	
+		addAnnotation
+		  (delegationConnectorEClass, 
+		   source, 
+		   new String[] {
+			 "DelegationConnectorRolesType", "\t\t \n\t\tself.role->first().oclType() = self.role->last().oclType()",
+			 "DelegationConnectorRolesInterface", "\t\t \n\t\tself.role->first().interface = self.role->last().interface"
+		   });
+		addAnnotation
+		  (delegationConnectorEClass, 
+		   new boolean[] { true },
+		   "http://www.eclipse.org/emf/2002/GenModel",
+		   new String[] {
+			 "documentation", "Constraint ensures that the interface of the roles are the same"
+		   });	
+		addAnnotation
+		  (allocationEClass, 
+		   source, 
+		   new String[] {
+			 "NestedComponentAllocation", " \n\t\tlet composites : Collection(CompositeComponent) = \n\t\tself.allocationcontext->select(a | a.assemblycontext.component.oclIsTypeOf(CompositeComponent)).assemblycontext.component.oclAsType(CompositeComponent)\n\t\tin self.allocationcontext.assemblycontext->excludesAll(composites.assemblycontext)"
+		   });
+		addAnnotation
+		  (allocationEClass, 
+		   new boolean[] { true },
+		   "http://www.eclipse.org/emf/2002/GenModel",
+		   new String[] {
+			 "documentation", "Constraint prohibits allocation of an assemblyContext (specified in AllocationContext),\nif it is allocated inside a CompositeComponent"
+		   });
 	}
 
 } //ComponentBasedSystemPackageImpl
