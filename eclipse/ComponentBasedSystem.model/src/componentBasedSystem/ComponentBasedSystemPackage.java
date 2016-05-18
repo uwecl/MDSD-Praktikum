@@ -103,13 +103,22 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPONENT_BASED_SYSTEM__TYPE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Assemblyconnector</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR = 4;
+
+	/**
 	 * The number of structural features of the '<em>Component Based System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM_FEATURE_COUNT = 4;
+	int COMPONENT_BASED_SYSTEM_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Component Based System</em>' class.
@@ -876,6 +885,17 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getComponentBasedSystem_Type();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.ComponentBasedSystem#getAssemblyconnector <em>Assemblyconnector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Assemblyconnector</em>'.
+	 * @see componentBasedSystem.ComponentBasedSystem#getAssemblyconnector()
+	 * @see #getComponentBasedSystem()
+	 * @generated
+	 */
+	EReference getComponentBasedSystem_Assemblyconnector();
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.Component <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1398,6 +1418,14 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT_BASED_SYSTEM__TYPE = eINSTANCE.getComponentBasedSystem_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Assemblyconnector</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR = eINSTANCE.getComponentBasedSystem_Assemblyconnector();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.ComponentImpl <em>Component</em>}' class.

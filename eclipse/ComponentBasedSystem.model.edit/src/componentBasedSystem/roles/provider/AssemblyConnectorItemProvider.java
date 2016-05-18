@@ -5,6 +5,7 @@ package componentBasedSystem.roles.provider;
 
 import componentBasedSystem.provider.ComponentBasedSystemEditPlugin;
 
+import componentBasedSystem.roles.AssemblyConnector;
 import componentBasedSystem.roles.RolesPackage;
 
 import java.util.Collection;
@@ -22,7 +23,9 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
  * This is the item provider adapter for a {@link componentBasedSystem.roles.AssemblyConnector} object.
@@ -61,6 +64,7 @@ public class AssemblyConnectorItemProvider
 
 			addProvidedrolePropertyDescriptor(object);
 			addRequiredrolePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -110,6 +114,28 @@ public class AssemblyConnectorItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AssemblyConnector_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AssemblyConnector_name_feature", "_UI_AssemblyConnector_type"),
+				 RolesPackage.Literals.ASSEMBLY_CONNECTOR__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns AssemblyConnector.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,7 +154,10 @@ public class AssemblyConnectorItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_AssemblyConnector_type");
+		String label = ((AssemblyConnector)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_AssemblyConnector_type") :
+			getString("_UI_AssemblyConnector_type") + " " + label;
 	}
 	
 
@@ -142,6 +171,12 @@ public class AssemblyConnectorItemProvider
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(AssemblyConnector.class)) {
+			case RolesPackage.ASSEMBLY_CONNECTOR__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

@@ -223,13 +223,22 @@ public interface RolesPackage extends EPackage {
 	int ASSEMBLY_CONNECTOR__REQUIREDROLE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSEMBLY_CONNECTOR__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Assembly Connector</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_CONNECTOR_FEATURE_COUNT = 2;
+	int ASSEMBLY_CONNECTOR_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Assembly Connector</em>' class.
@@ -326,6 +335,17 @@ public interface RolesPackage extends EPackage {
 	EReference getAssemblyConnector_Requiredrole();
 
 	/**
+	 * Returns the meta object for the attribute '{@link componentBasedSystem.roles.AssemblyConnector#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see componentBasedSystem.roles.AssemblyConnector#getName()
+	 * @see #getAssemblyConnector()
+	 * @generated
+	 */
+	EAttribute getAssemblyConnector_Name();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -419,6 +439,14 @@ public interface RolesPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ASSEMBLY_CONNECTOR__REQUIREDROLE = eINSTANCE.getAssemblyConnector_Requiredrole();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ASSEMBLY_CONNECTOR__NAME = eINSTANCE.getAssemblyConnector_Name();
 
 	}
 
