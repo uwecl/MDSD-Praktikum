@@ -9,5 +9,6 @@
   <assemblycontext name="PoolingAudioDB">
     <component href="repository.componentbasedsystem#//@component.4"/>
   </assemblycontext>
+  <environment href="environment.componentbasedsystem#/"/>
   <type xsi:type="dataTypes:Void" name="void"/>
 </componentBasedSystem:ComponentBasedSystem>
