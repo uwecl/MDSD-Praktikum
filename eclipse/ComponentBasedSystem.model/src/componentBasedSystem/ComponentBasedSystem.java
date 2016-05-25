@@ -22,6 +22,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getType <em>Type</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getAssemblyconnector <em>Assemblyconnector</em>}</li>
+ *   <li>{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}</li>
+ *   <li>{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem()
@@ -118,5 +120,57 @@ public interface ComponentBasedSystem extends EObject {
 	 * @generated
 	 */
 	EList<AssemblyConnector> getAssemblyconnector();
+
+	/**
+	 * Returns the value of the '<em><b>Repository</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Repository</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Repository</em>' reference.
+	 * @see #setRepository(Repository)
+	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem_Repository()
+	 * @model
+	 * @generated
+	 */
+	Repository getRepository();
+
+	/**
+	 * Sets the value of the '{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Repository</em>' reference.
+	 * @see #getRepository()
+	 * @generated
+	 */
+	void setRepository(Repository value);
+
+	/**
+	 * Returns the value of the '<em><b>Allocation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Allocation</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Allocation</em>' reference.
+	 * @see #setAllocation(Allocation)
+	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem_Allocation()
+	 * @model
+	 * @generated
+	 */
+	Allocation getAllocation();
+
+	/**
+	 * Sets the value of the '{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Allocation</em>' reference.
+	 * @see #getAllocation()
+	 * @generated
+	 */
+	void setAllocation(Allocation value);
 
 } // ComponentBasedSystem

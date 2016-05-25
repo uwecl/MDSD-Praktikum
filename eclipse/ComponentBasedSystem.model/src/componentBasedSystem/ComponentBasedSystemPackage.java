@@ -113,13 +113,31 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR = 4;
 
 	/**
+	 * The feature id for the '<em><b>Repository</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_BASED_SYSTEM__REPOSITORY = 5;
+
+	/**
+	 * The feature id for the '<em><b>Allocation</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_BASED_SYSTEM__ALLOCATION = 6;
+
+	/**
 	 * The number of structural features of the '<em>Component Based System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM_FEATURE_COUNT = 5;
+	int COMPONENT_BASED_SYSTEM_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Component Based System</em>' class.
@@ -897,6 +915,28 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getComponentBasedSystem_Assemblyconnector();
 
 	/**
+	 * Returns the meta object for the reference '{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Repository</em>'.
+	 * @see componentBasedSystem.ComponentBasedSystem#getRepository()
+	 * @see #getComponentBasedSystem()
+	 * @generated
+	 */
+	EReference getComponentBasedSystem_Repository();
+
+	/**
+	 * Returns the meta object for the reference '{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Allocation</em>'.
+	 * @see componentBasedSystem.ComponentBasedSystem#getAllocation()
+	 * @see #getComponentBasedSystem()
+	 * @generated
+	 */
+	EReference getComponentBasedSystem_Allocation();
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.Component <em>Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1427,6 +1467,22 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR = eINSTANCE.getComponentBasedSystem_Assemblyconnector();
+
+		/**
+		 * The meta object literal for the '<em><b>Repository</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_BASED_SYSTEM__REPOSITORY = eINSTANCE.getComponentBasedSystem_Repository();
+
+		/**
+		 * The meta object literal for the '<em><b>Allocation</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_BASED_SYSTEM__ALLOCATION = eINSTANCE.getComponentBasedSystem_Allocation();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.ComponentImpl <em>Component</em>}' class.

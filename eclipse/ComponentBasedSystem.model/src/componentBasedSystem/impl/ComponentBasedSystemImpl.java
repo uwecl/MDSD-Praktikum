@@ -2,12 +2,14 @@
  */
 package componentBasedSystem.impl;
 
+import componentBasedSystem.Allocation;
 import componentBasedSystem.AssemblyContext;
 import componentBasedSystem.ComponentBasedSystem;
 import componentBasedSystem.ComponentBasedSystemPackage;
 import componentBasedSystem.Environment;
 import componentBasedSystem.Interface;
 
+import componentBasedSystem.Repository;
 import componentBasedSystem.dataTypes.Type;
 import componentBasedSystem.roles.AssemblyConnector;
 import java.util.Collection;
@@ -40,6 +42,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getType <em>Type</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getAssemblyconnector <em>Assemblyconnector</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getRepository <em>Repository</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getAllocation <em>Allocation</em>}</li>
  * </ul>
  *
  * @generated
@@ -94,6 +98,26 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected EList<AssemblyConnector> assemblyconnector;
+
+	/**
+	 * The cached value of the '{@link #getRepository() <em>Repository</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRepository()
+	 * @generated
+	 * @ordered
+	 */
+	protected Repository repository;
+
+	/**
+	 * The cached value of the '{@link #getAllocation() <em>Allocation</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAllocation()
+	 * @generated
+	 * @ordered
+	 */
+	protected Allocation allocation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -205,6 +229,82 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public Repository getRepository() {
+		if (repository != null && repository.eIsProxy()) {
+			InternalEObject oldRepository = (InternalEObject)repository;
+			repository = (Repository)eResolveProxy(oldRepository);
+			if (repository != oldRepository) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REPOSITORY, oldRepository, repository));
+			}
+		}
+		return repository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Repository basicGetRepository() {
+		return repository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRepository(Repository newRepository) {
+		Repository oldRepository = repository;
+		repository = newRepository;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REPOSITORY, oldRepository, repository));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Allocation getAllocation() {
+		if (allocation != null && allocation.eIsProxy()) {
+			InternalEObject oldAllocation = (InternalEObject)allocation;
+			allocation = (Allocation)eResolveProxy(oldAllocation);
+			if (allocation != oldAllocation) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION, oldAllocation, allocation));
+			}
+		}
+		return allocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Allocation basicGetAllocation() {
+		return allocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAllocation(Allocation newAllocation) {
+		Allocation oldAllocation = allocation;
+		allocation = newAllocation;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION, oldAllocation, allocation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -237,6 +337,12 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				return getType();
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
 				return getAssemblyconnector();
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REPOSITORY:
+				if (resolve) return getRepository();
+				return basicGetRepository();
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION:
+				if (resolve) return getAllocation();
+				return basicGetAllocation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -269,6 +375,12 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				getAssemblyconnector().clear();
 				getAssemblyconnector().addAll((Collection<? extends AssemblyConnector>)newValue);
 				return;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REPOSITORY:
+				setRepository((Repository)newValue);
+				return;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION:
+				setAllocation((Allocation)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -296,6 +408,12 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
 				getAssemblyconnector().clear();
 				return;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REPOSITORY:
+				setRepository((Repository)null);
+				return;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION:
+				setAllocation((Allocation)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -318,6 +436,10 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				return type != null && !type.isEmpty();
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
 				return assemblyconnector != null && !assemblyconnector.isEmpty();
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REPOSITORY:
+				return repository != null;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION:
+				return allocation != null;
 		}
 		return super.eIsSet(featureID);
 	}

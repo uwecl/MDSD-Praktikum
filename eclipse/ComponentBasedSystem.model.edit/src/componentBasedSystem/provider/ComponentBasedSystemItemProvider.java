@@ -66,6 +66,8 @@ public class ComponentBasedSystemItemProvider
 
 			addInterfacePropertyDescriptor(object);
 			addEnvironmentPropertyDescriptor(object);
+			addRepositoryPropertyDescriptor(object);
+			addAllocationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -106,6 +108,50 @@ public class ComponentBasedSystemItemProvider
 				 getString("_UI_ComponentBasedSystem_environment_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_environment_feature", "_UI_ComponentBasedSystem_type"),
 				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ENVIRONMENT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Repository feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRepositoryPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ComponentBasedSystem_repository_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_repository_feature", "_UI_ComponentBasedSystem_type"),
+				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__REPOSITORY,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Allocation feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAllocationPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ComponentBasedSystem_allocation_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_allocation_feature", "_UI_ComponentBasedSystem_type"),
+				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ALLOCATION,
 				 true,
 				 false,
 				 true,
