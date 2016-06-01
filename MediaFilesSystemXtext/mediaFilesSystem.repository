@@ -1,0 +1,19 @@
+Repository {
+	interface {
+		Interface HTTP 
+		{	
+		},
+		Interface Sound {	},
+		Interface AudioDB {	},
+		Interface MediaStore {}	
+	}
+	component {
+		Component WebGUI {
+			service {
+				Service {
+					correspondingSignatures (
+				}
+			}
+		}
+	}
+}
