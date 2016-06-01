@@ -59,6 +59,7 @@
     <genClasses ecoreClass="componentBasedSystem.ecore#//Environment">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Environment/container"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Environment/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Environment/name"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Repository">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Repository/interface"/>

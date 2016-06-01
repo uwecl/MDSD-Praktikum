@@ -338,7 +338,7 @@ public class MyDslSemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     Environment returns Environment
 	 *
 	 * Constraint:
-	 *     ((container+=Container container+=Container*)? (link+=Link link+=Link*)?)
+	 *     (name=EString (container+=Container container+=Container*)? (link+=Link link+=Link*)?)
 	 */
 	protected void sequence_Environment(ISerializationContext context, Environment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

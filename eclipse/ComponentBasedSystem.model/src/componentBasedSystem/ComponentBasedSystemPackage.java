@@ -691,13 +691,22 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int ENVIRONMENT__LINK = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIRONMENT__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Environment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_FEATURE_COUNT = 2;
+	int ENVIRONMENT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Environment</em>' class.
@@ -1282,6 +1291,17 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getEnvironment_Link();
 
 	/**
+	 * Returns the meta object for the attribute '{@link componentBasedSystem.Environment#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see componentBasedSystem.Environment#getName()
+	 * @see #getEnvironment()
+	 * @generated
+	 */
+	EAttribute getEnvironment_Name();
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.Repository <em>Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1737,6 +1757,14 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ENVIRONMENT__LINK = eINSTANCE.getEnvironment_Link();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ENVIRONMENT__NAME = eINSTANCE.getEnvironment_Name();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.RepositoryImpl <em>Repository</em>}' class.

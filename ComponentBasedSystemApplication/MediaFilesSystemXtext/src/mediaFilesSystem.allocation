@@ -1,0 +1,12 @@
+Allocation {
+	allocationcontext{
+		AllocationContext {
+			container "env.DatabaseServer"
+			assemblycontext PoolingAudioDB
+		},
+		AllocationContext {
+			container "env.ApplicationServer"
+			assemblycontext WebGUI
+		}
+	}
+}

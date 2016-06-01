@@ -8,6 +8,7 @@ import componentBasedSystem.Link;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -15,6 +16,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -30,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link componentBasedSystem.impl.EnvironmentImpl#getContainer <em>Container</em>}</li>
  *   <li>{@link componentBasedSystem.impl.EnvironmentImpl#getLink <em>Link</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.EnvironmentImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,6 +57,26 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 	 * @ordered
 	 */
 	protected EList<Link> link;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,6 +126,27 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.ENVIRONMENT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -126,6 +170,8 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 				return getContainer();
 			case ComponentBasedSystemPackage.ENVIRONMENT__LINK:
 				return getLink();
+			case ComponentBasedSystemPackage.ENVIRONMENT__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -147,6 +193,9 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 				getLink().clear();
 				getLink().addAll((Collection<? extends Link>)newValue);
 				return;
+			case ComponentBasedSystemPackage.ENVIRONMENT__NAME:
+				setName((String)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -165,6 +214,9 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 			case ComponentBasedSystemPackage.ENVIRONMENT__LINK:
 				getLink().clear();
 				return;
+			case ComponentBasedSystemPackage.ENVIRONMENT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -181,8 +233,26 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 				return container != null && !container.isEmpty();
 			case ComponentBasedSystemPackage.ENVIRONMENT__LINK:
 				return link != null && !link.isEmpty();
+			case ComponentBasedSystemPackage.ENVIRONMENT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //EnvironmentImpl

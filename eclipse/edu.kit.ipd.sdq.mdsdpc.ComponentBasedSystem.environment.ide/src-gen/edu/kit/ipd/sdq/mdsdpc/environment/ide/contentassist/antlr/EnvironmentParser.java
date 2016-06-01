@@ -37,17 +37,18 @@ public class EnvironmentParser extends AbstractContentAssistParser {
 				{
 					put(grammarAccess.getEStringAccess().getAlternatives(), "rule__EString__Alternatives");
 					put(grammarAccess.getEnvironmentAccess().getGroup(), "rule__Environment__Group__0");
-					put(grammarAccess.getEnvironmentAccess().getGroup_3(), "rule__Environment__Group_3__0");
-					put(grammarAccess.getEnvironmentAccess().getGroup_3_3(), "rule__Environment__Group_3_3__0");
 					put(grammarAccess.getEnvironmentAccess().getGroup_4(), "rule__Environment__Group_4__0");
 					put(grammarAccess.getEnvironmentAccess().getGroup_4_3(), "rule__Environment__Group_4_3__0");
+					put(grammarAccess.getEnvironmentAccess().getGroup_5(), "rule__Environment__Group_5__0");
+					put(grammarAccess.getEnvironmentAccess().getGroup_5_3(), "rule__Environment__Group_5_3__0");
 					put(grammarAccess.getContainerAccess().getGroup(), "rule__Container__Group__0");
 					put(grammarAccess.getLinkAccess().getGroup(), "rule__Link__Group__0");
 					put(grammarAccess.getLinkAccess().getGroup_6(), "rule__Link__Group_6__0");
-					put(grammarAccess.getEnvironmentAccess().getContainerAssignment_3_2(), "rule__Environment__ContainerAssignment_3_2");
-					put(grammarAccess.getEnvironmentAccess().getContainerAssignment_3_3_1(), "rule__Environment__ContainerAssignment_3_3_1");
-					put(grammarAccess.getEnvironmentAccess().getLinkAssignment_4_2(), "rule__Environment__LinkAssignment_4_2");
-					put(grammarAccess.getEnvironmentAccess().getLinkAssignment_4_3_1(), "rule__Environment__LinkAssignment_4_3_1");
+					put(grammarAccess.getEnvironmentAccess().getNameAssignment_2(), "rule__Environment__NameAssignment_2");
+					put(grammarAccess.getEnvironmentAccess().getContainerAssignment_4_2(), "rule__Environment__ContainerAssignment_4_2");
+					put(grammarAccess.getEnvironmentAccess().getContainerAssignment_4_3_1(), "rule__Environment__ContainerAssignment_4_3_1");
+					put(grammarAccess.getEnvironmentAccess().getLinkAssignment_5_2(), "rule__Environment__LinkAssignment_5_2");
+					put(grammarAccess.getEnvironmentAccess().getLinkAssignment_5_3_1(), "rule__Environment__LinkAssignment_5_3_1");
 					put(grammarAccess.getContainerAccess().getNameAssignment_2(), "rule__Container__NameAssignment_2");
 					put(grammarAccess.getLinkAccess().getNameAssignment_1(), "rule__Link__NameAssignment_1");
 					put(grammarAccess.getLinkAccess().getContainerAssignment_5(), "rule__Link__ContainerAssignment_5");

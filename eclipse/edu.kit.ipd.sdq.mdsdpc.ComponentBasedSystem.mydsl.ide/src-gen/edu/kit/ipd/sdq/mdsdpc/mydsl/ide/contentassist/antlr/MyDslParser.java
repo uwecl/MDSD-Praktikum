@@ -56,10 +56,10 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInterfaceAccess().getGroup_4_3(), "rule__Interface__Group_4_3__0");
 					put(grammarAccess.getAssemblyContextAccess().getGroup(), "rule__AssemblyContext__Group__0");
 					put(grammarAccess.getEnvironmentAccess().getGroup(), "rule__Environment__Group__0");
-					put(grammarAccess.getEnvironmentAccess().getGroup_3(), "rule__Environment__Group_3__0");
-					put(grammarAccess.getEnvironmentAccess().getGroup_3_3(), "rule__Environment__Group_3_3__0");
 					put(grammarAccess.getEnvironmentAccess().getGroup_4(), "rule__Environment__Group_4__0");
 					put(grammarAccess.getEnvironmentAccess().getGroup_4_3(), "rule__Environment__Group_4_3__0");
+					put(grammarAccess.getEnvironmentAccess().getGroup_5(), "rule__Environment__Group_5__0");
+					put(grammarAccess.getEnvironmentAccess().getGroup_5_3(), "rule__Environment__Group_5_3__0");
 					put(grammarAccess.getType_ImplAccess().getGroup(), "rule__Type_Impl__Group__0");
 					put(grammarAccess.getAssemblyConnectorAccess().getGroup(), "rule__AssemblyConnector__Group__0");
 					put(grammarAccess.getSignatureAccess().getGroup(), "rule__Signature__Group__0");
@@ -116,10 +116,11 @@ public class MyDslParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInterfaceAccess().getSignatureAssignment_4_3_1(), "rule__Interface__SignatureAssignment_4_3_1");
 					put(grammarAccess.getAssemblyContextAccess().getNameAssignment_1(), "rule__AssemblyContext__NameAssignment_1");
 					put(grammarAccess.getAssemblyContextAccess().getComponentAssignment_4(), "rule__AssemblyContext__ComponentAssignment_4");
-					put(grammarAccess.getEnvironmentAccess().getContainerAssignment_3_2(), "rule__Environment__ContainerAssignment_3_2");
-					put(grammarAccess.getEnvironmentAccess().getContainerAssignment_3_3_1(), "rule__Environment__ContainerAssignment_3_3_1");
-					put(grammarAccess.getEnvironmentAccess().getLinkAssignment_4_2(), "rule__Environment__LinkAssignment_4_2");
-					put(grammarAccess.getEnvironmentAccess().getLinkAssignment_4_3_1(), "rule__Environment__LinkAssignment_4_3_1");
+					put(grammarAccess.getEnvironmentAccess().getNameAssignment_2(), "rule__Environment__NameAssignment_2");
+					put(grammarAccess.getEnvironmentAccess().getContainerAssignment_4_2(), "rule__Environment__ContainerAssignment_4_2");
+					put(grammarAccess.getEnvironmentAccess().getContainerAssignment_4_3_1(), "rule__Environment__ContainerAssignment_4_3_1");
+					put(grammarAccess.getEnvironmentAccess().getLinkAssignment_5_2(), "rule__Environment__LinkAssignment_5_2");
+					put(grammarAccess.getEnvironmentAccess().getLinkAssignment_5_3_1(), "rule__Environment__LinkAssignment_5_3_1");
 					put(grammarAccess.getType_ImplAccess().getNameAssignment_2(), "rule__Type_Impl__NameAssignment_2");
 					put(grammarAccess.getAssemblyConnectorAccess().getNameAssignment_1(), "rule__AssemblyConnector__NameAssignment_1");
 					put(grammarAccess.getAssemblyConnectorAccess().getProvidedroleAssignment_4(), "rule__AssemblyConnector__ProvidedroleAssignment_4");

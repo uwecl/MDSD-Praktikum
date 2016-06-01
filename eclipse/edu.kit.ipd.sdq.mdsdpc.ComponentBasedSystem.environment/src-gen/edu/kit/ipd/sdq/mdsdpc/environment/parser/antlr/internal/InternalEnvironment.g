@@ -87,25 +87,44 @@ ruleEnvironment returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getEnvironmentAccess().getEnvironmentKeyword_1());
 		}
-		otherlv_2='{'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getEnvironmentAccess().getNameEStringParserRuleCall_2_0());
+				}
+				lv_name_2_0=ruleEString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getEnvironmentRule());
+					}
+					set(
+						$current,
+						"name",
+						lv_name_2_0,
+						"edu.kit.ipd.sdq.mdsdpc.environment.Environment.EString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3='{'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getEnvironmentAccess().getLeftCurlyBracketKeyword_2());
+			newLeafNode(otherlv_3, grammarAccess.getEnvironmentAccess().getLeftCurlyBracketKeyword_3());
 		}
 		(
-			otherlv_3='container'
+			otherlv_4='container'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getEnvironmentAccess().getContainerKeyword_3_0());
+				newLeafNode(otherlv_4, grammarAccess.getEnvironmentAccess().getContainerKeyword_4_0());
 			}
-			otherlv_4='{'
+			otherlv_5='{'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getEnvironmentAccess().getLeftCurlyBracketKeyword_3_1());
+				newLeafNode(otherlv_5, grammarAccess.getEnvironmentAccess().getLeftCurlyBracketKeyword_4_1());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getEnvironmentAccess().getContainerContainerParserRuleCall_3_2_0());
+						newCompositeNode(grammarAccess.getEnvironmentAccess().getContainerContainerParserRuleCall_4_2_0());
 					}
-					lv_container_5_0=ruleContainer
+					lv_container_6_0=ruleContainer
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEnvironmentRule());
@@ -113,23 +132,23 @@ ruleEnvironment returns [EObject current=null]
 						add(
 							$current,
 							"container",
-							lv_container_5_0,
+							lv_container_6_0,
 							"edu.kit.ipd.sdq.mdsdpc.environment.Environment.Container");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_6=','
+				otherlv_7=','
 				{
-					newLeafNode(otherlv_6, grammarAccess.getEnvironmentAccess().getCommaKeyword_3_3_0());
+					newLeafNode(otherlv_7, grammarAccess.getEnvironmentAccess().getCommaKeyword_4_3_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getEnvironmentAccess().getContainerContainerParserRuleCall_3_3_1_0());
+							newCompositeNode(grammarAccess.getEnvironmentAccess().getContainerContainerParserRuleCall_4_3_1_0());
 						}
-						lv_container_7_0=ruleContainer
+						lv_container_8_0=ruleContainer
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getEnvironmentRule());
@@ -137,33 +156,33 @@ ruleEnvironment returns [EObject current=null]
 							add(
 								$current,
 								"container",
-								lv_container_7_0,
+								lv_container_8_0,
 								"edu.kit.ipd.sdq.mdsdpc.environment.Environment.Container");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-			otherlv_8='}'
+			otherlv_9='}'
 			{
-				newLeafNode(otherlv_8, grammarAccess.getEnvironmentAccess().getRightCurlyBracketKeyword_3_4());
+				newLeafNode(otherlv_9, grammarAccess.getEnvironmentAccess().getRightCurlyBracketKeyword_4_4());
 			}
 		)?
 		(
-			otherlv_9='link'
+			otherlv_10='link'
 			{
-				newLeafNode(otherlv_9, grammarAccess.getEnvironmentAccess().getLinkKeyword_4_0());
+				newLeafNode(otherlv_10, grammarAccess.getEnvironmentAccess().getLinkKeyword_5_0());
 			}
-			otherlv_10='{'
+			otherlv_11='{'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getEnvironmentAccess().getLeftCurlyBracketKeyword_4_1());
+				newLeafNode(otherlv_11, grammarAccess.getEnvironmentAccess().getLeftCurlyBracketKeyword_5_1());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getEnvironmentAccess().getLinkLinkParserRuleCall_4_2_0());
+						newCompositeNode(grammarAccess.getEnvironmentAccess().getLinkLinkParserRuleCall_5_2_0());
 					}
-					lv_link_11_0=ruleLink
+					lv_link_12_0=ruleLink
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getEnvironmentRule());
@@ -171,23 +190,23 @@ ruleEnvironment returns [EObject current=null]
 						add(
 							$current,
 							"link",
-							lv_link_11_0,
+							lv_link_12_0,
 							"edu.kit.ipd.sdq.mdsdpc.environment.Environment.Link");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 			(
-				otherlv_12=','
+				otherlv_13=','
 				{
-					newLeafNode(otherlv_12, grammarAccess.getEnvironmentAccess().getCommaKeyword_4_3_0());
+					newLeafNode(otherlv_13, grammarAccess.getEnvironmentAccess().getCommaKeyword_5_3_0());
 				}
 				(
 					(
 						{
-							newCompositeNode(grammarAccess.getEnvironmentAccess().getLinkLinkParserRuleCall_4_3_1_0());
+							newCompositeNode(grammarAccess.getEnvironmentAccess().getLinkLinkParserRuleCall_5_3_1_0());
 						}
-						lv_link_13_0=ruleLink
+						lv_link_14_0=ruleLink
 						{
 							if ($current==null) {
 								$current = createModelElementForParent(grammarAccess.getEnvironmentRule());
@@ -195,21 +214,21 @@ ruleEnvironment returns [EObject current=null]
 							add(
 								$current,
 								"link",
-								lv_link_13_0,
+								lv_link_14_0,
 								"edu.kit.ipd.sdq.mdsdpc.environment.Environment.Link");
 							afterParserOrEnumRuleCall();
 						}
 					)
 				)
 			)*
-			otherlv_14='}'
+			otherlv_15='}'
 			{
-				newLeafNode(otherlv_14, grammarAccess.getEnvironmentAccess().getRightCurlyBracketKeyword_4_4());
+				newLeafNode(otherlv_15, grammarAccess.getEnvironmentAccess().getRightCurlyBracketKeyword_5_4());
 			}
 		)?
-		otherlv_15='}'
+		otherlv_16='}'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getEnvironmentAccess().getRightCurlyBracketKeyword_5());
+			newLeafNode(otherlv_16, grammarAccess.getEnvironmentAccess().getRightCurlyBracketKeyword_6());
 		}
 	)
 ;

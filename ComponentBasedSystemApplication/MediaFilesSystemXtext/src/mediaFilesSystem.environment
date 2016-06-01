@@ -1,0 +1,11 @@
+Environment env {
+	container {
+		Container ApplicationServer,
+		Container DatabaseServer	
+	}
+	link {
+		Link applicationToDatabase{
+			container(ApplicationServer, DatabaseServer)
+		}
+	}
+}

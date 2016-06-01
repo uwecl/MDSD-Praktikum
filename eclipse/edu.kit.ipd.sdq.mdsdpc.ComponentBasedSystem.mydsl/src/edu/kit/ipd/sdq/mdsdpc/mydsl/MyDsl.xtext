@@ -73,6 +73,7 @@ AssemblyContext returns AssemblyContext:
 Environment returns Environment:
 	{Environment}
 	'Environment'
+	name=EString
 	'{'
 		('container' '{' container+=Container ( "," container+=Container)* '}' )?
 		('link' '{' link+=Link ( "," link+=Link)* '}' )?
