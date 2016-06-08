@@ -65,6 +65,7 @@ public class AssemblyConnectorItemProvider
 			addProvidedrolePropertyDescriptor(object);
 			addRequiredrolePropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addAssemblycontextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -131,6 +132,28 @@ public class AssemblyConnectorItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Assemblycontext feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAssemblycontextPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AssemblyConnector_assemblycontext_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AssemblyConnector_assemblycontext_feature", "_UI_AssemblyConnector_type"),
+				 RolesPackage.Literals.ASSEMBLY_CONNECTOR__ASSEMBLYCONTEXT,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

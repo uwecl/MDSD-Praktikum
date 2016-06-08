@@ -266,7 +266,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * @generated
 	 */
 	public EReference getComponentBasedSystem_Environment() {
-		return (EReference)componentBasedSystemEClass.getEStructuralFeatures().get(2);
+		return (EReference)componentBasedSystemEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -275,7 +275,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * @generated
 	 */
 	public EReference getComponentBasedSystem_Type() {
-		return (EReference)componentBasedSystemEClass.getEStructuralFeatures().get(3);
+		return (EReference)componentBasedSystemEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -284,7 +284,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * @generated
 	 */
 	public EReference getComponentBasedSystem_Assemblyconnector() {
-		return (EReference)componentBasedSystemEClass.getEStructuralFeatures().get(4);
+		return (EReference)componentBasedSystemEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -302,7 +302,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * @generated
 	 */
 	public EReference getComponentBasedSystem_Allocation() {
-		return (EReference)componentBasedSystemEClass.getEStructuralFeatures().get(6);
+		return (EReference)componentBasedSystemEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -723,11 +723,11 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		componentBasedSystemEClass = createEClass(COMPONENT_BASED_SYSTEM);
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__INTERFACE);
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT);
-		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__ENVIRONMENT);
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__TYPE);
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR);
-		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__REPOSITORY);
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__ALLOCATION);
+		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__REPOSITORY);
+		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__ENVIRONMENT);
 
 		componentEClass = createEClass(COMPONENT);
 		createEAttribute(componentEClass, COMPONENT__NAME);
@@ -831,11 +831,11 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEClass(componentBasedSystemEClass, ComponentBasedSystem.class, "ComponentBasedSystem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponentBasedSystem_Interface(), this.getInterface(), null, "interface", null, 1, -1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponentBasedSystem_Assemblycontext(), this.getAssemblyContext(), null, "assemblycontext", null, 0, -1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponentBasedSystem_Environment(), this.getEnvironment(), null, "environment", null, 1, 1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponentBasedSystem_Type(), theDataTypesPackage.getType(), null, "type", null, 0, -1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponentBasedSystem_Assemblyconnector(), theRolesPackage.getAssemblyConnector(), null, "assemblyconnector", null, 0, -1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponentBasedSystem_Repository(), this.getRepository(), null, "repository", null, 0, 1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponentBasedSystem_Allocation(), this.getAllocation(), null, "allocation", null, 0, 1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponentBasedSystem_Allocation(), this.getAllocation(), null, "allocation", null, 1, 1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponentBasedSystem_Repository(), this.getRepository(), null, "repository", null, 1, 1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponentBasedSystem_Environment(), this.getEnvironment(), null, "environment", null, 1, 1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

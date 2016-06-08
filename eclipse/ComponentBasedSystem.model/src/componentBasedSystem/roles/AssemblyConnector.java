@@ -2,6 +2,8 @@
  */
 package componentBasedSystem.roles;
 
+import componentBasedSystem.AssemblyContext;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link componentBasedSystem.roles.AssemblyConnector#getProvidedrole <em>Providedrole</em>}</li>
  *   <li>{@link componentBasedSystem.roles.AssemblyConnector#getRequiredrole <em>Requiredrole</em>}</li>
  *   <li>{@link componentBasedSystem.roles.AssemblyConnector#getName <em>Name</em>}</li>
+ *   <li>{@link componentBasedSystem.roles.AssemblyConnector#getAssemblycontext <em>Assemblycontext</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.roles.RolesPackage#getAssemblyConnector()
@@ -100,5 +103,21 @@ public interface AssemblyConnector extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Assemblycontext</b></em>' reference list.
+	 * The list contents are of type {@link componentBasedSystem.AssemblyContext}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Assemblycontext</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Assemblycontext</em>' reference list.
+	 * @see componentBasedSystem.roles.RolesPackage#getAssemblyConnector_Assemblycontext()
+	 * @model lower="2" upper="2"
+	 * @generated
+	 */
+	EList<AssemblyContext> getAssemblycontext();
 
 } // AssemblyConnector

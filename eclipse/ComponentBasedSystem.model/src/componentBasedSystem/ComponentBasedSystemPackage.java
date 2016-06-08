@@ -86,22 +86,13 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Environment</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT_BASED_SYSTEM__ENVIRONMENT = 2;
-
-	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM__TYPE = 3;
+	int COMPONENT_BASED_SYSTEM__TYPE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Assemblyconnector</b></em>' containment reference list.
@@ -110,10 +101,19 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR = 4;
+	int COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR = 3;
 
 	/**
-	 * The feature id for the '<em><b>Repository</b></em>' reference.
+	 * The feature id for the '<em><b>Allocation</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_BASED_SYSTEM__ALLOCATION = 4;
+
+	/**
+	 * The feature id for the '<em><b>Repository</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -122,13 +122,13 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPONENT_BASED_SYSTEM__REPOSITORY = 5;
 
 	/**
-	 * The feature id for the '<em><b>Allocation</b></em>' reference.
+	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM__ALLOCATION = 6;
+	int COMPONENT_BASED_SYSTEM__ENVIRONMENT = 6;
 
 	/**
 	 * The number of structural features of the '<em>Component Based System</em>' class.
@@ -882,10 +882,10 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getComponentBasedSystem_Assemblycontext();
 
 	/**
-	 * Returns the meta object for the reference '{@link componentBasedSystem.ComponentBasedSystem#getEnvironment <em>Environment</em>}'.
+	 * Returns the meta object for the containment reference '{@link componentBasedSystem.ComponentBasedSystem#getEnvironment <em>Environment</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Environment</em>'.
+	 * @return the meta object for the containment reference '<em>Environment</em>'.
 	 * @see componentBasedSystem.ComponentBasedSystem#getEnvironment()
 	 * @see #getComponentBasedSystem()
 	 * @generated
@@ -915,10 +915,10 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getComponentBasedSystem_Assemblyconnector();
 
 	/**
-	 * Returns the meta object for the reference '{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}'.
+	 * Returns the meta object for the containment reference '{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Repository</em>'.
+	 * @return the meta object for the containment reference '<em>Repository</em>'.
 	 * @see componentBasedSystem.ComponentBasedSystem#getRepository()
 	 * @see #getComponentBasedSystem()
 	 * @generated
@@ -926,10 +926,10 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getComponentBasedSystem_Repository();
 
 	/**
-	 * Returns the meta object for the reference '{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}'.
+	 * Returns the meta object for the containment reference '{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Allocation</em>'.
+	 * @return the meta object for the containment reference '<em>Allocation</em>'.
 	 * @see componentBasedSystem.ComponentBasedSystem#getAllocation()
 	 * @see #getComponentBasedSystem()
 	 * @generated
@@ -1445,7 +1445,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT = eINSTANCE.getComponentBasedSystem_Assemblycontext();
 
 		/**
-		 * The meta object literal for the '<em><b>Environment</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Environment</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1469,7 +1469,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR = eINSTANCE.getComponentBasedSystem_Assemblyconnector();
 
 		/**
-		 * The meta object literal for the '<em><b>Repository</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Repository</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1477,7 +1477,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference COMPONENT_BASED_SYSTEM__REPOSITORY = eINSTANCE.getComponentBasedSystem_Repository();
 
 		/**
-		 * The meta object literal for the '<em><b>Allocation</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Allocation</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

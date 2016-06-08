@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getInterface <em>Interface</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getAssemblycontext <em>Assemblycontext</em>}</li>
- *   <li>{@link componentBasedSystem.ComponentBasedSystem#getEnvironment <em>Environment</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getType <em>Type</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getAssemblyconnector <em>Assemblyconnector</em>}</li>
- *   <li>{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}</li>
+ *   <li>{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}</li>
+ *   <li>{@link componentBasedSystem.ComponentBasedSystem#getEnvironment <em>Environment</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem()
@@ -64,26 +64,26 @@ public interface ComponentBasedSystem extends EObject {
 	EList<AssemblyContext> getAssemblycontext();
 
 	/**
-	 * Returns the value of the '<em><b>Environment</b></em>' reference.
+	 * Returns the value of the '<em><b>Environment</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Environment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Environment</em>' reference.
+	 * @return the value of the '<em>Environment</em>' containment reference.
 	 * @see #setEnvironment(Environment)
 	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem_Environment()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Environment getEnvironment();
 
 	/**
-	 * Sets the value of the '{@link componentBasedSystem.ComponentBasedSystem#getEnvironment <em>Environment</em>}' reference.
+	 * Sets the value of the '{@link componentBasedSystem.ComponentBasedSystem#getEnvironment <em>Environment</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Environment</em>' reference.
+	 * @param value the new value of the '<em>Environment</em>' containment reference.
 	 * @see #getEnvironment()
 	 * @generated
 	 */
@@ -122,52 +122,52 @@ public interface ComponentBasedSystem extends EObject {
 	EList<AssemblyConnector> getAssemblyconnector();
 
 	/**
-	 * Returns the value of the '<em><b>Repository</b></em>' reference.
+	 * Returns the value of the '<em><b>Repository</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Repository</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Repository</em>' reference.
+	 * @return the value of the '<em>Repository</em>' containment reference.
 	 * @see #setRepository(Repository)
 	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem_Repository()
-	 * @model
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Repository getRepository();
 
 	/**
-	 * Sets the value of the '{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}' reference.
+	 * Sets the value of the '{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Repository</em>' reference.
+	 * @param value the new value of the '<em>Repository</em>' containment reference.
 	 * @see #getRepository()
 	 * @generated
 	 */
 	void setRepository(Repository value);
 
 	/**
-	 * Returns the value of the '<em><b>Allocation</b></em>' reference.
+	 * Returns the value of the '<em><b>Allocation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Allocation</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Allocation</em>' reference.
+	 * @return the value of the '<em>Allocation</em>' containment reference.
 	 * @see #setAllocation(Allocation)
 	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem_Allocation()
-	 * @model
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	Allocation getAllocation();
 
 	/**
-	 * Sets the value of the '{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}' reference.
+	 * Sets the value of the '{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Allocation</em>' reference.
+	 * @param value the new value of the '<em>Allocation</em>' containment reference.
 	 * @see #getAllocation()
 	 * @generated
 	 */

@@ -232,13 +232,22 @@ public interface RolesPackage extends EPackage {
 	int ASSEMBLY_CONNECTOR__NAME = 2;
 
 	/**
+	 * The feature id for the '<em><b>Assemblycontext</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSEMBLY_CONNECTOR__ASSEMBLYCONTEXT = 3;
+
+	/**
 	 * The number of structural features of the '<em>Assembly Connector</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_CONNECTOR_FEATURE_COUNT = 3;
+	int ASSEMBLY_CONNECTOR_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Assembly Connector</em>' class.
@@ -346,6 +355,17 @@ public interface RolesPackage extends EPackage {
 	EAttribute getAssemblyConnector_Name();
 
 	/**
+	 * Returns the meta object for the reference list '{@link componentBasedSystem.roles.AssemblyConnector#getAssemblycontext <em>Assemblycontext</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Assemblycontext</em>'.
+	 * @see componentBasedSystem.roles.AssemblyConnector#getAssemblycontext()
+	 * @see #getAssemblyConnector()
+	 * @generated
+	 */
+	EReference getAssemblyConnector_Assemblycontext();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -447,6 +467,14 @@ public interface RolesPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute ASSEMBLY_CONNECTOR__NAME = eINSTANCE.getAssemblyConnector_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Assemblycontext</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSEMBLY_CONNECTOR__ASSEMBLYCONTEXT = eINSTANCE.getAssemblyConnector_Assemblycontext();
 
 	}
 

@@ -65,9 +65,6 @@ public class ComponentBasedSystemItemProvider
 			super.getPropertyDescriptors(object);
 
 			addInterfacePropertyDescriptor(object);
-			addEnvironmentPropertyDescriptor(object);
-			addRepositoryPropertyDescriptor(object);
-			addAllocationPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -95,72 +92,6 @@ public class ComponentBasedSystemItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Environment feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addEnvironmentPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ComponentBasedSystem_environment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_environment_feature", "_UI_ComponentBasedSystem_type"),
-				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ENVIRONMENT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Repository feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRepositoryPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ComponentBasedSystem_repository_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_repository_feature", "_UI_ComponentBasedSystem_type"),
-				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__REPOSITORY,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Allocation feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addAllocationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ComponentBasedSystem_allocation_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_allocation_feature", "_UI_ComponentBasedSystem_type"),
-				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ALLOCATION,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -175,6 +106,9 @@ public class ComponentBasedSystemItemProvider
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ALLOCATION);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__REPOSITORY);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ENVIRONMENT);
 		}
 		return childrenFeatures;
 	}
@@ -230,6 +164,9 @@ public class ComponentBasedSystemItemProvider
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT:
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__TYPE:
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION:
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REPOSITORY:
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ENVIRONMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -286,6 +223,21 @@ public class ComponentBasedSystemItemProvider
 			(createChildParameter
 				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR,
 				 RolesFactory.eINSTANCE.createAssemblyConnector()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ALLOCATION,
+				 ComponentBasedSystemFactory.eINSTANCE.createAllocation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__REPOSITORY,
+				 ComponentBasedSystemFactory.eINSTANCE.createRepository()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ENVIRONMENT,
+				 ComponentBasedSystemFactory.eINSTANCE.createEnvironment()));
 	}
 
 	/**
