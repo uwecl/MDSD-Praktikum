@@ -232,13 +232,22 @@ public interface RolesPackage extends EPackage {
 	int ASSEMBLY_CONNECTOR__NAME = 2;
 
 	/**
-	 * The feature id for the '<em><b>Assemblycontext</b></em>' reference list.
+	 * The feature id for the '<em><b>Provided Assembly Context</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_CONNECTOR__ASSEMBLYCONTEXT = 3;
+	int ASSEMBLY_CONNECTOR__PROVIDED_ASSEMBLY_CONTEXT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Required Assembly Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ASSEMBLY_CONNECTOR__REQUIRED_ASSEMBLY_CONTEXT = 4;
 
 	/**
 	 * The number of structural features of the '<em>Assembly Connector</em>' class.
@@ -247,7 +256,7 @@ public interface RolesPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ASSEMBLY_CONNECTOR_FEATURE_COUNT = 4;
+	int ASSEMBLY_CONNECTOR_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>Assembly Connector</em>' class.
@@ -355,15 +364,26 @@ public interface RolesPackage extends EPackage {
 	EAttribute getAssemblyConnector_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link componentBasedSystem.roles.AssemblyConnector#getAssemblycontext <em>Assemblycontext</em>}'.
+	 * Returns the meta object for the reference '{@link componentBasedSystem.roles.AssemblyConnector#getProvidedAssemblyContext <em>Provided Assembly Context</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Assemblycontext</em>'.
-	 * @see componentBasedSystem.roles.AssemblyConnector#getAssemblycontext()
+	 * @return the meta object for the reference '<em>Provided Assembly Context</em>'.
+	 * @see componentBasedSystem.roles.AssemblyConnector#getProvidedAssemblyContext()
 	 * @see #getAssemblyConnector()
 	 * @generated
 	 */
-	EReference getAssemblyConnector_Assemblycontext();
+	EReference getAssemblyConnector_ProvidedAssemblyContext();
+
+	/**
+	 * Returns the meta object for the reference '{@link componentBasedSystem.roles.AssemblyConnector#getRequiredAssemblyContext <em>Required Assembly Context</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Required Assembly Context</em>'.
+	 * @see componentBasedSystem.roles.AssemblyConnector#getRequiredAssemblyContext()
+	 * @see #getAssemblyConnector()
+	 * @generated
+	 */
+	EReference getAssemblyConnector_RequiredAssemblyContext();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -469,12 +489,20 @@ public interface RolesPackage extends EPackage {
 		EAttribute ASSEMBLY_CONNECTOR__NAME = eINSTANCE.getAssemblyConnector_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Assemblycontext</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Provided Assembly Context</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ASSEMBLY_CONNECTOR__ASSEMBLYCONTEXT = eINSTANCE.getAssemblyConnector_Assemblycontext();
+		EReference ASSEMBLY_CONNECTOR__PROVIDED_ASSEMBLY_CONTEXT = eINSTANCE.getAssemblyConnector_ProvidedAssemblyContext();
+
+		/**
+		 * The meta object literal for the '<em><b>Required Assembly Context</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ASSEMBLY_CONNECTOR__REQUIRED_ASSEMBLY_CONTEXT = eINSTANCE.getAssemblyConnector_RequiredAssemblyContext();
 
 	}
 

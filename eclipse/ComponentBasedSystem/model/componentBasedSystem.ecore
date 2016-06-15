@@ -182,8 +182,10 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="requiredrole" lowerBound="1"
           eType="#//roles/RequiredRole"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="assemblycontext" lowerBound="2"
-          upperBound="2" eType="#//AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="providedAssemblyContext"
+          lowerBound="1" eType="#//AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredAssemblyContext"
+          lowerBound="1" eType="#//AssemblyContext"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

@@ -121,7 +121,9 @@
             ecoreFeature="ecore:EReference componentBasedSystem.ecore#//roles/AssemblyConnector/requiredrole"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//roles/AssemblyConnector/name"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference componentBasedSystem.ecore#//roles/AssemblyConnector/assemblycontext"/>
+            ecoreFeature="ecore:EReference componentBasedSystem.ecore#//roles/AssemblyConnector/providedAssemblyContext"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference componentBasedSystem.ecore#//roles/AssemblyConnector/requiredAssemblyContext"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>
