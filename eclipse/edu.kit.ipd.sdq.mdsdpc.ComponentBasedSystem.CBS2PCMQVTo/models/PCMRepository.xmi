@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.1" xsi:schemaLocation="http://palladiosimulator.org/PalladioComponentModel/Repository/5.1 ../../PCM/model/pcm.ecore#//repository">
+  <interfaces__Repository xsi:type="repository:OperationInterface" entityName="AudioDB">
+    <signatures__OperationInterface entityName="queryDB"/>
+    <signatures__OperationInterface entityName="addFile()"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" entityName="HTTP">
+    <signatures__OperationInterface entityName="HTTPUpload"/>
+    <signatures__OperationInterface entityName="HTTPDownload"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" entityName="MediaStore">
+    <signatures__OperationInterface entityName="download"/>
+    <signatures__OperationInterface entityName="upload"/>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" entityName="Sound">
+    <signatures__OperationInterface entityName="watermark"/>
+  </interfaces__Repository>
+</repository:Repository>

@@ -1,0 +1,37 @@
+modeltype CBS "strict" uses componentBasedSystem('edu.kit.ipd.sdq.mdsdpc.componentBasedSystem');	
+modeltype PCM "strict" uses pcm('http://palladiosimulator.org/PalladioComponentModel/5.1');
+
+transformation CBSRepository2PCMRepository(in cbs : CBS, out pcm : PCM);
+
+main() {
+	cbs.rootObjects()[Repository].map toRepository();
+}
+
+mapping CBS::Repository::toRepository() : PCM::repository::Repository 
+{
+	result.interfaces__Repository := self.interface->map toOperationInterface();
+}
+
+mapping CBS::Interface::toOperationInterface() : PCM::repository::OperationInterface {
+	result.entityName := self.name;
+	result.signatures__OperationInterface := self.signature->map toOperationSignature();
+}
+
+mapping CBS::Signature::toOperationSignature() : PCM::repository::OperationSignature {
+	result.entityName := self.name;
+	result.parameters__OperationSignature := self.parameter->map toParameter();
+//	result.returnType__OperationSignature := self.returntype->map toReturnType();	
+}
+
+mapping CBS::Parameter::toParameter() : PCM::repository::Parameter {
+	result.parameterName := self.name;
+//	result.dataType__Parameter := self.parametertype->map toDataType();
+}
+
+//mapping CBS::dataTypes::ParameterType::toDataType() : PCM::repository::DataType {
+//
+//}
+
+//mapping CBS::dataTypes::ReturnType::toReturnType() : PCM::repository::DataType {
+//
+//}
