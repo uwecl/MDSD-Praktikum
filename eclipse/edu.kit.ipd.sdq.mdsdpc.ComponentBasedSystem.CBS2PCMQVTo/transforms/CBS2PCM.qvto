@@ -1,0 +1,190 @@
+modeltype CBS "strict" uses componentBasedSystem('edu.kit.ipd.sdq.mdsdpc.componentBasedSystem');	
+modeltype PCM "strict" uses pcm('http://palladiosimulator.org/PalladioComponentModel/5.1');
+//modeltype ID "strict" uses identifier('http://sdq.ipd.uka.de/Identifier/2.1');
+
+transformation CBS2PCM(in cbs : CBS, out pcm : PCM);
+
+main() {
+	cbs.rootObjects()[CBS::ComponentBasedSystem].repository.map toRepository();
+	cbs.rootObjects()[CBS::ComponentBasedSystem].environment.map toEnvironment();
+//	cbs.rootObjects()[CBS::ComponentBasedSystem].allocation.map toAllocation();
+//	cbs.rootObjects()[CBS::ComponentBasedSystem].assemblycontext.map toAssemblyContext();
+//	cbs.rootObjects()[CBS::ComponentBasedSystem].assemblyconnector.map toAssemblyConnector();
+}
+
+mapping CBS::Environment::toEnvironment() : pcm::resourceenvironment::ResourceEnvironment 
+when{self -> size() > 0} {
+	entityName := "Environment";
+	resourceContainer_ResourceEnvironment := self.container -> map toResourceContainer();
+	linkingResources__ResourceEnvironment := self.link -> map toLinkingResource();
+}
+
+mapping CBS::Container::toResourceContainer() : pcm::resourceenvironment::ResourceContainer {
+	entityName := self.name;
+	activeResourceSpecifications_ResourceContainer := null;
+	nestedResourceContainers__ResourceContainer := null;
+	parentResourceContainer__ResourceContainer := null;
+}
+
+mapping CBS::Link::toLinkingResource() : pcm::resourceenvironment::LinkingResource {
+	entityName := self.name;
+	connectedResourceContainers_LinkingResource := self.container -> map toResourceContainer();
+}
+
+mapping CBS::Repository::toRepository() : PCM::repository::Repository {
+	
+	entityName := "Repository";
+	repositoryDescription := "This is an awesome repository for compontents and interfaces";
+	interfaces__Repository:=self.interface->map toOperationInterface();
+	components__Repository:=self.component->map toComponent();
+}
+
+mapping CBS::Component::toComponent() : pcm::repository::RepositoryComponent 
+disjuncts CBS::Component::toBasicComponent, CBS::CompositeComponent::toCompositeComponent {}
+
+mapping CBS::Component::toBasicComponent() : pcm::repository::BasicComponent {
+	entityName := self.name;
+	providedRoles_InterfaceProvidingEntity := self.providedrole -> map toOperationProvidedRole();
+	requiredRoles_InterfaceRequiringEntity := self.requiredrole -> map toOperationRequiredRole();
+	resourceRequiredRoles__ResourceInterfaceRequiringEntity := null;
+	serviceEffectSpecifications__BasicComponent := null;
+	passiveResource_BasicComponent := null;
+}
+
+mapping CBS::roles::RequiredRole::toOperationRequiredRole() : pcm::repository::OperationRequiredRole { //done
+	entityName := self.name;
+//	requiringEntity_RequiredRole  := self.component.resolveoneIn(cbswa::assemblyelements::Component::toComponent, pcm::repository::RepositoryComponent); //tmaybe system too if it has a role(needs clarifying)
+	requiredInterface__OperationRequiredRole  := self.interface.resolveoneIn(CBS::Interface::toOperationInterface, pcm::repository::OperationInterface);
+}
+
+mapping CBS::roles::ProvidedRole::toOperationProvidedRole() : pcm::repository::OperationProvidedRole {//done
+	entityName := self.name;
+//	providingEntity_ProvidedRole := self.component.resolveoneIn(cbswa::assemblyelements::Component::toComponent, pcm::repository::RepositoryComponent); //tmaybe system too if it has a role(needs clarifying)
+	providedInterface__OperationProvidedRole := self.interface.resolveoneIn(CBS::Interface::toOperationInterface, pcm::repository::OperationInterface);
+}
+
+mapping CBS::CompositeComponent::toCompositeComponent() : pcm::repository::CompositeComponent {
+	entityName := self.name;
+//	providedRoles_InterfaceProvidingEntity := self.role -> select (role | role.oclIsTypeOf(cbswa::assemblyelements::ProvidedRole))
+//		.oclAsType(cbswa::assemblyelements::ProvidedRole) -> map toOperationProvidedRole();
+//	requiredRoles_InterfaceRequiringEntity := self.role -> select (role | role.oclIsTypeOf(cbswa::assemblyelements::RequiredRole))
+//		.oclAsType(cbswa::assemblyelements::RequiredRole)-> map toOperationRequiredRole();
+	resourceRequiredDelegationConnectors_ComposedStructure := null;
+	assemblyContexts__ComposedStructure := null; 
+    resourceRequiredDelegationConnectors_ComposedStructure := null;
+    eventChannel__ComposedStructure := null; 
+    connectors__ComposedStructure := null //todo reslove to connectors see System -> late resolve
+}
+
+mapping CBS::Interface::toOperationInterface() : PCM::repository::OperationInterface {
+	result.entityName := self.name;
+	result.signatures__OperationInterface := self.signature->map toOperationSignature();
+}
+
+mapping CBS::Signature::toOperationSignature() : PCM::repository::OperationSignature {
+	result.entityName := self.name;
+	result.parameters__OperationSignature := self.parameter->map toParameter();
+	result.returnType__OperationSignature := self.returntype.map toDataType();	
+}
+
+mapping CBS::Parameter::toParameter() : pcm::repository::Parameter {
+	parameterName := self.name;
+	dataType__Parameter := self.parametertype.map toDataType(); 
+	eventType__Parameter := null;
+	infrastructureSignature__Parameter := null;
+	operationSignature__Parameter := null;
+	resourceSignature__Parameter := null;
+}
+
+mapping CBS::dataTypes::Type::toDataType() : pcm::repository::DataType 
+disjuncts CBS::dataTypes::ReturnType::ToReturnDataType, CBS::dataTypes::ParameterType::toParameterDataType { } 
+
+mapping CBS::dataTypes::ReturnType::ToReturnDataType() : pcm::repository::DataType 
+disjuncts CBS::dataTypes::Void::toVoid,CBS::dataTypes::Simple::toSimple { }
+
+mapping CBS::dataTypes::ParameterType::toParameterDataType() : pcm::repository::DataType 
+disjuncts CBS::dataTypes::Simple::toSimple,CBS::dataTypes::Complex::toComplexDataType { }
+
+mapping CBS::dataTypes::Void::toVoid() : pcm::repository::PrimitiveDataType {
+	// Actually void as type is not supported in palladio. The Intension could be that void is considered as null-type.
+	result.type := null;
+}
+
+mapping CBS::dataTypes::Simple::toSimple() : pcm::repository::PrimitiveDataType {
+	result.type := getDataTypeOf(self.kind);
+}
+
+mapping CBS::dataTypes::Complex::toComplexDataType() : pcm::repository::CompositeDataType {
+	result.entityName := self.name;
+//	innerDeclaration_CompositeDataType := self.parameter -> map toInnerDeclaration(); TODO
+}
+
+
+
+query getDataTypeOf(kind : CBS::dataTypes::simpleTypes) : pcm::repository::PrimitiveTypeEnum {
+	var pcmDataType : pcm::repository::PrimitiveTypeEnum := null;
+	
+	if (kind =  CBS::dataTypes::simpleTypes::boolean) then {
+		pcmDataType := pcm::repository::PrimitiveTypeEnum::BOOL;
+	} endif;
+	
+	if (kind = CBS::dataTypes::simpleTypes::char) then {
+		pcmDataType := pcm::repository::PrimitiveTypeEnum::CHAR;
+	} endif;
+	
+	if (kind = CBS::dataTypes::simpleTypes::date) then {
+		pcmDataType := pcm::repository::PrimitiveTypeEnum::STRING;
+	} endif;
+	
+	if (kind = CBS::dataTypes::simpleTypes::double) then {
+		pcmDataType := pcm::repository::PrimitiveTypeEnum::DOUBLE;
+	} endif;
+	
+	if (kind = CBS::dataTypes::simpleTypes::float) then {
+		pcmDataType := pcm::repository::PrimitiveTypeEnum::DOUBLE;
+	} endif;
+	
+	if (kind = CBS::dataTypes::simpleTypes::int) then {
+		pcmDataType := pcm::repository::PrimitiveTypeEnum::INT;
+	} endif;
+	
+	if (kind = CBS::dataTypes::simpleTypes::long) then {
+		pcmDataType := pcm::repository::PrimitiveTypeEnum::LONG;
+	} endif;
+	
+	if (kind = CBS::dataTypes::simpleTypes::string) then {
+		pcmDataType := pcm::repository::PrimitiveTypeEnum::STRING;
+	} endif;
+	
+	return pcmDataType;	
+}
+
+//mapping cbswa::assemblyelements::_Collection::toCollectionDataType() : pcm::repository::CollectionDataType 
+//disjuncts cbswa::assemblyelements::_List::ListToCollectionDataType {
+//	
+//}
+
+//mapping cbswa::assemblyelements::_List::ListToCollectionDataType() : pcm::repository::CollectionDataType {
+//	entityName := self.name;
+//	innerType_CollectionDataType := self.type.map toDataType();
+//}
+
+//mapping cbswa::assemblyelements::Parameter::toInnerDeclaration() : pcm::repository::InnerDeclaration {
+//	entityName := self.name;
+//	
+//	if ((self.type.oclIsTypeOf(cbswa::assemblyelements::Primitive)) or 
+//		(self.type.oclIsTypeOf(cbswa::assemblyelements::Void))) then {
+//		
+//		datatype_InnerDeclaration := self.type.map toDataType();
+//		
+//	} else {
+//		compositeDataType_InnerDeclaration := self.type.oclAsType(cbswa::assemblyelements::Complex).map toCompositeDataType();
+//	} endif;
+//}
+
+
+//mapping cbswa::assemblyelements::Primitive::toPrimitiveDataType() : pcm::repository::PrimitiveDataType {
+//		type := getDataTypeOf(self.primitiveType.oclAsType(cbswa::assemblyelements::Primitive));
+//}
+
+
