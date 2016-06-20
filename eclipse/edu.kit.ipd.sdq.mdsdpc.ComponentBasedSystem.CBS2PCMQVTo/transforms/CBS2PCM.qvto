@@ -8,8 +8,25 @@ main() {
 	cbs.rootObjects()[CBS::ComponentBasedSystem].repository.map toRepository();
 	cbs.rootObjects()[CBS::ComponentBasedSystem].environment.map toEnvironment();
 	cbs.rootObjects()[CBS::ComponentBasedSystem].allocation.map toAllocation();
-//	cbs.rootObjects()[CBS::ComponentBasedSystem].assemblycontext.map toAssemblyContext();
-//	cbs.rootObjects()[CBS::ComponentBasedSystem].assemblyconnector.map toAssemblyConnector();
+	cbs.rootObjects()[CBS::ComponentBasedSystem]->map toSystem();
+}
+
+//###################### System ######################
+
+mapping CBS::ComponentBasedSystem::toSystem() : pcm::system::System {
+	entityName := "System";
+	assemblyContexts__ComposedStructure := self.assemblycontext -> map toAssemblyContext();
+	connectors__ComposedStructure := self.assemblyconnector.late resolve(pcm::core::composition::Connector);
+
+	
+	// Has to be discussed with Erik
+	//providedRoles_InterfaceProvidingEntity := getProvidedRoles(self.interface) -> oclAsType(cbswa::assemblyelements::ProvidedRole).map toOperationProvidedRole();
+	//requiredRoles_InterfaceRequiringEntity := getRequiredRoles(self.interface) -> oclAsType(cbswa::assemblyelements::RequiredRole).map toOperationRequiredRole();
+	
+	qosAnnotations_System := null;
+	resourceRequiredRoles__ResourceInterfaceRequiringEntity := null;
+	eventChannel__ComposedStructure := null;	
+	resourceRequiredDelegationConnectors_ComposedStructure := null;
 }
 
 //###################### Allocation ######################
