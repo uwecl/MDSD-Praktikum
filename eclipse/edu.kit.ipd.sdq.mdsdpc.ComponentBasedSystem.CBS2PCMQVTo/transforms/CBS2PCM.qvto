@@ -7,16 +7,31 @@ transformation CBS2PCM(in cbs : CBS, out pcm : PCM);
 main() {
 	cbs.rootObjects()[CBS::ComponentBasedSystem].repository.map toRepository();
 	cbs.rootObjects()[CBS::ComponentBasedSystem].environment.map toEnvironment();
-//	cbs.rootObjects()[CBS::ComponentBasedSystem].allocation.map toAllocation();
+	cbs.rootObjects()[CBS::ComponentBasedSystem].allocation.map toAllocation();
 //	cbs.rootObjects()[CBS::ComponentBasedSystem].assemblycontext.map toAssemblyContext();
 //	cbs.rootObjects()[CBS::ComponentBasedSystem].assemblyconnector.map toAssemblyConnector();
 }
 
-mapping CBS::Environment::toEnvironment() : pcm::resourceenvironment::ResourceEnvironment 
-when{self -> size() > 0} {
-	entityName := "Environment";
-	resourceContainer_ResourceEnvironment := self.container -> map toResourceContainer();
-	linkingResources__ResourceEnvironment := self.link -> map toLinkingResource();
+//###################### Allocation ######################
+
+mapping CBS::Allocation::toAllocation() : pcm::allocation::Allocation {
+	result.allocationContexts_Allocation := self.allocationcontext->map toAllocationContext();
+	result.system_Allocation := null; //TODO
+	result.targetResourceEnvironment_Allocation := null; //TODO
+}
+
+mapping CBS::AllocationContext::toAllocationContext() : pcm::allocation::AllocationContext {
+	entityName := self.assemblycontext.name + "_DeployedOn_" + self.container.name;
+	resourceContainer_AllocationContext := self.container.map toResourceContainer(); //Change metamodel?
+	assemblyContext_AllocationContext := self.assemblycontext.map toAssemblyContext();
+	
+	eventChannel__AllocationContext := null;
+}
+
+mapping CBS::AssemblyContext::toAssemblyContext() : pcm::core::composition::AssemblyContext { //TODO
+	entityName := self.name;
+	parentStructure__AssemblyContext := null; //TODO composite component or system(need references in model)
+	encapsulatedComponent__AssemblyContext := self.component.resolveoneIn(CBS::Component::toComponent, pcm::repository::RepositoryComponent);
 }
 
 mapping CBS::Container::toResourceContainer() : pcm::resourceenvironment::ResourceContainer {
@@ -26,10 +41,22 @@ mapping CBS::Container::toResourceContainer() : pcm::resourceenvironment::Resour
 	parentResourceContainer__ResourceContainer := null;
 }
 
+
+//###################### Environment ######################
+
+mapping CBS::Environment::toEnvironment() : pcm::resourceenvironment::ResourceEnvironment 
+when{self -> size() > 0} {
+	entityName := "Environment";
+	resourceContainer_ResourceEnvironment := self.container -> map toResourceContainer();
+	linkingResources__ResourceEnvironment := self.link -> map toLinkingResource();
+}
+
 mapping CBS::Link::toLinkingResource() : pcm::resourceenvironment::LinkingResource {
 	entityName := self.name;
 	connectedResourceContainers_LinkingResource := self.container -> map toResourceContainer();
 }
+
+//###################### Repository ######################
 
 mapping CBS::Repository::toRepository() : PCM::repository::Repository {
 	
