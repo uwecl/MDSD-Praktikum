@@ -112,8 +112,7 @@ mapping CBS::CompositeComponent::toCompositeComponent() : pcm::repository::Compo
 	providedRoles_InterfaceProvidingEntity := self.providedrole -> map toOperationProvidedRole();
 	requiredRoles_InterfaceRequiringEntity := self.requiredrole -> map toOperationRequiredRole();
 	resourceRequiredDelegationConnectors_ComposedStructure := null;
-	assemblyContexts__ComposedStructure := null; 
-    resourceRequiredDelegationConnectors_ComposedStructure := null;
+	assemblyContexts__ComposedStructure := self.assemblycontext->map toAssemblyContext(); 
     eventChannel__ComposedStructure := null; 
     connectors__ComposedStructure := null; //todo reslove to connectors see System -> late resolve
 }
