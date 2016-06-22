@@ -84,7 +84,7 @@ mapping CBS::Repository::toRepository() : PCM::repository::Repository {
 }
 
 mapping CBS::Component::toComponent() : pcm::repository::RepositoryComponent 
-disjuncts CBS::Component::toBasicComponent, CBS::CompositeComponent::toCompositeComponent {}
+disjuncts CBS::CompositeComponent::toCompositeComponent, CBS::Component::toBasicComponent {}
 
 mapping CBS::Component::toBasicComponent() : pcm::repository::BasicComponent {
 	entityName := self.name;
@@ -109,15 +109,13 @@ mapping CBS::roles::ProvidedRole::toOperationProvidedRole() : pcm::repository::O
 
 mapping CBS::CompositeComponent::toCompositeComponent() : pcm::repository::CompositeComponent {
 	entityName := self.name;
-//	providedRoles_InterfaceProvidingEntity := self.role -> select (role | role.oclIsTypeOf(cbswa::assemblyelements::ProvidedRole))
-//		.oclAsType(cbswa::assemblyelements::ProvidedRole) -> map toOperationProvidedRole();
-//	requiredRoles_InterfaceRequiringEntity := self.role -> select (role | role.oclIsTypeOf(cbswa::assemblyelements::RequiredRole))
-//		.oclAsType(cbswa::assemblyelements::RequiredRole)-> map toOperationRequiredRole();
+	providedRoles_InterfaceProvidingEntity := self.providedrole -> map toOperationProvidedRole();
+	requiredRoles_InterfaceRequiringEntity := self.requiredrole -> map toOperationRequiredRole();
 	resourceRequiredDelegationConnectors_ComposedStructure := null;
 	assemblyContexts__ComposedStructure := null; 
     resourceRequiredDelegationConnectors_ComposedStructure := null;
     eventChannel__ComposedStructure := null; 
-    connectors__ComposedStructure := null //todo reslove to connectors see System -> late resolve
+    connectors__ComposedStructure := null; //todo reslove to connectors see System -> late resolve
 }
 
 mapping CBS::Interface::toOperationInterface() : PCM::repository::OperationInterface {
