@@ -4,6 +4,8 @@ package componentBasedSystem;
 
 import componentBasedSystem.dataTypes.Type;
 import componentBasedSystem.roles.AssemblyConnector;
+import componentBasedSystem.roles.ProvidedRole;
+import componentBasedSystem.roles.RequiredRole;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -17,13 +19,14 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link componentBasedSystem.ComponentBasedSystem#getInterface <em>Interface</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getAssemblycontext <em>Assemblycontext</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getType <em>Type</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getAssemblyconnector <em>Assemblyconnector</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}</li>
  *   <li>{@link componentBasedSystem.ComponentBasedSystem#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link componentBasedSystem.ComponentBasedSystem#getProvidedrole <em>Providedrole</em>}</li>
+ *   <li>{@link componentBasedSystem.ComponentBasedSystem#getRequiredrole <em>Requiredrole</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem()
@@ -31,22 +34,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface ComponentBasedSystem extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Interface</b></em>' reference list.
-	 * The list contents are of type {@link componentBasedSystem.Interface}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Interface</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Interface</em>' reference list.
-	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem_Interface()
-	 * @model required="true"
-	 * @generated
-	 */
-	EList<Interface> getInterface();
-
 	/**
 	 * Returns the value of the '<em><b>Assemblycontext</b></em>' containment reference list.
 	 * The list contents are of type {@link componentBasedSystem.AssemblyContext}.
@@ -88,6 +75,38 @@ public interface ComponentBasedSystem extends EObject {
 	 * @generated
 	 */
 	void setEnvironment(Environment value);
+
+	/**
+	 * Returns the value of the '<em><b>Providedrole</b></em>' reference list.
+	 * The list contents are of type {@link componentBasedSystem.roles.ProvidedRole}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Providedrole</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Providedrole</em>' reference list.
+	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem_Providedrole()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<ProvidedRole> getProvidedrole();
+
+	/**
+	 * Returns the value of the '<em><b>Requiredrole</b></em>' reference list.
+	 * The list contents are of type {@link componentBasedSystem.roles.RequiredRole}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Requiredrole</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Requiredrole</em>' reference list.
+	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponentBasedSystem_Requiredrole()
+	 * @model
+	 * @generated
+	 */
+	EList<RequiredRole> getRequiredrole();
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' containment reference list.

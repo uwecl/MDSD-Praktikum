@@ -7,11 +7,11 @@ import componentBasedSystem.AssemblyContext;
 import componentBasedSystem.ComponentBasedSystem;
 import componentBasedSystem.ComponentBasedSystemPackage;
 import componentBasedSystem.Environment;
-import componentBasedSystem.Interface;
-
 import componentBasedSystem.Repository;
 import componentBasedSystem.dataTypes.Type;
 import componentBasedSystem.roles.AssemblyConnector;
+import componentBasedSystem.roles.ProvidedRole;
+import componentBasedSystem.roles.RequiredRole;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -37,28 +37,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getInterface <em>Interface</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getAssemblycontext <em>Assemblycontext</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getType <em>Type</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getAssemblyconnector <em>Assemblyconnector</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getAllocation <em>Allocation</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getRepository <em>Repository</em>}</li>
  *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getEnvironment <em>Environment</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getProvidedrole <em>Providedrole</em>}</li>
+ *   <li>{@link componentBasedSystem.impl.ComponentBasedSystemImpl#getRequiredrole <em>Requiredrole</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container implements ComponentBasedSystem {
-	/**
-	 * The cached value of the '{@link #getInterface() <em>Interface</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getInterface()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Interface> interface_;
-
 	/**
 	 * The cached value of the '{@link #getAssemblycontext() <em>Assemblycontext</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -120,6 +111,26 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	protected Environment environment;
 
 	/**
+	 * The cached value of the '{@link #getProvidedrole() <em>Providedrole</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProvidedrole()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ProvidedRole> providedrole;
+
+	/**
+	 * The cached value of the '{@link #getRequiredrole() <em>Requiredrole</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequiredrole()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<RequiredRole> requiredrole;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -136,18 +147,6 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	protected EClass eStaticClass() {
 		return ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Interface> getInterface() {
-		if (interface_ == null) {
-			interface_ = new EObjectResolvingEList<Interface>(Interface.class, this, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__INTERFACE);
-		}
-		return interface_;
 	}
 
 	/**
@@ -203,6 +202,30 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ENVIRONMENT, newEnvironment, newEnvironment));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ProvidedRole> getProvidedrole() {
+		if (providedrole == null) {
+			providedrole = new EObjectResolvingEList<ProvidedRole>(ProvidedRole.class, this, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__PROVIDEDROLE);
+		}
+		return providedrole;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<RequiredRole> getRequiredrole() {
+		if (requiredrole == null) {
+			requiredrole = new EObjectResolvingEList<RequiredRole>(RequiredRole.class, this, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REQUIREDROLE);
+		}
+		return requiredrole;
 	}
 
 	/**
@@ -347,8 +370,6 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__INTERFACE:
-				return getInterface();
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT:
 				return getAssemblycontext();
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__TYPE:
@@ -361,6 +382,10 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				return getRepository();
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ENVIRONMENT:
 				return getEnvironment();
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__PROVIDEDROLE:
+				return getProvidedrole();
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REQUIREDROLE:
+				return getRequiredrole();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -374,10 +399,6 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__INTERFACE:
-				getInterface().clear();
-				getInterface().addAll((Collection<? extends Interface>)newValue);
-				return;
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT:
 				getAssemblycontext().clear();
 				getAssemblycontext().addAll((Collection<? extends AssemblyContext>)newValue);
@@ -399,6 +420,14 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ENVIRONMENT:
 				setEnvironment((Environment)newValue);
 				return;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__PROVIDEDROLE:
+				getProvidedrole().clear();
+				getProvidedrole().addAll((Collection<? extends ProvidedRole>)newValue);
+				return;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REQUIREDROLE:
+				getRequiredrole().clear();
+				getRequiredrole().addAll((Collection<? extends RequiredRole>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -411,9 +440,6 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__INTERFACE:
-				getInterface().clear();
-				return;
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT:
 				getAssemblycontext().clear();
 				return;
@@ -432,6 +458,12 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ENVIRONMENT:
 				setEnvironment((Environment)null);
 				return;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__PROVIDEDROLE:
+				getProvidedrole().clear();
+				return;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REQUIREDROLE:
+				getRequiredrole().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -444,8 +476,6 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__INTERFACE:
-				return interface_ != null && !interface_.isEmpty();
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT:
 				return assemblycontext != null && !assemblycontext.isEmpty();
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__TYPE:
@@ -458,6 +488,10 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				return repository != null;
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ENVIRONMENT:
 				return environment != null;
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__PROVIDEDROLE:
+				return providedrole != null && !providedrole.isEmpty();
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REQUIREDROLE:
+				return requiredrole != null && !requiredrole.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

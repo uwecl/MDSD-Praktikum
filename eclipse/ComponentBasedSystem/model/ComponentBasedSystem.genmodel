@@ -7,13 +7,14 @@
   <foreignModel>componentBasedSystem.ecore</foreignModel>
   <genPackages prefix="ComponentBasedSystem" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#/">
     <genClasses ecoreClass="componentBasedSystem.ecore#//ComponentBasedSystem">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/interface"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/assemblycontext"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/assemblyconnector"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/allocation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/repository"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/environment"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/providedrole"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/requiredrole"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Component">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Component/name"/>

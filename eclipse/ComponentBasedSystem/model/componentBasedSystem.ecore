@@ -8,8 +8,6 @@
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentBasedSystem">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
-        upperBound="-1" eType="#//Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assemblycontext" upperBound="-1"
         eType="#//AssemblyContext" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//dataTypes/Type"
@@ -22,6 +20,10 @@
         eType="#//Repository" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="environment" lowerBound="1"
         eType="#//Environment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" lowerBound="1"
+        upperBound="-1" eType="#//roles/ProvidedRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredrole" upperBound="-1"
+        eType="#//roles/RequiredRole"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

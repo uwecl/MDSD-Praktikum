@@ -64,25 +64,48 @@ public class ComponentBasedSystemItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addInterfacePropertyDescriptor(object);
+			addProvidedrolePropertyDescriptor(object);
+			addRequiredrolePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Interface feature.
+	 * This adds a property descriptor for the Providedrole feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInterfacePropertyDescriptor(Object object) {
+	protected void addProvidedrolePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ComponentBasedSystem_interface_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_interface_feature", "_UI_ComponentBasedSystem_type"),
-				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__INTERFACE,
+				 getString("_UI_ComponentBasedSystem_providedrole_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_providedrole_feature", "_UI_ComponentBasedSystem_type"),
+				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__PROVIDEDROLE,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Requiredrole feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRequiredrolePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ComponentBasedSystem_requiredrole_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_requiredrole_feature", "_UI_ComponentBasedSystem_type"),
+				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__REQUIREDROLE,
 				 true,
 				 false,
 				 true,

@@ -68,22 +68,13 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPONENT_BASED_SYSTEM = 0;
 
 	/**
-	 * The feature id for the '<em><b>Interface</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT_BASED_SYSTEM__INTERFACE = 0;
-
-	/**
 	 * The feature id for the '<em><b>Assemblycontext</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT = 1;
+	int COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' containment reference list.
@@ -92,7 +83,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM__TYPE = 2;
+	int COMPONENT_BASED_SYSTEM__TYPE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Assemblyconnector</b></em>' containment reference list.
@@ -101,7 +92,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR = 3;
+	int COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR = 2;
 
 	/**
 	 * The feature id for the '<em><b>Allocation</b></em>' containment reference.
@@ -110,7 +101,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM__ALLOCATION = 4;
+	int COMPONENT_BASED_SYSTEM__ALLOCATION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Repository</b></em>' containment reference.
@@ -119,7 +110,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM__REPOSITORY = 5;
+	int COMPONENT_BASED_SYSTEM__REPOSITORY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Environment</b></em>' containment reference.
@@ -128,7 +119,25 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM__ENVIRONMENT = 6;
+	int COMPONENT_BASED_SYSTEM__ENVIRONMENT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Providedrole</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_BASED_SYSTEM__PROVIDEDROLE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Requiredrole</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_BASED_SYSTEM__REQUIREDROLE = 7;
 
 	/**
 	 * The number of structural features of the '<em>Component Based System</em>' class.
@@ -137,7 +146,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM_FEATURE_COUNT = 7;
+	int COMPONENT_BASED_SYSTEM_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>Component Based System</em>' class.
@@ -860,17 +869,6 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EClass getComponentBasedSystem();
 
 	/**
-	 * Returns the meta object for the reference list '{@link componentBasedSystem.ComponentBasedSystem#getInterface <em>Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interface</em>'.
-	 * @see componentBasedSystem.ComponentBasedSystem#getInterface()
-	 * @see #getComponentBasedSystem()
-	 * @generated
-	 */
-	EReference getComponentBasedSystem_Interface();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.ComponentBasedSystem#getAssemblycontext <em>Assemblycontext</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -891,6 +889,28 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComponentBasedSystem_Environment();
+
+	/**
+	 * Returns the meta object for the reference list '{@link componentBasedSystem.ComponentBasedSystem#getProvidedrole <em>Providedrole</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Providedrole</em>'.
+	 * @see componentBasedSystem.ComponentBasedSystem#getProvidedrole()
+	 * @see #getComponentBasedSystem()
+	 * @generated
+	 */
+	EReference getComponentBasedSystem_Providedrole();
+
+	/**
+	 * Returns the meta object for the reference list '{@link componentBasedSystem.ComponentBasedSystem#getRequiredrole <em>Requiredrole</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Requiredrole</em>'.
+	 * @see componentBasedSystem.ComponentBasedSystem#getRequiredrole()
+	 * @see #getComponentBasedSystem()
+	 * @generated
+	 */
+	EReference getComponentBasedSystem_Requiredrole();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.ComponentBasedSystem#getType <em>Type</em>}'.
@@ -1429,14 +1449,6 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EClass COMPONENT_BASED_SYSTEM = eINSTANCE.getComponentBasedSystem();
 
 		/**
-		 * The meta object literal for the '<em><b>Interface</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT_BASED_SYSTEM__INTERFACE = eINSTANCE.getComponentBasedSystem_Interface();
-
-		/**
 		 * The meta object literal for the '<em><b>Assemblycontext</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1451,6 +1463,22 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT_BASED_SYSTEM__ENVIRONMENT = eINSTANCE.getComponentBasedSystem_Environment();
+
+		/**
+		 * The meta object literal for the '<em><b>Providedrole</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_BASED_SYSTEM__PROVIDEDROLE = eINSTANCE.getComponentBasedSystem_Providedrole();
+
+		/**
+		 * The meta object literal for the '<em><b>Requiredrole</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_BASED_SYSTEM__REQUIREDROLE = eINSTANCE.getComponentBasedSystem_Requiredrole();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' containment reference list feature.
