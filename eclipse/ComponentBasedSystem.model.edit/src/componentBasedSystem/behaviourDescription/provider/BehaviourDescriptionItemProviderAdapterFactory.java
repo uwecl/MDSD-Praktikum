@@ -72,6 +72,29 @@ public class BehaviourDescriptionItemProviderAdapterFactory extends BehaviourDes
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link componentBasedSystem.behaviourDescription.DescriptionElement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DescriptionElementItemProvider descriptionElementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link componentBasedSystem.behaviourDescription.DescriptionElement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDescriptionElementAdapter() {
+		if (descriptionElementItemProvider == null) {
+			descriptionElementItemProvider = new DescriptionElementItemProvider(this);
+		}
+
+		return descriptionElementItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link componentBasedSystem.behaviourDescription.BehaviourDescription} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -285,11 +308,12 @@ public class BehaviourDescriptionItemProviderAdapterFactory extends BehaviourDes
 	 * @generated
 	 */
 	public void dispose() {
-		if (behaviourDescriptionItemProvider != null) behaviourDescriptionItemProvider.dispose();
+		if (descriptionElementItemProvider != null) descriptionElementItemProvider.dispose();
 		if (internalActionItemProvider != null) internalActionItemProvider.dispose();
 		if (externalCallItemProvider != null) externalCallItemProvider.dispose();
 		if (loopItemProvider != null) loopItemProvider.dispose();
 		if (branchItemProvider != null) branchItemProvider.dispose();
+		if (behaviourDescriptionItemProvider != null) behaviourDescriptionItemProvider.dispose();
 	}
 
 }

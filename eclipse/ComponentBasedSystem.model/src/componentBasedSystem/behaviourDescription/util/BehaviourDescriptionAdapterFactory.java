@@ -68,8 +68,8 @@ public class BehaviourDescriptionAdapterFactory extends AdapterFactoryImpl {
 	protected BehaviourDescriptionSwitch<Adapter> modelSwitch =
 		new BehaviourDescriptionSwitch<Adapter>() {
 			@Override
-			public Adapter caseBehaviourDescription(BehaviourDescription object) {
-				return createBehaviourDescriptionAdapter();
+			public Adapter caseDescriptionElement(DescriptionElement object) {
+				return createDescriptionElementAdapter();
 			}
 			@Override
 			public Adapter caseInternalAction(InternalAction object) {
@@ -86,6 +86,10 @@ public class BehaviourDescriptionAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseBranch(Branch object) {
 				return createBranchAdapter();
+			}
+			@Override
+			public Adapter caseBehaviourDescription(BehaviourDescription object) {
+				return createBehaviourDescriptionAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -106,6 +110,20 @@ public class BehaviourDescriptionAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link componentBasedSystem.behaviourDescription.DescriptionElement <em>Description Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see componentBasedSystem.behaviourDescription.DescriptionElement
+	 * @generated
+	 */
+	public Adapter createDescriptionElementAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link componentBasedSystem.behaviourDescription.BehaviourDescription <em>Behaviour Description</em>}'.

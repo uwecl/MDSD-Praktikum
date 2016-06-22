@@ -22,6 +22,15 @@ public interface BehaviourDescriptionFactory extends EFactory {
 	BehaviourDescriptionFactory eINSTANCE = componentBasedSystem.behaviourDescription.impl.BehaviourDescriptionFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Description Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Description Element</em>'.
+	 * @generated
+	 */
+	DescriptionElement createDescriptionElement();
+
+	/**
 	 * Returns a new object of class '<em>Behaviour Description</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

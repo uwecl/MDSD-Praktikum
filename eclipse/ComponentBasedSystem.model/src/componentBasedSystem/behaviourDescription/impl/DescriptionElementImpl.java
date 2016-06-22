@@ -3,24 +3,26 @@
 package componentBasedSystem.behaviourDescription.impl;
 
 import componentBasedSystem.behaviourDescription.BehaviourDescriptionPackage;
-import componentBasedSystem.behaviourDescription.ExternalCall;
+import componentBasedSystem.behaviourDescription.DescriptionElement;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>External Call</b></em>'.
+ * An implementation of the model object '<em><b>Description Element</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class ExternalCallImpl extends DescriptionElementImpl implements ExternalCall {
+public class DescriptionElementImpl extends MinimalEObjectImpl.Container implements DescriptionElement {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ExternalCallImpl() {
+	protected DescriptionElementImpl() {
 		super();
 	}
 
@@ -31,7 +33,7 @@ public class ExternalCallImpl extends DescriptionElementImpl implements External
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return BehaviourDescriptionPackage.Literals.EXTERNAL_CALL;
+		return BehaviourDescriptionPackage.Literals.DESCRIPTION_ELEMENT;
 	}
 
-} //ExternalCallImpl
+} //DescriptionElementImpl

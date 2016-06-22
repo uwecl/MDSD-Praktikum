@@ -161,11 +161,21 @@
   </eSubpackages>
   <eSubpackages name="behaviourDescription" nsURI="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/behaviourDescription"
       nsPrefix="behaviourDescription">
-    <eClassifiers xsi:type="ecore:EClass" name="BehaviourDescription"/>
-    <eClassifiers xsi:type="ecore:EClass" name="InternalAction" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
-    <eClassifiers xsi:type="ecore:EClass" name="ExternalCall" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Branch" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DescriptionElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalAction" eSuperTypes="#//behaviourDescription/DescriptionElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ExternalCall" eSuperTypes="#//behaviourDescription/DescriptionElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//behaviourDescription/DescriptionElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="descriptionelement" upperBound="-1"
+          eType="#//behaviourDescription/DescriptionElement" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Branch" eSuperTypes="#//behaviourDescription/DescriptionElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="descriptionelement" upperBound="-1"
+          eType="#//behaviourDescription/DescriptionElement" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BehaviourDescription">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="descriptionelement" upperBound="-1"
+          eType="#//behaviourDescription/DescriptionElement" containment="true"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="roles" nsURI="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/roles"
       nsPrefix="roles">

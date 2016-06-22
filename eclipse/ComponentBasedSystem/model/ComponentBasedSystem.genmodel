@@ -100,11 +100,18 @@
     </nestedGenPackages>
     <nestedGenPackages prefix="BehaviourDescription" disposableProviderFactory="true"
         ecorePackage="componentBasedSystem.ecore#//behaviourDescription">
-      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/BehaviourDescription"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/DescriptionElement"/>
       <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/InternalAction"/>
       <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/ExternalCall"/>
-      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/Loop"/>
-      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/Branch"/>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/Loop">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//behaviourDescription/Loop/descriptionelement"/>
+      </genClasses>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/Branch">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//behaviourDescription/Branch/descriptionelement"/>
+      </genClasses>
+      <genClasses ecoreClass="componentBasedSystem.ecore#//behaviourDescription/BehaviourDescription">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//behaviourDescription/BehaviourDescription/descriptionelement"/>
+      </genClasses>
     </nestedGenPackages>
     <nestedGenPackages prefix="Roles" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#//roles">
       <genClasses ecoreClass="componentBasedSystem.ecore#//roles/Role">

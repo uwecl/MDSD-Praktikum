@@ -195,26 +195,6 @@ public class ComponentItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ComponentBasedSystemPackage.Literals.COMPONENT__BEHAVIOURDESCRIPTION,
-				 BehaviourDescriptionFactory.eINSTANCE.createInternalAction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ComponentBasedSystemPackage.Literals.COMPONENT__BEHAVIOURDESCRIPTION,
-				 BehaviourDescriptionFactory.eINSTANCE.createExternalCall()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ComponentBasedSystemPackage.Literals.COMPONENT__BEHAVIOURDESCRIPTION,
-				 BehaviourDescriptionFactory.eINSTANCE.createLoop()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ComponentBasedSystemPackage.Literals.COMPONENT__BEHAVIOURDESCRIPTION,
-				 BehaviourDescriptionFactory.eINSTANCE.createBranch()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(ComponentBasedSystemPackage.Literals.COMPONENT__SERVICE,
 				 ComponentBasedSystemFactory.eINSTANCE.createService()));
 

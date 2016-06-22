@@ -56,14 +56,25 @@ public class BehaviourDescriptionFactoryImpl extends EFactoryImpl implements Beh
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case BehaviourDescriptionPackage.BEHAVIOUR_DESCRIPTION: return createBehaviourDescription();
+			case BehaviourDescriptionPackage.DESCRIPTION_ELEMENT: return createDescriptionElement();
 			case BehaviourDescriptionPackage.INTERNAL_ACTION: return createInternalAction();
 			case BehaviourDescriptionPackage.EXTERNAL_CALL: return createExternalCall();
 			case BehaviourDescriptionPackage.LOOP: return createLoop();
 			case BehaviourDescriptionPackage.BRANCH: return createBranch();
+			case BehaviourDescriptionPackage.BEHAVIOUR_DESCRIPTION: return createBehaviourDescription();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DescriptionElement createDescriptionElement() {
+		DescriptionElementImpl descriptionElement = new DescriptionElementImpl();
+		return descriptionElement;
 	}
 
 	/**

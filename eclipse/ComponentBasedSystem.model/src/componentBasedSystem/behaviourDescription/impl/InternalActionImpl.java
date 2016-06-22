@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class InternalActionImpl extends BehaviourDescriptionImpl implements InternalAction {
+public class InternalActionImpl extends DescriptionElementImpl implements InternalAction {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
