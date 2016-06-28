@@ -1,0 +1,39 @@
+module cbscodegeneration.RepositoryToJava
+
+import org.eclipse.emf.mwe.utils.*
+ 
+var targetDir = "src-gen"
+var inputMetamodel = "componentBasedSystem.ComponentBasedSystemPackage"
+var inputModelDir = "inputModels"
+ 
+Workflow {
+ 
+    bean = StandaloneSetup {
+        registerGeneratedEPackage = inputMetamodel
+    }
+ 
+    component = DirectoryCleaner {
+        directory = targetDir
+    }
+ 
+    component = cbscodegeneration.RepositoryToJavaSupport {}
+ 
+    // Parse .componentbasedsystem models.
+    component = org.eclipse.xtext.mwe.Reader {
+        path = inputModelDir
+        register = RepositoryToJavaSetup {}
+        loadResource = {
+            slot = "model"
+        }
+    }
+ 
+ 	// Generate .java files.
+ 	component = RepositoryToJavaSupport {}
+    component = org.eclipse.xtext.generator.GeneratorComponent {
+        register = RepositoryToJavaSetup {}
+        slot = 'model'
+        outlet = {
+            path = targetDir
+        }
+    }
+}
