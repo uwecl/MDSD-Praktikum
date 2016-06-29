@@ -14,8 +14,8 @@ public abstract class AbstractRepositoryValidator extends AbstractDeclarativeVal
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("edu.kit.ipd.sdq.mdsdpc.componentBasedSystem"));
-	    result.add(EPackage.Registry.INSTANCE.getEPackage("edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/behaviourDescription"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/dataTypes"));
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/behaviourDescription"));
 	    result.add(EPackage.Registry.INSTANCE.getEPackage("edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/roles"));
 		return result;
 	}

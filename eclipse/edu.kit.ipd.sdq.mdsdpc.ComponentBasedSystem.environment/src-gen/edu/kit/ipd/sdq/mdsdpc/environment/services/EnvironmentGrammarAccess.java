@@ -29,121 +29,112 @@ public class EnvironmentGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cEnvironmentAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cEnvironmentKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cContainerKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cContainerAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cContainerContainerParserRuleCall_3_2_0 = (RuleCall)cContainerAssignment_3_2.eContents().get(0);
+		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
+		private final Assignment cContainerAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
+		private final RuleCall cContainerContainerParserRuleCall_3_3_1_0 = (RuleCall)cContainerAssignment_3_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cContainerKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cLinkKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cContainerAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final RuleCall cContainerContainerParserRuleCall_4_2_0 = (RuleCall)cContainerAssignment_4_2.eContents().get(0);
+		private final Assignment cLinkAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cLinkLinkParserRuleCall_4_2_0 = (RuleCall)cLinkAssignment_4_2.eContents().get(0);
 		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
 		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
-		private final Assignment cContainerAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
-		private final RuleCall cContainerContainerParserRuleCall_4_3_1_0 = (RuleCall)cContainerAssignment_4_3_1.eContents().get(0);
+		private final Assignment cLinkAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
+		private final RuleCall cLinkLinkParserRuleCall_4_3_1_0 = (RuleCall)cLinkAssignment_4_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cLinkKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
-		private final Assignment cLinkAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
-		private final RuleCall cLinkLinkParserRuleCall_5_2_0 = (RuleCall)cLinkAssignment_5_2.eContents().get(0);
-		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
-		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
-		private final Assignment cLinkAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
-		private final RuleCall cLinkLinkParserRuleCall_5_3_1_0 = (RuleCall)cLinkAssignment_5_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Environment componentBasedSystem::Environment:
-		//	{componentBasedSystem::Environment}
+		//Environment:
+		//	{Environment}
 		//	'Environment'
-		//	name=EString
 		//	'{' ('container' '{' container+=Container ("," container+=Container)* '}')? ('link' '{' link+=Link ("," link+=Link)*
 		//	'}')?
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{componentBasedSystem::Environment} 'Environment' name=EString '{' ('container' '{' container+=Container (","
-		//container+=Container)* '}')? ('link' '{' link+=Link ("," link+=Link)* '}')? '}'
+		//{Environment} 'Environment' '{' ('container' '{' container+=Container ("," container+=Container)* '}')? ('link' '{'
+		//link+=Link ("," link+=Link)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{componentBasedSystem::Environment}
+		//{Environment}
 		public Action getEnvironmentAction_0() { return cEnvironmentAction_0; }
 		
 		//'Environment'
 		public Keyword getEnvironmentKeyword_1() { return cEnvironmentKeyword_1; }
 		
-		//name=EString
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//EString
-		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
-		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 		
 		//('container' '{' container+=Container ("," container+=Container)* '}')?
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'container'
-		public Keyword getContainerKeyword_4_0() { return cContainerKeyword_4_0; }
+		public Keyword getContainerKeyword_3_0() { return cContainerKeyword_3_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
+		
+		//container+=Container
+		public Assignment getContainerAssignment_3_2() { return cContainerAssignment_3_2; }
+		
+		//Container
+		public RuleCall getContainerContainerParserRuleCall_3_2_0() { return cContainerContainerParserRuleCall_3_2_0; }
+		
+		//("," container+=Container)*
+		public Group getGroup_3_3() { return cGroup_3_3; }
+		
+		//","
+		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
+		
+		//container+=Container
+		public Assignment getContainerAssignment_3_3_1() { return cContainerAssignment_3_3_1; }
+		
+		//Container
+		public RuleCall getContainerContainerParserRuleCall_3_3_1_0() { return cContainerContainerParserRuleCall_3_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
+		
+		//('link' '{' link+=Link ("," link+=Link)* '}')?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'link'
+		public Keyword getLinkKeyword_4_0() { return cLinkKeyword_4_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
 		
-		//container+=Container
-		public Assignment getContainerAssignment_4_2() { return cContainerAssignment_4_2; }
+		//link+=Link
+		public Assignment getLinkAssignment_4_2() { return cLinkAssignment_4_2; }
 		
-		//Container
-		public RuleCall getContainerContainerParserRuleCall_4_2_0() { return cContainerContainerParserRuleCall_4_2_0; }
+		//Link
+		public RuleCall getLinkLinkParserRuleCall_4_2_0() { return cLinkLinkParserRuleCall_4_2_0; }
 		
-		//("," container+=Container)*
+		//("," link+=Link)*
 		public Group getGroup_4_3() { return cGroup_4_3; }
 		
 		//","
 		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
 		
-		//container+=Container
-		public Assignment getContainerAssignment_4_3_1() { return cContainerAssignment_4_3_1; }
+		//link+=Link
+		public Assignment getLinkAssignment_4_3_1() { return cLinkAssignment_4_3_1; }
 		
-		//Container
-		public RuleCall getContainerContainerParserRuleCall_4_3_1_0() { return cContainerContainerParserRuleCall_4_3_1_0; }
+		//Link
+		public RuleCall getLinkLinkParserRuleCall_4_3_1_0() { return cLinkLinkParserRuleCall_4_3_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_4_4() { return cRightCurlyBracketKeyword_4_4; }
 		
-		//('link' '{' link+=Link ("," link+=Link)* '}')?
-		public Group getGroup_5() { return cGroup_5; }
-		
-		//'link'
-		public Keyword getLinkKeyword_5_0() { return cLinkKeyword_5_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
-		
-		//link+=Link
-		public Assignment getLinkAssignment_5_2() { return cLinkAssignment_5_2; }
-		
-		//Link
-		public RuleCall getLinkLinkParserRuleCall_5_2_0() { return cLinkLinkParserRuleCall_5_2_0; }
-		
-		//("," link+=Link)*
-		public Group getGroup_5_3() { return cGroup_5_3; }
-		
-		//","
-		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
-		
-		//link+=Link
-		public Assignment getLinkAssignment_5_3_1() { return cLinkAssignment_5_3_1; }
-		
-		//Link
-		public RuleCall getLinkLinkParserRuleCall_5_3_1_0() { return cLinkLinkParserRuleCall_5_3_1_0; }
-		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class ContainerElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.environment.Environment.Container");
@@ -153,16 +144,16 @@ public class EnvironmentGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
-		//Container componentBasedSystem::Container:
-		//	{componentBasedSystem::Container}
+		//Container:
+		//	{Container}
 		//	'Container'
-		//	name=EString
+		//	name=EString;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{componentBasedSystem::Container} 'Container' name=EString
+		//{Container} 'Container' name=EString
 		public Group getGroup() { return cGroup; }
 		
-		//{componentBasedSystem::Container}
+		//{Container}
 		public Action getContainerAction_0() { return cContainerAction_0; }
 		
 		//'Container'
@@ -194,17 +185,15 @@ public class EnvironmentGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//Link componentBasedSystem::Link:
+		//Link:
 		//	'Link'
 		//	name=EString
 		//	'{'
-		//	'container' '(' container+=[componentBasedSystem::Container|EString] (","
-		//	container+=[componentBasedSystem::Container|EString])* ')'
-		//	'}'
+		//	'container' '(' container+=[Container|EString] ("," container+=[Container|EString])* ')'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Link' name=EString '{' 'container' '(' container+=[componentBasedSystem::Container|EString] (","
-		//container+=[componentBasedSystem::Container|EString])* ')' '}'
+		//'Link' name=EString '{' 'container' '(' container+=[Container|EString] ("," container+=[Container|EString])* ')' '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Link'
@@ -225,25 +214,25 @@ public class EnvironmentGrammarAccess extends AbstractGrammarElementFinder {
 		//'('
 		public Keyword getLeftParenthesisKeyword_4() { return cLeftParenthesisKeyword_4; }
 		
-		//container+=[componentBasedSystem::Container|EString]
+		//container+=[Container|EString]
 		public Assignment getContainerAssignment_5() { return cContainerAssignment_5; }
 		
-		//[componentBasedSystem::Container|EString]
+		//[Container|EString]
 		public CrossReference getContainerContainerCrossReference_5_0() { return cContainerContainerCrossReference_5_0; }
 		
 		//EString
 		public RuleCall getContainerContainerEStringParserRuleCall_5_0_1() { return cContainerContainerEStringParserRuleCall_5_0_1; }
 		
-		//("," container+=[componentBasedSystem::Container|EString])*
+		//("," container+=[Container|EString])*
 		public Group getGroup_6() { return cGroup_6; }
 		
 		//","
 		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
 		
-		//container+=[componentBasedSystem::Container|EString]
+		//container+=[Container|EString]
 		public Assignment getContainerAssignment_6_1() { return cContainerAssignment_6_1; }
 		
-		//[componentBasedSystem::Container|EString]
+		//[Container|EString]
 		public CrossReference getContainerContainerCrossReference_6_1_0() { return cContainerContainerCrossReference_6_1_0; }
 		
 		//EString
@@ -323,13 +312,12 @@ public class EnvironmentGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Environment componentBasedSystem::Environment:
-	//	{componentBasedSystem::Environment}
+	//Environment:
+	//	{Environment}
 	//	'Environment'
-	//	name=EString
 	//	'{' ('container' '{' container+=Container ("," container+=Container)* '}')? ('link' '{' link+=Link ("," link+=Link)*
 	//	'}')?
-	//	'}'
+	//	'}';
 	public EnvironmentElements getEnvironmentAccess() {
 		return pEnvironment;
 	}
@@ -338,10 +326,10 @@ public class EnvironmentGrammarAccess extends AbstractGrammarElementFinder {
 		return getEnvironmentAccess().getRule();
 	}
 	
-	//Container componentBasedSystem::Container:
-	//	{componentBasedSystem::Container}
+	//Container:
+	//	{Container}
 	//	'Container'
-	//	name=EString
+	//	name=EString;
 	public ContainerElements getContainerAccess() {
 		return pContainer;
 	}
@@ -350,13 +338,12 @@ public class EnvironmentGrammarAccess extends AbstractGrammarElementFinder {
 		return getContainerAccess().getRule();
 	}
 	
-	//Link componentBasedSystem::Link:
+	//Link:
 	//	'Link'
 	//	name=EString
 	//	'{'
-	//	'container' '(' container+=[componentBasedSystem::Container|EString] (","
-	//	container+=[componentBasedSystem::Container|EString])* ')'
-	//	'}'
+	//	'container' '(' container+=[Container|EString] ("," container+=[Container|EString])* ')'
+	//	'}';
 	public LinkElements getLinkAccess() {
 		return pLink;
 	}

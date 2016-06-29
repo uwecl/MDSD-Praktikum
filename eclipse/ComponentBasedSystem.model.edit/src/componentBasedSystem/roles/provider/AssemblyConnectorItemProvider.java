@@ -65,6 +65,8 @@ public class AssemblyConnectorItemProvider
 			addProvidedrolePropertyDescriptor(object);
 			addRequiredrolePropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
+			addProvidedAssemblyContextPropertyDescriptor(object);
+			addRequiredAssemblyContextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -131,6 +133,50 @@ public class AssemblyConnectorItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Provided Assembly Context feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addProvidedAssemblyContextPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AssemblyConnector_providedAssemblyContext_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AssemblyConnector_providedAssemblyContext_feature", "_UI_AssemblyConnector_type"),
+				 RolesPackage.Literals.ASSEMBLY_CONNECTOR__PROVIDED_ASSEMBLY_CONTEXT,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Required Assembly Context feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRequiredAssemblyContextPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_AssemblyConnector_requiredAssemblyContext_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_AssemblyConnector_requiredAssemblyContext_feature", "_UI_AssemblyConnector_type"),
+				 RolesPackage.Literals.ASSEMBLY_CONNECTOR__REQUIRED_ASSEMBLY_CONTEXT,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

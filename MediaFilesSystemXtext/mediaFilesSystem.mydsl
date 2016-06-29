@@ -1,7 +1,0 @@
-ComponentBasedSystem {
-	assemblycontext {
-		AssemblyContext WebGUI {
-			component We
-		}
-	}
-}

@@ -4,8 +4,8 @@ grammar edu.kit.ipd.sdq.mdsdpc.allocation.Allocation with org.eclipse.xtext.comm
 import "platform:/resource/ComponentBasedSystem/model/componentBasedSystem.ecore" as componentBasedSystem
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 import "platform:/resource/ComponentBasedSystem/model/componentBasedSystem.ecore#//dataTypes" as dataTypes
-import "platform:/resource/ComponentBasedSystem/model/componentBasedSystem.ecore#//roles"
-import "platform:/resource/ComponentBasedSystem/model/componentBasedSystem.ecore#//behaviourDescription" as behaviourDescription
+import "platform:/resource/ComponentBasedSystem/model/componentBasedSystem.ecore#//roles" as roles
+import "platform:/resource/ComponentBasedSystem/model/componentBasedSystem.ecore#//behaviourDescription"
 
 Allocation returns componentBasedSystem::Allocation:
 	'Allocation'
@@ -19,11 +19,12 @@ Allocation returns componentBasedSystem::Allocation:
 Component returns componentBasedSystem::Component:
 	Component_Impl | CompositeComponent;
 
-BehaviourDescription returns behaviourDescription::BehaviourDescription:
-	BehaviourDescription_Impl | InternalAction | ExternalCall | Loop | Branch;
 
 
 
+
+DescriptionElement returns DescriptionElement:
+	DescriptionElement_Impl | InternalAction | ExternalCall | Loop | Branch;
 
 
 
@@ -36,7 +37,7 @@ ParameterType returns dataTypes::ParameterType:
 	ParameterType_Impl | Simple | Complex;
 
 
-Role returns Role:
+Role returns roles::Role:
 	Role_Impl | RequiredRole | ProvidedRole;
 
 AllocationContext returns componentBasedSystem::AllocationContext:
@@ -71,10 +72,12 @@ Component_Impl returns componentBasedSystem::Component:
 		'providedrole' providedrole=ProvidedRole
 	'}';
 
-BehaviourDescription_Impl returns behaviourDescription::BehaviourDescription:
-	{behaviourDescription::BehaviourDescription}
+BehaviourDescription returns BehaviourDescription:
+	{BehaviourDescription}
 	'BehaviourDescription'
-	;
+	'{'
+		('descriptionelement' '{' descriptionelement+=DescriptionElement ( "," descriptionelement+=DescriptionElement)* '}' )?
+	'}';
 
 Service returns componentBasedSystem::Service:
 	'Service'
@@ -82,14 +85,14 @@ Service returns componentBasedSystem::Service:
 		'correspondingSignatures' '(' correspondingSignatures+=[componentBasedSystem::Signature|EString] ( "," correspondingSignatures+=[componentBasedSystem::Signature|EString])* ')' 
 	'}';
 
-RequiredRole returns RequiredRole:
+RequiredRole returns roles::RequiredRole:
 	'RequiredRole'
 	name=EString
 	'{'
 		'interface' interface=[componentBasedSystem::Interface|EString]
 	'}';
 
-ProvidedRole returns ProvidedRole:
+ProvidedRole returns roles::ProvidedRole:
 	'ProvidedRole'
 	name=EString
 	'{'
@@ -108,25 +111,34 @@ CompositeComponent returns componentBasedSystem::CompositeComponent:
 		'delegationconnector' '{' delegationconnector+=DelegationConnector ( "," delegationconnector+=DelegationConnector)* '}' 
 	'}';
 
-InternalAction returns behaviourDescription::InternalAction:
-	{behaviourDescription::InternalAction}
+DescriptionElement_Impl returns DescriptionElement:
+	{DescriptionElement}
+	'DescriptionElement'
+	;
+
+InternalAction returns InternalAction:
+	{InternalAction}
 	'InternalAction'
 	;
 
-ExternalCall returns behaviourDescription::ExternalCall:
-	{behaviourDescription::ExternalCall}
+ExternalCall returns ExternalCall:
+	{ExternalCall}
 	'ExternalCall'
 	;
 
-Loop returns behaviourDescription::Loop:
-	{behaviourDescription::Loop}
+Loop returns Loop:
+	{Loop}
 	'Loop'
-	;
+	'{'
+		('descriptionelement' '{' descriptionelement+=DescriptionElement ( "," descriptionelement+=DescriptionElement)* '}' )?
+	'}';
 
-Branch returns behaviourDescription::Branch:
-	{behaviourDescription::Branch}
+Branch returns Branch:
+	{Branch}
 	'Branch'
-	;
+	'{'
+		('descriptionelement' '{' descriptionelement+=DescriptionElement ( "," descriptionelement+=DescriptionElement)* '}' )?
+	'}';
 
 Signature returns componentBasedSystem::Signature:
 	'Signature'
@@ -188,10 +200,10 @@ DelegationConnector returns componentBasedSystem::DelegationConnector:
 	'DelegationConnector'
 	name=EString
 	'{'
-		'role' '(' role+=[Role|EString] ( "," role+=[Role|EString])* ')' 
+		'role' '(' role+=[roles::Role|EString] ( "," role+=[roles::Role|EString])* ')' 
 	'}';
 
-Role_Impl returns Role:
+Role_Impl returns roles::Role:
 	'Role'
 	name=EString
 	'{'

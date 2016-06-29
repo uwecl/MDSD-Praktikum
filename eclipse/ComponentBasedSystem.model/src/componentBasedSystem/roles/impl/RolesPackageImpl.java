@@ -221,6 +221,24 @@ public class RolesPackageImpl extends EPackageImpl implements RolesPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getAssemblyConnector_ProvidedAssemblyContext() {
+		return (EReference)assemblyConnectorEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getAssemblyConnector_RequiredAssemblyContext() {
+		return (EReference)assemblyConnectorEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public RolesFactory getRolesFactory() {
 		return (RolesFactory)getEFactoryInstance();
 	}
@@ -256,6 +274,8 @@ public class RolesPackageImpl extends EPackageImpl implements RolesPackage {
 		createEReference(assemblyConnectorEClass, ASSEMBLY_CONNECTOR__PROVIDEDROLE);
 		createEReference(assemblyConnectorEClass, ASSEMBLY_CONNECTOR__REQUIREDROLE);
 		createEAttribute(assemblyConnectorEClass, ASSEMBLY_CONNECTOR__NAME);
+		createEReference(assemblyConnectorEClass, ASSEMBLY_CONNECTOR__PROVIDED_ASSEMBLY_CONTEXT);
+		createEReference(assemblyConnectorEClass, ASSEMBLY_CONNECTOR__REQUIRED_ASSEMBLY_CONTEXT);
 	}
 
 	/**
@@ -305,6 +325,8 @@ public class RolesPackageImpl extends EPackageImpl implements RolesPackage {
 		initEReference(getAssemblyConnector_Providedrole(), this.getProvidedRole(), null, "providedrole", null, 1, 1, AssemblyConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getAssemblyConnector_Requiredrole(), this.getRequiredRole(), null, "requiredrole", null, 1, 1, AssemblyConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getAssemblyConnector_Name(), ecorePackage.getEString(), "name", null, 0, 1, AssemblyConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssemblyConnector_ProvidedAssemblyContext(), theComponentBasedSystemPackage.getAssemblyContext(), null, "providedAssemblyContext", null, 1, 1, AssemblyConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getAssemblyConnector_RequiredAssemblyContext(), theComponentBasedSystemPackage.getAssemblyContext(), null, "requiredAssemblyContext", null, 1, 1, AssemblyConnector.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //RolesPackageImpl

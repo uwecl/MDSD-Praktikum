@@ -4,6 +4,7 @@ package componentBasedSystem.behaviourDescription;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 /**
  * <!-- begin-user-doc -->
@@ -55,6 +56,34 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	BehaviourDescriptionPackage eINSTANCE = componentBasedSystem.behaviourDescription.impl.BehaviourDescriptionPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link componentBasedSystem.behaviourDescription.impl.DescriptionElementImpl <em>Description Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see componentBasedSystem.behaviourDescription.impl.DescriptionElementImpl
+	 * @see componentBasedSystem.behaviourDescription.impl.BehaviourDescriptionPackageImpl#getDescriptionElement()
+	 * @generated
+	 */
+	int DESCRIPTION_ELEMENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Description Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIPTION_ELEMENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Description Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DESCRIPTION_ELEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link componentBasedSystem.behaviourDescription.impl.BehaviourDescriptionImpl <em>Behaviour Description</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -62,25 +91,17 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	 * @see componentBasedSystem.behaviourDescription.impl.BehaviourDescriptionPackageImpl#getBehaviourDescription()
 	 * @generated
 	 */
-	int BEHAVIOUR_DESCRIPTION = 0;
+	int BEHAVIOUR_DESCRIPTION = 5;
 
 	/**
-	 * The number of structural features of the '<em>Behaviour Description</em>' class.
+	 * Returns the meta object for class '{@link componentBasedSystem.behaviourDescription.DescriptionElement <em>Description Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Description Element</em>'.
+	 * @see componentBasedSystem.behaviourDescription.DescriptionElement
 	 * @generated
-	 * @ordered
 	 */
-	int BEHAVIOUR_DESCRIPTION_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Behaviour Description</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BEHAVIOUR_DESCRIPTION_OPERATION_COUNT = 0;
+	EClass getDescriptionElement();
 
 	/**
 	 * The meta object id for the '{@link componentBasedSystem.behaviourDescription.impl.InternalActionImpl <em>Internal Action</em>}' class.
@@ -99,7 +120,7 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_ACTION_FEATURE_COUNT = BEHAVIOUR_DESCRIPTION_FEATURE_COUNT + 0;
+	int INTERNAL_ACTION_FEATURE_COUNT = DESCRIPTION_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Internal Action</em>' class.
@@ -108,7 +129,7 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERNAL_ACTION_OPERATION_COUNT = BEHAVIOUR_DESCRIPTION_OPERATION_COUNT + 0;
+	int INTERNAL_ACTION_OPERATION_COUNT = DESCRIPTION_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link componentBasedSystem.behaviourDescription.impl.ExternalCallImpl <em>External Call</em>}' class.
@@ -127,7 +148,7 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTERNAL_CALL_FEATURE_COUNT = BEHAVIOUR_DESCRIPTION_FEATURE_COUNT + 0;
+	int EXTERNAL_CALL_FEATURE_COUNT = DESCRIPTION_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>External Call</em>' class.
@@ -136,7 +157,7 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXTERNAL_CALL_OPERATION_COUNT = BEHAVIOUR_DESCRIPTION_OPERATION_COUNT + 0;
+	int EXTERNAL_CALL_OPERATION_COUNT = DESCRIPTION_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link componentBasedSystem.behaviourDescription.impl.LoopImpl <em>Loop</em>}' class.
@@ -149,13 +170,22 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	int LOOP = 3;
 
 	/**
+	 * The feature id for the '<em><b>Descriptionelement</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOOP__DESCRIPTIONELEMENT = DESCRIPTION_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Loop</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int LOOP_FEATURE_COUNT = BEHAVIOUR_DESCRIPTION_FEATURE_COUNT + 0;
+	int LOOP_FEATURE_COUNT = DESCRIPTION_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Loop</em>' class.
@@ -164,7 +194,7 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int LOOP_OPERATION_COUNT = BEHAVIOUR_DESCRIPTION_OPERATION_COUNT + 0;
+	int LOOP_OPERATION_COUNT = DESCRIPTION_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link componentBasedSystem.behaviourDescription.impl.BranchImpl <em>Branch</em>}' class.
@@ -177,13 +207,22 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	int BRANCH = 4;
 
 	/**
+	 * The feature id for the '<em><b>Descriptionelement</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BRANCH__DESCRIPTIONELEMENT = DESCRIPTION_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Branch</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH_FEATURE_COUNT = BEHAVIOUR_DESCRIPTION_FEATURE_COUNT + 0;
+	int BRANCH_FEATURE_COUNT = DESCRIPTION_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Branch</em>' class.
@@ -192,7 +231,34 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BRANCH_OPERATION_COUNT = BEHAVIOUR_DESCRIPTION_OPERATION_COUNT + 0;
+	int BRANCH_OPERATION_COUNT = DESCRIPTION_ELEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Descriptionelement</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEHAVIOUR_DESCRIPTION__DESCRIPTIONELEMENT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Behaviour Description</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEHAVIOUR_DESCRIPTION_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Behaviour Description</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BEHAVIOUR_DESCRIPTION_OPERATION_COUNT = 0;
 
 
 	/**
@@ -204,6 +270,17 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBehaviourDescription();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.behaviourDescription.BehaviourDescription#getDescriptionelement <em>Descriptionelement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Descriptionelement</em>'.
+	 * @see componentBasedSystem.behaviourDescription.BehaviourDescription#getDescriptionelement()
+	 * @see #getBehaviourDescription()
+	 * @generated
+	 */
+	EReference getBehaviourDescription_Descriptionelement();
 
 	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.behaviourDescription.InternalAction <em>Internal Action</em>}'.
@@ -236,6 +313,17 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	EClass getLoop();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.behaviourDescription.Loop#getDescriptionelement <em>Descriptionelement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Descriptionelement</em>'.
+	 * @see componentBasedSystem.behaviourDescription.Loop#getDescriptionelement()
+	 * @see #getLoop()
+	 * @generated
+	 */
+	EReference getLoop_Descriptionelement();
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.behaviourDescription.Branch <em>Branch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -244,6 +332,17 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBranch();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.behaviourDescription.Branch#getDescriptionelement <em>Descriptionelement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Descriptionelement</em>'.
+	 * @see componentBasedSystem.behaviourDescription.Branch#getDescriptionelement()
+	 * @see #getBranch()
+	 * @generated
+	 */
+	EReference getBranch_Descriptionelement();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -269,6 +368,16 @@ public interface BehaviourDescriptionPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link componentBasedSystem.behaviourDescription.impl.DescriptionElementImpl <em>Description Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see componentBasedSystem.behaviourDescription.impl.DescriptionElementImpl
+		 * @see componentBasedSystem.behaviourDescription.impl.BehaviourDescriptionPackageImpl#getDescriptionElement()
+		 * @generated
+		 */
+		EClass DESCRIPTION_ELEMENT = eINSTANCE.getDescriptionElement();
+
+		/**
 		 * The meta object literal for the '{@link componentBasedSystem.behaviourDescription.impl.BehaviourDescriptionImpl <em>Behaviour Description</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -277,6 +386,14 @@ public interface BehaviourDescriptionPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BEHAVIOUR_DESCRIPTION = eINSTANCE.getBehaviourDescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Descriptionelement</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BEHAVIOUR_DESCRIPTION__DESCRIPTIONELEMENT = eINSTANCE.getBehaviourDescription_Descriptionelement();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.behaviourDescription.impl.InternalActionImpl <em>Internal Action</em>}' class.
@@ -309,6 +426,14 @@ public interface BehaviourDescriptionPackage extends EPackage {
 		EClass LOOP = eINSTANCE.getLoop();
 
 		/**
+		 * The meta object literal for the '<em><b>Descriptionelement</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LOOP__DESCRIPTIONELEMENT = eINSTANCE.getLoop_Descriptionelement();
+
+		/**
 		 * The meta object literal for the '{@link componentBasedSystem.behaviourDescription.impl.BranchImpl <em>Branch</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -317,6 +442,14 @@ public interface BehaviourDescriptionPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BRANCH = eINSTANCE.getBranch();
+
+		/**
+		 * The meta object literal for the '<em><b>Descriptionelement</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BRANCH__DESCRIPTIONELEMENT = eINSTANCE.getBranch_Descriptionelement();
 
 	}
 

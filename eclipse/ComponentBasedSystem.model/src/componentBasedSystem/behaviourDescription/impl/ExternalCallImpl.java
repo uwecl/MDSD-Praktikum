@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ExternalCallImpl extends BehaviourDescriptionImpl implements ExternalCall {
+public class ExternalCallImpl extends DescriptionElementImpl implements ExternalCall {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

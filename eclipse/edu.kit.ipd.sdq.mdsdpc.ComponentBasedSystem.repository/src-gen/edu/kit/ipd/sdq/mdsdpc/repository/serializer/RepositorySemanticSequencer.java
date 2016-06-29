@@ -16,6 +16,7 @@ import componentBasedSystem.Signature;
 import componentBasedSystem.behaviourDescription.BehaviourDescription;
 import componentBasedSystem.behaviourDescription.BehaviourDescriptionPackage;
 import componentBasedSystem.behaviourDescription.Branch;
+import componentBasedSystem.behaviourDescription.DescriptionElement;
 import componentBasedSystem.behaviourDescription.ExternalCall;
 import componentBasedSystem.behaviourDescription.InternalAction;
 import componentBasedSystem.behaviourDescription.Loop;
@@ -55,10 +56,13 @@ public class RepositorySemanticSequencer extends AbstractDelegatingSemanticSeque
 		if (epackage == BehaviourDescriptionPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
 			case BehaviourDescriptionPackage.BEHAVIOUR_DESCRIPTION:
-				sequence_BehaviourDescription_Impl(context, (BehaviourDescription) semanticObject); 
+				sequence_BehaviourDescription(context, (BehaviourDescription) semanticObject); 
 				return; 
 			case BehaviourDescriptionPackage.BRANCH:
 				sequence_Branch(context, (Branch) semanticObject); 
+				return; 
+			case BehaviourDescriptionPackage.DESCRIPTION_ELEMENT:
+				sequence_DescriptionElement_Impl(context, (DescriptionElement) semanticObject); 
 				return; 
 			case BehaviourDescriptionPackage.EXTERNAL_CALL:
 				sequence_ExternalCall(context, (ExternalCall) semanticObject); 
@@ -158,23 +162,22 @@ public class RepositorySemanticSequencer extends AbstractDelegatingSemanticSeque
 	/**
 	 * Contexts:
 	 *     BehaviourDescription returns BehaviourDescription
-	 *     BehaviourDescription_Impl returns BehaviourDescription
 	 *
 	 * Constraint:
-	 *     {BehaviourDescription}
+	 *     (descriptionelement+=DescriptionElement descriptionelement+=DescriptionElement*)?
 	 */
-	protected void sequence_BehaviourDescription_Impl(ISerializationContext context, BehaviourDescription semanticObject) {
+	protected void sequence_BehaviourDescription(ISerializationContext context, BehaviourDescription semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     BehaviourDescription returns Branch
+	 *     DescriptionElement returns Branch
 	 *     Branch returns Branch
 	 *
 	 * Constraint:
-	 *     {Branch}
+	 *     (descriptionelement+=DescriptionElement descriptionelement+=DescriptionElement*)?
 	 */
 	protected void sequence_Branch(ISerializationContext context, Branch semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -253,7 +256,20 @@ public class RepositorySemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     BehaviourDescription returns ExternalCall
+	 *     DescriptionElement returns DescriptionElement
+	 *     DescriptionElement_Impl returns DescriptionElement
+	 *
+	 * Constraint:
+	 *     {DescriptionElement}
+	 */
+	protected void sequence_DescriptionElement_Impl(ISerializationContext context, DescriptionElement semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DescriptionElement returns ExternalCall
 	 *     ExternalCall returns ExternalCall
 	 *
 	 * Constraint:
@@ -278,7 +294,7 @@ public class RepositorySemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     BehaviourDescription returns InternalAction
+	 *     DescriptionElement returns InternalAction
 	 *     InternalAction returns InternalAction
 	 *
 	 * Constraint:
@@ -291,11 +307,11 @@ public class RepositorySemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     BehaviourDescription returns Loop
+	 *     DescriptionElement returns Loop
 	 *     Loop returns Loop
 	 *
 	 * Constraint:
-	 *     {Loop}
+	 *     (descriptionelement+=DescriptionElement descriptionelement+=DescriptionElement*)?
 	 */
 	protected void sequence_Loop(ISerializationContext context, Loop semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

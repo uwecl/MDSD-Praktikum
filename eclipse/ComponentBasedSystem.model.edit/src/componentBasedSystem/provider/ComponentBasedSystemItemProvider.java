@@ -64,26 +64,26 @@ public class ComponentBasedSystemItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addInterfacePropertyDescriptor(object);
-			addEnvironmentPropertyDescriptor(object);
+			addProvidedrolePropertyDescriptor(object);
+			addRequiredrolePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Interface feature.
+	 * This adds a property descriptor for the Providedrole feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addInterfacePropertyDescriptor(Object object) {
+	protected void addProvidedrolePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ComponentBasedSystem_interface_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_interface_feature", "_UI_ComponentBasedSystem_type"),
-				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__INTERFACE,
+				 getString("_UI_ComponentBasedSystem_providedrole_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_providedrole_feature", "_UI_ComponentBasedSystem_type"),
+				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__PROVIDEDROLE,
 				 true,
 				 false,
 				 true,
@@ -93,19 +93,19 @@ public class ComponentBasedSystemItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Environment feature.
+	 * This adds a property descriptor for the Requiredrole feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEnvironmentPropertyDescriptor(Object object) {
+	protected void addRequiredrolePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ComponentBasedSystem_environment_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_environment_feature", "_UI_ComponentBasedSystem_type"),
-				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ENVIRONMENT,
+				 getString("_UI_ComponentBasedSystem_requiredrole_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentBasedSystem_requiredrole_feature", "_UI_ComponentBasedSystem_type"),
+				 ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__REQUIREDROLE,
 				 true,
 				 false,
 				 true,
@@ -129,6 +129,9 @@ public class ComponentBasedSystemItemProvider
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__TYPE);
 			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ALLOCATION);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__REPOSITORY);
+			childrenFeatures.add(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ENVIRONMENT);
 		}
 		return childrenFeatures;
 	}
@@ -184,6 +187,9 @@ public class ComponentBasedSystemItemProvider
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONTEXT:
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__TYPE:
 			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR:
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION:
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REPOSITORY:
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ENVIRONMENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -240,6 +246,21 @@ public class ComponentBasedSystemItemProvider
 			(createChildParameter
 				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR,
 				 RolesFactory.eINSTANCE.createAssemblyConnector()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ALLOCATION,
+				 ComponentBasedSystemFactory.eINSTANCE.createAllocation()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__REPOSITORY,
+				 ComponentBasedSystemFactory.eINSTANCE.createRepository()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM__ENVIRONMENT,
+				 ComponentBasedSystemFactory.eINSTANCE.createEnvironment()));
 	}
 
 	/**

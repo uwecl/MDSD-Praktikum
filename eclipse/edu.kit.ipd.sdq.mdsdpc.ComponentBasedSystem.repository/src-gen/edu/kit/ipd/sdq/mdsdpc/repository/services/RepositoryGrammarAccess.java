@@ -55,19 +55,19 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Repository componentBasedSystem::Repository:
-		//	{componentBasedSystem::Repository}
+		//Repository:
+		//	{Repository}
 		//	'Repository'
 		//	'{' ('interface' '{' interface+=Interface ("," interface+=Interface)* '}')? ('component' '{' component+=Component
 		//	("," component+=Component)* '}')?
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{componentBasedSystem::Repository} 'Repository' '{' ('interface' '{' interface+=Interface ("," interface+=Interface)*
-		//'}')? ('component' '{' component+=Component ("," component+=Component)* '}')? '}'
+		//{Repository} 'Repository' '{' ('interface' '{' interface+=Interface ("," interface+=Interface)* '}')? ('component' '{'
+		//component+=Component ("," component+=Component)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{componentBasedSystem::Repository}
+		//{Repository}
 		public Action getRepositoryAction_0() { return cRepositoryAction_0; }
 		
 		//'Repository'
@@ -145,8 +145,8 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cComponent_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cCompositeComponentParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		//Component componentBasedSystem::Component:
-		//	Component_Impl | CompositeComponent
+		//Component:
+		//	Component_Impl | CompositeComponent;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//Component_Impl | CompositeComponent
@@ -158,37 +158,6 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//CompositeComponent
 		public RuleCall getCompositeComponentParserRuleCall_1() { return cCompositeComponentParserRuleCall_1; }
 	}
-	public class BehaviourDescriptionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.BehaviourDescription");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cBehaviourDescription_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cInternalActionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cExternalCallParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cLoopParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cBranchParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		
-		//BehaviourDescription behaviourDescription::BehaviourDescription:
-		//	BehaviourDescription_Impl | InternalAction | ExternalCall | Loop | Branch
-		@Override public ParserRule getRule() { return rule; }
-		
-		//BehaviourDescription_Impl | InternalAction | ExternalCall | Loop | Branch
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//BehaviourDescription_Impl
-		public RuleCall getBehaviourDescription_ImplParserRuleCall_0() { return cBehaviourDescription_ImplParserRuleCall_0; }
-		
-		//InternalAction
-		public RuleCall getInternalActionParserRuleCall_1() { return cInternalActionParserRuleCall_1; }
-		
-		//ExternalCall
-		public RuleCall getExternalCallParserRuleCall_2() { return cExternalCallParserRuleCall_2; }
-		
-		//Loop
-		public RuleCall getLoopParserRuleCall_3() { return cLoopParserRuleCall_3; }
-		
-		//Branch
-		public RuleCall getBranchParserRuleCall_4() { return cBranchParserRuleCall_4; }
-	}
 	public class ReturnTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.ReturnType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -197,8 +166,8 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cComplexParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cVoidParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		
-		//ReturnType:
-		//	ReturnType_Impl | Simple | Complex | Void;
+		//ReturnType dataTypes::ReturnType:
+		//	ReturnType_Impl | Simple | Complex | Void
 		@Override public ParserRule getRule() { return rule; }
 		
 		//ReturnType_Impl | Simple | Complex | Void
@@ -223,8 +192,8 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSimpleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cComplexParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//ParameterType:
-		//	ParameterType_Impl | Simple | Complex;
+		//ParameterType dataTypes::ParameterType:
+		//	ParameterType_Impl | Simple | Complex
 		@Override public ParserRule getRule() { return rule; }
 		
 		//ParameterType_Impl | Simple | Complex
@@ -238,6 +207,37 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//Complex
 		public RuleCall getComplexParserRuleCall_2() { return cComplexParserRuleCall_2; }
+	}
+	public class DescriptionElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.DescriptionElement");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cDescriptionElement_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cInternalActionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cExternalCallParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cLoopParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cBranchParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		
+		//DescriptionElement behaviourDescription::DescriptionElement:
+		//	DescriptionElement_Impl | InternalAction | ExternalCall | Loop | Branch
+		@Override public ParserRule getRule() { return rule; }
+		
+		//DescriptionElement_Impl | InternalAction | ExternalCall | Loop | Branch
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//DescriptionElement_Impl
+		public RuleCall getDescriptionElement_ImplParserRuleCall_0() { return cDescriptionElement_ImplParserRuleCall_0; }
+		
+		//InternalAction
+		public RuleCall getInternalActionParserRuleCall_1() { return cInternalActionParserRuleCall_1; }
+		
+		//ExternalCall
+		public RuleCall getExternalCallParserRuleCall_2() { return cExternalCallParserRuleCall_2; }
+		
+		//Loop
+		public RuleCall getLoopParserRuleCall_3() { return cLoopParserRuleCall_3; }
+		
+		//Branch
+		public RuleCall getBranchParserRuleCall_4() { return cBranchParserRuleCall_4; }
 	}
 	public class RoleElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.Role");
@@ -282,19 +282,18 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Interface componentBasedSystem::Interface:
-		//	{componentBasedSystem::Interface}
+		//Interface:
+		//	{Interface}
 		//	'Interface'
 		//	name=EString
 		//	'{' ('signature' '{' signature+=Signature ("," signature+=Signature)* '}')?
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{componentBasedSystem::Interface} 'Interface' name=EString '{' ('signature' '{' signature+=Signature (","
-		//signature+=Signature)* '}')? '}'
+		//{Interface} 'Interface' name=EString '{' ('signature' '{' signature+=Signature ("," signature+=Signature)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{componentBasedSystem::Interface}
+		//{Interface}
 		public Action getInterfaceAction_0() { return cInterfaceAction_0; }
 		
 		//'Interface'
@@ -383,7 +382,7 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cProvidedroleProvidedRoleParserRuleCall_11_0 = (RuleCall)cProvidedroleAssignment_11.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
-		//Component_Impl componentBasedSystem::Component:
+		//Component_Impl Component:
 		//	'Component'
 		//	name=EString
 		//	'{' ('behaviourdescription' '{' behaviourdescription+=BehaviourDescription (","
@@ -554,16 +553,17 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//Signature componentBasedSystem::Signature:
+		//Signature:
 		//	'Signature'
 		//	name=EString
 		//	'{'
-		//	'returntype' returntype=[ReturnType|EString] ('parameter' '{' parameter+=Parameter ("," parameter+=Parameter)* '}')?
-		//	'}'
+		//	'returntype' returntype=[dataTypes::ReturnType|EString] ('parameter' '{' parameter+=Parameter (","
+		//	parameter+=Parameter)* '}')?
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Signature' name=EString '{' 'returntype' returntype=[ReturnType|EString] ('parameter' '{' parameter+=Parameter (","
-		//parameter+=Parameter)* '}')? '}'
+		//'Signature' name=EString '{' 'returntype' returntype=[dataTypes::ReturnType|EString] ('parameter' '{'
+		//parameter+=Parameter ("," parameter+=Parameter)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Signature'
@@ -581,10 +581,10 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//'returntype'
 		public Keyword getReturntypeKeyword_3() { return cReturntypeKeyword_3; }
 		
-		//returntype=[ReturnType|EString]
+		//returntype=[dataTypes::ReturnType|EString]
 		public Assignment getReturntypeAssignment_4() { return cReturntypeAssignment_4; }
 		
-		//[ReturnType|EString]
+		//[dataTypes::ReturnType|EString]
 		public CrossReference getReturntypeReturnTypeCrossReference_4_0() { return cReturntypeReturnTypeCrossReference_4_0; }
 		
 		//EString
@@ -636,15 +636,15 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cParametertypeParameterTypeEStringParserRuleCall_4_0_1 = (RuleCall)cParametertypeParameterTypeCrossReference_4_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Parameter componentBasedSystem::Parameter:
+		//Parameter:
 		//	'Parameter'
 		//	name=EString
 		//	'{'
-		//	'parametertype' parametertype=[ParameterType|EString]
-		//	'}'
+		//	'parametertype' parametertype=[dataTypes::ParameterType|EString]
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Parameter' name=EString '{' 'parametertype' parametertype=[ParameterType|EString] '}'
+		//'Parameter' name=EString '{' 'parametertype' parametertype=[dataTypes::ParameterType|EString] '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Parameter'
@@ -662,10 +662,10 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//'parametertype'
 		public Keyword getParametertypeKeyword_3() { return cParametertypeKeyword_3; }
 		
-		//parametertype=[ParameterType|EString]
+		//parametertype=[dataTypes::ParameterType|EString]
 		public Assignment getParametertypeAssignment_4() { return cParametertypeAssignment_4; }
 		
-		//[ParameterType|EString]
+		//[dataTypes::ParameterType|EString]
 		public CrossReference getParametertypeParameterTypeCrossReference_4_0() { return cParametertypeParameterTypeCrossReference_4_0; }
 		
 		//EString
@@ -682,16 +682,16 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
-		//ReturnType_Impl ReturnType:
-		//	{ReturnType}
+		//ReturnType_Impl dataTypes::ReturnType:
+		//	{dataTypes::ReturnType}
 		//	'ReturnType'
 		//	name=EString
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ReturnType} 'ReturnType' name=EString
+		//{dataTypes::ReturnType} 'ReturnType' name=EString
 		public Group getGroup() { return cGroup; }
 		
-		//{ReturnType}
+		//{dataTypes::ReturnType}
 		public Action getReturnTypeAction_0() { return cReturnTypeAction_0; }
 		
 		//'ReturnType'
@@ -711,16 +711,16 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
-		//ParameterType_Impl ParameterType:
-		//	{ParameterType}
+		//ParameterType_Impl dataTypes::ParameterType:
+		//	{dataTypes::ParameterType}
 		//	'ParameterType'
 		//	name=EString
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{ParameterType} 'ParameterType' name=EString
+		//{dataTypes::ParameterType} 'ParameterType' name=EString
 		public Group getGroup() { return cGroup; }
 		
-		//{ParameterType}
+		//{dataTypes::ParameterType}
 		public Action getParameterTypeAction_0() { return cParameterTypeAction_0; }
 		
 		//'ParameterType'
@@ -746,18 +746,18 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cKindSimpleTypesEnumRuleCall_4_1_0 = (RuleCall)cKindAssignment_4_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Simple:
-		//	{Simple}
+		//Simple dataTypes::Simple:
+		//	{dataTypes::Simple}
 		//	'Simple'
 		//	name=EString
 		//	'{' ('kind' kind=simpleTypes)?
-		//	'}';
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Simple} 'Simple' name=EString '{' ('kind' kind=simpleTypes)? '}'
+		//{dataTypes::Simple} 'Simple' name=EString '{' ('kind' kind=simpleTypes)? '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{Simple}
+		//{dataTypes::Simple}
 		public Action getSimpleAction_0() { return cSimpleAction_0; }
 		
 		//'Simple'
@@ -805,12 +805,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//Complex:
+		//Complex dataTypes::Complex:
 		//	'Complex'
 		//	name=EString
 		//	'{'
 		//	'simple' '{' simple+=Simple ("," simple+=Simple)* '}'
-		//	'}';
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Complex' name=EString '{' 'simple' '{' simple+=Simple ("," simple+=Simple)* '}' '}'
@@ -866,16 +866,16 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameEStringParserRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		
-		//Void:
-		//	{Void}
+		//Void dataTypes::Void:
+		//	{dataTypes::Void}
 		//	'Void'
-		//	name=EString;
+		//	name=EString
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Void} 'Void' name=EString
+		//{dataTypes::Void} 'Void' name=EString
 		public Group getGroup() { return cGroup; }
 		
-		//{Void}
+		//{dataTypes::Void}
 		public Action getVoidAction_0() { return cVoidAction_0; }
 		
 		//'Void'
@@ -887,18 +887,34 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//EString
 		public RuleCall getNameEStringParserRuleCall_2_0() { return cNameEStringParserRuleCall_2_0; }
 	}
-	public class BehaviourDescription_ImplElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.BehaviourDescription_Impl");
+	public class BehaviourDescriptionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.BehaviourDescription");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cBehaviourDescriptionAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cBehaviourDescriptionKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cDescriptionelementKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cDescriptionelementAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_2_0 = (RuleCall)cDescriptionelementAssignment_3_2.eContents().get(0);
+		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
+		private final Assignment cDescriptionelementAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0 = (RuleCall)cDescriptionelementAssignment_3_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//BehaviourDescription_Impl behaviourDescription::BehaviourDescription:
+		//BehaviourDescription behaviourDescription::BehaviourDescription:
 		//	{behaviourDescription::BehaviourDescription}
 		//	'BehaviourDescription'
+		//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+		//	'}')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{behaviourDescription::BehaviourDescription} 'BehaviourDescription'
+		//{behaviourDescription::BehaviourDescription} 'BehaviourDescription' '{' ('descriptionelement' '{'
+		//descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{behaviourDescription::BehaviourDescription}
@@ -906,6 +922,42 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'BehaviourDescription'
 		public Keyword getBehaviourDescriptionKeyword_1() { return cBehaviourDescriptionKeyword_1; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)* '}')?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'descriptionelement'
+		public Keyword getDescriptionelementKeyword_3_0() { return cDescriptionelementKeyword_3_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_2() { return cDescriptionelementAssignment_3_2; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_2_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_2_0; }
+		
+		//("," descriptionelement+=DescriptionElement)*
+		public Group getGroup_3_3() { return cGroup_3_3; }
+		
+		//","
+		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_3_1() { return cDescriptionelementAssignment_3_3_1; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_3_1_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class ServiceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.Service");
@@ -925,16 +977,16 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//Service componentBasedSystem::Service:
+		//Service:
 		//	'Service'
 		//	'{'
-		//	'correspondingSignatures' '(' correspondingSignatures+=[componentBasedSystem::Signature|EString] (","
-		//	correspondingSignatures+=[componentBasedSystem::Signature|EString])* ')'
-		//	'}'
+		//	'correspondingSignatures' '(' correspondingSignatures+=[Signature|EString] (","
+		//	correspondingSignatures+=[Signature|EString])* ')'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Service' '{' 'correspondingSignatures' '(' correspondingSignatures+=[componentBasedSystem::Signature|EString] (","
-		//correspondingSignatures+=[componentBasedSystem::Signature|EString])* ')' '}'
+		//'Service' '{' 'correspondingSignatures' '(' correspondingSignatures+=[Signature|EString] (","
+		//correspondingSignatures+=[Signature|EString])* ')' '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Service'
@@ -949,25 +1001,25 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//'('
 		public Keyword getLeftParenthesisKeyword_3() { return cLeftParenthesisKeyword_3; }
 		
-		//correspondingSignatures+=[componentBasedSystem::Signature|EString]
+		//correspondingSignatures+=[Signature|EString]
 		public Assignment getCorrespondingSignaturesAssignment_4() { return cCorrespondingSignaturesAssignment_4; }
 		
-		//[componentBasedSystem::Signature|EString]
+		//[Signature|EString]
 		public CrossReference getCorrespondingSignaturesSignatureCrossReference_4_0() { return cCorrespondingSignaturesSignatureCrossReference_4_0; }
 		
 		//EString
 		public RuleCall getCorrespondingSignaturesSignatureEStringParserRuleCall_4_0_1() { return cCorrespondingSignaturesSignatureEStringParserRuleCall_4_0_1; }
 		
-		//("," correspondingSignatures+=[componentBasedSystem::Signature|EString])*
+		//("," correspondingSignatures+=[Signature|EString])*
 		public Group getGroup_5() { return cGroup_5; }
 		
 		//","
 		public Keyword getCommaKeyword_5_0() { return cCommaKeyword_5_0; }
 		
-		//correspondingSignatures+=[componentBasedSystem::Signature|EString]
+		//correspondingSignatures+=[Signature|EString]
 		public Assignment getCorrespondingSignaturesAssignment_5_1() { return cCorrespondingSignaturesAssignment_5_1; }
 		
-		//[componentBasedSystem::Signature|EString]
+		//[Signature|EString]
 		public CrossReference getCorrespondingSignaturesSignatureCrossReference_5_1_0() { return cCorrespondingSignaturesSignatureCrossReference_5_1_0; }
 		
 		//EString
@@ -996,11 +1048,11 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//	'RequiredRole'
 		//	name=EString
 		//	'{'
-		//	'interface' interface=[componentBasedSystem::Interface|EString]
+		//	'interface' interface=[Interface|EString]
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'RequiredRole' name=EString '{' 'interface' interface=[componentBasedSystem::Interface|EString] '}'
+		//'RequiredRole' name=EString '{' 'interface' interface=[Interface|EString] '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'RequiredRole'
@@ -1018,10 +1070,10 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//'interface'
 		public Keyword getInterfaceKeyword_3() { return cInterfaceKeyword_3; }
 		
-		//interface=[componentBasedSystem::Interface|EString]
+		//interface=[Interface|EString]
 		public Assignment getInterfaceAssignment_4() { return cInterfaceAssignment_4; }
 		
-		//[componentBasedSystem::Interface|EString]
+		//[Interface|EString]
 		public CrossReference getInterfaceInterfaceCrossReference_4_0() { return cInterfaceInterfaceCrossReference_4_0; }
 		
 		//EString
@@ -1047,11 +1099,11 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//	'ProvidedRole'
 		//	name=EString
 		//	'{'
-		//	'interface' interface=[componentBasedSystem::Interface|EString]
+		//	'interface' interface=[Interface|EString]
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'ProvidedRole' name=EString '{' 'interface' interface=[componentBasedSystem::Interface|EString] '}'
+		//'ProvidedRole' name=EString '{' 'interface' interface=[Interface|EString] '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'ProvidedRole'
@@ -1069,10 +1121,10 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//'interface'
 		public Keyword getInterfaceKeyword_3() { return cInterfaceKeyword_3; }
 		
-		//interface=[componentBasedSystem::Interface|EString]
+		//interface=[Interface|EString]
 		public Assignment getInterfaceAssignment_4() { return cInterfaceAssignment_4; }
 		
-		//[componentBasedSystem::Interface|EString]
+		//[Interface|EString]
 		public CrossReference getInterfaceInterfaceCrossReference_4_0() { return cInterfaceInterfaceCrossReference_4_0; }
 		
 		//EString
@@ -1140,7 +1192,7 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_21 = (Keyword)cGroup.eContents().get(21);
 		private final Keyword cRightCurlyBracketKeyword_22 = (Keyword)cGroup.eContents().get(22);
 		
-		//CompositeComponent componentBasedSystem::CompositeComponent:
+		//CompositeComponent:
 		//	'CompositeComponent'
 		//	name=EString
 		//	'{' ('behaviourdescription' '{' behaviourdescription+=BehaviourDescription (","
@@ -1151,7 +1203,7 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//	'assemblycontext' '{' assemblycontext+=AssemblyContext ("," assemblycontext+=AssemblyContext)* '}'
 		//	'delegationconnector' '{' delegationconnector+=DelegationConnector ("," delegationconnector+=DelegationConnector)*
 		//	'}'
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'CompositeComponent' name=EString '{' ('behaviourdescription' '{' behaviourdescription+=BehaviourDescription (","
@@ -1328,6 +1380,26 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_22() { return cRightCurlyBracketKeyword_22; }
 	}
+	public class DescriptionElement_ImplElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.DescriptionElement_Impl");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cDescriptionElementAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cDescriptionElementKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//DescriptionElement_Impl behaviourDescription::DescriptionElement:
+		//	{behaviourDescription::DescriptionElement}
+		//	'DescriptionElement'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{behaviourDescription::DescriptionElement} 'DescriptionElement'
+		public Group getGroup() { return cGroup; }
+		
+		//{behaviourDescription::DescriptionElement}
+		public Action getDescriptionElementAction_0() { return cDescriptionElementAction_0; }
+		
+		//'DescriptionElement'
+		public Keyword getDescriptionElementKeyword_1() { return cDescriptionElementKeyword_1; }
+	}
 	public class InternalActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.InternalAction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1373,13 +1445,29 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cLoopAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cLoopKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cDescriptionelementKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cDescriptionelementAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_2_0 = (RuleCall)cDescriptionelementAssignment_3_2.eContents().get(0);
+		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
+		private final Assignment cDescriptionelementAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0 = (RuleCall)cDescriptionelementAssignment_3_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Loop behaviourDescription::Loop:
 		//	{behaviourDescription::Loop}
 		//	'Loop'
+		//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+		//	'}')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{behaviourDescription::Loop} 'Loop'
+		//{behaviourDescription::Loop} 'Loop' '{' ('descriptionelement' '{' descriptionelement+=DescriptionElement (","
+		//descriptionelement+=DescriptionElement)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{behaviourDescription::Loop}
@@ -1387,19 +1475,71 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'Loop'
 		public Keyword getLoopKeyword_1() { return cLoopKeyword_1; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)* '}')?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'descriptionelement'
+		public Keyword getDescriptionelementKeyword_3_0() { return cDescriptionelementKeyword_3_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_2() { return cDescriptionelementAssignment_3_2; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_2_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_2_0; }
+		
+		//("," descriptionelement+=DescriptionElement)*
+		public Group getGroup_3_3() { return cGroup_3_3; }
+		
+		//","
+		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_3_1() { return cDescriptionelementAssignment_3_3_1; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_3_1_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class BranchElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.Branch");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cBranchAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cBranchKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cDescriptionelementKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cDescriptionelementAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_2_0 = (RuleCall)cDescriptionelementAssignment_3_2.eContents().get(0);
+		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
+		private final Assignment cDescriptionelementAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0 = (RuleCall)cDescriptionelementAssignment_3_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//Branch behaviourDescription::Branch:
 		//	{behaviourDescription::Branch}
 		//	'Branch'
+		//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+		//	'}')?
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{behaviourDescription::Branch} 'Branch'
+		//{behaviourDescription::Branch} 'Branch' '{' ('descriptionelement' '{' descriptionelement+=DescriptionElement (","
+		//descriptionelement+=DescriptionElement)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{behaviourDescription::Branch}
@@ -1407,6 +1547,42 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'Branch'
 		public Keyword getBranchKeyword_1() { return cBranchKeyword_1; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)* '}')?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'descriptionelement'
+		public Keyword getDescriptionelementKeyword_3_0() { return cDescriptionelementKeyword_3_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_2() { return cDescriptionelementAssignment_3_2; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_2_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_2_0; }
+		
+		//("," descriptionelement+=DescriptionElement)*
+		public Group getGroup_3_3() { return cGroup_3_3; }
+		
+		//","
+		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_3_1() { return cDescriptionelementAssignment_3_3_1; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_3_1_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class AssemblyContextElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.repository.Repository.AssemblyContext");
@@ -1421,15 +1597,15 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cComponentComponentEStringParserRuleCall_4_0_1 = (RuleCall)cComponentComponentCrossReference_4_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//AssemblyContext componentBasedSystem::AssemblyContext:
+		//AssemblyContext:
 		//	'AssemblyContext'
 		//	name=EString
 		//	'{'
-		//	'component' component=[componentBasedSystem::Component|EString]
-		//	'}'
+		//	'component' component=[Component|EString]
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'AssemblyContext' name=EString '{' 'component' component=[componentBasedSystem::Component|EString] '}'
+		//'AssemblyContext' name=EString '{' 'component' component=[Component|EString] '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'AssemblyContext'
@@ -1447,10 +1623,10 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//'component'
 		public Keyword getComponentKeyword_3() { return cComponentKeyword_3; }
 		
-		//component=[componentBasedSystem::Component|EString]
+		//component=[Component|EString]
 		public Assignment getComponentAssignment_4() { return cComponentAssignment_4; }
 		
-		//[componentBasedSystem::Component|EString]
+		//[Component|EString]
 		public CrossReference getComponentComponentCrossReference_4_0() { return cComponentComponentCrossReference_4_0; }
 		
 		//EString
@@ -1479,12 +1655,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//DelegationConnector componentBasedSystem::DelegationConnector:
+		//DelegationConnector:
 		//	'DelegationConnector'
 		//	name=EString
 		//	'{'
 		//	'role' '(' role+=[roles::Role|EString] ("," role+=[roles::Role|EString])* ')'
-		//	'}'
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'DelegationConnector' name=EString '{' 'role' '(' role+=[roles::Role|EString] ("," role+=[roles::Role|EString])* ')' '}'
@@ -1555,11 +1731,11 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//	'Role'
 		//	name=EString
 		//	'{'
-		//	'interface' interface=[componentBasedSystem::Interface|EString]
+		//	'interface' interface=[Interface|EString]
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'Role' name=EString '{' 'interface' interface=[componentBasedSystem::Interface|EString] '}'
+		//'Role' name=EString '{' 'interface' interface=[Interface|EString] '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Role'
@@ -1577,10 +1753,10 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		//'interface'
 		public Keyword getInterfaceKeyword_3() { return cInterfaceKeyword_3; }
 		
-		//interface=[componentBasedSystem::Interface|EString]
+		//interface=[Interface|EString]
 		public Assignment getInterfaceAssignment_4() { return cInterfaceAssignment_4; }
 		
-		//[componentBasedSystem::Interface|EString]
+		//[Interface|EString]
 		public CrossReference getInterfaceInterfaceCrossReference_4_0() { return cInterfaceInterfaceCrossReference_4_0; }
 		
 		//EString
@@ -1614,7 +1790,7 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cStringEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
 		private final Keyword cStringStringKeyword_9_0 = (Keyword)cStringEnumLiteralDeclaration_9.eContents().get(0);
 		
-		//enum simpleTypes:
+		//enum simpleTypes returns dataTypes::simpleTypes:
 		//	int | boolean | char | date | double | float | list | long | map | string;
 		public EnumRule getRule() { return rule; }
 		
@@ -1684,9 +1860,9 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private final RepositoryElements pRepository;
 	private final ComponentElements pComponent;
-	private final BehaviourDescriptionElements pBehaviourDescription;
 	private final ReturnTypeElements pReturnType;
 	private final ParameterTypeElements pParameterType;
+	private final DescriptionElementElements pDescriptionElement;
 	private final RoleElements pRole;
 	private final InterfaceElements pInterface;
 	private final Component_ImplElements pComponent_Impl;
@@ -1699,11 +1875,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 	private final ComplexElements pComplex;
 	private final SimpleTypesElements eSimpleTypes;
 	private final VoidElements pVoid;
-	private final BehaviourDescription_ImplElements pBehaviourDescription_Impl;
+	private final BehaviourDescriptionElements pBehaviourDescription;
 	private final ServiceElements pService;
 	private final RequiredRoleElements pRequiredRole;
 	private final ProvidedRoleElements pProvidedRole;
 	private final CompositeComponentElements pCompositeComponent;
+	private final DescriptionElement_ImplElements pDescriptionElement_Impl;
 	private final InternalActionElements pInternalAction;
 	private final ExternalCallElements pExternalCall;
 	private final LoopElements pLoop;
@@ -1723,9 +1900,9 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		this.gaTerminals = gaTerminals;
 		this.pRepository = new RepositoryElements();
 		this.pComponent = new ComponentElements();
-		this.pBehaviourDescription = new BehaviourDescriptionElements();
 		this.pReturnType = new ReturnTypeElements();
 		this.pParameterType = new ParameterTypeElements();
+		this.pDescriptionElement = new DescriptionElementElements();
 		this.pRole = new RoleElements();
 		this.pInterface = new InterfaceElements();
 		this.pComponent_Impl = new Component_ImplElements();
@@ -1738,11 +1915,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		this.pComplex = new ComplexElements();
 		this.eSimpleTypes = new SimpleTypesElements();
 		this.pVoid = new VoidElements();
-		this.pBehaviourDescription_Impl = new BehaviourDescription_ImplElements();
+		this.pBehaviourDescription = new BehaviourDescriptionElements();
 		this.pService = new ServiceElements();
 		this.pRequiredRole = new RequiredRoleElements();
 		this.pProvidedRole = new ProvidedRoleElements();
 		this.pCompositeComponent = new CompositeComponentElements();
+		this.pDescriptionElement_Impl = new DescriptionElement_ImplElements();
 		this.pInternalAction = new InternalActionElements();
 		this.pExternalCall = new ExternalCallElements();
 		this.pLoop = new LoopElements();
@@ -1779,12 +1957,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	
-	//Repository componentBasedSystem::Repository:
-	//	{componentBasedSystem::Repository}
+	//Repository:
+	//	{Repository}
 	//	'Repository'
 	//	'{' ('interface' '{' interface+=Interface ("," interface+=Interface)* '}')? ('component' '{' component+=Component
 	//	("," component+=Component)* '}')?
-	//	'}'
+	//	'}';
 	public RepositoryElements getRepositoryAccess() {
 		return pRepository;
 	}
@@ -1793,8 +1971,8 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getRepositoryAccess().getRule();
 	}
 	
-	//Component componentBasedSystem::Component:
-	//	Component_Impl | CompositeComponent
+	//Component:
+	//	Component_Impl | CompositeComponent;
 	public ComponentElements getComponentAccess() {
 		return pComponent;
 	}
@@ -1803,18 +1981,8 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getComponentAccess().getRule();
 	}
 	
-	//BehaviourDescription behaviourDescription::BehaviourDescription:
-	//	BehaviourDescription_Impl | InternalAction | ExternalCall | Loop | Branch
-	public BehaviourDescriptionElements getBehaviourDescriptionAccess() {
-		return pBehaviourDescription;
-	}
-	
-	public ParserRule getBehaviourDescriptionRule() {
-		return getBehaviourDescriptionAccess().getRule();
-	}
-	
-	//ReturnType:
-	//	ReturnType_Impl | Simple | Complex | Void;
+	//ReturnType dataTypes::ReturnType:
+	//	ReturnType_Impl | Simple | Complex | Void
 	public ReturnTypeElements getReturnTypeAccess() {
 		return pReturnType;
 	}
@@ -1823,14 +1991,24 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getReturnTypeAccess().getRule();
 	}
 	
-	//ParameterType:
-	//	ParameterType_Impl | Simple | Complex;
+	//ParameterType dataTypes::ParameterType:
+	//	ParameterType_Impl | Simple | Complex
 	public ParameterTypeElements getParameterTypeAccess() {
 		return pParameterType;
 	}
 	
 	public ParserRule getParameterTypeRule() {
 		return getParameterTypeAccess().getRule();
+	}
+	
+	//DescriptionElement behaviourDescription::DescriptionElement:
+	//	DescriptionElement_Impl | InternalAction | ExternalCall | Loop | Branch
+	public DescriptionElementElements getDescriptionElementAccess() {
+		return pDescriptionElement;
+	}
+	
+	public ParserRule getDescriptionElementRule() {
+		return getDescriptionElementAccess().getRule();
 	}
 	
 	//Role roles::Role:
@@ -1843,12 +2021,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getRoleAccess().getRule();
 	}
 	
-	//Interface componentBasedSystem::Interface:
-	//	{componentBasedSystem::Interface}
+	//Interface:
+	//	{Interface}
 	//	'Interface'
 	//	name=EString
 	//	'{' ('signature' '{' signature+=Signature ("," signature+=Signature)* '}')?
-	//	'}'
+	//	'}';
 	public InterfaceElements getInterfaceAccess() {
 		return pInterface;
 	}
@@ -1857,7 +2035,7 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getInterfaceAccess().getRule();
 	}
 	
-	//Component_Impl componentBasedSystem::Component:
+	//Component_Impl Component:
 	//	'Component'
 	//	name=EString
 	//	'{' ('behaviourdescription' '{' behaviourdescription+=BehaviourDescription (","
@@ -1884,12 +2062,13 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getEStringAccess().getRule();
 	}
 	
-	//Signature componentBasedSystem::Signature:
+	//Signature:
 	//	'Signature'
 	//	name=EString
 	//	'{'
-	//	'returntype' returntype=[ReturnType|EString] ('parameter' '{' parameter+=Parameter ("," parameter+=Parameter)* '}')?
-	//	'}'
+	//	'returntype' returntype=[dataTypes::ReturnType|EString] ('parameter' '{' parameter+=Parameter (","
+	//	parameter+=Parameter)* '}')?
+	//	'}';
 	public SignatureElements getSignatureAccess() {
 		return pSignature;
 	}
@@ -1898,12 +2077,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getSignatureAccess().getRule();
 	}
 	
-	//Parameter componentBasedSystem::Parameter:
+	//Parameter:
 	//	'Parameter'
 	//	name=EString
 	//	'{'
-	//	'parametertype' parametertype=[ParameterType|EString]
-	//	'}'
+	//	'parametertype' parametertype=[dataTypes::ParameterType|EString]
+	//	'}';
 	public ParameterElements getParameterAccess() {
 		return pParameter;
 	}
@@ -1912,8 +2091,8 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getParameterAccess().getRule();
 	}
 	
-	//ReturnType_Impl ReturnType:
-	//	{ReturnType}
+	//ReturnType_Impl dataTypes::ReturnType:
+	//	{dataTypes::ReturnType}
 	//	'ReturnType'
 	//	name=EString
 	public ReturnType_ImplElements getReturnType_ImplAccess() {
@@ -1924,8 +2103,8 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getReturnType_ImplAccess().getRule();
 	}
 	
-	//ParameterType_Impl ParameterType:
-	//	{ParameterType}
+	//ParameterType_Impl dataTypes::ParameterType:
+	//	{dataTypes::ParameterType}
 	//	'ParameterType'
 	//	name=EString
 	public ParameterType_ImplElements getParameterType_ImplAccess() {
@@ -1936,12 +2115,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getParameterType_ImplAccess().getRule();
 	}
 	
-	//Simple:
-	//	{Simple}
+	//Simple dataTypes::Simple:
+	//	{dataTypes::Simple}
 	//	'Simple'
 	//	name=EString
 	//	'{' ('kind' kind=simpleTypes)?
-	//	'}';
+	//	'}'
 	public SimpleElements getSimpleAccess() {
 		return pSimple;
 	}
@@ -1950,12 +2129,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getSimpleAccess().getRule();
 	}
 	
-	//Complex:
+	//Complex dataTypes::Complex:
 	//	'Complex'
 	//	name=EString
 	//	'{'
 	//	'simple' '{' simple+=Simple ("," simple+=Simple)* '}'
-	//	'}';
+	//	'}'
 	public ComplexElements getComplexAccess() {
 		return pComplex;
 	}
@@ -1964,7 +2143,7 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getComplexAccess().getRule();
 	}
 	
-	//enum simpleTypes:
+	//enum simpleTypes returns dataTypes::simpleTypes:
 	//	int | boolean | char | date | double | float | list | long | map | string;
 	public SimpleTypesElements getSimpleTypesAccess() {
 		return eSimpleTypes;
@@ -1974,10 +2153,10 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getSimpleTypesAccess().getRule();
 	}
 	
-	//Void:
-	//	{Void}
+	//Void dataTypes::Void:
+	//	{dataTypes::Void}
 	//	'Void'
-	//	name=EString;
+	//	name=EString
 	public VoidElements getVoidAccess() {
 		return pVoid;
 	}
@@ -1986,23 +2165,26 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getVoidAccess().getRule();
 	}
 	
-	//BehaviourDescription_Impl behaviourDescription::BehaviourDescription:
+	//BehaviourDescription behaviourDescription::BehaviourDescription:
 	//	{behaviourDescription::BehaviourDescription}
 	//	'BehaviourDescription'
-	public BehaviourDescription_ImplElements getBehaviourDescription_ImplAccess() {
-		return pBehaviourDescription_Impl;
+	//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+	//	'}')?
+	//	'}'
+	public BehaviourDescriptionElements getBehaviourDescriptionAccess() {
+		return pBehaviourDescription;
 	}
 	
-	public ParserRule getBehaviourDescription_ImplRule() {
-		return getBehaviourDescription_ImplAccess().getRule();
+	public ParserRule getBehaviourDescriptionRule() {
+		return getBehaviourDescriptionAccess().getRule();
 	}
 	
-	//Service componentBasedSystem::Service:
+	//Service:
 	//	'Service'
 	//	'{'
-	//	'correspondingSignatures' '(' correspondingSignatures+=[componentBasedSystem::Signature|EString] (","
-	//	correspondingSignatures+=[componentBasedSystem::Signature|EString])* ')'
-	//	'}'
+	//	'correspondingSignatures' '(' correspondingSignatures+=[Signature|EString] (","
+	//	correspondingSignatures+=[Signature|EString])* ')'
+	//	'}';
 	public ServiceElements getServiceAccess() {
 		return pService;
 	}
@@ -2015,7 +2197,7 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 	//	'RequiredRole'
 	//	name=EString
 	//	'{'
-	//	'interface' interface=[componentBasedSystem::Interface|EString]
+	//	'interface' interface=[Interface|EString]
 	//	'}'
 	public RequiredRoleElements getRequiredRoleAccess() {
 		return pRequiredRole;
@@ -2029,7 +2211,7 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 	//	'ProvidedRole'
 	//	name=EString
 	//	'{'
-	//	'interface' interface=[componentBasedSystem::Interface|EString]
+	//	'interface' interface=[Interface|EString]
 	//	'}'
 	public ProvidedRoleElements getProvidedRoleAccess() {
 		return pProvidedRole;
@@ -2039,7 +2221,7 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getProvidedRoleAccess().getRule();
 	}
 	
-	//CompositeComponent componentBasedSystem::CompositeComponent:
+	//CompositeComponent:
 	//	'CompositeComponent'
 	//	name=EString
 	//	'{' ('behaviourdescription' '{' behaviourdescription+=BehaviourDescription (","
@@ -2050,13 +2232,24 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 	//	'assemblycontext' '{' assemblycontext+=AssemblyContext ("," assemblycontext+=AssemblyContext)* '}'
 	//	'delegationconnector' '{' delegationconnector+=DelegationConnector ("," delegationconnector+=DelegationConnector)*
 	//	'}'
-	//	'}'
+	//	'}';
 	public CompositeComponentElements getCompositeComponentAccess() {
 		return pCompositeComponent;
 	}
 	
 	public ParserRule getCompositeComponentRule() {
 		return getCompositeComponentAccess().getRule();
+	}
+	
+	//DescriptionElement_Impl behaviourDescription::DescriptionElement:
+	//	{behaviourDescription::DescriptionElement}
+	//	'DescriptionElement'
+	public DescriptionElement_ImplElements getDescriptionElement_ImplAccess() {
+		return pDescriptionElement_Impl;
+	}
+	
+	public ParserRule getDescriptionElement_ImplRule() {
+		return getDescriptionElement_ImplAccess().getRule();
 	}
 	
 	//InternalAction behaviourDescription::InternalAction:
@@ -2084,6 +2277,9 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 	//Loop behaviourDescription::Loop:
 	//	{behaviourDescription::Loop}
 	//	'Loop'
+	//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+	//	'}')?
+	//	'}'
 	public LoopElements getLoopAccess() {
 		return pLoop;
 	}
@@ -2095,6 +2291,9 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 	//Branch behaviourDescription::Branch:
 	//	{behaviourDescription::Branch}
 	//	'Branch'
+	//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+	//	'}')?
+	//	'}'
 	public BranchElements getBranchAccess() {
 		return pBranch;
 	}
@@ -2103,12 +2302,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getBranchAccess().getRule();
 	}
 	
-	//AssemblyContext componentBasedSystem::AssemblyContext:
+	//AssemblyContext:
 	//	'AssemblyContext'
 	//	name=EString
 	//	'{'
-	//	'component' component=[componentBasedSystem::Component|EString]
-	//	'}'
+	//	'component' component=[Component|EString]
+	//	'}';
 	public AssemblyContextElements getAssemblyContextAccess() {
 		return pAssemblyContext;
 	}
@@ -2117,12 +2316,12 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 		return getAssemblyContextAccess().getRule();
 	}
 	
-	//DelegationConnector componentBasedSystem::DelegationConnector:
+	//DelegationConnector:
 	//	'DelegationConnector'
 	//	name=EString
 	//	'{'
 	//	'role' '(' role+=[roles::Role|EString] ("," role+=[roles::Role|EString])* ')'
-	//	'}'
+	//	'}';
 	public DelegationConnectorElements getDelegationConnectorAccess() {
 		return pDelegationConnector;
 	}
@@ -2135,7 +2334,7 @@ public class RepositoryGrammarAccess extends AbstractGrammarElementFinder {
 	//	'Role'
 	//	name=EString
 	//	'{'
-	//	'interface' interface=[componentBasedSystem::Interface|EString]
+	//	'interface' interface=[Interface|EString]
 	//	'}'
 	public Role_ImplElements getRole_ImplAccess() {
 		return pRole_Impl;

@@ -8,16 +8,22 @@
     <details key="validationDelegates" value="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentBasedSystem">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
-        upperBound="-1" eType="#//Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assemblycontext" upperBound="-1"
         eType="#//AssemblyContext" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="environment" lowerBound="1"
-        eType="#//Environment"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" upperBound="-1" eType="#//dataTypes/Type"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assemblyconnector" upperBound="-1"
         eType="#//roles/AssemblyConnector" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="allocation" lowerBound="1"
+        eType="#//Allocation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repository" lowerBound="1"
+        eType="#//Repository" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environment" lowerBound="1"
+        eType="#//Environment" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" lowerBound="1"
+        upperBound="-1" eType="#//roles/ProvidedRole"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requiredrole" upperBound="-1"
+        eType="#//roles/RequiredRole"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -102,7 +108,6 @@
         eType="#//Container" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="link" upperBound="-1" eType="#//Link"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Repository">
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" upperBound="-1"
@@ -158,11 +163,21 @@
   </eSubpackages>
   <eSubpackages name="behaviourDescription" nsURI="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/behaviourDescription"
       nsPrefix="behaviourDescription">
-    <eClassifiers xsi:type="ecore:EClass" name="BehaviourDescription"/>
-    <eClassifiers xsi:type="ecore:EClass" name="InternalAction" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
-    <eClassifiers xsi:type="ecore:EClass" name="ExternalCall" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Branch" eSuperTypes="#//behaviourDescription/BehaviourDescription"/>
+    <eClassifiers xsi:type="ecore:EClass" name="DescriptionElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="InternalAction" eSuperTypes="#//behaviourDescription/DescriptionElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ExternalCall" eSuperTypes="#//behaviourDescription/DescriptionElement"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Loop" eSuperTypes="#//behaviourDescription/DescriptionElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="descriptionelement" upperBound="-1"
+          eType="#//behaviourDescription/DescriptionElement" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Branch" eSuperTypes="#//behaviourDescription/DescriptionElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="descriptionelement" upperBound="-1"
+          eType="#//behaviourDescription/DescriptionElement" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="BehaviourDescription">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="descriptionelement" upperBound="-1"
+          eType="#//behaviourDescription/DescriptionElement" containment="true"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="roles" nsURI="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/roles"
       nsPrefix="roles">
@@ -179,6 +194,10 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="requiredrole" lowerBound="1"
           eType="#//roles/RequiredRole"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="providedAssemblyContext"
+          lowerBound="1" eType="#//AssemblyContext"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="requiredAssemblyContext"
+          lowerBound="1" eType="#//AssemblyContext"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>

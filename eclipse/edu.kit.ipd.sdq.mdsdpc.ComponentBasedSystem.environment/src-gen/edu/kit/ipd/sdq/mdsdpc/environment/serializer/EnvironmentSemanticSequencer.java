@@ -71,7 +71,7 @@ public class EnvironmentSemanticSequencer extends AbstractDelegatingSemanticSequ
 	 *     Environment returns Environment
 	 *
 	 * Constraint:
-	 *     (name=EString (container+=Container container+=Container*)? (link+=Link link+=Link*)?)
+	 *     ((container+=Container container+=Container*)? (link+=Link link+=Link*)?)
 	 */
 	protected void sequence_Environment(ISerializationContext context, Environment semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

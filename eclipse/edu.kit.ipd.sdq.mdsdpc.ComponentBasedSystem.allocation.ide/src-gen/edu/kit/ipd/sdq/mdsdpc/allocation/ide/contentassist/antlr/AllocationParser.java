@@ -36,7 +36,7 @@ public class AllocationParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getComponentAccess().getAlternatives(), "rule__Component__Alternatives");
-					put(grammarAccess.getBehaviourDescriptionAccess().getAlternatives(), "rule__BehaviourDescription__Alternatives");
+					put(grammarAccess.getDescriptionElementAccess().getAlternatives(), "rule__DescriptionElement__Alternatives");
 					put(grammarAccess.getReturnTypeAccess().getAlternatives(), "rule__ReturnType__Alternatives");
 					put(grammarAccess.getParameterTypeAccess().getAlternatives(), "rule__ParameterType__Alternatives");
 					put(grammarAccess.getRoleAccess().getAlternatives(), "rule__Role__Alternatives");
@@ -53,7 +53,9 @@ public class AllocationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getComponent_ImplAccess().getGroup_7(), "rule__Component_Impl__Group_7__0");
 					put(grammarAccess.getComponent_ImplAccess().getGroup_9(), "rule__Component_Impl__Group_9__0");
 					put(grammarAccess.getComponent_ImplAccess().getGroup_9_3(), "rule__Component_Impl__Group_9_3__0");
-					put(grammarAccess.getBehaviourDescription_ImplAccess().getGroup(), "rule__BehaviourDescription_Impl__Group__0");
+					put(grammarAccess.getBehaviourDescriptionAccess().getGroup(), "rule__BehaviourDescription__Group__0");
+					put(grammarAccess.getBehaviourDescriptionAccess().getGroup_3(), "rule__BehaviourDescription__Group_3__0");
+					put(grammarAccess.getBehaviourDescriptionAccess().getGroup_3_3(), "rule__BehaviourDescription__Group_3_3__0");
 					put(grammarAccess.getServiceAccess().getGroup(), "rule__Service__Group__0");
 					put(grammarAccess.getServiceAccess().getGroup_5(), "rule__Service__Group_5__0");
 					put(grammarAccess.getRequiredRoleAccess().getGroup(), "rule__RequiredRole__Group__0");
@@ -66,10 +68,15 @@ public class AllocationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCompositeComponentAccess().getGroup_9_3(), "rule__CompositeComponent__Group_9_3__0");
 					put(grammarAccess.getCompositeComponentAccess().getGroup_15(), "rule__CompositeComponent__Group_15__0");
 					put(grammarAccess.getCompositeComponentAccess().getGroup_20(), "rule__CompositeComponent__Group_20__0");
+					put(grammarAccess.getDescriptionElement_ImplAccess().getGroup(), "rule__DescriptionElement_Impl__Group__0");
 					put(grammarAccess.getInternalActionAccess().getGroup(), "rule__InternalAction__Group__0");
 					put(grammarAccess.getExternalCallAccess().getGroup(), "rule__ExternalCall__Group__0");
 					put(grammarAccess.getLoopAccess().getGroup(), "rule__Loop__Group__0");
+					put(grammarAccess.getLoopAccess().getGroup_3(), "rule__Loop__Group_3__0");
+					put(grammarAccess.getLoopAccess().getGroup_3_3(), "rule__Loop__Group_3_3__0");
 					put(grammarAccess.getBranchAccess().getGroup(), "rule__Branch__Group__0");
+					put(grammarAccess.getBranchAccess().getGroup_3(), "rule__Branch__Group_3__0");
+					put(grammarAccess.getBranchAccess().getGroup_3_3(), "rule__Branch__Group_3_3__0");
 					put(grammarAccess.getSignatureAccess().getGroup(), "rule__Signature__Group__0");
 					put(grammarAccess.getSignatureAccess().getGroup_5(), "rule__Signature__Group_5__0");
 					put(grammarAccess.getSignatureAccess().getGroup_5_3(), "rule__Signature__Group_5_3__0");
@@ -102,6 +109,8 @@ public class AllocationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getComponent_ImplAccess().getRequiredroleAssignment_9_2(), "rule__Component_Impl__RequiredroleAssignment_9_2");
 					put(grammarAccess.getComponent_ImplAccess().getRequiredroleAssignment_9_3_1(), "rule__Component_Impl__RequiredroleAssignment_9_3_1");
 					put(grammarAccess.getComponent_ImplAccess().getProvidedroleAssignment_11(), "rule__Component_Impl__ProvidedroleAssignment_11");
+					put(grammarAccess.getBehaviourDescriptionAccess().getDescriptionelementAssignment_3_2(), "rule__BehaviourDescription__DescriptionelementAssignment_3_2");
+					put(grammarAccess.getBehaviourDescriptionAccess().getDescriptionelementAssignment_3_3_1(), "rule__BehaviourDescription__DescriptionelementAssignment_3_3_1");
 					put(grammarAccess.getServiceAccess().getCorrespondingSignaturesAssignment_4(), "rule__Service__CorrespondingSignaturesAssignment_4");
 					put(grammarAccess.getServiceAccess().getCorrespondingSignaturesAssignment_5_1(), "rule__Service__CorrespondingSignaturesAssignment_5_1");
 					put(grammarAccess.getRequiredRoleAccess().getNameAssignment_1(), "rule__RequiredRole__NameAssignment_1");
@@ -120,6 +129,10 @@ public class AllocationParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCompositeComponentAccess().getAssemblycontextAssignment_15_1(), "rule__CompositeComponent__AssemblycontextAssignment_15_1");
 					put(grammarAccess.getCompositeComponentAccess().getDelegationconnectorAssignment_19(), "rule__CompositeComponent__DelegationconnectorAssignment_19");
 					put(grammarAccess.getCompositeComponentAccess().getDelegationconnectorAssignment_20_1(), "rule__CompositeComponent__DelegationconnectorAssignment_20_1");
+					put(grammarAccess.getLoopAccess().getDescriptionelementAssignment_3_2(), "rule__Loop__DescriptionelementAssignment_3_2");
+					put(grammarAccess.getLoopAccess().getDescriptionelementAssignment_3_3_1(), "rule__Loop__DescriptionelementAssignment_3_3_1");
+					put(grammarAccess.getBranchAccess().getDescriptionelementAssignment_3_2(), "rule__Branch__DescriptionelementAssignment_3_2");
+					put(grammarAccess.getBranchAccess().getDescriptionelementAssignment_3_3_1(), "rule__Branch__DescriptionelementAssignment_3_3_1");
 					put(grammarAccess.getSignatureAccess().getNameAssignment_1(), "rule__Signature__NameAssignment_1");
 					put(grammarAccess.getSignatureAccess().getReturntypeAssignment_4(), "rule__Signature__ReturntypeAssignment_4");
 					put(grammarAccess.getSignatureAccess().getParameterAssignment_5_2(), "rule__Signature__ParameterAssignment_5_2");

@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class LoopTest extends BehaviourDescriptionTest {
+public class LoopTest extends DescriptionElementTest {
 
 	/**
 	 * <!-- begin-user-doc -->

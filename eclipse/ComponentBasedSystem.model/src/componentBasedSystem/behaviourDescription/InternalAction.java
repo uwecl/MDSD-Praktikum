@@ -13,5 +13,5 @@ package componentBasedSystem.behaviourDescription;
  * @model
  * @generated
  */
-public interface InternalAction extends BehaviourDescription {
+public interface InternalAction extends DescriptionElement {
 } // InternalAction

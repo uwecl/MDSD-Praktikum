@@ -66,42 +66,63 @@ public class BehaviourDescriptionSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case BehaviourDescriptionPackage.BEHAVIOUR_DESCRIPTION: {
-				BehaviourDescription behaviourDescription = (BehaviourDescription)theEObject;
-				T result = caseBehaviourDescription(behaviourDescription);
+			case BehaviourDescriptionPackage.DESCRIPTION_ELEMENT: {
+				DescriptionElement descriptionElement = (DescriptionElement)theEObject;
+				T result = caseDescriptionElement(descriptionElement);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BehaviourDescriptionPackage.INTERNAL_ACTION: {
 				InternalAction internalAction = (InternalAction)theEObject;
 				T result = caseInternalAction(internalAction);
-				if (result == null) result = caseBehaviourDescription(internalAction);
+				if (result == null) result = caseDescriptionElement(internalAction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BehaviourDescriptionPackage.EXTERNAL_CALL: {
 				ExternalCall externalCall = (ExternalCall)theEObject;
 				T result = caseExternalCall(externalCall);
-				if (result == null) result = caseBehaviourDescription(externalCall);
+				if (result == null) result = caseDescriptionElement(externalCall);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BehaviourDescriptionPackage.LOOP: {
 				Loop loop = (Loop)theEObject;
 				T result = caseLoop(loop);
-				if (result == null) result = caseBehaviourDescription(loop);
+				if (result == null) result = caseDescriptionElement(loop);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case BehaviourDescriptionPackage.BRANCH: {
 				Branch branch = (Branch)theEObject;
 				T result = caseBranch(branch);
-				if (result == null) result = caseBehaviourDescription(branch);
+				if (result == null) result = caseDescriptionElement(branch);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case BehaviourDescriptionPackage.BEHAVIOUR_DESCRIPTION: {
+				BehaviourDescription behaviourDescription = (BehaviourDescription)theEObject;
+				T result = caseBehaviourDescription(behaviourDescription);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Description Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Description Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDescriptionElement(DescriptionElement object) {
+		return null;
 	}
 
 	/**

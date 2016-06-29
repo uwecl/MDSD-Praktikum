@@ -109,24 +109,24 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		//CompositeComponent
 		public RuleCall getCompositeComponentParserRuleCall_1() { return cCompositeComponentParserRuleCall_1; }
 	}
-	public class BehaviourDescriptionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.allocation.Allocation.BehaviourDescription");
+	public class DescriptionElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.allocation.Allocation.DescriptionElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cBehaviourDescription_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cDescriptionElement_ImplParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cInternalActionParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cExternalCallParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		private final RuleCall cLoopParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cBranchParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		
-		//BehaviourDescription behaviourDescription::BehaviourDescription:
-		//	BehaviourDescription_Impl | InternalAction | ExternalCall | Loop | Branch
+		//DescriptionElement:
+		//	DescriptionElement_Impl | InternalAction | ExternalCall | Loop | Branch;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//BehaviourDescription_Impl | InternalAction | ExternalCall | Loop | Branch
+		//DescriptionElement_Impl | InternalAction | ExternalCall | Loop | Branch
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//BehaviourDescription_Impl
-		public RuleCall getBehaviourDescription_ImplParserRuleCall_0() { return cBehaviourDescription_ImplParserRuleCall_0; }
+		//DescriptionElement_Impl
+		public RuleCall getDescriptionElement_ImplParserRuleCall_0() { return cDescriptionElement_ImplParserRuleCall_0; }
 		
 		//InternalAction
 		public RuleCall getInternalActionParserRuleCall_1() { return cInternalActionParserRuleCall_1; }
@@ -197,8 +197,8 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRequiredRoleParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cProvidedRoleParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
-		//Role:
-		//	Role_Impl | RequiredRole | ProvidedRole;
+		//Role roles::Role:
+		//	Role_Impl | RequiredRole | ProvidedRole
 		@Override public ParserRule getRule() { return rule; }
 		
 		//Role_Impl | RequiredRole | ProvidedRole
@@ -542,25 +542,77 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
-	public class BehaviourDescription_ImplElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.allocation.Allocation.BehaviourDescription_Impl");
+	public class BehaviourDescriptionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.allocation.Allocation.BehaviourDescription");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cBehaviourDescriptionAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cBehaviourDescriptionKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cDescriptionelementKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cDescriptionelementAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_2_0 = (RuleCall)cDescriptionelementAssignment_3_2.eContents().get(0);
+		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
+		private final Assignment cDescriptionelementAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0 = (RuleCall)cDescriptionelementAssignment_3_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//BehaviourDescription_Impl behaviourDescription::BehaviourDescription:
-		//	{behaviourDescription::BehaviourDescription}
+		//BehaviourDescription:
+		//	{BehaviourDescription}
 		//	'BehaviourDescription'
+		//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+		//	'}')?
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{behaviourDescription::BehaviourDescription} 'BehaviourDescription'
+		//{BehaviourDescription} 'BehaviourDescription' '{' ('descriptionelement' '{' descriptionelement+=DescriptionElement (","
+		//descriptionelement+=DescriptionElement)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{behaviourDescription::BehaviourDescription}
+		//{BehaviourDescription}
 		public Action getBehaviourDescriptionAction_0() { return cBehaviourDescriptionAction_0; }
 		
 		//'BehaviourDescription'
 		public Keyword getBehaviourDescriptionKeyword_1() { return cBehaviourDescriptionKeyword_1; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)* '}')?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'descriptionelement'
+		public Keyword getDescriptionelementKeyword_3_0() { return cDescriptionelementKeyword_3_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_2() { return cDescriptionelementAssignment_3_2; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_2_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_2_0; }
+		
+		//("," descriptionelement+=DescriptionElement)*
+		public Group getGroup_3_3() { return cGroup_3_3; }
+		
+		//","
+		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_3_1() { return cDescriptionelementAssignment_3_3_1; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_3_1_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class ServiceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.allocation.Allocation.Service");
@@ -647,12 +699,12 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cInterfaceInterfaceEStringParserRuleCall_4_0_1 = (RuleCall)cInterfaceInterfaceCrossReference_4_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//RequiredRole:
+		//RequiredRole roles::RequiredRole:
 		//	'RequiredRole'
 		//	name=EString
 		//	'{'
 		//	'interface' interface=[componentBasedSystem::Interface|EString]
-		//	'}';
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'RequiredRole' name=EString '{' 'interface' interface=[componentBasedSystem::Interface|EString] '}'
@@ -698,12 +750,12 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cInterfaceInterfaceEStringParserRuleCall_4_0_1 = (RuleCall)cInterfaceInterfaceCrossReference_4_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//ProvidedRole:
+		//ProvidedRole roles::ProvidedRole:
 		//	'ProvidedRole'
 		//	name=EString
 		//	'{'
 		//	'interface' interface=[componentBasedSystem::Interface|EString]
-		//	'}';
+		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'ProvidedRole' name=EString '{' 'interface' interface=[componentBasedSystem::Interface|EString] '}'
@@ -983,21 +1035,41 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_22() { return cRightCurlyBracketKeyword_22; }
 	}
+	public class DescriptionElement_ImplElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.allocation.Allocation.DescriptionElement_Impl");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cDescriptionElementAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cDescriptionElementKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//DescriptionElement_Impl DescriptionElement:
+		//	{DescriptionElement}
+		//	'DescriptionElement'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{DescriptionElement} 'DescriptionElement'
+		public Group getGroup() { return cGroup; }
+		
+		//{DescriptionElement}
+		public Action getDescriptionElementAction_0() { return cDescriptionElementAction_0; }
+		
+		//'DescriptionElement'
+		public Keyword getDescriptionElementKeyword_1() { return cDescriptionElementKeyword_1; }
+	}
 	public class InternalActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.allocation.Allocation.InternalAction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cInternalActionAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cInternalActionKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
-		//InternalAction behaviourDescription::InternalAction:
-		//	{behaviourDescription::InternalAction}
-		//	'InternalAction'
+		//InternalAction:
+		//	{InternalAction}
+		//	'InternalAction';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{behaviourDescription::InternalAction} 'InternalAction'
+		//{InternalAction} 'InternalAction'
 		public Group getGroup() { return cGroup; }
 		
-		//{behaviourDescription::InternalAction}
+		//{InternalAction}
 		public Action getInternalActionAction_0() { return cInternalActionAction_0; }
 		
 		//'InternalAction'
@@ -1009,15 +1081,15 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		private final Action cExternalCallAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cExternalCallKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		
-		//ExternalCall behaviourDescription::ExternalCall:
-		//	{behaviourDescription::ExternalCall}
-		//	'ExternalCall'
+		//ExternalCall:
+		//	{ExternalCall}
+		//	'ExternalCall';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{behaviourDescription::ExternalCall} 'ExternalCall'
+		//{ExternalCall} 'ExternalCall'
 		public Group getGroup() { return cGroup; }
 		
-		//{behaviourDescription::ExternalCall}
+		//{ExternalCall}
 		public Action getExternalCallAction_0() { return cExternalCallAction_0; }
 		
 		//'ExternalCall'
@@ -1028,40 +1100,144 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cLoopAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cLoopKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cDescriptionelementKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cDescriptionelementAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_2_0 = (RuleCall)cDescriptionelementAssignment_3_2.eContents().get(0);
+		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
+		private final Assignment cDescriptionelementAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0 = (RuleCall)cDescriptionelementAssignment_3_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//Loop behaviourDescription::Loop:
-		//	{behaviourDescription::Loop}
+		//Loop:
+		//	{Loop}
 		//	'Loop'
+		//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+		//	'}')?
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{behaviourDescription::Loop} 'Loop'
+		//{Loop} 'Loop' '{' ('descriptionelement' '{' descriptionelement+=DescriptionElement (","
+		//descriptionelement+=DescriptionElement)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{behaviourDescription::Loop}
+		//{Loop}
 		public Action getLoopAction_0() { return cLoopAction_0; }
 		
 		//'Loop'
 		public Keyword getLoopKeyword_1() { return cLoopKeyword_1; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)* '}')?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'descriptionelement'
+		public Keyword getDescriptionelementKeyword_3_0() { return cDescriptionelementKeyword_3_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_2() { return cDescriptionelementAssignment_3_2; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_2_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_2_0; }
+		
+		//("," descriptionelement+=DescriptionElement)*
+		public Group getGroup_3_3() { return cGroup_3_3; }
+		
+		//","
+		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_3_1() { return cDescriptionelementAssignment_3_3_1; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_3_1_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class BranchElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.allocation.Allocation.Branch");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cBranchAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cBranchKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cDescriptionelementKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3_1 = (Keyword)cGroup_3.eContents().get(1);
+		private final Assignment cDescriptionelementAssignment_3_2 = (Assignment)cGroup_3.eContents().get(2);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_2_0 = (RuleCall)cDescriptionelementAssignment_3_2.eContents().get(0);
+		private final Group cGroup_3_3 = (Group)cGroup_3.eContents().get(3);
+		private final Keyword cCommaKeyword_3_3_0 = (Keyword)cGroup_3_3.eContents().get(0);
+		private final Assignment cDescriptionelementAssignment_3_3_1 = (Assignment)cGroup_3_3.eContents().get(1);
+		private final RuleCall cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0 = (RuleCall)cDescriptionelementAssignment_3_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3_4 = (Keyword)cGroup_3.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
-		//Branch behaviourDescription::Branch:
-		//	{behaviourDescription::Branch}
+		//Branch:
+		//	{Branch}
 		//	'Branch'
+		//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+		//	'}')?
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{behaviourDescription::Branch} 'Branch'
+		//{Branch} 'Branch' '{' ('descriptionelement' '{' descriptionelement+=DescriptionElement (","
+		//descriptionelement+=DescriptionElement)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
-		//{behaviourDescription::Branch}
+		//{Branch}
 		public Action getBranchAction_0() { return cBranchAction_0; }
 		
 		//'Branch'
 		public Keyword getBranchKeyword_1() { return cBranchKeyword_1; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		
+		//('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)* '}')?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'descriptionelement'
+		public Keyword getDescriptionelementKeyword_3_0() { return cDescriptionelementKeyword_3_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3_1() { return cLeftCurlyBracketKeyword_3_1; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_2() { return cDescriptionelementAssignment_3_2; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_2_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_2_0; }
+		
+		//("," descriptionelement+=DescriptionElement)*
+		public Group getGroup_3_3() { return cGroup_3_3; }
+		
+		//","
+		public Keyword getCommaKeyword_3_3_0() { return cCommaKeyword_3_3_0; }
+		
+		//descriptionelement+=DescriptionElement
+		public Assignment getDescriptionelementAssignment_3_3_1() { return cDescriptionelementAssignment_3_3_1; }
+		
+		//DescriptionElement
+		public RuleCall getDescriptionelementDescriptionElementParserRuleCall_3_3_1_0() { return cDescriptionelementDescriptionElementParserRuleCall_3_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_3_4() { return cRightCurlyBracketKeyword_3_4; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 	}
 	public class SignatureElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.allocation.Allocation.Signature");
@@ -1524,11 +1700,11 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		//	'DelegationConnector'
 		//	name=EString
 		//	'{'
-		//	'role' '(' role+=[Role|EString] ("," role+=[Role|EString])* ')'
+		//	'role' '(' role+=[roles::Role|EString] ("," role+=[roles::Role|EString])* ')'
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'DelegationConnector' name=EString '{' 'role' '(' role+=[Role|EString] ("," role+=[Role|EString])* ')' '}'
+		//'DelegationConnector' name=EString '{' 'role' '(' role+=[roles::Role|EString] ("," role+=[roles::Role|EString])* ')' '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'DelegationConnector'
@@ -1549,25 +1725,25 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		//'('
 		public Keyword getLeftParenthesisKeyword_4() { return cLeftParenthesisKeyword_4; }
 		
-		//role+=[Role|EString]
+		//role+=[roles::Role|EString]
 		public Assignment getRoleAssignment_5() { return cRoleAssignment_5; }
 		
-		//[Role|EString]
+		//[roles::Role|EString]
 		public CrossReference getRoleRoleCrossReference_5_0() { return cRoleRoleCrossReference_5_0; }
 		
 		//EString
 		public RuleCall getRoleRoleEStringParserRuleCall_5_0_1() { return cRoleRoleEStringParserRuleCall_5_0_1; }
 		
-		//("," role+=[Role|EString])*
+		//("," role+=[roles::Role|EString])*
 		public Group getGroup_6() { return cGroup_6; }
 		
 		//","
 		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
 		
-		//role+=[Role|EString]
+		//role+=[roles::Role|EString]
 		public Assignment getRoleAssignment_6_1() { return cRoleAssignment_6_1; }
 		
-		//[Role|EString]
+		//[roles::Role|EString]
 		public CrossReference getRoleRoleCrossReference_6_1_0() { return cRoleRoleCrossReference_6_1_0; }
 		
 		//EString
@@ -1592,7 +1768,7 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cInterfaceInterfaceEStringParserRuleCall_4_0_1 = (RuleCall)cInterfaceInterfaceCrossReference_4_0.eContents().get(1);
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//Role_Impl Role:
+		//Role_Impl roles::Role:
 		//	'Role'
 		//	name=EString
 		//	'{'
@@ -1725,7 +1901,7 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 	
 	private final AllocationElements pAllocation;
 	private final ComponentElements pComponent;
-	private final BehaviourDescriptionElements pBehaviourDescription;
+	private final DescriptionElementElements pDescriptionElement;
 	private final ReturnTypeElements pReturnType;
 	private final ParameterTypeElements pParameterType;
 	private final RoleElements pRole;
@@ -1734,11 +1910,12 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 	private final AssemblyContextElements pAssemblyContext;
 	private final EStringElements pEString;
 	private final Component_ImplElements pComponent_Impl;
-	private final BehaviourDescription_ImplElements pBehaviourDescription_Impl;
+	private final BehaviourDescriptionElements pBehaviourDescription;
 	private final ServiceElements pService;
 	private final RequiredRoleElements pRequiredRole;
 	private final ProvidedRoleElements pProvidedRole;
 	private final CompositeComponentElements pCompositeComponent;
+	private final DescriptionElement_ImplElements pDescriptionElement_Impl;
 	private final InternalActionElements pInternalAction;
 	private final ExternalCallElements pExternalCall;
 	private final LoopElements pLoop;
@@ -1766,7 +1943,7 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		this.gaTerminals = gaTerminals;
 		this.pAllocation = new AllocationElements();
 		this.pComponent = new ComponentElements();
-		this.pBehaviourDescription = new BehaviourDescriptionElements();
+		this.pDescriptionElement = new DescriptionElementElements();
 		this.pReturnType = new ReturnTypeElements();
 		this.pParameterType = new ParameterTypeElements();
 		this.pRole = new RoleElements();
@@ -1775,11 +1952,12 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		this.pAssemblyContext = new AssemblyContextElements();
 		this.pEString = new EStringElements();
 		this.pComponent_Impl = new Component_ImplElements();
-		this.pBehaviourDescription_Impl = new BehaviourDescription_ImplElements();
+		this.pBehaviourDescription = new BehaviourDescriptionElements();
 		this.pService = new ServiceElements();
 		this.pRequiredRole = new RequiredRoleElements();
 		this.pProvidedRole = new ProvidedRoleElements();
 		this.pCompositeComponent = new CompositeComponentElements();
+		this.pDescriptionElement_Impl = new DescriptionElement_ImplElements();
 		this.pInternalAction = new InternalActionElements();
 		this.pExternalCall = new ExternalCallElements();
 		this.pLoop = new LoopElements();
@@ -1847,14 +2025,14 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		return getComponentAccess().getRule();
 	}
 	
-	//BehaviourDescription behaviourDescription::BehaviourDescription:
-	//	BehaviourDescription_Impl | InternalAction | ExternalCall | Loop | Branch
-	public BehaviourDescriptionElements getBehaviourDescriptionAccess() {
-		return pBehaviourDescription;
+	//DescriptionElement:
+	//	DescriptionElement_Impl | InternalAction | ExternalCall | Loop | Branch;
+	public DescriptionElementElements getDescriptionElementAccess() {
+		return pDescriptionElement;
 	}
 	
-	public ParserRule getBehaviourDescriptionRule() {
-		return getBehaviourDescriptionAccess().getRule();
+	public ParserRule getDescriptionElementRule() {
+		return getDescriptionElementAccess().getRule();
 	}
 	
 	//ReturnType dataTypes::ReturnType:
@@ -1877,8 +2055,8 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		return getParameterTypeAccess().getRule();
 	}
 	
-	//Role:
-	//	Role_Impl | RequiredRole | ProvidedRole;
+	//Role roles::Role:
+	//	Role_Impl | RequiredRole | ProvidedRole
 	public RoleElements getRoleAccess() {
 		return pRole;
 	}
@@ -1954,15 +2132,18 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		return getComponent_ImplAccess().getRule();
 	}
 	
-	//BehaviourDescription_Impl behaviourDescription::BehaviourDescription:
-	//	{behaviourDescription::BehaviourDescription}
+	//BehaviourDescription:
+	//	{BehaviourDescription}
 	//	'BehaviourDescription'
-	public BehaviourDescription_ImplElements getBehaviourDescription_ImplAccess() {
-		return pBehaviourDescription_Impl;
+	//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+	//	'}')?
+	//	'}';
+	public BehaviourDescriptionElements getBehaviourDescriptionAccess() {
+		return pBehaviourDescription;
 	}
 	
-	public ParserRule getBehaviourDescription_ImplRule() {
-		return getBehaviourDescription_ImplAccess().getRule();
+	public ParserRule getBehaviourDescriptionRule() {
+		return getBehaviourDescriptionAccess().getRule();
 	}
 	
 	//Service componentBasedSystem::Service:
@@ -1979,12 +2160,12 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		return getServiceAccess().getRule();
 	}
 	
-	//RequiredRole:
+	//RequiredRole roles::RequiredRole:
 	//	'RequiredRole'
 	//	name=EString
 	//	'{'
 	//	'interface' interface=[componentBasedSystem::Interface|EString]
-	//	'}';
+	//	'}'
 	public RequiredRoleElements getRequiredRoleAccess() {
 		return pRequiredRole;
 	}
@@ -1993,12 +2174,12 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		return getRequiredRoleAccess().getRule();
 	}
 	
-	//ProvidedRole:
+	//ProvidedRole roles::ProvidedRole:
 	//	'ProvidedRole'
 	//	name=EString
 	//	'{'
 	//	'interface' interface=[componentBasedSystem::Interface|EString]
-	//	'}';
+	//	'}'
 	public ProvidedRoleElements getProvidedRoleAccess() {
 		return pProvidedRole;
 	}
@@ -2027,9 +2208,20 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		return getCompositeComponentAccess().getRule();
 	}
 	
-	//InternalAction behaviourDescription::InternalAction:
-	//	{behaviourDescription::InternalAction}
-	//	'InternalAction'
+	//DescriptionElement_Impl DescriptionElement:
+	//	{DescriptionElement}
+	//	'DescriptionElement'
+	public DescriptionElement_ImplElements getDescriptionElement_ImplAccess() {
+		return pDescriptionElement_Impl;
+	}
+	
+	public ParserRule getDescriptionElement_ImplRule() {
+		return getDescriptionElement_ImplAccess().getRule();
+	}
+	
+	//InternalAction:
+	//	{InternalAction}
+	//	'InternalAction';
 	public InternalActionElements getInternalActionAccess() {
 		return pInternalAction;
 	}
@@ -2038,9 +2230,9 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		return getInternalActionAccess().getRule();
 	}
 	
-	//ExternalCall behaviourDescription::ExternalCall:
-	//	{behaviourDescription::ExternalCall}
-	//	'ExternalCall'
+	//ExternalCall:
+	//	{ExternalCall}
+	//	'ExternalCall';
 	public ExternalCallElements getExternalCallAccess() {
 		return pExternalCall;
 	}
@@ -2049,9 +2241,12 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		return getExternalCallAccess().getRule();
 	}
 	
-	//Loop behaviourDescription::Loop:
-	//	{behaviourDescription::Loop}
+	//Loop:
+	//	{Loop}
 	//	'Loop'
+	//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+	//	'}')?
+	//	'}';
 	public LoopElements getLoopAccess() {
 		return pLoop;
 	}
@@ -2060,9 +2255,12 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		return getLoopAccess().getRule();
 	}
 	
-	//Branch behaviourDescription::Branch:
-	//	{behaviourDescription::Branch}
+	//Branch:
+	//	{Branch}
 	//	'Branch'
+	//	'{' ('descriptionelement' '{' descriptionelement+=DescriptionElement ("," descriptionelement+=DescriptionElement)*
+	//	'}')?
+	//	'}';
 	public BranchElements getBranchAccess() {
 		return pBranch;
 	}
@@ -2192,7 +2390,7 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 	//	'DelegationConnector'
 	//	name=EString
 	//	'{'
-	//	'role' '(' role+=[Role|EString] ("," role+=[Role|EString])* ')'
+	//	'role' '(' role+=[roles::Role|EString] ("," role+=[roles::Role|EString])* ')'
 	//	'}'
 	public DelegationConnectorElements getDelegationConnectorAccess() {
 		return pDelegationConnector;
@@ -2202,7 +2400,7 @@ public class AllocationGrammarAccess extends AbstractGrammarElementFinder {
 		return getDelegationConnectorAccess().getRule();
 	}
 	
-	//Role_Impl Role:
+	//Role_Impl roles::Role:
 	//	'Role'
 	//	name=EString
 	//	'{'

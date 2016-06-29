@@ -2,6 +2,7 @@
  */
 package componentBasedSystem.roles;
 
+import componentBasedSystem.AssemblyContext;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,6 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link componentBasedSystem.roles.AssemblyConnector#getProvidedrole <em>Providedrole</em>}</li>
  *   <li>{@link componentBasedSystem.roles.AssemblyConnector#getRequiredrole <em>Requiredrole</em>}</li>
  *   <li>{@link componentBasedSystem.roles.AssemblyConnector#getName <em>Name</em>}</li>
+ *   <li>{@link componentBasedSystem.roles.AssemblyConnector#getProvidedAssemblyContext <em>Provided Assembly Context</em>}</li>
+ *   <li>{@link componentBasedSystem.roles.AssemblyConnector#getRequiredAssemblyContext <em>Required Assembly Context</em>}</li>
  * </ul>
  *
  * @see componentBasedSystem.roles.RolesPackage#getAssemblyConnector()
@@ -100,5 +103,57 @@ public interface AssemblyConnector extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Provided Assembly Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Provided Assembly Context</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Provided Assembly Context</em>' reference.
+	 * @see #setProvidedAssemblyContext(AssemblyContext)
+	 * @see componentBasedSystem.roles.RolesPackage#getAssemblyConnector_ProvidedAssemblyContext()
+	 * @model required="true"
+	 * @generated
+	 */
+	AssemblyContext getProvidedAssemblyContext();
+
+	/**
+	 * Sets the value of the '{@link componentBasedSystem.roles.AssemblyConnector#getProvidedAssemblyContext <em>Provided Assembly Context</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Provided Assembly Context</em>' reference.
+	 * @see #getProvidedAssemblyContext()
+	 * @generated
+	 */
+	void setProvidedAssemblyContext(AssemblyContext value);
+
+	/**
+	 * Returns the value of the '<em><b>Required Assembly Context</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Required Assembly Context</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Required Assembly Context</em>' reference.
+	 * @see #setRequiredAssemblyContext(AssemblyContext)
+	 * @see componentBasedSystem.roles.RolesPackage#getAssemblyConnector_RequiredAssemblyContext()
+	 * @model required="true"
+	 * @generated
+	 */
+	AssemblyContext getRequiredAssemblyContext();
+
+	/**
+	 * Sets the value of the '{@link componentBasedSystem.roles.AssemblyConnector#getRequiredAssemblyContext <em>Required Assembly Context</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Required Assembly Context</em>' reference.
+	 * @see #getRequiredAssemblyContext()
+	 * @generated
+	 */
+	void setRequiredAssemblyContext(AssemblyContext value);
 
 } // AssemblyConnector

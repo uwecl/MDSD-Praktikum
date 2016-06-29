@@ -2,10 +2,10 @@
  */
 package componentBasedSystem.behaviourDescription.tests;
 
-import componentBasedSystem.behaviourDescription.BehaviourDescription;
 import componentBasedSystem.behaviourDescription.BehaviourDescriptionFactory;
 import componentBasedSystem.behaviourDescription.BehaviourDescriptionPackage;
 
+import componentBasedSystem.behaviourDescription.DescriptionElement;
 import java.io.File;
 import java.io.IOException;
 
@@ -60,7 +60,7 @@ public class BehaviourDescriptionExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.behaviourdescription"));
-				BehaviourDescription root = BehaviourDescriptionFactory.eINSTANCE.createBehaviourDescription();
+				DescriptionElement root = BehaviourDescriptionFactory.eINSTANCE.createDescriptionElement();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

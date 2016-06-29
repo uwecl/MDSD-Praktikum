@@ -13,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class BranchTest extends BehaviourDescriptionTest {
+public class BranchTest extends DescriptionElementTest {
 
 	/**
 	 * <!-- begin-user-doc -->

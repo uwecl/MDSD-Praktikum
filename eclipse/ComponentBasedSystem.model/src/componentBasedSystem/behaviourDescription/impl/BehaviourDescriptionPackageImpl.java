@@ -8,6 +8,7 @@ import componentBasedSystem.behaviourDescription.BehaviourDescription;
 import componentBasedSystem.behaviourDescription.BehaviourDescriptionFactory;
 import componentBasedSystem.behaviourDescription.BehaviourDescriptionPackage;
 import componentBasedSystem.behaviourDescription.Branch;
+import componentBasedSystem.behaviourDescription.DescriptionElement;
 import componentBasedSystem.behaviourDescription.ExternalCall;
 import componentBasedSystem.behaviourDescription.InternalAction;
 import componentBasedSystem.behaviourDescription.Loop;
@@ -25,6 +26,7 @@ import componentBasedSystem.roles.impl.RolesPackageImpl;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 
+import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 /**
@@ -34,6 +36,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class BehaviourDescriptionPackageImpl extends EPackageImpl implements BehaviourDescriptionPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass descriptionElementEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -146,8 +155,26 @@ public class BehaviourDescriptionPackageImpl extends EPackageImpl implements Beh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDescriptionElement() {
+		return descriptionElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBehaviourDescription() {
 		return behaviourDescriptionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBehaviourDescription_Descriptionelement() {
+		return (EReference)behaviourDescriptionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -182,8 +209,26 @@ public class BehaviourDescriptionPackageImpl extends EPackageImpl implements Beh
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getLoop_Descriptionelement() {
+		return (EReference)loopEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getBranch() {
 		return branchEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBranch_Descriptionelement() {
+		return (EReference)branchEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -214,15 +259,20 @@ public class BehaviourDescriptionPackageImpl extends EPackageImpl implements Beh
 		isCreated = true;
 
 		// Create classes and their features
-		behaviourDescriptionEClass = createEClass(BEHAVIOUR_DESCRIPTION);
+		descriptionElementEClass = createEClass(DESCRIPTION_ELEMENT);
 
 		internalActionEClass = createEClass(INTERNAL_ACTION);
 
 		externalCallEClass = createEClass(EXTERNAL_CALL);
 
 		loopEClass = createEClass(LOOP);
+		createEReference(loopEClass, LOOP__DESCRIPTIONELEMENT);
 
 		branchEClass = createEClass(BRANCH);
+		createEReference(branchEClass, BRANCH__DESCRIPTIONELEMENT);
+
+		behaviourDescriptionEClass = createEClass(BEHAVIOUR_DESCRIPTION);
+		createEReference(behaviourDescriptionEClass, BEHAVIOUR_DESCRIPTION__DESCRIPTIONELEMENT);
 	}
 
 	/**
@@ -253,21 +303,26 @@ public class BehaviourDescriptionPackageImpl extends EPackageImpl implements Beh
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		internalActionEClass.getESuperTypes().add(this.getBehaviourDescription());
-		externalCallEClass.getESuperTypes().add(this.getBehaviourDescription());
-		loopEClass.getESuperTypes().add(this.getBehaviourDescription());
-		branchEClass.getESuperTypes().add(this.getBehaviourDescription());
+		internalActionEClass.getESuperTypes().add(this.getDescriptionElement());
+		externalCallEClass.getESuperTypes().add(this.getDescriptionElement());
+		loopEClass.getESuperTypes().add(this.getDescriptionElement());
+		branchEClass.getESuperTypes().add(this.getDescriptionElement());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(behaviourDescriptionEClass, BehaviourDescription.class, "BehaviourDescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(descriptionElementEClass, DescriptionElement.class, "DescriptionElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(internalActionEClass, InternalAction.class, "InternalAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(externalCallEClass, ExternalCall.class, "ExternalCall", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(loopEClass, Loop.class, "Loop", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getLoop_Descriptionelement(), this.getDescriptionElement(), null, "descriptionelement", null, 0, -1, Loop.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(branchEClass, Branch.class, "Branch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBranch_Descriptionelement(), this.getDescriptionElement(), null, "descriptionelement", null, 0, -1, Branch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(behaviourDescriptionEClass, BehaviourDescription.class, "BehaviourDescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBehaviourDescription_Descriptionelement(), this.getDescriptionElement(), null, "descriptionelement", null, 0, -1, BehaviourDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //BehaviourDescriptionPackageImpl

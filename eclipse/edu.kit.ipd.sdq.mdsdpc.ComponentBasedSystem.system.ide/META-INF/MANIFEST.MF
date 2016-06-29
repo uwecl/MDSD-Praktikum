@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.system.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.system.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.system,
+ ComponentBasedSystem,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: edu.kit.ipd.sdq.mdsdpc.system.ide.contentassist.antlr,
+ edu.kit.ipd.sdq.mdsdpc.system.ide.contentassist.antlr.internal
+

@@ -13,5 +13,5 @@ package componentBasedSystem.behaviourDescription;
  * @model
  * @generated
  */
-public interface ExternalCall extends BehaviourDescription {
+public interface ExternalCall extends DescriptionElement {
 } // ExternalCall
