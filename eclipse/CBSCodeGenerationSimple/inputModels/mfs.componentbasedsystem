@@ -4,6 +4,8 @@
   <assemblycontext name="MediaStore" component="//@repository/@component.2"/>
   <assemblycontext name="PoolingAudioDB" component="//@repository/@component.1"/>
   <type xsi:type="dataTypes:Void" name="void"/>
+  <type xsi:type="dataTypes:Simple" name="String" kind="string"/>
+  <type xsi:type="dataTypes:Simple" name="int"/>
   <assemblyconnector providedrole="//@repository/@component.2/@providedrole" requiredrole="//@repository/@component.0/@requiredrole.0" name="MediaStore" providedAssemblyContext="//@assemblycontext.1" requiredAssemblyContext="//@assemblycontext.0"/>
   <assemblyconnector providedrole="//@repository/@component.4/@providedrole" requiredrole="//@repository/@component.3/@requiredrole.0" name="Sound" providedAssemblyContext="//@repository/@component.2/@assemblycontext.2" requiredAssemblyContext="//@repository/@component.2/@assemblycontext.0"/>
   <assemblyconnector providedrole="//@repository/@component.5/@providedrole" requiredrole="//@repository/@component.3/@requiredrole.1" name="AudioDB1" providedAssemblyContext="//@repository/@component.2/@assemblycontext.1" requiredAssemblyContext="//@repository/@component.2/@assemblycontext.0"/>
@@ -15,7 +17,10 @@
   </allocation>
   <repository>
     <interface name="HTTP">
-      <signature name="HTTPDownload" returntype="//@type.0"/>
+      <signature name="HTTPDownload" returntype="//@type.0">
+        <parameter name="url" parametertype="//@type.1"/>
+        <parameter name="magicNumber" parametertype="//@type.2"/>
+      </signature>
       <signature name="HTTPUpload" returntype="//@type.0"/>
     </interface>
     <interface name="Sound">
@@ -23,10 +28,12 @@
     </interface>
     <interface name="AudioDB">
       <signature name="queryDB" returntype="//@type.0"/>
-      <signature name="addFile()" returntype="//@type.0"/>
+      <signature name="addFile" returntype="//@type.0"/>
     </interface>
     <interface name="MediaStore">
-      <signature name="download" returntype="//@type.0"/>
+      <signature name="download" returntype="//@type.0">
+        <parameter name="url" parametertype="//@type.1"/>
+      </signature>
       <signature name="upload" returntype="//@type.0"/>
     </interface>
     <component name="WebGUI">
