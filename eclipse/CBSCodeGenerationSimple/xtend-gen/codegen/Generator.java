@@ -1,7 +1,13 @@
 package codegen;
 
+import com.google.common.base.Objects;
 import componentBasedSystem.ComponentBasedSystem;
+import componentBasedSystem.Interface;
+import componentBasedSystem.Parameter;
 import componentBasedSystem.Repository;
+import componentBasedSystem.Signature;
+import componentBasedSystem.dataTypes.ParameterType;
+import componentBasedSystem.dataTypes.ReturnType;
 import java.util.Arrays;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
@@ -28,41 +34,82 @@ public class Generator implements IGenerator {
   }
   
   protected void _compile(final ComponentBasedSystem cbs, final IFileSystemAccess fsa) {
+    final String mainPackageName = "repository";
     final Repository repository = cbs.getRepository();
-    CharSequence _mapCBS = this.mapCBS(cbs);
-    InputOutput.<CharSequence>println(_mapCBS);
-    CharSequence _mapRepository = this.mapRepository(repository);
-    InputOutput.<CharSequence>println(_mapRepository);
+    final EList<Interface> ifaces = repository.getInterface();
+    this.generateInterfaces(ifaces, mainPackageName);
   }
   
-  public CharSequence mapCBS(final ComponentBasedSystem cbs) {
+  public void generateInterfaces(final EList<Interface> ifaces, final String mainPackageName) {
+    for (final Interface iface : ifaces) {
+      CharSequence _mapInterface = this.mapInterface(iface, mainPackageName);
+      InputOutput.<CharSequence>println(_mapInterface);
+    }
+  }
+  
+  public CharSequence mapInterface(final Interface iface, final String mainPackageName) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.newLine();
-    _builder.append("class MyName {");
-    _builder.newLine();
-    _builder.append("\t\t");
-    _builder.newLine();
+    _builder.append("package ");
+    _builder.append(mainPackageName, "");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
     _builder.append("\t");
-    _builder.append("public static void main(String[] args) {");
     _builder.newLine();
-    _builder.append("\t\t");
-    _builder.append("System.out.println(\"Hello World!\");");
-    _builder.newLine();
-    _builder.append("\t");
+    _builder.append("public interface ");
+    String _name = iface.getName();
+    _builder.append(_name, "");
+    _builder.append(" {");
+    _builder.newLineIfNotEmpty();
+    {
+      EList<Signature> _signature = iface.getSignature();
+      for(final Signature sig : _signature) {
+        _builder.append("\t");
+        CharSequence _mapSignature = this.mapSignature(sig);
+        _builder.append(_mapSignature, "\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("}");
-    _builder.newLine();
-    _builder.append("}");
-    _builder.newLine();
     _builder.newLine();
     return _builder;
   }
   
-  public CharSequence mapRepository(final Repository r) {
+  public CharSequence mapSignature(final Signature sig) {
     StringConcatenation _builder = new StringConcatenation();
-    _builder.newLine();
-    _builder.append("boolean areYouAwesome = true;");
-    _builder.newLine();
-    _builder.newLine();
+    _builder.append("public ");
+    ReturnType _returntype = sig.getReturntype();
+    String _name = _returntype.getName();
+    _builder.append(_name, "");
+    _builder.append(" ");
+    String _name_1 = sig.getName();
+    _builder.append(_name_1, "");
+    _builder.append("(");
+    {
+      EList<Parameter> _parameter = sig.getParameter();
+      boolean _hasElements = false;
+      for(final Parameter p : _parameter) {
+        if (!_hasElements) {
+          _hasElements = true;
+        } else {
+          _builder.appendImmediate(", ", "");
+        }
+        {
+          if (((!Objects.equal(p.getParametertype(), null)) && (!Objects.equal(p.getName(), null)))) {
+            ParameterType _parametertype = p.getParametertype();
+            String _name_2 = _parametertype.getName();
+            _builder.append(_name_2, "");
+            _builder.append(" ");
+            String _name_3 = p.getName();
+            _builder.append(_name_3, "");
+          }
+        }
+      }
+      if (_hasElements) {
+        _builder.append("", "");
+      }
+    }
+    _builder.append(");");
+    _builder.newLineIfNotEmpty();
     return _builder;
   }
   
