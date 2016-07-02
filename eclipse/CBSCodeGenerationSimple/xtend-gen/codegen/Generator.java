@@ -43,10 +43,64 @@ public class Generator implements IGenerator {
   protected void _compile(final ComponentBasedSystem cbs, final IFileSystemAccess fsa) {
     final String mainPackageName = "repository";
     final Repository repository = cbs.getRepository();
+    this.generateHelper(mainPackageName);
     final EList<Interface> ifaces = repository.getInterface();
     this.generateInterfaces(ifaces, mainPackageName);
     final EList<Component> components = repository.getComponent();
     this.generateComponents(components, mainPackageName);
+  }
+  
+  public CharSequence generateHelper(final String mainPackageName) {
+    CharSequence _createHelperClass = this.createHelperClass(mainPackageName);
+    return InputOutput.<CharSequence>println(_createHelperClass);
+  }
+  
+  public CharSequence createHelperClass(final String mainPackageName) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("package ");
+    _builder.append(mainPackageName, "");
+    _builder.append(";");
+    _builder.newLineIfNotEmpty();
+    _builder.newLine();
+    _builder.append("public class Helper {");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public static void assertNull(Object o) {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("if(o != null) {");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("System.out.println(\"[AssertNull] Test failed! Element is not null!\");");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("public static void assertNotNull(Object o) {");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("if(o == null) {");
+    _builder.newLine();
+    _builder.append("\t\t\t");
+    _builder.append("System.out.println(\"[AssertNotNull] Test failed! Element is null!\");");
+    _builder.newLine();
+    _builder.append("\t\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("\t");
+    _builder.append("}");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
   }
   
   public void generateInterfaces(final EList<Interface> ifaces, final String mainPackageName) {
@@ -199,6 +253,12 @@ public class Generator implements IGenerator {
           imports.add(_name_2);
         }
       }
+      EList<RequiredRole> _requiredrole_1 = c.getRequiredrole();
+      int _size = _requiredrole_1.size();
+      boolean _greaterThan = (_size > 0);
+      if (_greaterThan) {
+        imports.add("Helper");
+      }
       _xblockexpression = this.mapImports(imports, mainPackageName);
     }
     return _xblockexpression;
@@ -290,6 +350,19 @@ public class Generator implements IGenerator {
         _builder.append(_mapSignature, "");
         _builder.append("{");
         _builder.newLineIfNotEmpty();
+        {
+          EList<RequiredRole> _requiredrole = c.getRequiredrole();
+          for(final RequiredRole rRole : _requiredrole) {
+            _builder.append("\t");
+            _builder.append("Helper.assertNotNull(this.");
+            Interface _interface_2 = rRole.getInterface();
+            String _name_2 = _interface_2.getName();
+            String _firstLower = StringExtensions.toFirstLower(_name_2);
+            _builder.append(_firstLower, "\t");
+            _builder.append(");");
+            _builder.newLineIfNotEmpty();
+          }
+        }
         _builder.append("\t");
         _builder.append("// TODO: Insert code here.");
         _builder.newLine();
@@ -328,16 +401,24 @@ public class Generator implements IGenerator {
         _builder.append("){");
         _builder.newLineIfNotEmpty();
         _builder.append("\t");
-        _builder.append("this.");
+        _builder.append("Helper.assertNull(this.");
         Interface _interface_3 = r.getInterface();
         String _name_3 = _interface_3.getName();
         String _firstLower_1 = StringExtensions.toFirstLower(_name_3);
         _builder.append(_firstLower_1, "\t");
-        _builder.append(" = ");
+        _builder.append(");");
+        _builder.newLineIfNotEmpty();
+        _builder.append("\t");
+        _builder.append("this.");
         Interface _interface_4 = r.getInterface();
         String _name_4 = _interface_4.getName();
         String _firstLower_2 = StringExtensions.toFirstLower(_name_4);
         _builder.append(_firstLower_2, "\t");
+        _builder.append(" = ");
+        Interface _interface_5 = r.getInterface();
+        String _name_5 = _interface_5.getName();
+        String _firstLower_3 = StringExtensions.toFirstLower(_name_5);
+        _builder.append(_firstLower_3, "\t");
         _builder.append(";");
         _builder.newLineIfNotEmpty();
         _builder.append("}");

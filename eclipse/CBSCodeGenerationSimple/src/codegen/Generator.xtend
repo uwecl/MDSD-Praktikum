@@ -39,8 +39,14 @@ class Generator implements IGenerator {
 		val repository = cbs.repository
 
 		// TODO: Generate main package.
+		// Generate helper.
+		generateHelper(mainPackageName)
+
+		// Generate interfaces.
 		val ifaces = repository.interface
 		generateInterfaces(ifaces, mainPackageName)
+
+		// Generate components.
 		val components = repository.component
 		generateComponents(components, mainPackageName)
 
@@ -50,6 +56,30 @@ class Generator implements IGenerator {
 
 	// Code generation.	
 	// -------------------------------------------------------------------------------------
+	// Helper.
+	def generateHelper(String mainPackageName) {
+		println(createHelperClass(mainPackageName))
+	}
+
+	def createHelperClass(String mainPackageName) '''
+		package «mainPackageName»;
+		
+		public class Helper {
+			
+			public static void assertNull(Object o) {
+				if(o != null) {
+					System.out.println("[AssertNull] Test failed! Element is not null!");
+				}
+			}
+			
+			public static void assertNotNull(Object o) {
+				if(o == null) {
+					System.out.println("[AssertNotNull] Test failed! Element is null!");
+				}
+			}
+		}
+	'''
+
 	// Interfaces.
 	def generateInterfaces(EList<Interface> ifaces, String mainPackageName) {
 
@@ -69,7 +99,7 @@ class Generator implements IGenerator {
 			«ENDFOR»
 		}
 	'''
-	
+
 	// TODO: Fix newline bug at the end.
 	def mapSignature(Signature sig) '''
 		public «sig.returntype.name» «sig.name»(«FOR p : sig.parameter SEPARATOR ", " AFTER ""»«
@@ -108,26 +138,32 @@ class Generator implements IGenerator {
 	'''
 
 	def generateImports(Component c, String mainPackageName) {
-		
-		val imports  = newArrayList()
-		
+
+		val imports = newArrayList()
+
 		// Add provided interfaces.
 		// TODO: Adapt this to support several provided roles if the meta model was adapted.
 		if (c.providedrole != null) {
 			imports.add(c.providedrole.interface.name)
 		}
-		
+
 		// Add required interfaces.
 		for (rRole : c.requiredrole) {
-			if(!imports.contains(rRole.interface.name)) {			
+			if (!imports.contains(rRole.interface.name)) {
 				imports.add(rRole.interface.name)
 			}
 		}
-		
+
+		// Add other imports.
+		if (c.requiredrole.size > 0) {
+			imports.add("Helper")
+		}
+
 		// Generate import statements.
 		mapImports(imports, mainPackageName)
-		
+
 	}
+
 	/*
 	 * Our meta model supports only one provided role for a component at the moment.
 	 * TODO: Adapt this to support several provided roles if the meta model was adapted
@@ -137,7 +173,7 @@ class Generator implements IGenerator {
 			import «mainPackageName».«i»;
 		«ENDFOR»
 	'''
-	
+
 	def mapRequiredInterfaces(EList<RequiredRole> rRoles) '''
 		«FOR r : rRoles»
 			«r.interface.name » «r.interface.name.toFirstLower»;
@@ -151,7 +187,7 @@ class Generator implements IGenerator {
 	def mapProvidedRoles(Component c) '''
 		«IF c.providedrole != null»implements «c.providedrole.interface.name»«ENDIF»
 	'''
-	
+
 	/*
 	 * Our meta model supports only one provided role for a component at the moment.
 	 * TODO: Adapt this to support several provided roles if the meta model was adapted
@@ -161,17 +197,21 @@ class Generator implements IGenerator {
 			// Implementing «s.name» from interface «c.providedrole.interface.name».
 			@Override
 			«mapSignature(s)»{
+				«FOR rRole : c.requiredrole»
+					Helper.assertNotNull(this.«rRole.interface.name.toFirstLower»);
+				«ENDFOR»
 				// TODO: Insert code here.
 			}
 		«ENDFOR»
 	'''
-	
+
 	def mapSetterMethods(EList<RequiredRole> rRoles) '''
 		«IF rRoles.size > 0»
 			// Setter methods.
 		«ENDIF»
-		«FOR r: rRoles»
+		«FOR r : rRoles»
 			public void set«r.interface.name»(«r.interface.name» «r.interface.name.toFirstLower»){
+				Helper.assertNull(this.«r.interface.name.toFirstLower»);
 				this.«r.interface.name.toFirstLower» = «r.interface.name.toFirstLower»;
 			}
 		«ENDFOR»
