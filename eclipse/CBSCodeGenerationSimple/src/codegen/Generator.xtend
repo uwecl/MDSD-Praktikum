@@ -8,6 +8,11 @@ import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
+import componentBasedSystem.Component
+import componentBasedSystem.CompositeComponent
+import componentBasedSystem.roles.RequiredRole
+import componentBasedSystem.roles.ProvidedRole
+import java.util.ArrayList
 
 class Generator implements IGenerator {
 
@@ -37,7 +42,8 @@ class Generator implements IGenerator {
 		// TODO: Generate main package.
 		val ifaces = repository.interface
 		generateInterfaces(ifaces, mainPackageName)
-		
+		val components = repository.component
+		generateComponents(components, mainPackageName)
 
 //		TODO: Write output in files.
 //		fsa.generateFile(filename + ".java", mapCBS(cbs))
@@ -49,6 +55,7 @@ class Generator implements IGenerator {
 	def generateInterfaces(EList<Interface> ifaces, String mainPackageName) {
 
 		for (iface : ifaces) {
+			// TODO: Remove println to export source code in a file.
 			println(mapInterface(iface, mainPackageName))
 		}
 
@@ -59,17 +66,124 @@ class Generator implements IGenerator {
 			
 		public interface «iface.name» {
 			«FOR sig : iface.signature»
-				«mapSignature(sig)»
+				«mapSignature(sig)»;
 			«ENDFOR»
 		}
 	'''
-
+	
+	// TODO: Fix newline bug at the end.
 	def mapSignature(Signature sig) '''
-		public «sig.returntype.name» «sig.name»(«
-			FOR p : sig.parameter SEPARATOR ", " AFTER ""»«
-				»«IF p.parametertype != null && p.name != null»«
-					p.parametertype.name» «p.name
-				»«ENDIF»«
-			»«ENDFOR»);
+		public «sig.returntype.name» «sig.name»(«FOR p : sig.parameter SEPARATOR ", " AFTER ""»«
+			»«IF p.parametertype != null && p.name != null»«
+				p.parametertype.name» «p.name
+			»«ENDIF»«
+		»«ENDFOR»)
+	'''
+
+	// Components.
+	def generateComponents(EList<Component> components, String mainPackageName) {
+
+		for (c : components) {
+
+			// Composite components should not be supported at the moment.
+			if ((c instanceof CompositeComponent) == false) {
+				// TODO: Remove println to export source code in a file.
+				println(mapComponent(c, mainPackageName))
+			}
+		}
+	}
+
+	def mapComponent(Component c, String mainPackageName) '''
+		package «mainPackageName»;
+		
+«««		«mapImports(c, mainPackageName)»
+		«generateImports(c, mainPackageName)»
+		
+		public class «c.name» «mapProvidedRoles(c)»{
+		
+			«mapRequiredInterfaces(c.requiredrole)»
+			
+			«mapMethodsToImplement(c)»
+			
+			«mapSetterMethods(c.requiredrole)»
+		}
+	'''
+
+	def generateImports(Component c, String mainPackageName) {
+		
+		val imports  = newArrayList()
+		
+		// Add provided interfaces.
+		// TODO: Adapt this to support several provided roles if the meta model was adapted.
+		if (c.providedrole != null) {
+			imports.add(c.providedrole.interface.name)
+		}
+		
+		// Add required interfaces.
+		for (rRole : c.requiredrole) {
+			if(!imports.contains(rRole.interface.name)) {			
+				imports.add(rRole.interface.name)
+			}
+		}
+		
+		// Generate import statements.
+		mapImports(imports, mainPackageName)
+		
+	}
+	/*
+	 * Our meta model supports only one provided role for a component at the moment.
+	 * TODO: Adapt this to support several provided roles if the meta model was adapted
+	 */
+	def mapImports(ArrayList<String> imports, String mainPackageName) '''
+«««		««« Provided interfaces.
+«««		«IF c.providedrole != null»
+«««			import «mainPackageName».«c.providedrole.interface.name»;
+«««		«ENDIF»
+«««		««« Required interfaces.
+«««		«FOR rRole : c.requiredrole»
+«««			import «mainPackageName».«rRole.interface.name»;
+«««		«ENDFOR»
+		«FOR i : imports»
+			import «mainPackageName».«i»;
+		«ENDFOR»
+	'''
+	
+	def mapRequiredInterfaces(EList<RequiredRole> rRoles) '''
+		«FOR r : rRoles»
+			«r.interface.name » «r.interface.name.toFirstLower»;
+		«ENDFOR»	
+	'''
+
+	/*
+	 * Our meta model supports only one provided role for a component at the moment.
+	 * TODO: Adapt this to support several provided roles if the meta model was adapted
+	 */
+	def mapProvidedRoles(Component c) '''
+		«IF c.providedrole != null»implements «c.providedrole.interface.name»«ENDIF»
+	'''
+	
+	/*
+	 * Our meta model supports only one provided role for a component at the moment.
+	 * TODO: Adapt this to support several provided roles if the meta model was adapted
+	 */
+	def mapMethodsToImplement(Component c) '''
+		«FOR s : c.providedrole.interface.signature»
+			// Implementing «s.name» from interface «c.providedrole.interface.name».
+			@Override
+			«mapSignature(s)»{
+				// TODO: Insert code here.
+			}
+		«ENDFOR»
+	'''
+	
+	def mapSetterMethods(EList<RequiredRole> rRoles) '''
+		«IF rRoles.size > 0»
+			// Setter methods.
+		«ENDIF»
+		«FOR r: rRoles»
+			public void set«r.interface.name»(«r.interface.name» «r.interface.name.toFirstLower»){
+				this.«r.interface.name.toFirstLower» = «r.interface.name.toFirstLower»;
+			}
+		«ENDFOR»
 	'''
 }
