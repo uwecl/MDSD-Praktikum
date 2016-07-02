@@ -1,18 +1,17 @@
 package codegen
 
+import componentBasedSystem.Component
 import componentBasedSystem.ComponentBasedSystem
+import componentBasedSystem.CompositeComponent
 import componentBasedSystem.Interface
 import componentBasedSystem.Signature
+import componentBasedSystem.roles.RequiredRole
+import java.util.ArrayList
 import org.eclipse.emf.common.util.EList
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
-import componentBasedSystem.Component
-import componentBasedSystem.CompositeComponent
-import componentBasedSystem.roles.RequiredRole
-import componentBasedSystem.roles.ProvidedRole
-import java.util.ArrayList
 
 class Generator implements IGenerator {
 
@@ -96,7 +95,6 @@ class Generator implements IGenerator {
 	def mapComponent(Component c, String mainPackageName) '''
 		package «mainPackageName»;
 		
-«««		«mapImports(c, mainPackageName)»
 		«generateImports(c, mainPackageName)»
 		
 		public class «c.name» «mapProvidedRoles(c)»{
@@ -135,14 +133,6 @@ class Generator implements IGenerator {
 	 * TODO: Adapt this to support several provided roles if the meta model was adapted
 	 */
 	def mapImports(ArrayList<String> imports, String mainPackageName) '''
-«««		««« Provided interfaces.
-«««		«IF c.providedrole != null»
-«««			import «mainPackageName».«c.providedrole.interface.name»;
-«««		«ENDIF»
-«««		««« Required interfaces.
-«««		«FOR rRole : c.requiredrole»
-«««			import «mainPackageName».«rRole.interface.name»;
-«««		«ENDFOR»
 		«FOR i : imports»
 			import «mainPackageName».«i»;
 		«ENDFOR»
