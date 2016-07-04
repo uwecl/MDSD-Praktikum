@@ -12,6 +12,8 @@ import componentBasedSystem.dataTypes.ParameterType;
 import componentBasedSystem.dataTypes.ReturnType;
 import componentBasedSystem.roles.ProvidedRole;
 import componentBasedSystem.roles.RequiredRole;
+import java.io.File;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import org.eclipse.emf.common.util.EList;
@@ -21,6 +23,7 @@ import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
 import org.eclipse.xtext.xbase.lib.CollectionLiterals;
+import org.eclipse.xtext.xbase.lib.Exceptions;
 import org.eclipse.xtext.xbase.lib.InputOutput;
 import org.eclipse.xtext.xbase.lib.StringExtensions;
 
@@ -42,17 +45,58 @@ public class Generator implements IGenerator {
   
   protected void _compile(final ComponentBasedSystem cbs, final IFileSystemAccess fsa) {
     final String mainPackageName = "repository";
+    final String exportDir = "output";
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append(exportDir, "");
+    _builder.append("/");
+    _builder.append(mainPackageName, "");
+    final String mainPackagePath = _builder.toString();
     final Repository repository = cbs.getRepository();
-    this.generateHelper(mainPackageName);
+    StringConcatenation _builder_1 = new StringConcatenation();
+    _builder_1.append(exportDir, "");
+    _builder_1.append("/");
+    _builder_1.append(mainPackageName, "");
+    this.createFolder(_builder_1.toString());
+    this.generateHelper(mainPackageName, mainPackagePath);
     final EList<Interface> ifaces = repository.getInterface();
-    this.generateInterfaces(ifaces, mainPackageName);
+    this.generateInterfaces(ifaces, mainPackageName, mainPackagePath);
     final EList<Component> components = repository.getComponent();
-    this.generateComponents(components, mainPackageName);
+    this.generateComponents(components, mainPackageName, exportDir);
   }
   
-  public CharSequence generateHelper(final String mainPackageName) {
-    CharSequence _createHelperClass = this.createHelperClass(mainPackageName);
-    return InputOutput.<CharSequence>println(_createHelperClass);
+  public boolean createFolder(final String path) {
+    boolean _xblockexpression = false;
+    {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("Create folder ");
+      _builder.append(path, "");
+      InputOutput.<String>println(_builder.toString());
+      File _file = new File(path);
+      _xblockexpression = _file.mkdirs();
+    }
+    return _xblockexpression;
+  }
+  
+  public void writeCodeToFile(final CharSequence code, final String filePath) {
+    try {
+      StringConcatenation _builder = new StringConcatenation();
+      _builder.append("Write code to ");
+      _builder.append(filePath, "");
+      InputOutput.<String>println(_builder.toString());
+      final PrintWriter writer = new PrintWriter(filePath, "UTF-8");
+      writer.println(code);
+      writer.close();
+    } catch (Throwable _e) {
+      throw Exceptions.sneakyThrow(_e);
+    }
+  }
+  
+  public void generateHelper(final String mainPackageName, final String exportDirPath) {
+    final CharSequence code = this.createHelperClass(mainPackageName);
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append(exportDirPath, "");
+    _builder.append("/Helper.java");
+    this.writeCodeToFile(code, _builder.toString());
   }
   
   public CharSequence createHelperClass(final String mainPackageName) {
@@ -103,10 +147,19 @@ public class Generator implements IGenerator {
     return _builder;
   }
   
-  public void generateInterfaces(final EList<Interface> ifaces, final String mainPackageName) {
+  public void generateInterfaces(final EList<Interface> ifaces, final String mainPackageName, final String exportDirPath) {
     for (final Interface iface : ifaces) {
-      CharSequence _mapInterface = this.mapInterface(iface, mainPackageName);
-      InputOutput.<CharSequence>println(_mapInterface);
+      {
+        final CharSequence code = this.mapInterface(iface, mainPackageName);
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append(exportDirPath, "");
+        _builder.append("/");
+        String _name = iface.getName();
+        String _firstUpper = StringExtensions.toFirstUpper(_name);
+        _builder.append(_firstUpper, "");
+        _builder.append(".java");
+        this.writeCodeToFile(code, _builder.toString());
+      }
     }
   }
   
@@ -177,11 +230,28 @@ public class Generator implements IGenerator {
     return _builder;
   }
   
-  public void generateComponents(final EList<Component> components, final String mainPackageName) {
+  public void generateComponents(final EList<Component> components, final String mainPackageName, final String exportDirPath) {
     for (final Component c : components) {
       if (((c instanceof CompositeComponent) == false)) {
-        CharSequence _mapComponent = this.mapComponent(c, mainPackageName);
-        InputOutput.<CharSequence>println(_mapComponent);
+        final CharSequence code = this.mapComponent(c, mainPackageName);
+        StringConcatenation _builder = new StringConcatenation();
+        _builder.append(exportDirPath, "");
+        _builder.append("/");
+        String _name = c.getName();
+        String _firstUpper = StringExtensions.toFirstUpper(_name);
+        _builder.append(_firstUpper, "");
+        this.createFolder(_builder.toString());
+        StringConcatenation _builder_1 = new StringConcatenation();
+        _builder_1.append(exportDirPath, "");
+        _builder_1.append("/");
+        String _name_1 = c.getName();
+        _builder_1.append(_name_1, "");
+        _builder_1.append("/");
+        String _name_2 = c.getName();
+        String _firstUpper_1 = StringExtensions.toFirstUpper(_name_2);
+        _builder_1.append(_firstUpper_1, "");
+        _builder_1.append("Impl.java");
+        this.writeCodeToFile(code, _builder_1.toString());
       }
     }
   }
@@ -189,7 +259,9 @@ public class Generator implements IGenerator {
   public CharSequence mapComponent(final Component c, final String mainPackageName) {
     StringConcatenation _builder = new StringConcatenation();
     _builder.append("package ");
-    _builder.append(mainPackageName, "");
+    String _name = c.getName();
+    String _firstUpper = StringExtensions.toFirstUpper(_name);
+    _builder.append(_firstUpper, "");
     _builder.append(";");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -198,9 +270,9 @@ public class Generator implements IGenerator {
     _builder.newLineIfNotEmpty();
     _builder.newLine();
     _builder.append("public class ");
-    String _name = c.getName();
-    _builder.append(_name, "");
-    _builder.append(" ");
+    String _name_1 = c.getName();
+    _builder.append(_name_1, "");
+    _builder.append("Impl ");
     CharSequence _mapProvidedRoles = this.mapProvidedRoles(c);
     _builder.append(_mapProvidedRoles, "");
     _builder.append("{");

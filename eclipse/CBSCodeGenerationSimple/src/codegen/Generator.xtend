@@ -12,6 +12,8 @@ import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
+import java.io.File
+import java.io.PrintWriter
 
 class Generator implements IGenerator {
 
@@ -36,29 +38,49 @@ class Generator implements IGenerator {
 	def dispatch void compile(ComponentBasedSystem cbs, IFileSystemAccess fsa) {
 
 		val mainPackageName = "repository"
+		val exportDir = "output"
+		val mainPackagePath = '''«exportDir»/«mainPackageName»'''
 		val repository = cbs.repository
 
-		// TODO: Generate main package.
+		// Generate main package.
+		createFolder('''«exportDir»/«mainPackageName»''')
+
 		// Generate helper.
-		generateHelper(mainPackageName)
+		generateHelper(mainPackageName, mainPackagePath)
 
 		// Generate interfaces.
 		val ifaces = repository.interface
-		generateInterfaces(ifaces, mainPackageName)
+		generateInterfaces(ifaces, mainPackageName, mainPackagePath)
 
 		// Generate components.
 		val components = repository.component
-		generateComponents(components, mainPackageName)
+		generateComponents(components, mainPackageName, exportDir)
 
-//		TODO: Write output in files.
-//		fsa.generateFile(filename + ".java", mapCBS(cbs))
+	}
+
+	def createFolder(String path) {
+
+		println('''Create folder «path»''')
+		new File(path).mkdirs()
+
+	}
+
+	def writeCodeToFile(CharSequence code, String filePath) {
+
+		println('''Write code to «filePath»''')
+		
+		val	writer = new PrintWriter(filePath, "UTF-8")
+		writer.println(code)
+		writer.close()
+
 	}
 
 	// Code generation.	
-	// -------------------------------------------------------------------------------------
+	// -------------------------------------------------------------------------------------	
 	// Helper.
-	def generateHelper(String mainPackageName) {
-		println(createHelperClass(mainPackageName))
+	def generateHelper(String mainPackageName, String exportDirPath) {
+		val code = createHelperClass(mainPackageName)
+		writeCodeToFile(code, '''«exportDirPath»/Helper.java''')
 	}
 
 	def createHelperClass(String mainPackageName) '''
@@ -81,11 +103,12 @@ class Generator implements IGenerator {
 	'''
 
 	// Interfaces.
-	def generateInterfaces(EList<Interface> ifaces, String mainPackageName) {
+	def generateInterfaces(EList<Interface> ifaces, String mainPackageName, String exportDirPath) {
 
 		for (iface : ifaces) {
-			// TODO: Remove println to export source code in a file.
-			println(mapInterface(iface, mainPackageName))
+			
+			val code = mapInterface(iface, mainPackageName)
+			writeCodeToFile(code, '''«exportDirPath»/«iface.name.toFirstUpper».java''')
 		}
 
 	}
@@ -110,24 +133,28 @@ class Generator implements IGenerator {
 	'''
 
 	// Components.
-	def generateComponents(EList<Component> components, String mainPackageName) {
+	def generateComponents(EList<Component> components, String mainPackageName, String exportDirPath) {
 
 		for (c : components) {
 
 			// Composite components should not be supported at the moment.
 			if ((c instanceof CompositeComponent) == false) {
-				// TODO: Remove println to export source code in a file.
-				println(mapComponent(c, mainPackageName))
+				
+				val code = mapComponent(c, mainPackageName)
+				
+				createFolder('''«exportDirPath»/«c.name.toFirstUpper»''')
+				writeCodeToFile(code, '''«exportDirPath»/«c.name»/«c.name.toFirstUpper»Impl.java''')
+				
 			}
 		}
 	}
 
 	def mapComponent(Component c, String mainPackageName) '''
-		package «mainPackageName»;
+		package «c.name.toFirstUpper»;
 		
 		«generateImports(c, mainPackageName)»
 		
-		public class «c.name» «mapProvidedRoles(c)»{
+		public class «c.name»Impl «mapProvidedRoles(c)»{
 		
 			«mapRequiredInterfaces(c.requiredrole)»
 			
