@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<componentBasedSystem:ComponentBasedSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem" xmlns:dataTypes="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/dataTypes">
+<componentBasedSystem:ComponentBasedSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem" xmlns:dataTypes="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/dataTypes" providedrole="//@repository/@component.0/@providedrole">
   <assemblycontext name="WebGUI" component="//@repository/@component.0"/>
   <assemblycontext name="MediaStore" component="//@repository/@component.2"/>
   <assemblycontext name="PoolingAudioDB" component="//@repository/@component.1"/>
