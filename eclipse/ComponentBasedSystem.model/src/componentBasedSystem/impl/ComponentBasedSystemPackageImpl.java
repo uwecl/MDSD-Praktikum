@@ -34,6 +34,7 @@ import componentBasedSystem.roles.impl.RolesPackageImpl;
 import componentBasedSystem.util.ComponentBasedSystemValidator;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -276,6 +277,15 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 */
 	public EReference getComponentBasedSystem_Requiredrole() {
 		return (EReference)componentBasedSystemEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getComponentBasedSystem__GetContainerOfContext__AssemblyContext() {
+		return componentBasedSystemEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -643,6 +653,15 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EOperation getEnvironment__IsLinked__Container_Container() {
+		return environmentEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getRepository() {
 		return repositoryEClass;
 	}
@@ -738,6 +757,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__ENVIRONMENT);
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__PROVIDEDROLE);
 		createEReference(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM__REQUIREDROLE);
+		createEOperation(componentBasedSystemEClass, COMPONENT_BASED_SYSTEM___GET_CONTAINER_OF_CONTEXT__ASSEMBLYCONTEXT);
 
 		componentEClass = createEClass(COMPONENT);
 		createEAttribute(componentEClass, COMPONENT__NAME);
@@ -785,6 +805,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		environmentEClass = createEClass(ENVIRONMENT);
 		createEReference(environmentEClass, ENVIRONMENT__CONTAINER);
 		createEReference(environmentEClass, ENVIRONMENT__LINK);
+		createEOperation(environmentEClass, ENVIRONMENT___IS_LINKED__CONTAINER_CONTAINER);
 
 		repositoryEClass = createEClass(REPOSITORY);
 		createEReference(repositoryEClass, REPOSITORY__INTERFACE);
@@ -848,6 +869,9 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEReference(getComponentBasedSystem_Providedrole(), theRolesPackage.getProvidedRole(), null, "providedrole", null, 1, -1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponentBasedSystem_Requiredrole(), theRolesPackage.getRequiredRole(), null, "requiredrole", null, 0, -1, ComponentBasedSystem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		EOperation op = initEOperation(getComponentBasedSystem__GetContainerOfContext__AssemblyContext(), this.getContainer(), "GetContainerOfContext", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getAssemblyContext(), "context", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_Behaviourdescription(), theBehaviourDescriptionPackage.getBehaviourDescription(), null, "behaviourdescription", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -895,6 +919,10 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEReference(getEnvironment_Container(), this.getContainer(), null, "container", null, 0, -1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEnvironment_Link(), this.getLink(), null, "link", null, 0, -1, Environment.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		op = initEOperation(getEnvironment__IsLinked__Container_Container(), ecorePackage.getEBoolean(), "IsLinked", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getContainer(), "c1", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getContainer(), "c2", 0, 1, IS_UNIQUE, IS_ORDERED);
+
 		initEClass(repositoryEClass, Repository.class, "Repository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRepository_Interface(), this.getInterface(), null, "interface", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRepository_Component(), this.getComponent(), null, "component", null, 0, -1, Repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -932,6 +960,12 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
 		   });	
 		addAnnotation
+		  (componentBasedSystemEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "SameParentContainerOrLinkedContainerOfconnectedAssemblyContexts"
+		   });	
+		addAnnotation
 		  (compositeComponentEClass, 
 		   source, 
 		   new String[] {
@@ -960,6 +994,25 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	protected void createPivotAnnotations() {
 		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
 		addAnnotation
+		  (componentBasedSystemEClass, 
+		   source, 
+		   new String[] {
+			 "SameParentContainerOrLinkedContainerOfconnectedAssemblyContexts", "\n\t  \tself.assemblyconnector->forAll( a | \n\t  \tlet c1 : Container = GetContainerOfContext(a.providedAssemblyContext),\n\t  \t\tc2: Container = GetContainerOfContext(a.requiredAssemblyContext)\n\t  \tin c1 = c2  or environment.IsLinked(c1,c2))"
+		   });
+		addAnnotation
+		  (componentBasedSystemEClass, 
+		   new boolean[] { true },
+		   "http://www.eclipse.org/emf/2002/GenModel",
+		   new String[] {
+			 "documentation", "Ensures, that the corresponding assembly contexts of the assembly connector are either allocated in the same container,\nor their containers are linked."
+		   });	
+		addAnnotation
+		  (getComponentBasedSystem__GetContainerOfContext__AssemblyContext(), 
+		   source, 
+		   new String[] {
+			 "body", "\n\t\t \tif  self.allocation.allocationcontext->any(a | a.assemblycontext = context).container.oclIsInvalid() then\n\t\t \t /* if AssemblyContext is nested and therefore not directly allocated */ \n\t\t \t\t/* get CompositeComponents */\n\t\t \t\tlet composites : Collection(CompositeComponent) = \n\t\t\t\t\tself.allocation.allocationcontext->select(a | a.assemblycontext.component.oclIsTypeOf(CompositeComponent)).assemblycontext.component.oclAsType(CompositeComponent)in\n\t\t \t\tlet composite : CompositeComponent = composites->any(c | c.assemblycontext->includes(context)) in\n\t\t \t\tlet parentContext : AssemblyContext = self.assemblycontext->any(a | a.component = composite) in\t\t\n\t\t \t\tself.allocation.allocationcontext->any(a | a.assemblycontext = parentContext).container\n\t\t \telse self.allocation.allocationcontext->any(a | a.assemblycontext = context).container\n\t\t  \tendif"
+		   });	
+		addAnnotation
 		  (compositeComponentEClass, 
 		   source, 
 		   new String[] {
@@ -986,6 +1039,12 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		   "http://www.eclipse.org/emf/2002/GenModel",
 		   new String[] {
 			 "documentation", "Constraint ensures that the interface of the roles are the same"
+		   });	
+		addAnnotation
+		  (getEnvironment__IsLinked__Container_Container(), 
+		   source, 
+		   new String[] {
+			 "body", "link->exists( l | (l.container->first() = c1 and l.container->last() =c2) or \n\t\t\t\t\t\t\t\t\t\t\t   ( l.container->first() = c2 and l.container->last() =c1))"
 		   });	
 		addAnnotation
 		  (allocationEClass, 

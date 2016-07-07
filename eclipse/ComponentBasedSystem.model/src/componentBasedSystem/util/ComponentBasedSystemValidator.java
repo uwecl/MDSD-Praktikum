@@ -127,7 +127,50 @@ public class ComponentBasedSystemValidator extends EObjectValidator {
 	 * @generated
 	 */
 	public boolean validateComponentBasedSystem(ComponentBasedSystem componentBasedSystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
-		return validate_EveryDefaultConstraint(componentBasedSystem, diagnostics, context);
+		if (!validate_NoCircularContainment(componentBasedSystem, diagnostics, context)) return false;
+		boolean result = validate_EveryMultiplicityConforms(componentBasedSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryDataValueConforms(componentBasedSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryReferenceIsContained(componentBasedSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryBidirectionalReferenceIsPaired(componentBasedSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryProxyResolves(componentBasedSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_UniqueID(componentBasedSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryKeyUnique(componentBasedSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validate_EveryMapEntryUnique(componentBasedSystem, diagnostics, context);
+		if (result || diagnostics != null) result &= validateComponentBasedSystem_SameParentContainerOrLinkedContainerOfconnectedAssemblyContexts(componentBasedSystem, diagnostics, context);
+		return result;
+	}
+
+	/**
+	 * The cached validation expression for the SameParentContainerOrLinkedContainerOfconnectedAssemblyContexts constraint of '<em>Component Based System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected static final String COMPONENT_BASED_SYSTEM__SAME_PARENT_CONTAINER_OR_LINKED_CONTAINER_OFCONNECTED_ASSEMBLY_CONTEXTS__EEXPRESSION = "\n" +
+		"\t  \tself.assemblyconnector->forAll( a | \n" +
+		"\t  \tlet c1 : Container = GetContainerOfContext(a.providedAssemblyContext),\n" +
+		"\t  \t\tc2: Container = GetContainerOfContext(a.requiredAssemblyContext)\n" +
+		"\t  \tin c1 = c2  or environment.IsLinked(c1,c2))";
+
+	/**
+	 * Validates the SameParentContainerOrLinkedContainerOfconnectedAssemblyContexts constraint of '<em>Component Based System</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean validateComponentBasedSystem_SameParentContainerOrLinkedContainerOfconnectedAssemblyContexts(ComponentBasedSystem componentBasedSystem, DiagnosticChain diagnostics, Map<Object, Object> context) {
+		return
+			validate
+				(ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM,
+				 componentBasedSystem,
+				 diagnostics,
+				 context,
+				 "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+				 "SameParentContainerOrLinkedContainerOfconnectedAssemblyContexts",
+				 COMPONENT_BASED_SYSTEM__SAME_PARENT_CONTAINER_OR_LINKED_CONTAINER_OFCONNECTED_ASSEMBLY_CONTEXTS__EEXPRESSION,
+				 Diagnostic.ERROR,
+				 DIAGNOSTIC_SOURCE,
+				 0);
 	}
 
 	/**
