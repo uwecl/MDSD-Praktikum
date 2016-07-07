@@ -226,7 +226,6 @@ public class Generator implements IGenerator {
       }
     }
     _builder.append(")");
-    _builder.newLineIfNotEmpty();
     return _builder;
   }
   
@@ -391,7 +390,6 @@ public class Generator implements IGenerator {
         _builder.append(_name, "");
       }
     }
-    _builder.newLineIfNotEmpty();
     return _builder;
   }
   

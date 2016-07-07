@@ -1,7 +1,6 @@
 package repository;
 	
 public interface Sound {
-	public void watermark()
-	;
+	public void watermark();
 }
 

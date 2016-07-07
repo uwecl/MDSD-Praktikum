@@ -4,22 +4,19 @@ import repository.HTTP;
 import repository.MediaStore;
 import repository.Helper;
 
-public class WebGUIImpl implements HTTP
-{
+public class WebGUIImpl implements HTTP{
 
 	MediaStore mediaStore;
 	
 	// Implementing HTTPDownload from interface HTTP.
 	@Override
-	public void HTTPDownload(String url, int magicNumber)
-	{
+	public void HTTPDownload(String url, int magicNumber){
 		Helper.assertNotNull(this.mediaStore);
 		// TODO: Insert code here.
 	}
 	// Implementing HTTPUpload from interface HTTP.
 	@Override
-	public void HTTPUpload()
-	{
+	public void HTTPUpload(){
 		Helper.assertNotNull(this.mediaStore);
 		// TODO: Insert code here.
 	}

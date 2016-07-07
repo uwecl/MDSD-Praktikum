@@ -123,14 +123,7 @@ class Generator implements IGenerator {
 		}
 	'''
 
-	// TODO: Fix newline bug at the end.
-	def mapSignature(Signature sig) '''
-		public «sig.returntype.name» «sig.name»(«FOR p : sig.parameter SEPARATOR ", " AFTER ""»«
-			»«IF p.parametertype != null && p.name != null»«
-				p.parametertype.name» «p.name
-			»«ENDIF»«
-		»«ENDFOR»)
-	'''
+	def mapSignature(Signature sig) '''public «sig.returntype.name» «sig.name»(«FOR p : sig.parameter SEPARATOR ", " AFTER ""»«IF p.parametertype != null && p.name != null»«p.parametertype.name» «p.name»«ENDIF»«ENDFOR»)'''
 
 	// Components.
 	def generateComponents(EList<Component> components, String mainPackageName, String exportDirPath) {
@@ -211,9 +204,7 @@ class Generator implements IGenerator {
 	 * Our meta model supports only one provided role for a component at the moment.
 	 * TODO: Adapt this to support several provided roles if the meta model was adapted
 	 */
-	def mapProvidedRoles(Component c) '''
-		«IF c.providedrole != null»implements «c.providedrole.interface.name»«ENDIF»
-	'''
+	def mapProvidedRoles(Component c) '''«IF c.providedrole != null»implements «c.providedrole.interface.name»«ENDIF»'''
 
 	/*
 	 * Our meta model supports only one provided role for a component at the moment.

@@ -3,22 +3,19 @@ package DBCache;
 import repository.AudioDB;
 import repository.Helper;
 
-public class DBCacheImpl implements AudioDB
-{
+public class DBCacheImpl implements AudioDB{
 
 	AudioDB audioDB;
 	
 	// Implementing queryDB from interface AudioDB.
 	@Override
-	public void queryDB()
-	{
+	public void queryDB(){
 		Helper.assertNotNull(this.audioDB);
 		// TODO: Insert code here.
 	}
 	// Implementing addFile from interface AudioDB.
 	@Override
-	public void addFile()
-	{
+	public void addFile(){
 		Helper.assertNotNull(this.audioDB);
 		// TODO: Insert code here.
 	}

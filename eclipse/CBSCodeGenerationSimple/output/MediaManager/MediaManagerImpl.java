@@ -5,24 +5,21 @@ import repository.Sound;
 import repository.AudioDB;
 import repository.Helper;
 
-public class MediaManagerImpl implements MediaStore
-{
+public class MediaManagerImpl implements MediaStore{
 
 	Sound sound;
 	AudioDB audioDB;
 	
 	// Implementing download from interface MediaStore.
 	@Override
-	public void download(String url)
-	{
+	public void download(String url){
 		Helper.assertNotNull(this.sound);
 		Helper.assertNotNull(this.audioDB);
 		// TODO: Insert code here.
 	}
 	// Implementing upload from interface MediaStore.
 	@Override
-	public void upload()
-	{
+	public void upload(){
 		Helper.assertNotNull(this.sound);
 		Helper.assertNotNull(this.audioDB);
 		// TODO: Insert code here.
