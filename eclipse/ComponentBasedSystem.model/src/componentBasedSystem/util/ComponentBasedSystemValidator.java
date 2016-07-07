@@ -219,7 +219,7 @@ public class ComponentBasedSystemValidator extends EObjectValidator {
 	 */
 	protected static final String COMPOSITE_COMPONENT__SAME_INTERFACE_DELEGATED__EEXPRESSION = "\n" +
 		"\t\tself.delegationconnector->\n" +
-		"\t\tforAll( d | d.role->includes(providedrole) or d.role->includesAll(requiredrole))";
+		"\t\tforAll( d | d.role->includesAll(providedrole) or d.role->includesAll(requiredrole))";
 
 	/**
 	 * Validates the SameInterfaceDelegated constraint of '<em>Composite Component</em>'.

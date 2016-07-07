@@ -90,30 +90,20 @@ public interface Component extends EObject {
 	EList<Service> getService();
 
 	/**
-	 * Returns the value of the '<em><b>Providedrole</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Providedrole</b></em>' containment reference list.
+	 * The list contents are of type {@link componentBasedSystem.roles.ProvidedRole}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Providedrole</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Providedrole</em>' containment reference.
-	 * @see #setProvidedrole(ProvidedRole)
+	 * @return the value of the '<em>Providedrole</em>' containment reference list.
 	 * @see componentBasedSystem.ComponentBasedSystemPackage#getComponent_Providedrole()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	ProvidedRole getProvidedrole();
-
-	/**
-	 * Sets the value of the '{@link componentBasedSystem.Component#getProvidedrole <em>Providedrole</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Providedrole</em>' containment reference.
-	 * @see #getProvidedrole()
-	 * @generated
-	 */
-	void setProvidedrole(ProvidedRole value);
+	EList<ProvidedRole> getProvidedrole();
 
 	/**
 	 * Returns the value of the '<em><b>Requiredrole</b></em>' containment reference list.

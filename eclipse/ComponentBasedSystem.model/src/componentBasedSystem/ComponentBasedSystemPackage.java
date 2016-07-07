@@ -214,7 +214,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPONENT__REQUIREDROLE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Providedrole</b></em>' containment reference.
+	 * The feature id for the '<em><b>Providedrole</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -333,7 +333,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPOSITE_COMPONENT__REQUIREDROLE = COMPONENT__REQUIREDROLE;
 
 	/**
-	 * The feature id for the '<em><b>Providedrole</b></em>' containment reference.
+	 * The feature id for the '<em><b>Providedrole</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1029,10 +1029,10 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getComponent_Service();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link componentBasedSystem.Component#getProvidedrole <em>Providedrole</em>}'.
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.Component#getProvidedrole <em>Providedrole</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Providedrole</em>'.
+	 * @return the meta object for the containment reference list '<em>Providedrole</em>'.
 	 * @see componentBasedSystem.Component#getProvidedrole()
 	 * @see #getComponent()
 	 * @generated
@@ -1594,7 +1594,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference COMPONENT__SERVICE = eINSTANCE.getComponent_Service();
 
 		/**
-		 * The meta object literal for the '<em><b>Providedrole</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Providedrole</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

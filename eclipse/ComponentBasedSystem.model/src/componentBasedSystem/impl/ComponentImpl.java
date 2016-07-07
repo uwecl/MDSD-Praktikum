@@ -94,14 +94,14 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	protected EList<RequiredRole> requiredrole;
 
 	/**
-	 * The cached value of the '{@link #getProvidedrole() <em>Providedrole</em>}' containment reference.
+	 * The cached value of the '{@link #getProvidedrole() <em>Providedrole</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProvidedrole()
 	 * @generated
 	 * @ordered
 	 */
-	protected ProvidedRole providedrole;
+	protected EList<ProvidedRole> providedrole;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -172,42 +172,11 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProvidedRole getProvidedrole() {
+	public EList<ProvidedRole> getProvidedrole() {
+		if (providedrole == null) {
+			providedrole = new EObjectContainmentEList<ProvidedRole>(ProvidedRole.class, this, ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE);
+		}
 		return providedrole;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetProvidedrole(ProvidedRole newProvidedrole, NotificationChain msgs) {
-		ProvidedRole oldProvidedrole = providedrole;
-		providedrole = newProvidedrole;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE, oldProvidedrole, newProvidedrole);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setProvidedrole(ProvidedRole newProvidedrole) {
-		if (newProvidedrole != providedrole) {
-			NotificationChain msgs = null;
-			if (providedrole != null)
-				msgs = ((InternalEObject)providedrole).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE, null, msgs);
-			if (newProvidedrole != null)
-				msgs = ((InternalEObject)newProvidedrole).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE, null, msgs);
-			msgs = basicSetProvidedrole(newProvidedrole, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE, newProvidedrole, newProvidedrole));
 	}
 
 	/**
@@ -237,7 +206,7 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 			case ComponentBasedSystemPackage.COMPONENT__REQUIREDROLE:
 				return ((InternalEList<?>)getRequiredrole()).basicRemove(otherEnd, msgs);
 			case ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE:
-				return basicSetProvidedrole(null, msgs);
+				return ((InternalEList<?>)getProvidedrole()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -289,7 +258,8 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				getRequiredrole().addAll((Collection<? extends RequiredRole>)newValue);
 				return;
 			case ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE:
-				setProvidedrole((ProvidedRole)newValue);
+				getProvidedrole().clear();
+				getProvidedrole().addAll((Collection<? extends ProvidedRole>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -316,7 +286,7 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 				getRequiredrole().clear();
 				return;
 			case ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE:
-				setProvidedrole((ProvidedRole)null);
+				getProvidedrole().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -339,7 +309,7 @@ public class ComponentImpl extends MinimalEObjectImpl.Container implements Compo
 			case ComponentBasedSystemPackage.COMPONENT__REQUIREDROLE:
 				return requiredrole != null && !requiredrole.isEmpty();
 			case ComponentBasedSystemPackage.COMPONENT__PROVIDEDROLE:
-				return providedrole != null;
+				return providedrole != null && !providedrole.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

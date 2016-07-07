@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<componentBasedSystem:ComponentBasedSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem" xmlns:dataTypes="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/dataTypes" providedrole="//@repository/@component.0/@providedrole">
+<componentBasedSystem:ComponentBasedSystem xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem" xmlns:dataTypes="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/dataTypes" providedrole="//@repository/@component.0/@providedrole.0">
   <assemblycontext name="WebGUI" component="//@repository/@component.0"/>
   <assemblycontext name="MediaStore" component="//@repository/@component.2"/>
   <assemblycontext name="PoolingAudioDB" component="//@repository/@component.1"/>
   <type xsi:type="dataTypes:Void" name="void"/>
-  <assemblyconnector providedrole="//@repository/@component.2/@providedrole" requiredrole="//@repository/@component.0/@requiredrole.0" name="MediaStore" providedAssemblyContext="//@assemblycontext.1" requiredAssemblyContext="//@assemblycontext.0"/>
-  <assemblyconnector providedrole="//@repository/@component.4/@providedrole" requiredrole="//@repository/@component.3/@requiredrole.0" name="Sound" providedAssemblyContext="//@repository/@component.2/@assemblycontext.2" requiredAssemblyContext="//@repository/@component.2/@assemblycontext.0"/>
-  <assemblyconnector providedrole="//@repository/@component.5/@providedrole" requiredrole="//@repository/@component.3/@requiredrole.1" name="AudioDB1" providedAssemblyContext="//@repository/@component.2/@assemblycontext.1" requiredAssemblyContext="//@repository/@component.2/@assemblycontext.0"/>
-  <assemblyconnector providedrole="//@repository/@component.1/@providedrole" requiredrole="//@repository/@component.2/@requiredrole.0" name="AudioDB2" providedAssemblyContext="//@assemblycontext.2" requiredAssemblyContext="//@assemblycontext.1"/>
   <allocation>
     <allocationcontext container="//@environment/@container.0" assemblycontext="//@assemblycontext.1"/>
     <allocationcontext container="//@environment/@container.1" assemblycontext="//@assemblycontext.2"/>
@@ -48,7 +44,7 @@
       <assemblycontext name="MediaManager" component="//@repository/@component.3"/>
       <assemblycontext name="DBCache" component="//@repository/@component.5"/>
       <assemblycontext name="DigitalWatermarking" component="//@repository/@component.4"/>
-      <delegationconnector role="//@repository/@component.2/@providedrole //@repository/@component.3/@providedrole" name="MediaStore-Provided"/>
+      <delegationconnector role="//@repository/@component.2/@providedrole.0 //@repository/@component.3/@providedrole.0" name="MediaStore-Provided"/>
       <delegationconnector role="//@repository/@component.5/@requiredrole.0 //@repository/@component.2/@requiredrole.0" name="MediaStore-Required"/>
     </component>
     <component name="MediaManager">

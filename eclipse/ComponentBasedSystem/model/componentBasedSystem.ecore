@@ -53,7 +53,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="requiredrole" upperBound="-1"
         eType="#//roles/RequiredRole" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="providedrole" lowerBound="1"
-        eType="#//roles/ProvidedRole" containment="true"/>
+        upperBound="-1" eType="#//roles/ProvidedRole" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Interface">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -68,7 +68,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value="Ensures that there are as many connectors as there are roles in the composite component"/>
       </eAnnotations>
-      <details key="SameInterfaceDelegated" value="&#xA;&#x9;&#x9;self.delegationconnector->&#xA;&#x9;&#x9;forAll( d | d.role->includes(providedrole) or d.role->includesAll(requiredrole))"/>
+      <details key="SameInterfaceDelegated" value="&#xA;&#x9;&#x9;self.delegationconnector->&#xA;&#x9;&#x9;forAll( d | d.role->includesAll(providedrole) or d.role->includesAll(requiredrole))"/>
       <details key="RoleCount" value="&#xA;&#x9;&#x9;self.delegationconnector->size() = self.requiredrole->size() + self.providedrole->size()"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assemblycontext" lowerBound="2"

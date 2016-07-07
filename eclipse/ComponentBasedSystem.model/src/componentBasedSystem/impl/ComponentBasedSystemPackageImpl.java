@@ -877,7 +877,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEReference(getComponent_Behaviourdescription(), theBehaviourDescriptionPackage.getBehaviourDescription(), null, "behaviourdescription", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_Service(), this.getService(), null, "service", null, 1, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_Requiredrole(), theRolesPackage.getRequiredRole(), null, "requiredrole", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponent_Providedrole(), theRolesPackage.getProvidedRole(), null, "providedrole", null, 1, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_Providedrole(), theRolesPackage.getProvidedRole(), null, "providedrole", null, 1, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(interfaceEClass, Interface.class, "Interface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInterface_Name(), ecorePackage.getEString(), "name", null, 0, 1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1016,7 +1016,7 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		  (compositeComponentEClass, 
 		   source, 
 		   new String[] {
-			 "SameInterfaceDelegated", "\n\t\tself.delegationconnector->\n\t\tforAll( d | d.role->includes(providedrole) or d.role->includesAll(requiredrole))",
+			 "SameInterfaceDelegated", "\n\t\tself.delegationconnector->\n\t\tforAll( d | d.role->includesAll(providedrole) or d.role->includesAll(requiredrole))",
 			 "RoleCount", "\n\t\tself.delegationconnector->size() = self.requiredrole->size() + self.providedrole->size()"
 		   });
 		addAnnotation
