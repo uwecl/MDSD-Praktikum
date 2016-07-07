@@ -1,10 +1,11 @@
 package WebGUI;
 
 import repository.HTTP;
+import repository.Sound;
 import repository.MediaStore;
 import repository.Helper;
 
-public class WebGUIImpl implements HTTP{
+public class WebGUIImpl implements HTTP, Sound{
 
 	MediaStore mediaStore;
 	
@@ -17,6 +18,12 @@ public class WebGUIImpl implements HTTP{
 	// Implementing HTTPUpload from interface HTTP.
 	@Override
 	public void HTTPUpload(){
+		Helper.assertNotNull(this.mediaStore);
+		// TODO: Insert code here.
+	}
+	// Implementing watermark from interface Sound.
+	@Override
+	public void watermark(){
 		Helper.assertNotNull(this.mediaStore);
 		// TODO: Insert code here.
 	}

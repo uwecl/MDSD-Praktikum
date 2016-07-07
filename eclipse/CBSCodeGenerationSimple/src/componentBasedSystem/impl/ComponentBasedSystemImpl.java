@@ -12,14 +12,18 @@ import componentBasedSystem.dataTypes.Type;
 import componentBasedSystem.roles.AssemblyConnector;
 import componentBasedSystem.roles.ProvidedRole;
 import componentBasedSystem.roles.RequiredRole;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -226,6 +230,30 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 			requiredrole = new EObjectResolvingEList<RequiredRole>(RequiredRole.class, this, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REQUIREDROLE);
 		}
 		return requiredrole;
+	}
+
+	/**
+	 * The cached invocation delegate for the '{@link #GetContainerOfContext(componentBasedSystem.AssemblyContext) <em>Get Container Of Context</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GetContainerOfContext(componentBasedSystem.AssemblyContext)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate GET_CONTAINER_OF_CONTEXT_ASSEMBLY_CONTEXT__EINVOCATION_DELEGATE = ((EOperation.Internal)ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM___GET_CONTAINER_OF_CONTEXT__ASSEMBLYCONTEXT).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public componentBasedSystem.Container GetContainerOfContext(AssemblyContext context) {
+		try {
+			return (componentBasedSystem.Container)GET_CONTAINER_OF_CONTEXT_ASSEMBLY_CONTEXT__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{context}));
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
 	}
 
 	/**
@@ -494,6 +522,20 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				return requiredrole != null && !requiredrole.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM___GET_CONTAINER_OF_CONTEXT__ASSEMBLYCONTEXT:
+				return GetContainerOfContext((AssemblyContext)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ComponentBasedSystemImpl

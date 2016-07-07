@@ -147,7 +147,7 @@ class Generator implements IGenerator {
 		
 		«generateImports(c, mainPackageName)»
 		
-		public class «c.name»Impl «mapProvidedRoles(c)»{
+		public class «c.name»Impl «mapInterfacesToImplement(c)»{
 		
 			«mapRequiredInterfaces(c.requiredrole)»
 			
@@ -162,9 +162,10 @@ class Generator implements IGenerator {
 		val imports = newArrayList()
 
 		// Add provided interfaces.
-		// TODO: Adapt this to support several provided roles if the meta model was adapted.
 		if (c.providedrole != null) {
-			imports.add(c.providedrole.interface.name)
+			for (pRole : c.providedrole) {
+				imports.add(pRole.interface.name)
+			}
 		}
 
 		// Add required interfaces.
@@ -186,7 +187,6 @@ class Generator implements IGenerator {
 
 	/*
 	 * Our meta model supports only one provided role for a component at the moment.
-	 * TODO: Adapt this to support several provided roles if the meta model was adapted
 	 */
 	def mapImports(ArrayList<String> imports, String mainPackageName) '''
 		«FOR i : imports»
@@ -202,24 +202,24 @@ class Generator implements IGenerator {
 
 	/*
 	 * Our meta model supports only one provided role for a component at the moment.
-	 * TODO: Adapt this to support several provided roles if the meta model was adapted
 	 */
-	def mapProvidedRoles(Component c) '''«IF c.providedrole != null»implements «c.providedrole.interface.name»«ENDIF»'''
+	def mapInterfacesToImplement(Component c) '''«IF c.providedrole != null»implements «FOR pRole : c.providedrole SEPARATOR ", " AFTER ""»«pRole.interface.name»«ENDFOR»«ENDIF»'''
 
 	/*
 	 * Our meta model supports only one provided role for a component at the moment.
-	 * TODO: Adapt this to support several provided roles if the meta model was adapted
 	 */
 	def mapMethodsToImplement(Component c) '''
-		«FOR s : c.providedrole.interface.signature»
-			// Implementing «s.name» from interface «c.providedrole.interface.name».
-			@Override
-			«mapSignature(s)»{
-				«FOR rRole : c.requiredrole»
-					Helper.assertNotNull(this.«rRole.interface.name.toFirstLower»);
-				«ENDFOR»
-				// TODO: Insert code here.
-			}
+		«FOR pRole : c.providedrole»
+			«FOR s : pRole.interface.signature»
+				// Implementing «s.name» from interface «pRole.interface.name».
+				@Override
+				«mapSignature(s)»{
+					«FOR rRole : c.requiredrole»
+						Helper.assertNotNull(this.«rRole.interface.name.toFirstLower»);
+					«ENDFOR»
+					// TODO: Insert code here.
+				}
+			«ENDFOR»
 		«ENDFOR»
 	'''
 

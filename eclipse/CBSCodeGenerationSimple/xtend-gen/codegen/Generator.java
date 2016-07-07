@@ -272,8 +272,8 @@ public class Generator implements IGenerator {
     String _name_1 = c.getName();
     _builder.append(_name_1, "");
     _builder.append("Impl ");
-    CharSequence _mapProvidedRoles = this.mapProvidedRoles(c);
-    _builder.append(_mapProvidedRoles, "");
+    CharSequence _mapInterfacesToImplement = this.mapInterfacesToImplement(c);
+    _builder.append(_mapInterfacesToImplement, "");
     _builder.append("{");
     _builder.newLineIfNotEmpty();
     _builder.newLine();
@@ -304,13 +304,15 @@ public class Generator implements IGenerator {
     CharSequence _xblockexpression = null;
     {
       final ArrayList<String> imports = CollectionLiterals.<String>newArrayList();
-      ProvidedRole _providedrole = c.getProvidedrole();
+      EList<ProvidedRole> _providedrole = c.getProvidedrole();
       boolean _notEquals = (!Objects.equal(_providedrole, null));
       if (_notEquals) {
-        ProvidedRole _providedrole_1 = c.getProvidedrole();
-        Interface _interface = _providedrole_1.getInterface();
-        String _name = _interface.getName();
-        imports.add(_name);
+        EList<ProvidedRole> _providedrole_1 = c.getProvidedrole();
+        for (final ProvidedRole pRole : _providedrole_1) {
+          Interface _interface = pRole.getInterface();
+          String _name = _interface.getName();
+          imports.add(_name);
+        }
       }
       EList<RequiredRole> _requiredrole = c.getRequiredrole();
       for (final RequiredRole rRole : _requiredrole) {
@@ -337,7 +339,6 @@ public class Generator implements IGenerator {
   
   /**
    * Our meta model supports only one provided role for a component at the moment.
-   * TODO: Adapt this to support several provided roles if the meta model was adapted
    */
   public CharSequence mapImports(final ArrayList<String> imports, final String mainPackageName) {
     StringConcatenation _builder = new StringConcatenation();
@@ -375,19 +376,31 @@ public class Generator implements IGenerator {
   
   /**
    * Our meta model supports only one provided role for a component at the moment.
-   * TODO: Adapt this to support several provided roles if the meta model was adapted
    */
-  public CharSequence mapProvidedRoles(final Component c) {
+  public CharSequence mapInterfacesToImplement(final Component c) {
     StringConcatenation _builder = new StringConcatenation();
     {
-      ProvidedRole _providedrole = c.getProvidedrole();
+      EList<ProvidedRole> _providedrole = c.getProvidedrole();
       boolean _notEquals = (!Objects.equal(_providedrole, null));
       if (_notEquals) {
         _builder.append("implements ");
-        ProvidedRole _providedrole_1 = c.getProvidedrole();
-        Interface _interface = _providedrole_1.getInterface();
-        String _name = _interface.getName();
-        _builder.append(_name, "");
+        {
+          EList<ProvidedRole> _providedrole_1 = c.getProvidedrole();
+          boolean _hasElements = false;
+          for(final ProvidedRole pRole : _providedrole_1) {
+            if (!_hasElements) {
+              _hasElements = true;
+            } else {
+              _builder.appendImmediate(", ", "");
+            }
+            Interface _interface = pRole.getInterface();
+            String _name = _interface.getName();
+            _builder.append(_name, "");
+          }
+          if (_hasElements) {
+            _builder.append("", "");
+          }
+        }
       }
     }
     return _builder;
@@ -395,49 +408,51 @@ public class Generator implements IGenerator {
   
   /**
    * Our meta model supports only one provided role for a component at the moment.
-   * TODO: Adapt this to support several provided roles if the meta model was adapted
    */
   public CharSequence mapMethodsToImplement(final Component c) {
     StringConcatenation _builder = new StringConcatenation();
     {
-      ProvidedRole _providedrole = c.getProvidedrole();
-      Interface _interface = _providedrole.getInterface();
-      EList<Signature> _signature = _interface.getSignature();
-      for(final Signature s : _signature) {
-        _builder.append("// Implementing ");
-        String _name = s.getName();
-        _builder.append(_name, "");
-        _builder.append(" from interface ");
-        ProvidedRole _providedrole_1 = c.getProvidedrole();
-        Interface _interface_1 = _providedrole_1.getInterface();
-        String _name_1 = _interface_1.getName();
-        _builder.append(_name_1, "");
-        _builder.append(".");
-        _builder.newLineIfNotEmpty();
-        _builder.append("@Override");
-        _builder.newLine();
-        CharSequence _mapSignature = this.mapSignature(s);
-        _builder.append(_mapSignature, "");
-        _builder.append("{");
-        _builder.newLineIfNotEmpty();
+      EList<ProvidedRole> _providedrole = c.getProvidedrole();
+      for(final ProvidedRole pRole : _providedrole) {
         {
-          EList<RequiredRole> _requiredrole = c.getRequiredrole();
-          for(final RequiredRole rRole : _requiredrole) {
-            _builder.append("\t");
-            _builder.append("Helper.assertNotNull(this.");
-            Interface _interface_2 = rRole.getInterface();
-            String _name_2 = _interface_2.getName();
-            String _firstLower = StringExtensions.toFirstLower(_name_2);
-            _builder.append(_firstLower, "\t");
-            _builder.append(");");
+          Interface _interface = pRole.getInterface();
+          EList<Signature> _signature = _interface.getSignature();
+          for(final Signature s : _signature) {
+            _builder.append("// Implementing ");
+            String _name = s.getName();
+            _builder.append(_name, "");
+            _builder.append(" from interface ");
+            Interface _interface_1 = pRole.getInterface();
+            String _name_1 = _interface_1.getName();
+            _builder.append(_name_1, "");
+            _builder.append(".");
             _builder.newLineIfNotEmpty();
+            _builder.append("@Override");
+            _builder.newLine();
+            CharSequence _mapSignature = this.mapSignature(s);
+            _builder.append(_mapSignature, "");
+            _builder.append("{");
+            _builder.newLineIfNotEmpty();
+            {
+              EList<RequiredRole> _requiredrole = c.getRequiredrole();
+              for(final RequiredRole rRole : _requiredrole) {
+                _builder.append("\t");
+                _builder.append("Helper.assertNotNull(this.");
+                Interface _interface_2 = rRole.getInterface();
+                String _name_2 = _interface_2.getName();
+                String _firstLower = StringExtensions.toFirstLower(_name_2);
+                _builder.append(_firstLower, "\t");
+                _builder.append(");");
+                _builder.newLineIfNotEmpty();
+              }
+            }
+            _builder.append("\t");
+            _builder.append("// TODO: Insert code here.");
+            _builder.newLine();
+            _builder.append("}");
+            _builder.newLine();
           }
         }
-        _builder.append("\t");
-        _builder.append("// TODO: Insert code here.");
-        _builder.newLine();
-        _builder.append("}");
-        _builder.newLine();
       }
     }
     return _builder;
