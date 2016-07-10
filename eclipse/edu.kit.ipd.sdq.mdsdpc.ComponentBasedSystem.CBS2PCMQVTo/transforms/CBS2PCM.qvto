@@ -19,9 +19,12 @@ mapping CBS::ComponentBasedSystem::toSystem() : pcm::system::System {
 //	connectors__ComposedStructure := self.assemblyconnector.late resolve(pcm::core::composition::Connector);
 	connectors__ComposedStructure := self.assemblyconnector -> map toAssemblyConnector();
 	
+	
 	// Has to be discussed with Erik
 	providedRoles_InterfaceProvidingEntity := self.providedrole->map toOperationProviedRole();
 	requiredRoles_InterfaceRequiringEntity := self.requiredrole->map toOperationRequiredRole();
+	
+	connectors__ComposedStructure += getSystemDelegationConnector(providedRoles_InterfaceProvidingEntity);
 	
 	//requiredRoles_InterfaceRequiringEntity := getRequiredRoles(self.interface) -> oclAsType(cbswa::assemblyelements::RequiredRole).map toOperationRequiredRole();
 	
@@ -29,6 +32,9 @@ mapping CBS::ComponentBasedSystem::toSystem() : pcm::system::System {
 	resourceRequiredRoles__ResourceInterfaceRequiringEntity := null;
 	eventChannel__ComposedStructure := null;	
 	resourceRequiredDelegationConnectors_ComposedStructure := null;
+	
+	
+	
 }
 
 mapping CBS::roles::AssemblyConnector::toAssemblyConnector() : pcm::core::composition::AssemblyConnector {
@@ -57,14 +63,14 @@ mapping CBS::roles::RequiredRole::toOperationRequiredRole() : pcm::repository::O
 
 mapping CBS::Allocation::toAllocation() : pcm::allocation::Allocation {
 	result.allocationContexts_Allocation := self.allocationcontext->map toAllocationContext();
-	result.system_Allocation := null; //TODO
+	result.system_Allocation := getSystem().late resolveone(pcm::system::System);
 	result.targetResourceEnvironment_Allocation := null; //TODO
 }
 
 mapping CBS::AllocationContext::toAllocationContext() : pcm::allocation::AllocationContext {
 	entityName := self.assemblycontext.name + "_DeployedOn_" + self.container.name;
 	resourceContainer_AllocationContext := self.container.map toResourceContainer(); //Change metamodel?
-	assemblyContext_AllocationContext := self.assemblycontext.resolveone(PCM::core::composition::AssemblyContext); // map toAssemblyContext();
+	assemblyContext_AllocationContext := self.assemblycontext.late resolveone(PCM::core::composition::AssemblyContext); // map toAssemblyContext();
 	
 	eventChannel__AllocationContext := null;
 }
@@ -248,7 +254,7 @@ query getDataTypeOf(kind : CBS::dataTypes::simpleTypes) : pcm::repository::Primi
 	} endif;
 	
 	if (kind = CBS::dataTypes::simpleTypes::int) then {
-		pcmDataType := pcm::repository::PrimitiveTypeEnum::INT;
+		pcmDataType := pcm::repository::PrimitiveTypeEnum::INT;		
 	} endif;
 	
 	if (kind = CBS::dataTypes::simpleTypes::long) then {
@@ -260,6 +266,17 @@ query getDataTypeOf(kind : CBS::dataTypes::simpleTypes) : pcm::repository::Primi
 	} endif;
 	
 	return pcmDataType;	
+}
+
+query getSystemDelegationConnector(providedRole : Set(pcm::repository::ProvidedRole)) {
+	var providedDelegationConnectors : Set(pcm::repository::OperationProvidedRole) := null;
+	
+	var providedDelegationConnector : pcm::repository::OperationProvidedRole := null;
+	//assemblyContext
+//	providedDelegationConnector.
+	//äußere der Parameter
+	//innere muss ermittelt werden
+	//zusammenhang von innere und äußere nirgends modelliert oder?
 }
 
 query getDelegationConnector(delegationConnector : OrderedSet(CBS::DelegationConnector)) : OrderedSet(pcm::core::composition::Connector) {
@@ -281,25 +298,14 @@ query getDelegationConnector(delegationConnector : OrderedSet(CBS::DelegationCon
 query getParentComposedStructure(component : CBS::Component) : pcm::core::composition::ComposedStructure {
 	var pcmComposedStructure : pcm::core::composition::ComposedStructure := null;
 	var compositeComponent : Set(CBS::CompositeComponent) := cbs.rootObjects()[CBS::CompositeComponent];
-//	delegationConnector->forEach(d) {
-//		if (d.role->first().oclIsTypeOf(CBS::roles::RequiredRole)) then {
-//			pcmDelegationConnector += d.map toRequiredDelegationConnector();
-//		} endif;
-//		if (d.role->first().oclIsTypeOf(CBS::roles::ProvidedRole)) then {
-//			pcmDelegationConnector += d.map toProvidedDelegationConnector();
-//		} endif;
-//	};
 	return pcmComposedStructure;
 }
 
-query getProvidedRoles(interfaces : Set(CBS::Interface)) : pcm::repository::OperationProvidedRole {
-	var pcmOperationProvidedRole : pcm::repository::OperationProvidedRole := null;
-	
-	interfaces->forEach(i) {
-		
-	};
-	
-	return pcmOperationProvidedRole;
+query getSystem() : CBS::ComponentBasedSystem {	
+	var cbsSystem : CBS::ComponentBasedSystem := null;
+	var cbsSystems : OrderedSet(CBS::ComponentBasedSystem) := CBS::ComponentBasedSystem.allInstances()->asOrderedSet();	
+	cbsSystem := cbsSystems->at(1);
+	return cbsSystem;
 }
 
 //helper CBS::DelegationConnector::createDelegationConnector() : PCM::core::composition::Connector {
