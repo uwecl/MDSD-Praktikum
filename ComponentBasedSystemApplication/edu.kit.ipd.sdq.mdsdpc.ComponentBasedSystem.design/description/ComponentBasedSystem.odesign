@@ -3,13 +3,6 @@
   <ownedViewpoints name="cbs">
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Repository diagram" initialisation="true" domainClass="componentBasedSystem.Repository" enablePopupBars="true">
       <defaultLayer name="Default">
-        <nodeMappings name="Component" labelDirectEdit="//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:component" domainClass="componentBasedSystem.Component">
-          <style xsi:type="style:SquareDescription" labelPosition="node" resizeKind="NSEW" width="10" height="4">
-            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
-            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-          </style>
-        </nodeMappings>
         <containerMappings name="Interface" semanticCandidatesExpression="feature:interface" domainClass="componentBasedSystem.Interface" childrenPresentation="VerticalStack">
           <subContainerMappings name="Signature" semanticCandidatesExpression="feature:signature" domainClass="componentBasedSystem.Signature" childrenPresentation="List">
             <subNodeMappings name="Parameter" semanticCandidatesExpression="feature:parameter" domainClass="componentBasedSystem.Parameter">
@@ -24,7 +17,7 @@
               <labelFormat>bold</labelFormat>
               <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
               <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
               <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
             </style>
           </subContainerMappings>
@@ -33,8 +26,24 @@
             <labelFormat>bold</labelFormat>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
-            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
             <labelBorderStyle href="environment:/viewpoint#//@labelBorderStyles/@labelBorderStyleDescriptions.2"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="Component" semanticCandidatesExpression="feature:component" domainClass="componentBasedSystem.Component" childrenPresentation="List">
+          <subNodeMappings name="ServiceSignature" semanticCandidatesExpression="aql:self.service.correspondingSignatures" domainClass="componentBasedSystem.Signature">
+            <style xsi:type="style:SquareDescription" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            </style>
+          </subNodeMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
           </style>
         </containerMappings>
         <toolSections name="EditSection">

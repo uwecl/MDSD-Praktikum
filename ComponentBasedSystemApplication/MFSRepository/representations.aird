@@ -10,7 +10,7 @@
       </ownedAnnotationEntries>
       <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_8i2csEK4Eeap1dC_CpU1HA" source="GMF_DIAGRAMS">
         <data xmi:type="notation:Diagram" xmi:id="_8i2csUK4Eeap1dC_CpU1HA" type="Sirius" element="_8iIrAEK4Eeap1dC_CpU1HA" measurementUnit="Pixel">
-          <children xmi:type="notation:Node" xmi:id="_8kCIckK4Eeap1dC_CpU1HA" type="2001" element="_8iJSGkK4Eeap1dC_CpU1HA">
+          <children xmi:type="notation:Node" xmi:id="_8kCIckK4Eeap1dC_CpU1HA" visible="false" type="2001" element="_8iJSGkK4Eeap1dC_CpU1HA">
             <children xmi:type="notation:Node" xmi:id="_8kCvgEK4Eeap1dC_CpU1HA" type="5002">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_8kCvgUK4Eeap1dC_CpU1HA" y="5"/>
             </children>
@@ -21,7 +21,7 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_8kCIc0K4Eeap1dC_CpU1HA" fontName=".SF NS Text" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8kCIdEK4Eeap1dC_CpU1HA" x="636" y="32" width="100" height="40"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_8kCvgkK4Eeap1dC_CpU1HA" type="2001" element="_8iJSHEK4Eeap1dC_CpU1HA">
+          <children xmi:type="notation:Node" xmi:id="_8kCvgkK4Eeap1dC_CpU1HA" visible="false" type="2001" element="_8iJSHEK4Eeap1dC_CpU1HA">
             <children xmi:type="notation:Node" xmi:id="_8kDWkEK4Eeap1dC_CpU1HA" type="5002">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_8kDWkUK4Eeap1dC_CpU1HA" y="5"/>
             </children>
@@ -32,7 +32,7 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_8kCvg0K4Eeap1dC_CpU1HA" fontName=".SF NS Text" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8kCvhEK4Eeap1dC_CpU1HA" x="636" y="87" width="100" height="40"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_8kD9oEK4Eeap1dC_CpU1HA" type="2001" element="_8iJSHkK4Eeap1dC_CpU1HA">
+          <children xmi:type="notation:Node" xmi:id="_8kD9oEK4Eeap1dC_CpU1HA" visible="false" type="2001" element="_8iJSHkK4Eeap1dC_CpU1HA">
             <children xmi:type="notation:Node" xmi:id="_8kD9o0K4Eeap1dC_CpU1HA" type="5002">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_8kD9pEK4Eeap1dC_CpU1HA" y="5"/>
             </children>
@@ -43,7 +43,7 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_8kD9oUK4Eeap1dC_CpU1HA" fontName=".SF NS Text" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8kD9okK4Eeap1dC_CpU1HA" x="636" y="126" width="100" height="40"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_8kEksEK4Eeap1dC_CpU1HA" type="2001" element="_8iJSIEK4Eeap1dC_CpU1HA">
+          <children xmi:type="notation:Node" xmi:id="_8kEksEK4Eeap1dC_CpU1HA" visible="false" type="2001" element="_8iJSIEK4Eeap1dC_CpU1HA">
             <children xmi:type="notation:Node" xmi:id="_8kFLwEK4Eeap1dC_CpU1HA" type="5002">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_8kFLwUK4Eeap1dC_CpU1HA" y="5"/>
             </children>
@@ -54,7 +54,7 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_8kEksUK4Eeap1dC_CpU1HA" fontName=".SF NS Text" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8kEkskK4Eeap1dC_CpU1HA" x="636" y="172" width="100" height="40"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_8kFLwkK4Eeap1dC_CpU1HA" type="2001" element="_8iJSIkK4Eeap1dC_CpU1HA">
+          <children xmi:type="notation:Node" xmi:id="_8kFLwkK4Eeap1dC_CpU1HA" visible="false" type="2001" element="_8iJSIkK4Eeap1dC_CpU1HA">
             <children xmi:type="notation:Node" xmi:id="_8kGZ4EK4Eeap1dC_CpU1HA" type="5002">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_8kGZ4UK4Eeap1dC_CpU1HA" y="5"/>
             </children>
@@ -65,7 +65,7 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_8kFLw0K4Eeap1dC_CpU1HA" fontName=".SF NS Text" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8kFLxEK4Eeap1dC_CpU1HA" x="636" y="224" width="100" height="40"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_8kGZ4kK4Eeap1dC_CpU1HA" type="2001" element="_8iJSJEK4Eeap1dC_CpU1HA">
+          <children xmi:type="notation:Node" xmi:id="_8kGZ4kK4Eeap1dC_CpU1HA" visible="false" type="2001" element="_8iJSJEK4Eeap1dC_CpU1HA">
             <children xmi:type="notation:Node" xmi:id="_8kHoAEK4Eeap1dC_CpU1HA" type="5002">
               <layoutConstraint xmi:type="notation:Location" xmi:id="_8kHoAUK4Eeap1dC_CpU1HA" y="5"/>
             </children>
@@ -657,7 +657,7 @@
                   <styles xmi:type="notation:DrawerStyle" xmi:id="_N8RVc0gxEeaY66vyx2eNIw"/>
                 </children>
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_N8QuZUgxEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N8QuZkgxEeaY66vyx2eNIw" width="140" height="40"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N8QuZkgxEeaY66vyx2eNIw" width="136" height="40"/>
               </children>
               <children xmi:type="notation:Node" xmi:id="_N8RVdEgxEeaY66vyx2eNIw" type="3009" element="_N8D6EkgxEeaY66vyx2eNIw">
                 <children xmi:type="notation:Node" xmi:id="_N8RVd0gxEeaY66vyx2eNIw" type="5004"/>
@@ -667,7 +667,7 @@
                   <styles xmi:type="notation:DrawerStyle" xmi:id="_N8RVe0gxEeaY66vyx2eNIw"/>
                 </children>
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_N8RVdUgxEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N8RVdkgxEeaY66vyx2eNIw" y="40" width="140" height="40"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N8RVdkgxEeaY66vyx2eNIw" y="40" width="136" height="40"/>
               </children>
               <children xmi:type="notation:Node" xmi:id="_N8RVfEgxEeaY66vyx2eNIw" type="3009" element="_N8EhIUgxEeaY66vyx2eNIw">
                 <children xmi:type="notation:Node" xmi:id="_N8R8gEgxEeaY66vyx2eNIw" type="5004"/>
@@ -677,13 +677,13 @@
                   <styles xmi:type="notation:DrawerStyle" xmi:id="_N8R8hEgxEeaY66vyx2eNIw"/>
                 </children>
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_N8RVfUgxEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N8RVfkgxEeaY66vyx2eNIw" y="80" width="140" height="65"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N8RVfkgxEeaY66vyx2eNIw" y="80" width="136" height="40"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_zwVNBUgwEeaY66vyx2eNIw"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_zwVNBkgwEeaY66vyx2eNIw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_zwVNAUgwEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zwVNAkgwEeaY66vyx2eNIw" x="135" y="4" width="144"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zwVNAkgwEeaY66vyx2eNIw" x="135" y="4" width="140"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_-ZeOkEgzEeaY66vyx2eNIw" visible="false" type="2003" element="_-ZHCMEgzEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_-Ze1oEgzEeaY66vyx2eNIw" type="5007"/>
@@ -955,10 +955,108 @@
             <styles xmi:type="notation:ShapeStyle" xmi:id="_azFIcUg0EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_azFIckg0EeaY66vyx2eNIw" x="344" y="32" width="107"/>
           </children>
+          <children xmi:type="notation:Node" xmi:id="_eesXMEg3EeaY66vyx2eNIw" type="2003" element="_oBbRsEg3EeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_ees-QEg3EeaY66vyx2eNIw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_ees-QUg3EeaY66vyx2eNIw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_oBlCsEg3EeaY66vyx2eNIw" type="3010" element="_oBdG4Eg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBlCsUg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBlCskg3EeaY66vyx2eNIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_oBlCs0g3EeaY66vyx2eNIw" type="3010" element="_oBdG4kg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBlCtEg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBlCtUg3EeaY66vyx2eNIw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_ees-Qkg3EeaY66vyx2eNIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_ees-Q0g3EeaY66vyx2eNIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_eesXMUg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eesXMkg3EeaY66vyx2eNIw" x="-181" y="520"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_ees-REg3EeaY66vyx2eNIw" type="2003" element="_oBbRskg3EeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_eetlUEg3EeaY66vyx2eNIw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_eetlUUg3EeaY66vyx2eNIw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_oBlpwEg3EeaY66vyx2eNIw" type="3010" element="_oBdt8Eg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBlpwUg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBlpwkg3EeaY66vyx2eNIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_oBlpw0g3EeaY66vyx2eNIw" type="3010" element="_oBdt8kg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBlpxEg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBlpxUg3EeaY66vyx2eNIw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_eetlUkg3EeaY66vyx2eNIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_eetlU0g3EeaY66vyx2eNIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_ees-RUg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ees-Rkg3EeaY66vyx2eNIw" x="-37" y="520"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_eetlVEg3EeaY66vyx2eNIw" type="2003" element="_oBb4wUg3EeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_eetlV0g3EeaY66vyx2eNIw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_eetlWEg3EeaY66vyx2eNIw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_oBlpxkg3EeaY66vyx2eNIw" type="3010" element="_oBdt9Eg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBlpx0g3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBlpyEg3EeaY66vyx2eNIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_oBlpyUg3EeaY66vyx2eNIw" type="3010" element="_oBdt9kg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBmQ0Eg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBmQ0Ug3EeaY66vyx2eNIw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_eetlWUg3EeaY66vyx2eNIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_eetlWkg3EeaY66vyx2eNIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_eetlVUg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eetlVkg3EeaY66vyx2eNIw" x="107" y="520"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_eetlW0g3EeaY66vyx2eNIw" type="2003" element="_oBb4w0g3EeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_eeuMYEg3EeaY66vyx2eNIw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_eeuMYUg3EeaY66vyx2eNIw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_oBmQ0kg3EeaY66vyx2eNIw" type="3010" element="_oBeVAEg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBmQ00g3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBmQ1Eg3EeaY66vyx2eNIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_oBmQ1Ug3EeaY66vyx2eNIw" type="3010" element="_oBeVAkg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBmQ1kg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBmQ10g3EeaY66vyx2eNIw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_eeuMYkg3EeaY66vyx2eNIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_eeuMY0g3EeaY66vyx2eNIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_eetlXEg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eetlXUg3EeaY66vyx2eNIw" x="235" y="520"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_eeuMZEg3EeaY66vyx2eNIw" type="2003" element="_oBcf0Eg3EeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_eeuMZ0g3EeaY66vyx2eNIw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_eeuzcEg3EeaY66vyx2eNIw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_oBmQ2Eg3EeaY66vyx2eNIw" type="3010" element="_oBeVBEg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBmQ2Ug3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBmQ2kg3EeaY66vyx2eNIw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_eeuzcUg3EeaY66vyx2eNIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_eeuzckg3EeaY66vyx2eNIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_eeuMZUg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eeuMZkg3EeaY66vyx2eNIw" x="379" y="520"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_eeuzc0g3EeaY66vyx2eNIw" type="2003" element="_oBcf0kg3EeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_eeuzdkg3EeaY66vyx2eNIw" type="5007"/>
+            <children xmi:type="notation:Node" xmi:id="_eeuzd0g3EeaY66vyx2eNIw" type="7004">
+              <children xmi:type="notation:Node" xmi:id="_oBmQ20g3EeaY66vyx2eNIw" type="3010" element="_oBe8EEg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBmQ3Eg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBmQ3Ug3EeaY66vyx2eNIw"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_oBmQ3kg3EeaY66vyx2eNIw" type="3010" element="_oBe8Ekg3EeaY66vyx2eNIw">
+                <styles xmi:type="notation:FontStyle" xmi:id="_oBmQ30g3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_oBmQ4Eg3EeaY66vyx2eNIw"/>
+              </children>
+              <styles xmi:type="notation:SortingStyle" xmi:id="_eeuzeEg3EeaY66vyx2eNIw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_eeuzeUg3EeaY66vyx2eNIw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_eeuzdEg3EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eeuzdUg3EeaY66vyx2eNIw" x="543" y="520"/>
+          </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_8i2cskK4Eeap1dC_CpU1HA"/>
         </data>
       </ownedAnnotationEntries>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSGkK4Eeap1dC_CpU1HA" name="WebGUI" width="10" height="4" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSGkK4Eeap1dC_CpU1HA" name="WebGUI" visible="false" width="10" height="4" resizeKind="NSEW">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.0"/>
         <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -969,7 +1067,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@nodeMappings[name='Component']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSHEK4Eeap1dC_CpU1HA" name="PoolingAudioDB" width="10" height="4" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSHEK4Eeap1dC_CpU1HA" name="PoolingAudioDB" visible="false" width="10" height="4" resizeKind="NSEW">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.1"/>
         <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.1"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -980,7 +1078,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@nodeMappings[name='Component']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSHkK4Eeap1dC_CpU1HA" name="MediaStore" width="10" height="4" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSHkK4Eeap1dC_CpU1HA" name="MediaStore" visible="false" width="10" height="4" resizeKind="NSEW">
         <target xmi:type="componentBasedSystem:CompositeComponent" href="mfs.componentbasedsystem#//@repository/@component.2"/>
         <semanticElements xmi:type="componentBasedSystem:CompositeComponent" href="mfs.componentbasedsystem#//@repository/@component.2"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -991,7 +1089,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@nodeMappings[name='Component']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSIEK4Eeap1dC_CpU1HA" name="MediaManager" width="10" height="4" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSIEK4Eeap1dC_CpU1HA" name="MediaManager" visible="false" width="10" height="4" resizeKind="NSEW">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.3"/>
         <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.3"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1002,7 +1100,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@nodeMappings[name='Component']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSIkK4Eeap1dC_CpU1HA" name="DigitalWatermarking" width="10" height="4" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSIkK4Eeap1dC_CpU1HA" name="DigitalWatermarking" visible="false" width="10" height="4" resizeKind="NSEW">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.4"/>
         <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.4"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1013,7 +1111,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@nodeMappings[name='Component']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSJEK4Eeap1dC_CpU1HA" name="DBCache" width="10" height="4" resizeKind="NSEW">
+      <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_8iJSJEK4Eeap1dC_CpU1HA" name="DBCache" visible="false" width="10" height="4" resizeKind="NSEW">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.5"/>
         <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.5"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1528,7 +1626,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N79zcUgxEeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N79zcUgxEeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@style"/>
         </ownedStyle>
@@ -1536,7 +1634,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_N7_ookgxEeaY66vyx2eNIw" name="void HTTPDownload">
           <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.0"/>
           <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.0"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8APsEgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8APsEgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
           </ownedStyle>
@@ -1561,7 +1659,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_N8APsUgxEeaY66vyx2eNIw" name="void HTTPUpload">
           <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.1"/>
           <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.1"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8APskgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8APskgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
           </ownedStyle>
@@ -1570,7 +1668,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_sqBmwEgyEeaY66vyx2eNIw" name="String SpecialSignature">
           <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2"/>
           <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_sqCN0EgyEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_sqCN0EgyEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
           </ownedStyle>
@@ -1591,7 +1689,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N7-agUgxEeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N7-agUgxEeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@style"/>
         </ownedStyle>
@@ -1599,7 +1697,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_N8Bd0EgxEeaY66vyx2eNIw" name="void watermark">
           <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.1/@signature.0"/>
           <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.1/@signature.0"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8Bd0UgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8Bd0UgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
           </ownedStyle>
@@ -1612,7 +1710,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N7_BkUgxEeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N7_BkUgxEeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@style"/>
         </ownedStyle>
@@ -1620,7 +1718,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_N8CE4EgxEeaY66vyx2eNIw" name="void queryDB">
           <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.0"/>
           <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.0"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8CE4UgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8CE4UgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
           </ownedStyle>
@@ -1629,7 +1727,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_N8CE4kgxEeaY66vyx2eNIw" name="void addFile()">
           <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.1"/>
           <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.1"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8DTAEgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8DTAEgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
           </ownedStyle>
@@ -1639,7 +1737,7 @@
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_N7_ooEgxEeaY66vyx2eNIw" name="MediaStore" childrenPresentation="VerticalStack">
         <target xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.3"/>
         <semanticElements xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.3"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N7_ooUgxEeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N7_ooUgxEeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@style"/>
         </ownedStyle>
@@ -1647,7 +1745,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_N8D6EEgxEeaY66vyx2eNIw" name="void download">
           <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.0"/>
           <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.0"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8D6EUgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8D6EUgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
           </ownedStyle>
@@ -1656,7 +1754,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_N8D6EkgxEeaY66vyx2eNIw" name="void upload">
           <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.1"/>
           <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.1"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8EhIEgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8EhIEgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
           </ownedStyle>
@@ -1665,7 +1763,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_N8EhIUgxEeaY66vyx2eNIw" name="int demoSignature">
           <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.2"/>
           <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.2"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8EhIkgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_N8EhIkgxEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
           </ownedStyle>
@@ -1934,7 +2032,7 @@
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
         <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
         <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ay-awUg0EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ay-awUg0EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
           <labelFormat>bold</labelFormat>
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@style"/>
         </ownedStyle>
@@ -1942,7 +2040,7 @@
         <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_iS8zUEg0EeaY66vyx2eNIw" name="int retteDieWelt">
           <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0"/>
           <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_iS8zUUg0EeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_iS8zUUg0EeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
             <labelFormat>bold</labelFormat>
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
           </ownedStyle>
@@ -1964,6 +2062,148 @@
             <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@subNodeMappings[name='Parameter']"/>
           </ownedElements>
         </ownedDiagramElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBbRsEg3EeaY66vyx2eNIw" name="WebGUI">
+        <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.0"/>
+        <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.0"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_oBbRsUg3EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBdG4Eg3EeaY66vyx2eNIw" name="HTTPDownload">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.0"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBdG4Ug3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBdG4kg3EeaY66vyx2eNIw" name="HTTPUpload">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.1"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBdG40g3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBbRskg3EeaY66vyx2eNIw" name="PoolingAudioDB">
+        <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.1"/>
+        <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_oBb4wEg3EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBdt8Eg3EeaY66vyx2eNIw" name="queryDB">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.0"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBdt8Ug3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBdt8kg3EeaY66vyx2eNIw" name="addFile()">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.1"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBdt80g3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBb4wUg3EeaY66vyx2eNIw" name="MediaStore">
+        <target xmi:type="componentBasedSystem:CompositeComponent" href="mfs.componentbasedsystem#//@repository/@component.2"/>
+        <semanticElements xmi:type="componentBasedSystem:CompositeComponent" href="mfs.componentbasedsystem#//@repository/@component.2"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_oBb4wkg3EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBdt9Eg3EeaY66vyx2eNIw" name="download">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.0"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBdt9Ug3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBdt9kg3EeaY66vyx2eNIw" name="upload">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.1"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBdt90g3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBb4w0g3EeaY66vyx2eNIw" name="MediaManager">
+        <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.3"/>
+        <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.3"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_oBb4xEg3EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBeVAEg3EeaY66vyx2eNIw" name="upload">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.1"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBeVAUg3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBeVAkg3EeaY66vyx2eNIw" name="download">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.0"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBeVA0g3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBcf0Eg3EeaY66vyx2eNIw" name="DigitalWatermarking">
+        <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.4"/>
+        <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.4"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_oBcf0Ug3EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBeVBEg3EeaY66vyx2eNIw" name="watermark">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.1/@signature.0"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.1/@signature.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBeVBUg3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBcf0kg3EeaY66vyx2eNIw" name="DBCache">
+        <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.5"/>
+        <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.5"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_oBcf00g3EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
+          <labelFormat>bold</labelFormat>
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBe8EEg3EeaY66vyx2eNIw" name="queryDB">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.0"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.0"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBe8EUg3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oBe8Ekg3EeaY66vyx2eNIw" name="addFile()">
+          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.1"/>
+          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.2/@signature.1"/>
+          <ownedStyle xmi:type="diagram:Square" xmi:id="_oBe8E0g3EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
+        </ownedElements>
       </ownedDiagramElements>
       <description xmi:type="description_1:DiagramDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']"/>
       <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_8iJSJkK4Eeap1dC_CpU1HA"/>
