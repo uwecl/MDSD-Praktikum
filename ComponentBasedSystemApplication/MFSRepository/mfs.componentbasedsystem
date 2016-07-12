@@ -32,7 +32,7 @@
     <interface name="MediaStore">
       <signature name="download" returntype="//@type.0"/>
       <signature name="upload" returntype="//@type.0"/>
-      <signature name="demoSignature" returntype="//@type.2"/>
+      <signature name="testalkfjsdaklf" returntype="//@type.2"/>
     </interface>
     <interface name="Weltfrieden">
       <signature name="retteDieWelt" returntype="//@type.2">
