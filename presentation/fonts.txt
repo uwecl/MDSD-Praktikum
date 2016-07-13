@@ -1,0 +1,9 @@
+Die Schriften, welche in der Präsentation verwendet werden sind unter folgenden Links zu finden:
+
+Fira Sans
+---------
+https://www.fontsquirrel.com/fonts/fira-sans
+
+Fira Mono
+---------
+https://www.fontsquirrel.com/fonts/fira-mono
