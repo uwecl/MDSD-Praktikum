@@ -12,3 +12,13 @@ Das Wiki enthält unter anderem eine Erklärung für das [Einbinden des Eclipse-
 	eclipse/							# Eclipse-Projekte des Metamodells
 	
 	presentation/						# Ordner für die Abschlusspräsentation
+
+
+## Branches
+Für jede Aufgabe existiert ein eigener Branch.
+
++ [Aufgabe 1: Metamodell](https://github.com/uwecl/MDSD-Praktikum)
++ [Aufgabe 2: Xtext](https://github.com/uwecl/MDSD-Praktikum/tree/xtext)
++ [Aufgabe 3: Modell-Transformation](https://github.com/uwecl/MDSD-Praktikum/tree/modelTransformationQVTo)
++ [Aufgabe 4: Java-Code-Generierung](https://github.com/uwecl/MDSD-Praktikum/tree/codeGenerator)
++ [Aufgabe 5: grafischer Editor (Sirius)](https://github.com/uwecl/MDSD-Praktikum/tree/editor)
