@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="__ZUwAEK3Eeap1dC_CpU1HA" selectedViews="_8fLdoEK4Eeap1dC_CpU1HA" version="10.1.0.201509162000">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:roles="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/roles" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description edu.kit.ipd.sdq.mdsdpc.componentBasedSystem/roles edu.kit.ipd.sdq.mdsdpc.componentBasedSystem#//roles http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style" xmi:id="__ZUwAEK3Eeap1dC_CpU1HA" selectedViews="_8fLdoEK4Eeap1dC_CpU1HA" version="10.1.0.201509162000">
   <semanticResources>mfs.componentbasedsystem</semanticResources>
   <semanticResources>file:/Users/benjaminrupp/Documents/KIT/Praktika/MDSD/MDSD-Praktikum/eclipse/ComponentBasedSystem/model/componentBasedSystem.ecore</semanticResources>
   <semanticResources>http://www.eclipse.org/emf/2002/Ecore</semanticResources>
@@ -40,20 +40,6 @@
                 </children>
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_N8NrEUgxEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N8NrEkgxEeaY66vyx2eNIw" y="59" width="127" height="50"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_sqSsgEgyEeaY66vyx2eNIw" type="3009" element="_sqBmwEgyEeaY66vyx2eNIw">
-                <children xmi:type="notation:Node" xmi:id="_sqSsg0gyEeaY66vyx2eNIw" type="5004"/>
-                <children xmi:type="notation:Node" xmi:id="_sqSshEgyEeaY66vyx2eNIw" type="7003">
-                  <children xmi:type="notation:Node" xmi:id="_oMqOIEgzEeaY66vyx2eNIw" type="3010" element="_oMcywEgzEeaY66vyx2eNIw">
-                    <styles xmi:type="notation:FontStyle" xmi:id="_oMqOIUgzEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                    <layoutConstraint xmi:type="notation:Location" xmi:id="_oMqOIkgzEeaY66vyx2eNIw"/>
-                  </children>
-                  <styles xmi:type="notation:SortingStyle" xmi:id="_sqSshUgyEeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:FilteringStyle" xmi:id="_sqSshkgyEeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:DrawerStyle" xmi:id="_sqSsh0gyEeaY66vyx2eNIw"/>
-                </children>
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_sqSsgUgyEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sqSsgkgyEeaY66vyx2eNIw" y="109"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_zwSwwkgwEeaY66vyx2eNIw"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_zwSww0gwEeaY66vyx2eNIw"/>
@@ -132,48 +118,11 @@
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_N8RVdUgxEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_N8RVdkgxEeaY66vyx2eNIw" y="40" width="136" height="40"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_ZCzVQEhCEeaY66vyx2eNIw" type="3009" element="_ZCpkQEhCEeaY66vyx2eNIw">
-                <children xmi:type="notation:Node" xmi:id="_ZCzVQ0hCEeaY66vyx2eNIw" type="5004"/>
-                <children xmi:type="notation:Node" xmi:id="_ZCzVREhCEeaY66vyx2eNIw" type="7003">
-                  <styles xmi:type="notation:SortingStyle" xmi:id="_ZCzVRUhCEeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:FilteringStyle" xmi:id="_ZCzVRkhCEeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:DrawerStyle" xmi:id="_ZCzVR0hCEeaY66vyx2eNIw"/>
-                </children>
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_ZCzVQUhCEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZCzVQkhCEeaY66vyx2eNIw" y="80"/>
-              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_zwVNBUgwEeaY66vyx2eNIw"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_zwVNBkgwEeaY66vyx2eNIw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_zwVNAUgwEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_zwVNAkgwEeaY66vyx2eNIw" x="-160" y="164" width="140"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_azFIcEg0EeaY66vyx2eNIw" type="2002" element="_ay-awEg0EeaY66vyx2eNIw">
-            <children xmi:type="notation:Node" xmi:id="_azFvgEg0EeaY66vyx2eNIw" type="5006"/>
-            <children xmi:type="notation:Node" xmi:id="_azFvgUg0EeaY66vyx2eNIw" type="7001">
-              <children xmi:type="notation:Node" xmi:id="_iTHLYEg0EeaY66vyx2eNIw" type="3009" element="_iS8zUEg0EeaY66vyx2eNIw">
-                <children xmi:type="notation:Node" xmi:id="_iTHLY0g0EeaY66vyx2eNIw" type="5004"/>
-                <children xmi:type="notation:Node" xmi:id="_iTHLZEg0EeaY66vyx2eNIw" type="7003">
-                  <children xmi:type="notation:Node" xmi:id="_mqZ7wEg0EeaY66vyx2eNIw" type="3010" element="_mqRY4Eg0EeaY66vyx2eNIw">
-                    <styles xmi:type="notation:FontStyle" xmi:id="_mqZ7wUg0EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                    <layoutConstraint xmi:type="notation:Location" xmi:id="_mqZ7wkg0EeaY66vyx2eNIw"/>
-                  </children>
-                  <children xmi:type="notation:Node" xmi:id="_spFgsEg0EeaY66vyx2eNIw" type="3010" element="_so9k4Eg0EeaY66vyx2eNIw">
-                    <styles xmi:type="notation:FontStyle" xmi:id="_spFgsUg0EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                    <layoutConstraint xmi:type="notation:Location" xmi:id="_spFgskg0EeaY66vyx2eNIw"/>
-                  </children>
-                  <styles xmi:type="notation:SortingStyle" xmi:id="_iTHLZUg0EeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:FilteringStyle" xmi:id="_iTHLZkg0EeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:DrawerStyle" xmi:id="_iTHLZ0g0EeaY66vyx2eNIw"/>
-                </children>
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_iTHLYUg0EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_iTHLYkg0EeaY66vyx2eNIw" width="103" height="81"/>
-              </children>
-              <styles xmi:type="notation:SortingStyle" xmi:id="_azFvgkg0EeaY66vyx2eNIw"/>
-              <styles xmi:type="notation:FilteringStyle" xmi:id="_azFvg0g0EeaY66vyx2eNIw"/>
-            </children>
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_azFIcUg0EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8" bold="true"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_azFIckg0EeaY66vyx2eNIw" x="468" y="56" width="107"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_eesXMEg3EeaY66vyx2eNIw" type="2003" element="_oBbRsEg3EeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_ees-QEg3EeaY66vyx2eNIw" type="5007"/>
@@ -284,10 +233,6 @@
                 <styles xmi:type="notation:FontStyle" xmi:id="_9ZfMsUg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_9ZfMskg9EeaY66vyx2eNIw"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_9ZfMs0g9EeaY66vyx2eNIw" visible="false" type="3010" element="_9Y9BMUg9EeaY66vyx2eNIw">
-                <styles xmi:type="notation:FontStyle" xmi:id="_9ZfMtEg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_9ZfMtUg9EeaY66vyx2eNIw"/>
-              </children>
               <children xmi:type="notation:Node" xmi:id="_9ZfMtkg9EeaY66vyx2eNIw" visible="false" type="3010" element="_9Y9oQEg9EeaY66vyx2eNIw">
                 <styles xmi:type="notation:FontStyle" xmi:id="_9ZfMt0g9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_9ZfMuEg9EeaY66vyx2eNIw"/>
@@ -295,10 +240,6 @@
               <children xmi:type="notation:Node" xmi:id="_9ZfMuUg9EeaY66vyx2eNIw" visible="false" type="3010" element="_9Y9oQkg9EeaY66vyx2eNIw">
                 <styles xmi:type="notation:FontStyle" xmi:id="_9ZfMukg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_9ZfMu0g9EeaY66vyx2eNIw"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_9ZfzwEg9EeaY66vyx2eNIw" visible="false" type="3010" element="_9Y-PUEg9EeaY66vyx2eNIw">
-                <styles xmi:type="notation:FontStyle" xmi:id="_9ZfzwUg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_9Zfzwkg9EeaY66vyx2eNIw"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_9ZZtIkg9EeaY66vyx2eNIw"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_9ZZtI0g9EeaY66vyx2eNIw"/>
@@ -347,36 +288,11 @@
                 <styles xmi:type="notation:FontStyle" xmi:id="_9Zga1Eg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Location" xmi:id="_9Zga1Ug9EeaY66vyx2eNIw"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_p7yroEhCEeaY66vyx2eNIw" visible="false" type="3010" element="_p7UxkEhCEeaY66vyx2eNIw">
-                <styles xmi:type="notation:FontStyle" xmi:id="_p7yroUhCEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_p7yrokhCEeaY66vyx2eNIw"/>
-              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_9Za7SUg9EeaY66vyx2eNIw"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_9Za7Skg9EeaY66vyx2eNIw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_9Za7RUg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Za7Rkg9EeaY66vyx2eNIw" x="484"/>
-          </children>
-          <children xmi:type="notation:Node" xmi:id="_9Za7S0g9EeaY66vyx2eNIw" visible="false" type="2003" element="_9Y7MAUg9EeaY66vyx2eNIw">
-            <children xmi:type="notation:Node" xmi:id="_9Za7Tkg9EeaY66vyx2eNIw" type="5007"/>
-            <children xmi:type="notation:Node" xmi:id="_9ZbiUEg9EeaY66vyx2eNIw" type="7004">
-              <children xmi:type="notation:Node" xmi:id="_9Zga2Ug9EeaY66vyx2eNIw" visible="false" type="3010" element="_9Y_dckg9EeaY66vyx2eNIw">
-                <styles xmi:type="notation:FontStyle" xmi:id="_9Zga2kg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_9Zga20g9EeaY66vyx2eNIw"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_9Zga3Eg9EeaY66vyx2eNIw" visible="false" type="3010" element="_9Y_ddEg9EeaY66vyx2eNIw">
-                <styles xmi:type="notation:FontStyle" xmi:id="_9Zga3Ug9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_9Zga3kg9EeaY66vyx2eNIw"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_9Zga30g9EeaY66vyx2eNIw" visible="false" type="3010" element="_9Y_ddkg9EeaY66vyx2eNIw">
-                <styles xmi:type="notation:FontStyle" xmi:id="_9ZhB4Eg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_9ZhB4Ug9EeaY66vyx2eNIw"/>
-              </children>
-              <styles xmi:type="notation:SortingStyle" xmi:id="_9ZbiUUg9EeaY66vyx2eNIw"/>
-              <styles xmi:type="notation:FilteringStyle" xmi:id="_9ZbiUkg9EeaY66vyx2eNIw"/>
-            </children>
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_9Za7TEg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Za7TUg9EeaY66vyx2eNIw" x="632"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_9ZbiU0g9EeaY66vyx2eNIw" visible="false" type="2002" element="_9ZAEgEg9EeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_9ZbiVkg9EeaY66vyx2eNIw" type="5006"/>
@@ -422,27 +338,6 @@
                 </children>
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_9ZrZ9kg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9ZrZ90g9EeaY66vyx2eNIw" y="72"/>
-              </children>
-              <children xmi:type="notation:Node" xmi:id="_9ZsBBUg9EeaY66vyx2eNIw" visible="false" type="3008" element="_9ZB5sEg9EeaY66vyx2eNIw">
-                <children xmi:type="notation:Node" xmi:id="_9ZsBCEg9EeaY66vyx2eNIw" type="5005"/>
-                <children xmi:type="notation:Node" xmi:id="_9ZsBCUg9EeaY66vyx2eNIw" type="7002">
-                  <children xmi:type="notation:Node" xmi:id="_9ZtPKEg9EeaY66vyx2eNIw" visible="false" type="3007" element="_9ZDu4Eg9EeaY66vyx2eNIw">
-                    <children xmi:type="notation:Node" xmi:id="_9Zt2MEg9EeaY66vyx2eNIw" type="5003">
-                      <layoutConstraint xmi:type="notation:Location" xmi:id="_9Zt2MUg9EeaY66vyx2eNIw" y="5"/>
-                    </children>
-                    <children xmi:type="notation:Node" xmi:id="_9Zt2Mkg9EeaY66vyx2eNIw" type="3003" element="_9ZDu4Ug9EeaY66vyx2eNIw">
-                      <styles xmi:type="notation:ShapeStyle" xmi:id="_9Zt2M0g9EeaY66vyx2eNIw" fontName=".SF NS Text"/>
-                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Zt2NEg9EeaY66vyx2eNIw"/>
-                    </children>
-                    <styles xmi:type="notation:ShapeStyle" xmi:id="_9ZtPKUg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9ZtPKkg9EeaY66vyx2eNIw" x="31" y="29" width="80" height="30"/>
-                  </children>
-                  <styles xmi:type="notation:SortingStyle" xmi:id="_9ZsBCkg9EeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:FilteringStyle" xmi:id="_9ZsBC0g9EeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:DrawerStyle" xmi:id="_9ZsBDEg9EeaY66vyx2eNIw"/>
-                </children>
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_9ZsBBkg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9ZsBB0g9EeaY66vyx2eNIw" y="112"/>
               </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_9ZcJYUg9EeaY66vyx2eNIw"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_9ZcJYkg9EeaY66vyx2eNIw"/>
@@ -521,65 +416,14 @@
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_9ZwSeUg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9ZwSekg9EeaY66vyx2eNIw" y="40"/>
               </children>
-              <children xmi:type="notation:Node" xmi:id="_p7zSsEhCEeaY66vyx2eNIw" visible="false" type="3008" element="_p7bfQEhCEeaY66vyx2eNIw">
-                <children xmi:type="notation:Node" xmi:id="_p7z5wEhCEeaY66vyx2eNIw" type="5005"/>
-                <children xmi:type="notation:Node" xmi:id="_p7z5wUhCEeaY66vyx2eNIw" type="7002">
-                  <styles xmi:type="notation:SortingStyle" xmi:id="_p7z5wkhCEeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:FilteringStyle" xmi:id="_p7z5w0hCEeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:DrawerStyle" xmi:id="_p7z5xEhCEeaY66vyx2eNIw"/>
-                </children>
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_p7zSsUhCEeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_p7zSskhCEeaY66vyx2eNIw" y="80"/>
-              </children>
               <styles xmi:type="notation:SortingStyle" xmi:id="_9ZcwfEg9EeaY66vyx2eNIw"/>
               <styles xmi:type="notation:FilteringStyle" xmi:id="_9ZcwfUg9EeaY66vyx2eNIw"/>
             </children>
             <styles xmi:type="notation:ShapeStyle" xmi:id="_9ZcweEg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9ZcweUg9EeaY66vyx2eNIw" x="1324" y="2"/>
           </children>
-          <children xmi:type="notation:Node" xmi:id="_9ZdXgEg9EeaY66vyx2eNIw" visible="false" type="2002" element="_9ZArlkg9EeaY66vyx2eNIw">
-            <children xmi:type="notation:Node" xmi:id="_9ZdXg0g9EeaY66vyx2eNIw" type="5006"/>
-            <children xmi:type="notation:Node" xmi:id="_9ZdXhEg9EeaY66vyx2eNIw" type="7001">
-              <children xmi:type="notation:Node" xmi:id="_9Zw5jUg9EeaY66vyx2eNIw" visible="false" type="3008" element="_9ZGLJEg9EeaY66vyx2eNIw">
-                <children xmi:type="notation:Node" xmi:id="_9ZxgkEg9EeaY66vyx2eNIw" type="5005"/>
-                <children xmi:type="notation:Node" xmi:id="_9ZxgkUg9EeaY66vyx2eNIw" type="7002">
-                  <children xmi:type="notation:Node" xmi:id="_9ZxglUg9EeaY66vyx2eNIw" visible="false" type="3007" element="_9ZGyMEg9EeaY66vyx2eNIw">
-                    <children xmi:type="notation:Node" xmi:id="_9ZxgmEg9EeaY66vyx2eNIw" type="5003">
-                      <layoutConstraint xmi:type="notation:Location" xmi:id="_9ZxgmUg9EeaY66vyx2eNIw" y="5"/>
-                    </children>
-                    <children xmi:type="notation:Node" xmi:id="_9ZyHokg9EeaY66vyx2eNIw" type="3003" element="_9ZGyMUg9EeaY66vyx2eNIw">
-                      <styles xmi:type="notation:ShapeStyle" xmi:id="_9ZyHo0g9EeaY66vyx2eNIw" fontName=".SF NS Text"/>
-                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9ZyHpEg9EeaY66vyx2eNIw"/>
-                    </children>
-                    <styles xmi:type="notation:ShapeStyle" xmi:id="_9Zxglkg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Zxgl0g9EeaY66vyx2eNIw" x="30" y="30" width="80" height="30"/>
-                  </children>
-                  <children xmi:type="notation:Node" xmi:id="_9Zxgmkg9EeaY66vyx2eNIw" visible="false" type="3007" element="_9ZGyMkg9EeaY66vyx2eNIw">
-                    <children xmi:type="notation:Node" xmi:id="_9ZyHoEg9EeaY66vyx2eNIw" type="5003">
-                      <layoutConstraint xmi:type="notation:Location" xmi:id="_9ZyHoUg9EeaY66vyx2eNIw" y="5"/>
-                    </children>
-                    <children xmi:type="notation:Node" xmi:id="_9ZyHpUg9EeaY66vyx2eNIw" type="3003" element="_9ZGyM0g9EeaY66vyx2eNIw">
-                      <styles xmi:type="notation:ShapeStyle" xmi:id="_9ZyHpkg9EeaY66vyx2eNIw" fontName=".SF NS Text"/>
-                      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9ZyHp0g9EeaY66vyx2eNIw"/>
-                    </children>
-                    <styles xmi:type="notation:ShapeStyle" xmi:id="_9Zxgm0g9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9ZxgnEg9EeaY66vyx2eNIw" x="138" y="30" width="80" height="30"/>
-                  </children>
-                  <styles xmi:type="notation:SortingStyle" xmi:id="_9Zxgkkg9EeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:FilteringStyle" xmi:id="_9Zxgk0g9EeaY66vyx2eNIw"/>
-                  <styles xmi:type="notation:DrawerStyle" xmi:id="_9ZxglEg9EeaY66vyx2eNIw"/>
-                </children>
-                <styles xmi:type="notation:ShapeStyle" xmi:id="_9Zw5jkg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9Zw5j0g9EeaY66vyx2eNIw"/>
-              </children>
-              <styles xmi:type="notation:SortingStyle" xmi:id="_9ZdXhUg9EeaY66vyx2eNIw"/>
-              <styles xmi:type="notation:FilteringStyle" xmi:id="_9ZdXhkg9EeaY66vyx2eNIw"/>
-            </children>
-            <styles xmi:type="notation:ShapeStyle" xmi:id="_9ZdXgUg9EeaY66vyx2eNIw" fontName=".SF NS Text" fontHeight="8"/>
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_9ZdXgkg9EeaY66vyx2eNIw" x="1464" y="-1"/>
-          </children>
           <styles xmi:type="notation:DiagramStyle" xmi:id="_8i2cskK4Eeap1dC_CpU1HA"/>
-          <edges xmi:type="notation:Edge" xmi:id="_Z8YXsEg5EeaY66vyx2eNIw" type="4001" element="_Z8GD0Eg5EeaY66vyx2eNIw" source="_eesXMEg3EeaY66vyx2eNIw" target="_zwSJsEgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_Z8YXsEg5EeaY66vyx2eNIw" visible="false" type="4001" element="_Z8GD0Eg5EeaY66vyx2eNIw" source="_eesXMEg3EeaY66vyx2eNIw" target="_zwSJsEgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_Z8Y-wEg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8Y-wUg5EeaY66vyx2eNIw" x="27" y="-15"/>
             </children>
@@ -595,7 +439,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8Zl0kg5EeaY66vyx2eNIw" id="(0.5,0.5)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8Zl00g5EeaY66vyx2eNIw" id="(0.4961832061068702,0.4966442953020134)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_Z8aM4Eg5EeaY66vyx2eNIw" type="4001" element="_Z8Gq4Eg5EeaY66vyx2eNIw" source="_ees-REg3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_Z8aM4Eg5EeaY66vyx2eNIw" visible="false" type="4001" element="_Z8Gq4Eg5EeaY66vyx2eNIw" source="_ees-REg3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_Z8eeUEg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8eeUUg5EeaY66vyx2eNIw" x="-11" y="-43"/>
             </children>
@@ -611,7 +455,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8fFYEg5EeaY66vyx2eNIw" id="(0.5,0.5)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8fFYUg5EeaY66vyx2eNIw" id="(0.4065829978688137,0.6513761467889908)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_Z8fFYkg5EeaY66vyx2eNIw" type="4001" element="_Z8H5AEg5EeaY66vyx2eNIw" source="_eetlVEg3EeaY66vyx2eNIw" target="_zwVNAEgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_Z8fFYkg5EeaY66vyx2eNIw" visible="false" type="4001" element="_Z8H5AEg5EeaY66vyx2eNIw" source="_eetlVEg3EeaY66vyx2eNIw" target="_zwVNAEgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_Z8fscEg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8fscUg5EeaY66vyx2eNIw" x="-1" y="12"/>
             </children>
@@ -627,7 +471,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8gTgEg5EeaY66vyx2eNIw" id="(0.33663366336633666,0.46923076923076923)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8gTgUg5EeaY66vyx2eNIw" id="(0.5,0.5)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_Z8gTgkg5EeaY66vyx2eNIw" type="4001" element="_Z8IgEEg5EeaY66vyx2eNIw" source="_eetlW0g3EeaY66vyx2eNIw" target="_zwVNAEgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_Z8gTgkg5EeaY66vyx2eNIw" visible="false" type="4001" element="_Z8IgEEg5EeaY66vyx2eNIw" source="_eetlW0g3EeaY66vyx2eNIw" target="_zwVNAEgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_Z8g6kEg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8g6kUg5EeaY66vyx2eNIw" x="10" y="-16"/>
             </children>
@@ -643,7 +487,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8g6lkg5EeaY66vyx2eNIw" id="(0.35526315789473684,0.4178082191780822)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8g6l0g5EeaY66vyx2eNIw" id="(0.5,0.5)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_Z8hhoEg5EeaY66vyx2eNIw" type="4001" element="_Z8JHIEg5EeaY66vyx2eNIw" source="_eeuMZEg3EeaY66vyx2eNIw" target="_zwTX0EgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_Z8hhoEg5EeaY66vyx2eNIw" visible="false" type="4001" element="_Z8JHIEg5EeaY66vyx2eNIw" source="_eeuMZEg3EeaY66vyx2eNIw" target="_zwTX0EgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_Z8hhpEg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8hhpUg5EeaY66vyx2eNIw" x="-12" y="-24"/>
             </children>
@@ -659,7 +503,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8iIskg5EeaY66vyx2eNIw" id="(0.4126984126984127,0.39473684210526316)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8iIs0g5EeaY66vyx2eNIw" id="(0.49650349650349657,0.764867042707494)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_Z8ivwEg5EeaY66vyx2eNIw" type="4001" element="_Z8JuMEg5EeaY66vyx2eNIw" source="_eeuzc0g3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_Z8ivwEg5EeaY66vyx2eNIw" visible="false" type="4001" element="_Z8JuMEg5EeaY66vyx2eNIw" source="_eeuzc0g3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_Z8ivxEg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Z8ivxUg5EeaY66vyx2eNIw" x="181" y="10"/>
             </children>
@@ -675,7 +519,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8jW0Eg5EeaY66vyx2eNIw" id="(0.2807017543859649,0.46923076923076923)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Z8jW0Ug5EeaY66vyx2eNIw" id="(0.4065829978688137,0.6513761467889908)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_8BCI0Eg5EeaY66vyx2eNIw" type="4001" element="_8A0tcEg5EeaY66vyx2eNIw" source="_eesXMEg3EeaY66vyx2eNIw" target="_zwVNAEgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_8BCI0Eg5EeaY66vyx2eNIw" visible="false" type="4001" element="_8A0tcEg5EeaY66vyx2eNIw" source="_eesXMEg3EeaY66vyx2eNIw" target="_zwVNAEgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_8BCI1Eg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8BCI1Ug5EeaY66vyx2eNIw" x="-16" y="-41"/>
             </children>
@@ -691,7 +535,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8BCv4Eg5EeaY66vyx2eNIw" id="(0.5,0.5)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8BCv4Ug5EeaY66vyx2eNIw" id="(0.5,0.5)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_8BDW8Eg5EeaY66vyx2eNIw" type="4001" element="_8A1Ugkg5EeaY66vyx2eNIw" source="_eetlVEg3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_8BDW8Eg5EeaY66vyx2eNIw" visible="false" type="4001" element="_8A1Ugkg5EeaY66vyx2eNIw" source="_eetlVEg3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_8BDW9Eg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8BDW9Ug5EeaY66vyx2eNIw" x="1" y="-13"/>
             </children>
@@ -707,7 +551,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8BD-AEg5EeaY66vyx2eNIw" id="(0.33663366336633666,0.46923076923076923)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8BD-AUg5EeaY66vyx2eNIw" id="(0.03188886257794617,0.07237512742099897)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_8BD-Akg5EeaY66vyx2eNIw" type="4001" element="_8A17kkg5EeaY66vyx2eNIw" source="_eetlW0g3EeaY66vyx2eNIw" target="_zwTX0EgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_8BD-Akg5EeaY66vyx2eNIw" visible="false" type="4001" element="_8A17kkg5EeaY66vyx2eNIw" source="_eetlW0g3EeaY66vyx2eNIw" target="_zwTX0EgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_8BD-Bkg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8BElEEg5EeaY66vyx2eNIw" x="-17" y="35"/>
             </children>
@@ -723,7 +567,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8BElFUg5EeaY66vyx2eNIw" id="(0.35526315789473684,0.4178082191780822)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8BElFkg5EeaY66vyx2eNIw" id="(0.49650349650349657,0.764867042707494)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_8BFMIEg5EeaY66vyx2eNIw" type="4001" element="_8A17lUg5EeaY66vyx2eNIw" source="_eetlW0g3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_8BFMIEg5EeaY66vyx2eNIw" visible="false" type="4001" element="_8A17lUg5EeaY66vyx2eNIw" source="_eetlW0g3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_8BFMJEg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8BFMJUg5EeaY66vyx2eNIw" x="-18" y="43"/>
             </children>
@@ -739,7 +583,7 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8BFMKkg5EeaY66vyx2eNIw" id="(0.35526315789473684,0.4178082191780822)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8BFMK0g5EeaY66vyx2eNIw" id="(0.552,0.9819819819819819)"/>
           </edges>
-          <edges xmi:type="notation:Edge" xmi:id="_8BFzMEg5EeaY66vyx2eNIw" type="4001" element="_8A2iokg5EeaY66vyx2eNIw" source="_eeuzc0g3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
+          <edges xmi:type="notation:Edge" xmi:id="_8BFzMEg5EeaY66vyx2eNIw" visible="false" type="4001" element="_8A2iokg5EeaY66vyx2eNIw" source="_eeuzc0g3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
             <children xmi:type="notation:Node" xmi:id="_8BFzNEg5EeaY66vyx2eNIw" type="6001">
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_8BFzNUg5EeaY66vyx2eNIw" x="154" y="10"/>
             </children>
@@ -755,9 +599,185 @@
             <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8BGaREg5EeaY66vyx2eNIw" id="(0.2807017543859649,0.46923076923076923)"/>
             <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_8BGaRUg5EeaY66vyx2eNIw" id="(0.4065829978688137,0.6513761467889908)"/>
           </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_xSTVYEkiEeaD2NUh-wnRKQ" type="4001" element="_xR-lQEkiEeaD2NUh-wnRKQ" source="_eesXMEg3EeaY66vyx2eNIw" target="_zwSJsEgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_xST8cEkiEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xST8cUkiEeaD2NUh-wnRKQ" x="39" y="8"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xST8ckkiEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xST8c0kiEeaD2NUh-wnRKQ" x="-5" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xST8dEkiEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xST8dUkiEeaD2NUh-wnRKQ" x="5" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_xSTVYUkiEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_xSTVYkkiEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xSTVY0kiEeaD2NUh-wnRKQ" points="[-1, 31, -144, -148]$[-1, 106, -144, -73]$[79, 106, -64, -73]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSUjgEkiEeaD2NUh-wnRKQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSUjgUkiEeaD2NUh-wnRKQ" id="(0.4961832061068702,0.4966442953020134)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_xSVKkEkiEeaD2NUh-wnRKQ" type="4001" element="_xR_zYEkiEeaD2NUh-wnRKQ" source="_ees-REg3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_xSVKlEkiEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSVKlUkiEeaD2NUh-wnRKQ" x="2" y="-28"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xSVKlkkiEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSVKl0kiEeaD2NUh-wnRKQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xSVKmEkiEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSVKmUkiEeaD2NUh-wnRKQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_xSVKkUkiEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_xSVKkkkiEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xSVKk0kiEeaD2NUh-wnRKQ" points="[182, 72, 182, 72]$[174, 232, 174, 232]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSVxoEkiEeaD2NUh-wnRKQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSVxoUkiEeaD2NUh-wnRKQ" id="(0.496,0.49382716049382713)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_xSVxokkiEeaD2NUh-wnRKQ" type="4001" element="_xSBBgEkiEeaD2NUh-wnRKQ" source="_eetlVEg3EeaY66vyx2eNIw" target="_zwVNAEgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_xSVxpkkiEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSVxp0kiEeaD2NUh-wnRKQ" x="17" y="11"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xSVxqEkiEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSVxqUkiEeaD2NUh-wnRKQ" x="34" y="-36"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xSWYsEkiEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSWYsUkiEeaD2NUh-wnRKQ" y="-10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_xSVxo0kiEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_xSVxpEkiEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xSVxpUkiEeaD2NUh-wnRKQ" points="[-26, -32, 155, 18]$[-26, -76, 155, -26]$[-112, -76, 69, -26]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSWYskkiEeaD2NUh-wnRKQ" id="(0.49514563106796117,0.4925373134328358)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSWYs0kiEeaD2NUh-wnRKQ" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_xSWYtEkiEeaD2NUh-wnRKQ" type="4001" element="_xSBokEkiEeaD2NUh-wnRKQ" source="_eetlW0g3EeaY66vyx2eNIw" target="_zwVNAEgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_xSWYuEkiEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSW_wEkiEeaD2NUh-wnRKQ" x="-11" y="11"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xSW_wUkiEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSW_wkkiEeaD2NUh-wnRKQ" x="-11" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xSW_w0kiEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSW_xEkiEeaD2NUh-wnRKQ" x="-6" y="137"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_xSWYtUkiEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_xSWYtkkiEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xSWYt0kiEeaD2NUh-wnRKQ" points="[-26, -36, 326, 282]$[-26, -148, 326, 170]$[-351, -148, 1, 170]$[-351, -244, 1, 74]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSW_xUkiEeaD2NUh-wnRKQ" id="(0.5,0.49333333333333335)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSW_xkkiEeaD2NUh-wnRKQ" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_xSXm0EkiEeaD2NUh-wnRKQ" type="4001" element="_xSC2sEkiEeaD2NUh-wnRKQ" source="_eeuMZEg3EeaY66vyx2eNIw" target="_zwTX0EgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_xSXm1EkiEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSXm1UkiEeaD2NUh-wnRKQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xSXm1kkiEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSXm10kiEeaD2NUh-wnRKQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xSYN4EkiEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSYN4UkiEeaD2NUh-wnRKQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_xSXm0UkiEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_xSXm0kkiEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xSXm00kiEeaD2NUh-wnRKQ" points="[379, 520, 379, 520]$[288, 688, 288, 688]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSYN4kkiEeaD2NUh-wnRKQ" id="(0.5,0.4915254237288136)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSYN40kiEeaD2NUh-wnRKQ" id="(0.4965034965034965,0.4888888888888889)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_xSY08EkiEeaD2NUh-wnRKQ" type="4001" element="_xSDdwEkiEeaD2NUh-wnRKQ" source="_eeuzc0g3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_xSY09EkiEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSY09UkiEeaD2NUh-wnRKQ" x="116" y="11"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xSY09kkiEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSY090kiEeaD2NUh-wnRKQ" x="-16" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_xSY0-EkiEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xSY0-UkiEeaD2NUh-wnRKQ" x="16" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_xSY08UkiEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_xSY08kkiEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_xSY080kiEeaD2NUh-wnRKQ" points="[15, -32, 381, 239]$[15, -276, 381, -5]$[-304, -276, 62, -5]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSZcAEkiEeaD2NUh-wnRKQ" id="(0.5,0.4925373134328358)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_xSZcAUkiEeaD2NUh-wnRKQ" id="(0.496,0.49382716049382713)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_LFRuwEkkEeaD2NUh-wnRKQ" type="4001" element="_LFFhgEkkEeaD2NUh-wnRKQ" source="_eesXMEg3EeaY66vyx2eNIw" target="_zwVNAEgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_LFRuxEkkEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFRuxUkkEeaD2NUh-wnRKQ" x="7" y="-31"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LFSV0EkkEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFSV0UkkEeaD2NUh-wnRKQ" x="1" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LFSV0kkkEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFSV00kkEeaD2NUh-wnRKQ" x="-1" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_LFRuwUkkEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_LFRuwkkkEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LFRuw0kkEeaD2NUh-wnRKQ" points="[-21, -30, -37, 218]$[-21, -174, -37, 74]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LFS84EkkEeaD2NUh-wnRKQ" id="(0.5,0.5)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LFS84UkkEeaD2NUh-wnRKQ" id="(0.5,0.5)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_LFS84kkkEeaD2NUh-wnRKQ" type="4001" element="_LFGIkEkkEeaD2NUh-wnRKQ" source="_eetlVEg3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_LFTj8EkkEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFTj8UkkEeaD2NUh-wnRKQ" x="10" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LFTj8kkkEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFTj80kkEeaD2NUh-wnRKQ" x="11" y="30"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LFTj9EkkEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFTj9UkkEeaD2NUh-wnRKQ" x="-32" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_LFS840kkEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_LFS85EkkEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LFS85UkkEeaD2NUh-wnRKQ" points="[26, -32, -119, -29]$[26, -76, -119, -73]$[114, -76, -31, -73]$[114, -56, -31, -53]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LFULAEkkEeaD2NUh-wnRKQ" id="(0.49514563106796117,0.4925373134328358)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LFULAUkkEeaD2NUh-wnRKQ" id="(0.496,0.49382716049382713)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_LFULAkkkEeaD2NUh-wnRKQ" type="4001" element="_LFGIk0kkEeaD2NUh-wnRKQ" source="_eetlW0g3EeaY66vyx2eNIw" target="_zwTX0EgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_LFUyEEkkEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFUyEUkkEeaD2NUh-wnRKQ" y="-10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LFUyEkkkEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFUyE0kkEeaD2NUh-wnRKQ" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LFUyFEkkEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFUyFUkkEeaD2NUh-wnRKQ" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_LFULA0kkEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_LFULBEkkEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LFULBUkkEeaD2NUh-wnRKQ" points="[204, 520, 204, 520]$[288, 688, 288, 688]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LFVZIEkkEeaD2NUh-wnRKQ" id="(0.5,0.49333333333333335)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LFVZIUkkEeaD2NUh-wnRKQ" id="(0.4965034965034965,0.4888888888888889)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_LFVZIkkkEeaD2NUh-wnRKQ" type="4001" element="_LFGvokkkEeaD2NUh-wnRKQ" source="_eetlW0g3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_LFWAMEkkEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFWAMUkkEeaD2NUh-wnRKQ" x="9" y="25"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LFWAMkkkEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFWAM0kkEeaD2NUh-wnRKQ" x="2" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LFWANEkkEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFWANUkkEeaD2NUh-wnRKQ" x="-2" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_LFVZI0kkEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_LFVZJEkkEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LFVZJUkkEeaD2NUh-wnRKQ" points="[15, -36, 41, 235]$[15, -215, 41, 56]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LFWANkkkEeaD2NUh-wnRKQ" id="(0.5,0.49333333333333335)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LFWAN0kkEeaD2NUh-wnRKQ" id="(0.496,0.49382716049382713)"/>
+          </edges>
+          <edges xmi:type="notation:Edge" xmi:id="_LFWnQEkkEeaD2NUh-wnRKQ" type="4001" element="_LFGvpUkkEeaD2NUh-wnRKQ" source="_eeuzc0g3EeaY66vyx2eNIw" target="_zwUl8EgwEeaY66vyx2eNIw">
+            <children xmi:type="notation:Node" xmi:id="_LFWnREkkEeaD2NUh-wnRKQ" type="6001">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFWnRUkkEeaD2NUh-wnRKQ" x="84" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LFWnRkkkEeaD2NUh-wnRKQ" type="6002">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFWnR0kkEeaD2NUh-wnRKQ" x="-6" y="10"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_LFWnSEkkEeaD2NUh-wnRKQ" type="6003">
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_LFWnSUkkEeaD2NUh-wnRKQ" x="6" y="10"/>
+            </children>
+            <styles xmi:type="notation:ConnectorStyle" xmi:id="_LFWnQUkkEeaD2NUh-wnRKQ" routing="Rectilinear"/>
+            <styles xmi:type="notation:FontStyle" xmi:id="_LFWnQkkkEeaD2NUh-wnRKQ" fontName=".SF NS Text" fontHeight="8" italic="true"/>
+            <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_LFWnQ0kkEeaD2NUh-wnRKQ" points="[-21, -32, 345, 239]$[-21, -245, 345, 26]$[-304, -245, 62, 26]"/>
+            <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LFXOUEkkEeaD2NUh-wnRKQ" id="(0.5,0.4925373134328358)"/>
+            <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_LFXOUUkkEeaD2NUh-wnRKQ" id="(0.496,0.49382716049382713)"/>
+          </edges>
         </data>
       </ownedAnnotationEntries>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_N79zcEgxEeaY66vyx2eNIw" name="HTTP" incomingEdges="_Z8GD0Eg5EeaY66vyx2eNIw" childrenPresentation="VerticalStack">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_N79zcEgxEeaY66vyx2eNIw" name="HTTP" incomingEdges="_Z8GD0Eg5EeaY66vyx2eNIw _xR-lQEkiEeaD2NUh-wnRKQ" childrenPresentation="VerticalStack">
         <target xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.0"/>
         <semanticElements xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -802,25 +822,8 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']"/>
         </ownedDiagramElements>
-        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_sqBmwEgyEeaY66vyx2eNIw" name="String SpecialSignature">
-          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2"/>
-          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_sqCN0EgyEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
-            <labelFormat>bold</labelFormat>
-            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']"/>
-          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_oMcywEgzEeaY66vyx2eNIw" name="int aAwesomeParameter">
-            <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2/@parameter.0"/>
-            <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2/@parameter.0"/>
-            <ownedStyle xmi:type="diagram:Square" xmi:id="_oMdZ0EgzEeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
-              <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@subNodeMappings[name='Parameter']/@style"/>
-            </ownedStyle>
-            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@subNodeMappings[name='Parameter']"/>
-          </ownedElements>
-        </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_N7-agEgxEeaY66vyx2eNIw" name="Sound" incomingEdges="_Z8JHIEg5EeaY66vyx2eNIw _8A17kkg5EeaY66vyx2eNIw" childrenPresentation="VerticalStack">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_N7-agEgxEeaY66vyx2eNIw" name="Sound" incomingEdges="_Z8JHIEg5EeaY66vyx2eNIw _8A17kkg5EeaY66vyx2eNIw _xSC2sEkiEeaD2NUh-wnRKQ _LFGIk0kkEeaD2NUh-wnRKQ" childrenPresentation="VerticalStack">
         <target xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.1"/>
         <semanticElements xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.1"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -841,7 +844,7 @@
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']"/>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_N7_BkEgxEeaY66vyx2eNIw" name="AudioDB" incomingEdges="_Z8Gq4Eg5EeaY66vyx2eNIw _Z8JuMEg5EeaY66vyx2eNIw _8A1Ugkg5EeaY66vyx2eNIw _8A17lUg5EeaY66vyx2eNIw _8A2iokg5EeaY66vyx2eNIw" childrenPresentation="VerticalStack">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_N7_BkEgxEeaY66vyx2eNIw" name="AudioDB" incomingEdges="_Z8Gq4Eg5EeaY66vyx2eNIw _Z8JuMEg5EeaY66vyx2eNIw _8A1Ugkg5EeaY66vyx2eNIw _8A17lUg5EeaY66vyx2eNIw _8A2iokg5EeaY66vyx2eNIw _xR_zYEkiEeaD2NUh-wnRKQ _xSDdwEkiEeaD2NUh-wnRKQ _LFGIkEkkEeaD2NUh-wnRKQ _LFGvokkkEeaD2NUh-wnRKQ _LFGvpUkkEeaD2NUh-wnRKQ" childrenPresentation="VerticalStack">
         <target xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.2"/>
         <semanticElements xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.2"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -871,7 +874,7 @@
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']"/>
         </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_N7_ooEgxEeaY66vyx2eNIw" name="MediaStore" incomingEdges="_Z8H5AEg5EeaY66vyx2eNIw _Z8IgEEg5EeaY66vyx2eNIw _8A0tcEg5EeaY66vyx2eNIw" childrenPresentation="VerticalStack">
+      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_N7_ooEgxEeaY66vyx2eNIw" name="MediaStore" incomingEdges="_Z8H5AEg5EeaY66vyx2eNIw _Z8IgEEg5EeaY66vyx2eNIw _8A0tcEg5EeaY66vyx2eNIw _xSBBgEkiEeaD2NUh-wnRKQ _xSBokEkiEeaD2NUh-wnRKQ _LFFhgEkkEeaD2NUh-wnRKQ" childrenPresentation="VerticalStack">
         <target xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.3"/>
         <semanticElements xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.3"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -900,54 +903,8 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']"/>
         </ownedDiagramElements>
-        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_ZCpkQEhCEeaY66vyx2eNIw" name="int testalkfjsdaklf">
-          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.2"/>
-          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.2"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ZCqLUEhCEeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
-            <labelFormat>bold</labelFormat>
-            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']"/>
-        </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_ay-awEg0EeaY66vyx2eNIw" name="Weltfrieden" childrenPresentation="VerticalStack">
-        <target xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.4"/>
-        <semanticElements xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.4"/>
-        <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
-        <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
-        <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_ay-awUg0EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
-          <labelFormat>bold</labelFormat>
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']"/>
-        <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_iS8zUEg0EeaY66vyx2eNIw" name="int retteDieWelt">
-          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0"/>
-          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_iS8zUUg0EeaY66vyx2eNIw" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
-            <labelFormat>bold</labelFormat>
-            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']"/>
-          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_mqRY4Eg0EeaY66vyx2eNIw" name="String motivation">
-            <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.0"/>
-            <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.0"/>
-            <ownedStyle xmi:type="diagram:Square" xmi:id="_mqR_8Eg0EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
-              <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@subNodeMappings[name='Parameter']/@style"/>
-            </ownedStyle>
-            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@subNodeMappings[name='Parameter']"/>
-          </ownedElements>
-          <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_so9k4Eg0EeaY66vyx2eNIw" name="int geduld">
-            <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.1"/>
-            <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.1"/>
-            <ownedStyle xmi:type="diagram:Square" xmi:id="_so-L8Eg0EeaY66vyx2eNIw" labelAlignment="LEFT" labelPosition="node">
-              <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@subNodeMappings[name='Parameter']/@style"/>
-            </ownedStyle>
-            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']/@subContainerMappings[name='Signature']/@subNodeMappings[name='Parameter']"/>
-          </ownedElements>
-        </ownedDiagramElements>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBbRsEg3EeaY66vyx2eNIw" name="WebGUI" outgoingEdges="_Z8GD0Eg5EeaY66vyx2eNIw _8A0tcEg5EeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBbRsEg3EeaY66vyx2eNIw" name="WebGUI" outgoingEdges="_Z8GD0Eg5EeaY66vyx2eNIw _8A0tcEg5EeaY66vyx2eNIw _xR-lQEkiEeaD2NUh-wnRKQ _LFFhgEkkEeaD2NUh-wnRKQ">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.0"/>
         <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.0"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -975,7 +932,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBbRskg3EeaY66vyx2eNIw" name="PoolingAudioDB" outgoingEdges="_Z8Gq4Eg5EeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBbRskg3EeaY66vyx2eNIw" name="PoolingAudioDB" outgoingEdges="_Z8Gq4Eg5EeaY66vyx2eNIw _xR_zYEkiEeaD2NUh-wnRKQ">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.1"/>
         <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.1"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1003,7 +960,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBb4wUg3EeaY66vyx2eNIw" name="MediaStore" outgoingEdges="_Z8H5AEg5EeaY66vyx2eNIw _8A1Ugkg5EeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBb4wUg3EeaY66vyx2eNIw" name="MediaStore" outgoingEdges="_Z8H5AEg5EeaY66vyx2eNIw _8A1Ugkg5EeaY66vyx2eNIw _xSBBgEkiEeaD2NUh-wnRKQ _LFGIkEkkEeaD2NUh-wnRKQ">
         <target xmi:type="componentBasedSystem:CompositeComponent" href="mfs.componentbasedsystem#//@repository/@component.2"/>
         <semanticElements xmi:type="componentBasedSystem:CompositeComponent" href="mfs.componentbasedsystem#//@repository/@component.2"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1031,7 +988,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBb4w0g3EeaY66vyx2eNIw" name="MediaManager" outgoingEdges="_Z8IgEEg5EeaY66vyx2eNIw _8A17kkg5EeaY66vyx2eNIw _8A17lUg5EeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBb4w0g3EeaY66vyx2eNIw" name="MediaManager" outgoingEdges="_Z8IgEEg5EeaY66vyx2eNIw _8A17kkg5EeaY66vyx2eNIw _8A17lUg5EeaY66vyx2eNIw _xSBokEkiEeaD2NUh-wnRKQ _LFGIk0kkEeaD2NUh-wnRKQ _LFGvokkkEeaD2NUh-wnRKQ">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.3"/>
         <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.3"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1059,7 +1016,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBcf0Eg3EeaY66vyx2eNIw" name="DigitalWatermarking" outgoingEdges="_Z8JHIEg5EeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBcf0Eg3EeaY66vyx2eNIw" name="DigitalWatermarking" outgoingEdges="_Z8JHIEg5EeaY66vyx2eNIw _xSC2sEkiEeaD2NUh-wnRKQ">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.4"/>
         <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.4"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_oBcf0Ug3EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="253,206,137">
@@ -1076,7 +1033,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBcf0kg3EeaY66vyx2eNIw" name="DBCache" outgoingEdges="_Z8JuMEg5EeaY66vyx2eNIw _8A2iokg5EeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_oBcf0kg3EeaY66vyx2eNIw" name="DBCache" outgoingEdges="_Z8JuMEg5EeaY66vyx2eNIw _8A2iokg5EeaY66vyx2eNIw _xSDdwEkiEeaD2NUh-wnRKQ _LFGvpUkkEeaD2NUh-wnRKQ">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.5"/>
         <semanticElements xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.5"/>
         <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -1104,7 +1061,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Component']/@subNodeMappings[name='ServiceSignature']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8GD0Eg5EeaY66vyx2eNIw" name="«provides»" sourceNode="_oBbRsEg3EeaY66vyx2eNIw" targetNode="_N79zcEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8GD0Eg5EeaY66vyx2eNIw" name="«provides»" visible="false" sourceNode="_oBbRsEg3EeaY66vyx2eNIw" targetNode="_N79zcEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Z8GD0Ug5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']/@style"/>
@@ -1114,7 +1071,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8Gq4Eg5EeaY66vyx2eNIw" name="«provides»" sourceNode="_oBbRskg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8Gq4Eg5EeaY66vyx2eNIw" name="«provides»" visible="false" sourceNode="_oBbRskg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.1"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Z8Gq4Ug5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']/@style"/>
@@ -1124,7 +1081,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8H5AEg5EeaY66vyx2eNIw" name="«provides»" sourceNode="_oBb4wUg3EeaY66vyx2eNIw" targetNode="_N7_ooEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8H5AEg5EeaY66vyx2eNIw" name="«provides»" visible="false" sourceNode="_oBb4wUg3EeaY66vyx2eNIw" targetNode="_N7_ooEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:CompositeComponent" href="mfs.componentbasedsystem#//@repository/@component.2"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Z8H5AUg5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']/@style"/>
@@ -1134,7 +1091,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8IgEEg5EeaY66vyx2eNIw" name="«provides»" sourceNode="_oBb4w0g3EeaY66vyx2eNIw" targetNode="_N7_ooEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8IgEEg5EeaY66vyx2eNIw" name="«provides»" visible="false" sourceNode="_oBb4w0g3EeaY66vyx2eNIw" targetNode="_N7_ooEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.3"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Z8IgEUg5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']/@style"/>
@@ -1144,7 +1101,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8JHIEg5EeaY66vyx2eNIw" name="«provides»" sourceNode="_oBcf0Eg3EeaY66vyx2eNIw" targetNode="_N7-agEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8JHIEg5EeaY66vyx2eNIw" name="«provides»" visible="false" sourceNode="_oBcf0Eg3EeaY66vyx2eNIw" targetNode="_N7-agEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.4"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Z8JHIUg5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']/@style"/>
@@ -1154,7 +1111,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8JuMEg5EeaY66vyx2eNIw" name="«provides»" sourceNode="_oBcf0kg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_Z8JuMEg5EeaY66vyx2eNIw" name="«provides»" visible="false" sourceNode="_oBcf0kg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.5"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_Z8JuMUg5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']/@style"/>
@@ -1164,7 +1121,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='providedRole']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8A0tcEg5EeaY66vyx2eNIw" name="«requires»" sourceNode="_oBbRsEg3EeaY66vyx2eNIw" targetNode="_N7_ooEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8A0tcEg5EeaY66vyx2eNIw" name="«requires»" visible="false" sourceNode="_oBbRsEg3EeaY66vyx2eNIw" targetNode="_N7_ooEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.0"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_8A1UgEg5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='requiredRole']/@style"/>
@@ -1174,7 +1131,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='requiredRole']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8A1Ugkg5EeaY66vyx2eNIw" name="«requires»" sourceNode="_oBb4wUg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8A1Ugkg5EeaY66vyx2eNIw" name="«requires»" visible="false" sourceNode="_oBb4wUg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:CompositeComponent" href="mfs.componentbasedsystem#//@repository/@component.2"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_8A17kEg5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='requiredRole']/@style"/>
@@ -1184,7 +1141,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='requiredRole']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8A17kkg5EeaY66vyx2eNIw" name="«requires»" sourceNode="_oBb4w0g3EeaY66vyx2eNIw" targetNode="_N7-agEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8A17kkg5EeaY66vyx2eNIw" name="«requires»" visible="false" sourceNode="_oBb4w0g3EeaY66vyx2eNIw" targetNode="_N7-agEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.3"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_8A17k0g5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='requiredRole']/@style"/>
@@ -1194,7 +1151,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='requiredRole']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8A17lUg5EeaY66vyx2eNIw" name="«requires»" sourceNode="_oBb4w0g3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8A17lUg5EeaY66vyx2eNIw" name="«requires»" visible="false" sourceNode="_oBb4w0g3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.3"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_8A2ioEg5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='requiredRole']/@style"/>
@@ -1204,7 +1161,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='requiredRole']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8A2iokg5EeaY66vyx2eNIw" name="«requires»" sourceNode="_oBcf0kg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_8A2iokg5EeaY66vyx2eNIw" name="«requires»" visible="false" sourceNode="_oBcf0kg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
         <target xmi:type="componentBasedSystem:Component" href="mfs.componentbasedsystem#//@repository/@component.5"/>
         <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_8A2io0g5EeaY66vyx2eNIw" size="2" routingStyle="manhattan">
           <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='requiredRole']/@style"/>
@@ -1237,14 +1194,6 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureSimple']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9Y9BMUg9EeaY66vyx2eNIw" name="String SpecialSignature()" visible="false">
-          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2"/>
-          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_9Y9BMkg9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureSimple']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureSimple']"/>
-        </ownedElements>
         <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9Y9oQEg9EeaY66vyx2eNIw" name="String url" visible="false">
           <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.0/@parameter.0"/>
           <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.0/@parameter.0"/>
@@ -1257,14 +1206,6 @@
           <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.0/@parameter.1"/>
           <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.0/@parameter.1"/>
           <ownedStyle xmi:type="diagram:Square" xmi:id="_9Y9oQ0g9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureParameter']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureParameter']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9Y-PUEg9EeaY66vyx2eNIw" name="int aAwesomeParameter" visible="false">
-          <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2/@parameter.0"/>
-          <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2/@parameter.0"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_9Y-PUUg9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
             <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureParameter']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureParameter']"/>
@@ -1333,46 +1274,6 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureSimple']"/>
         </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_p7UxkEhCEeaY66vyx2eNIw" name="int testalkfjsdaklf()" visible="false">
-          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.2"/>
-          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.2"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_p7UxkUhCEeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureSimple']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureSimple']"/>
-        </ownedElements>
-      </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_9Y7MAUg9EeaY66vyx2eNIw" name="Weltfrieden" visible="false">
-        <target xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.4"/>
-        <semanticElements xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.4"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_9Y7MAkg9EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1">
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@style"/>
-        </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']"/>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9Y_dckg9EeaY66vyx2eNIw" name="int retteDieWelt()" visible="false">
-          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0"/>
-          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_9Y_dc0g9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureSimple']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureSimple']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9Y_ddEg9EeaY66vyx2eNIw" name="String motivation" visible="false">
-          <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.0"/>
-          <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.0"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_9Y_ddUg9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureParameter']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureParameter']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" xmi:id="_9Y_ddkg9EeaY66vyx2eNIw" name="int geduld" visible="false">
-          <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.1"/>
-          <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.1"/>
-          <ownedStyle xmi:type="diagram:Square" xmi:id="_9Y_dd0g9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureParameter']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimple']/@subNodeMappings[name='SignatureParameter']"/>
-        </ownedElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_9ZAEgEg9EeaY66vyx2eNIw" name="HTTP" visible="false" childrenPresentation="VerticalStack">
         <target xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.0"/>
@@ -1418,22 +1319,6 @@
             <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']"/>
-        </ownedDiagramElements>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_9ZB5sEg9EeaY66vyx2eNIw" name="String SpecialSignature" visible="false">
-          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2"/>
-          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_9ZB5sUg9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
-            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']"/>
-          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_9ZDu4Eg9EeaY66vyx2eNIw" name="int aAwesomeParameter" visible="false" width="8" height="3" resizeKind="NSEW">
-            <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2/@parameter.0"/>
-            <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.0/@signature.2/@parameter.0"/>
-            <ownedStyle xmi:type="diagram:Square" xmi:id="_9ZDu4Ug9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" borderColor="255,255,255" labelPosition="node" width="8" height="3" color="255,255,255">
-              <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']/@subNodeMappings[name='SignatureParameter']/@style"/>
-            </ownedStyle>
-            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']/@subNodeMappings[name='SignatureParameter']"/>
-          </ownedDiagramElements>
         </ownedDiagramElements>
       </ownedDiagramElements>
       <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_9ZArkEg9EeaY66vyx2eNIw" name="Sound" visible="false" childrenPresentation="VerticalStack">
@@ -1499,46 +1384,127 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']"/>
         </ownedDiagramElements>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_p7bfQEhCEeaY66vyx2eNIw" name="int testalkfjsdaklf" visible="false">
-          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.2"/>
-          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.3/@signature.2"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_p7bfQUhCEeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
-            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']"/>
-        </ownedDiagramElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_9ZArlkg9EeaY66vyx2eNIw" name="Weltfrieden" visible="false" childrenPresentation="VerticalStack">
-        <target xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.4"/>
-        <semanticElements xmi:type="componentBasedSystem:Interface" href="mfs.componentbasedsystem#//@repository/@interface.4"/>
-        <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_9ZBSoEg9EeaY66vyx2eNIw" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
-          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@style"/>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xR-lQEkiEeaD2NUh-wnRKQ" name="«provides»" sourceNode="_oBbRsEg3EeaY66vyx2eNIw" targetNode="_N79zcEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.0/@providedrole.0"/>
+        <semanticElements xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.0/@providedrole.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xR_MUEkiEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xR_MUUkiEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
         </ownedStyle>
-        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']"/>
-        <ownedDiagramElements xmi:type="diagram:DNodeContainer" xmi:id="_9ZGLJEg9EeaY66vyx2eNIw" name="int retteDieWelt" visible="false">
-          <target xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0"/>
-          <semanticElements xmi:type="componentBasedSystem:Signature" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0"/>
-          <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_9ZGLJUg9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="194,239,255">
-            <description xmi:type="style:FlatContainerStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']"/>
-          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_9ZGyMEg9EeaY66vyx2eNIw" name="String motivation" visible="false" width="8" height="3" resizeKind="NSEW">
-            <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.0"/>
-            <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.0"/>
-            <ownedStyle xmi:type="diagram:Square" xmi:id="_9ZGyMUg9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" borderColor="255,255,255" labelPosition="node" width="8" height="3" color="255,255,255">
-              <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']/@subNodeMappings[name='SignatureParameter']/@style"/>
-            </ownedStyle>
-            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']/@subNodeMappings[name='SignatureParameter']"/>
-          </ownedDiagramElements>
-          <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_9ZGyMkg9EeaY66vyx2eNIw" name="int geduld" visible="false" width="8" height="3" resizeKind="NSEW">
-            <target xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.1"/>
-            <semanticElements xmi:type="componentBasedSystem:Parameter" href="mfs.componentbasedsystem#//@repository/@interface.4/@signature.0/@parameter.1"/>
-            <ownedStyle xmi:type="diagram:Square" xmi:id="_9ZGyM0g9EeaY66vyx2eNIw" showIcon="false" labelAlignment="LEFT" borderColor="255,255,255" labelPosition="node" width="8" height="3" color="255,255,255">
-              <description xmi:type="style:SquareDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']/@subNodeMappings[name='SignatureParameter']/@style"/>
-            </ownedStyle>
-            <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@additionalLayers[name='experimental']/@containerMappings[name='InterfaceContainerSimpleAdvanced']/@subContainerMappings[name='SignatureContainerAdvanced']/@subNodeMappings[name='SignatureParameter']"/>
-          </ownedDiagramElements>
-        </ownedDiagramElements>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xR_zYEkiEeaD2NUh-wnRKQ" name="«provides»" sourceNode="_oBbRskg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.1/@providedrole.0"/>
+        <semanticElements xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.1/@providedrole.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xSAacEkiEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xSAacUkiEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xSBBgEkiEeaD2NUh-wnRKQ" name="«provides»" sourceNode="_oBb4wUg3EeaY66vyx2eNIw" targetNode="_N7_ooEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.2/@providedrole.0"/>
+        <semanticElements xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.2/@providedrole.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xSBBgUkiEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xSBBgkkiEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xSBokEkiEeaD2NUh-wnRKQ" name="«provides»" sourceNode="_oBb4w0g3EeaY66vyx2eNIw" targetNode="_N7_ooEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.3/@providedrole.0"/>
+        <semanticElements xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.3/@providedrole.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xSCPoEkiEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xSCPoUkiEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xSC2sEkiEeaD2NUh-wnRKQ" name="«provides»" sourceNode="_oBcf0Eg3EeaY66vyx2eNIw" targetNode="_N7-agEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.4/@providedrole.0"/>
+        <semanticElements xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.4/@providedrole.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xSC2sUkiEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xSC2skkiEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_xSDdwEkiEeaD2NUh-wnRKQ" name="«provides»" sourceNode="_oBcf0kg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.5/@providedrole.0"/>
+        <semanticElements xmi:type="roles:ProvidedRole" href="mfs.componentbasedsystem#//@repository/@component.5/@providedrole.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_xSDdwUkiEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_xSDdwkkiEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_LFFhgEkkEeaD2NUh-wnRKQ" name="«requires»" sourceNode="_oBbRsEg3EeaY66vyx2eNIw" targetNode="_N7_ooEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:RequiredRole" href="mfs.componentbasedsystem#//@repository/@component.0/@requiredrole.0"/>
+        <semanticElements xmi:type="roles:RequiredRole" href="mfs.componentbasedsystem#//@repository/@component.0/@requiredrole.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_LFFhgUkkEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='RequiredRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_LFFhgkkkEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='RequiredRole']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_LFGIkEkkEeaD2NUh-wnRKQ" name="«requires»" sourceNode="_oBb4wUg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:RequiredRole" href="mfs.componentbasedsystem#//@repository/@component.2/@requiredrole.0"/>
+        <semanticElements xmi:type="roles:RequiredRole" href="mfs.componentbasedsystem#//@repository/@component.2/@requiredrole.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_LFGIkUkkEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='RequiredRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_LFGIkkkkEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='RequiredRole']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_LFGIk0kkEeaD2NUh-wnRKQ" name="«requires»" sourceNode="_oBb4w0g3EeaY66vyx2eNIw" targetNode="_N7-agEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:RequiredRole" href="mfs.componentbasedsystem#//@repository/@component.3/@requiredrole.0"/>
+        <semanticElements xmi:type="roles:RequiredRole" href="mfs.componentbasedsystem#//@repository/@component.3/@requiredrole.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_LFGvoEkkEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='RequiredRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_LFGvoUkkEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='RequiredRole']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_LFGvokkkEeaD2NUh-wnRKQ" name="«requires»" sourceNode="_oBb4w0g3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:RequiredRole" href="mfs.componentbasedsystem#//@repository/@component.3/@requiredrole.1"/>
+        <semanticElements xmi:type="roles:RequiredRole" href="mfs.componentbasedsystem#//@repository/@component.3/@requiredrole.1"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_LFGvo0kkEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='RequiredRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_LFGvpEkkEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='RequiredRole']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_LFGvpUkkEeaD2NUh-wnRKQ" name="«requires»" sourceNode="_oBcf0kg3EeaY66vyx2eNIw" targetNode="_N7_BkEgxEeaY66vyx2eNIw">
+        <target xmi:type="roles:RequiredRole" href="mfs.componentbasedsystem#//@repository/@component.5/@requiredrole.0"/>
+        <semanticElements xmi:type="roles:RequiredRole" href="mfs.componentbasedsystem#//@repository/@component.5/@requiredrole.0"/>
+        <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_LFHWsEkkEeaD2NUh-wnRKQ" size="2" routingStyle="manhattan">
+          <description xmi:type="style:EdgeStyleDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='RequiredRole']/@style"/>
+          <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_LFHWsUkkEeaD2NUh-wnRKQ" showIcon="false">
+            <labelFormat>italic</labelFormat>
+          </centerLabelStyle>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='RequiredRole']"/>
       </ownedDiagramElements>
       <description xmi:type="description_1:DiagramDescription" href="platform:/resource/edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design/description/ComponentBasedSystem.odesign#//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']"/>
       <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_8iJSJkK4Eeap1dC_CpU1HA"/>

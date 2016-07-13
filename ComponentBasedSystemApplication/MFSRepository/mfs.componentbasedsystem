@@ -18,9 +18,6 @@
         <parameter name="magicNumber" parametertype="//@type.2"/>
       </signature>
       <signature name="HTTPUpload" returntype="//@type.0"/>
-      <signature name="SpecialSignature" returntype="//@type.1">
-        <parameter name="aAwesomeParameter" parametertype="//@type.2"/>
-      </signature>
     </interface>
     <interface name="Sound">
       <signature name="watermark" returntype="//@type.0"/>
@@ -32,13 +29,6 @@
     <interface name="MediaStore">
       <signature name="download" returntype="//@type.0"/>
       <signature name="upload" returntype="//@type.0"/>
-      <signature name="testalkfjsdaklf" returntype="//@type.2"/>
-    </interface>
-    <interface name="Weltfrieden">
-      <signature name="retteDieWelt" returntype="//@type.2">
-        <parameter name="motivation" parametertype="//@type.1"/>
-        <parameter name="geduld" parametertype="//@type.2"/>
-      </signature>
     </interface>
     <component name="WebGUI">
       <service correspondingSignatures="//@repository/@interface.0/@signature.0"/>
