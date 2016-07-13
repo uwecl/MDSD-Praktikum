@@ -10,3 +10,5 @@ Das Wiki enthält unter anderem eine Erklärung für das [Einbinden des Eclipse-
 		MediaFilesSystem/				# Beispiel aus Übung 1
 		
 	eclipse/							# Eclipse-Projekte des Metamodells
+	
+	presentation/						# Ordner für die Abschlusspräsentation
