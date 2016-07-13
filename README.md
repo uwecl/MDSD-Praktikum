@@ -8,6 +8,9 @@ Das Wiki enthält unter anderem eine Erklärung für das [Einbinden des Eclipse-
 ## Ordnerstruktur
 	ComponentBasedSystemApplication/	# Implementierungen des Metamodells
 		MediaFilesSystem/				# Beispiel aus Übung 1
+		MFSMerged/						# Beispiel aus Übung 1 mit Rootelement
+		MFSRepository/					# Beispiel aus Übung 1 mit grafischem Editor für das Repository (nur 'editor' Branch)
+		edu.kit.ipd.sdq.mdsdpc.ComponentBasedSystem.design # Sirius Projekt für grafischen Editor (nur 'editor' Branch)
 		
 	eclipse/							# Eclipse-Projekte des Metamodells
 	
