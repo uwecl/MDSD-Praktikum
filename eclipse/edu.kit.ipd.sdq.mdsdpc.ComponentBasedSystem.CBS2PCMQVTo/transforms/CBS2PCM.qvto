@@ -1,6 +1,5 @@
 modeltype CBS "strict" uses componentBasedSystem('edu.kit.ipd.sdq.mdsdpc.componentBasedSystem');	
 modeltype PCM "strict" uses pcm('http://palladiosimulator.org/PalladioComponentModel/5.1');
-//modeltype ID "strict" uses identifier('http://sdq.ipd.uka.de/Identifier/2.1');
 
 transformation CBS2PCM(in cbs : CBS, out pcm : PCM);
 
@@ -16,46 +15,31 @@ main() {
 mapping CBS::ComponentBasedSystem::toSystem() : pcm::system::System {
 	entityName := "System";
 	assemblyContexts__ComposedStructure := self.assemblycontext -> map toAssemblyContext();
-//	connectors__ComposedStructure := self.assemblyconnector.late resolve(pcm::core::composition::Connector);
 	connectors__ComposedStructure := self.assemblyconnector -> map toAssemblyConnector();
-	
-	
-	// Has to be discussed with Erik
 	providedRoles_InterfaceProvidingEntity := self.providedrole->map toOperationProviedRole();
-	requiredRoles_InterfaceRequiringEntity := self.requiredrole->map toOperationRequiredRole();
-	
+	requiredRoles_InterfaceRequiringEntity := self.requiredrole->map toOperationRequiredRole();	
 	connectors__ComposedStructure += getSystemDelegationConnector(providedRoles_InterfaceProvidingEntity);
-	
-	//requiredRoles_InterfaceRequiringEntity := getRequiredRoles(self.interface) -> oclAsType(cbswa::assemblyelements::RequiredRole).map toOperationRequiredRole();
-	
 	qosAnnotations_System := null;
 	resourceRequiredRoles__ResourceInterfaceRequiringEntity := null;
 	eventChannel__ComposedStructure := null;	
 	resourceRequiredDelegationConnectors_ComposedStructure := null;
-	
-	
-	
 }
 
 mapping CBS::roles::AssemblyConnector::toAssemblyConnector() : pcm::core::composition::AssemblyConnector {
 	result.entityName := self.name;
-	result.requiringAssemblyContext_AssemblyConnector := self.requiredAssemblyContext.late resolveone(pcm::core::composition::AssemblyContext); // toAssemblyContext();
-	result.providingAssemblyContext_AssemblyConnector := self.providedAssemblyContext.late resolveone(pcm::core::composition::AssemblyContext); // toAssemblyContext();
+	result.requiringAssemblyContext_AssemblyConnector := self.requiredAssemblyContext.late resolveone(pcm::core::composition::AssemblyContext); 
+	result.providingAssemblyContext_AssemblyConnector := self.providedAssemblyContext.late resolveone(pcm::core::composition::AssemblyContext);
 	result.providedRole_AssemblyConnector := self.providedrole.late resolveone(pcm::repository::OperationProvidedRole);
 	result.requiredRole_AssemblyConnector := self.requiredrole.late resolveone(pcm::repository::OperationRequiredRole);
-	
 }
 
 mapping CBS::roles::ProvidedRole::toOperationProviedRole() : pcm::repository::OperationProvidedRole {
 	result.entityName := self.name;
-//	result.providingEntity_ProvidedRole := 
 	result.providedInterface__OperationProvidedRole := self.interface.map toOperationInterface();
-
 }
 
 mapping CBS::roles::RequiredRole::toOperationRequiredRole() : pcm::repository::OperationRequiredRole {
 	result.entityName := self.name;
-//	result.requiredEntity_RequiredRole := 
 	result.requiredInterface__OperationRequiredRole := self.interface.map toOperationInterface();
 }
 
@@ -64,20 +48,20 @@ mapping CBS::roles::RequiredRole::toOperationRequiredRole() : pcm::repository::O
 mapping CBS::Allocation::toAllocation() : pcm::allocation::Allocation {
 	result.allocationContexts_Allocation := self.allocationcontext->map toAllocationContext();
 	result.system_Allocation := getSystem().late resolveone(pcm::system::System);
-	result.targetResourceEnvironment_Allocation := null; //TODO
+	result.targetResourceEnvironment_Allocation := null;
 }
 
 mapping CBS::AllocationContext::toAllocationContext() : pcm::allocation::AllocationContext {
 	entityName := self.assemblycontext.name + "_DeployedOn_" + self.container.name;
-	resourceContainer_AllocationContext := self.container.map toResourceContainer(); //Change metamodel?
-	assemblyContext_AllocationContext := self.assemblycontext.late resolveone(PCM::core::composition::AssemblyContext); // map toAssemblyContext();
+	resourceContainer_AllocationContext := self.container.map toResourceContainer(); 
+	assemblyContext_AllocationContext := self.assemblycontext.late resolveone(PCM::core::composition::AssemblyContext);
 	
 	eventChannel__AllocationContext := null;
 }
 
 mapping CBS::AssemblyContext::toAssemblyContext() : pcm::core::composition::AssemblyContext { //TODO
 	entityName := self.name;
-	parentStructure__AssemblyContext := getParentComposedStructure(self.component); //TODO composite component or system(need references in model)
+	parentStructure__AssemblyContext := getParentComposedStructure(self.component); 
 	encapsulatedComponent__AssemblyContext := self.component.late resolveoneIn(CBS::Component::toComponent, pcm::repository::RepositoryComponent);
 }
 
@@ -126,15 +110,8 @@ mapping CBS::Component::toBasicComponent() : pcm::repository::BasicComponent {
 	passiveResource_BasicComponent := null;
 }
 
-//mapping CBS::roles::RequiredRole::toOperationRequiredRole() : pcm::repository::OperationRequiredRole { //done
-//	entityName := self.name;
-////	requiringEntity_RequiredRole  := self.component.resolveoneIn(cbswa::assemblyelements::Component::toComponent, pcm::repository::RepositoryComponent); //tmaybe system too if it has a role(needs clarifying)
-//	requiredInterface__OperationRequiredRole  := self.interface.resolveoneIn(CBS::Interface::toOperationInterface, pcm::repository::OperationInterface);
-//}
-
 mapping CBS::roles::ProvidedRole::toOperationProvidedRole() : pcm::repository::OperationProvidedRole {//done
 	entityName := self.name;
-//	providingEntity_ProvidedRole := self.component.resolveoneIn(cbswa::assemblyelements::Component::toComponent, pcm::repository::RepositoryComponent); //tmaybe system too if it has a role(needs clarifying)
 	providedInterface__OperationProvidedRole := self.interface.resolveoneIn(CBS::Interface::toOperationInterface, pcm::repository::OperationInterface);
 }
 
@@ -147,7 +124,6 @@ mapping CBS::CompositeComponent::toCompositeComponent() : pcm::repository::Compo
     eventChannel__ComposedStructure := null; 
     connectors__ComposedStructure := getDelegationConnector(self.delegationconnector);
 }
-
 
 mapping CBS::DelegationConnector::toRequiredDelegationConnector() : pcm::core::composition::RequiredDelegationConnector {
 	var components : Set(CBS::Component) := cbs.objects()[CBS::Component];
@@ -170,19 +146,8 @@ mapping CBS::DelegationConnector::toProvidedDelegationConnector() : pcm::core::c
 	result.innerProvidedRole_ProvidedDelegationConnector := self.role->at(2).late resolveone(pcm::repository::OperationProvidedRole);
 	result.outerProvidedRole_ProvidedDelegationConnector := self.role->first().resolveone(pcm::repository::OperationProvidedRole);
 	
-	
-	var component : CBS::Component := components->selectOne(c | c.providedrole = self.role->at(2));
-	
-//	if (component.oclIsTypeOf(CBS::CompositeComponent)) then {
-//			assemblyContexts := component -> oclAsType(CBS::CompositeComponent).assemblycontext->asSet();
-//	} endif;
-	
+	var component : CBS::Component := components->selectOne(c | c.providedrole = self->role->at(2));
 	result.assemblyContext_ProvidedDelegationConnector := assemblyContexts->selectOne(a | a.component = component).late resolveone(pcm::core::composition::AssemblyContext);
-	
-	
-//	result.assemblyContext_ProvidedDelegationConnector :=  self.role->first() -> oclAsType(CBS::roles::ProvidedRole).
-	
-
 }
 
 mapping CBS::Interface::toOperationInterface() : PCM::repository::OperationInterface {
@@ -215,7 +180,6 @@ mapping CBS::dataTypes::ParameterType::toParameterDataType() : pcm::repository::
 disjuncts CBS::dataTypes::Simple::toSimple,CBS::dataTypes::Complex::toComplexDataType { }
 
 mapping CBS::dataTypes::Void::toVoid() : pcm::repository::PrimitiveDataType {
-	// Actually void as type is not supported in palladio. The Intension could be that void is considered as null-type.
 	result.type := null;
 }
 
@@ -225,10 +189,7 @@ mapping CBS::dataTypes::Simple::toSimple() : pcm::repository::PrimitiveDataType 
 
 mapping CBS::dataTypes::Complex::toComplexDataType() : pcm::repository::CompositeDataType {
 	result.entityName := self.name;
-//	innerDeclaration_CompositeDataType := self.parameter -> map toInnerDeclaration(); TODO
 }
-
-
 
 query getDataTypeOf(kind : CBS::dataTypes::simpleTypes) : pcm::repository::PrimitiveTypeEnum {
 	var pcmDataType : pcm::repository::PrimitiveTypeEnum := null;
@@ -269,19 +230,12 @@ query getDataTypeOf(kind : CBS::dataTypes::simpleTypes) : pcm::repository::Primi
 }
 
 query getSystemDelegationConnector(providedRole : Set(pcm::repository::ProvidedRole)) {
-	var providedDelegationConnectors : Set(pcm::repository::OperationProvidedRole) := null;
-	
+	var providedDelegationConnectors : Set(pcm::repository::OperationProvidedRole) := null;	
 	var providedDelegationConnector : pcm::repository::OperationProvidedRole := null;
-	//assemblyContext
-//	providedDelegationConnector.
-	//äußere der Parameter
-	//innere muss ermittelt werden
-	//zusammenhang von innere und äußere nirgends modelliert oder?
 }
 
 query getDelegationConnector(delegationConnector : OrderedSet(CBS::DelegationConnector)) : OrderedSet(pcm::core::composition::Connector) {
-	var pcmDelegationConnector : OrderedSet(pcm::core::composition::Connector) := null;
-	
+	var pcmDelegationConnector : OrderedSet(pcm::core::composition::Connector) := null;	
 	delegationConnector->forEach(d) {
 		if (d.role->first().oclIsTypeOf(CBS::roles::RequiredRole)) then {
 			pcmDelegationConnector += d.map toRequiredDelegationConnector();
@@ -290,8 +244,7 @@ query getDelegationConnector(delegationConnector : OrderedSet(CBS::DelegationCon
 		if (d.role->first().oclIsTypeOf(CBS::roles::ProvidedRole)) then {
 			pcmDelegationConnector += d.map toProvidedDelegationConnector();
 		} endif;
-	};
-	
+	};	
 	return pcmDelegationConnector;
 }
 
@@ -307,37 +260,3 @@ query getSystem() : CBS::ComponentBasedSystem {
 	cbsSystem := cbsSystems->at(1);
 	return cbsSystem;
 }
-
-//helper CBS::DelegationConnector::createDelegationConnector() : PCM::core::composition::Connector {
-//	return 
-//}
-
-//mapping cbswa::assemblyelements::_Collection::toCollectionDataType() : pcm::repository::CollectionDataType 
-//disjuncts cbswa::assemblyelements::_List::ListToCollectionDataType {
-//	
-//}
-
-//mapping cbswa::assemblyelements::_List::ListToCollectionDataType() : pcm::repository::CollectionDataType {
-//	entityName := self.name;
-//	innerType_CollectionDataType := self.type.map toDataType();
-//}
-
-//mapping cbswa::assemblyelements::Parameter::toInnerDeclaration() : pcm::repository::InnerDeclaration {
-//	entityName := self.name;
-//	
-//	if ((self.type.oclIsTypeOf(cbswa::assemblyelements::Primitive)) or 
-//		(self.type.oclIsTypeOf(cbswa::assemblyelements::Void))) then {
-//		
-//		datatype_InnerDeclaration := self.type.map toDataType();
-//		
-//	} else {
-//		compositeDataType_InnerDeclaration := self.type.oclAsType(cbswa::assemblyelements::Complex).map toCompositeDataType();
-//	} endif;
-//}
-
-
-//mapping cbswa::assemblyelements::Primitive::toPrimitiveDataType() : pcm::repository::PrimitiveDataType {
-//		type := getDataTypeOf(self.primitiveType.oclAsType(cbswa::assemblyelements::Primitive));
-//}
-
-
