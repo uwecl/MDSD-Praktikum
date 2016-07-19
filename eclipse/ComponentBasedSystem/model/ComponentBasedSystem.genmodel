@@ -15,6 +15,9 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/environment"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/providedrole"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//ComponentBasedSystem/requiredrole"/>
+      <genOperations ecoreOperation="componentBasedSystem.ecore#//ComponentBasedSystem/GetContainerOfContext">
+        <genParameters ecoreParameter="componentBasedSystem.ecore#//ComponentBasedSystem/GetContainerOfContext/context"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Component">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Component/name"/>
@@ -26,6 +29,7 @@
     <genClasses ecoreClass="componentBasedSystem.ecore#//Interface">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute componentBasedSystem.ecore#//Interface/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Interface/signature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Interface/inherited"/>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//CompositeComponent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//CompositeComponent/assemblycontext"/>
@@ -62,6 +66,10 @@
     <genClasses ecoreClass="componentBasedSystem.ecore#//Environment">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Environment/container"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Environment/link"/>
+      <genOperations ecoreOperation="componentBasedSystem.ecore#//Environment/IsLinked">
+        <genParameters ecoreParameter="componentBasedSystem.ecore#//Environment/IsLinked/c1"/>
+        <genParameters ecoreParameter="componentBasedSystem.ecore#//Environment/IsLinked/c2"/>
+      </genOperations>
     </genClasses>
     <genClasses ecoreClass="componentBasedSystem.ecore#//Repository">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference componentBasedSystem.ecore#//Repository/interface"/>

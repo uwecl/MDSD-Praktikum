@@ -64,6 +64,7 @@ public class InterfaceItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addInheritedPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -86,6 +87,28 @@ public class InterfaceItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Inherited feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInheritedPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Interface_inherited_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Interface_inherited_feature", "_UI_Interface_type"),
+				 ComponentBasedSystemPackage.Literals.INTERFACE__INHERITED,
+				 true,
+				 false,
+				 true,
+				 null,
 				 null,
 				 null));
 	}

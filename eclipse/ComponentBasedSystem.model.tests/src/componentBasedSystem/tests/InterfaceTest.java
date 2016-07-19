@@ -13,6 +13,12 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Interface</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link componentBasedSystem.Interface#isInterfaceInInherited(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Is Interface In Inherited</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class InterfaceTest extends TestCase {
@@ -84,6 +90,19 @@ public class InterfaceTest extends TestCase {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link componentBasedSystem.Interface#isInterfaceInInherited(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Is Interface In Inherited</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see componentBasedSystem.Interface#isInterfaceInInherited(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	public void testIsInterfaceInInherited__EList_EList() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //InterfaceTest

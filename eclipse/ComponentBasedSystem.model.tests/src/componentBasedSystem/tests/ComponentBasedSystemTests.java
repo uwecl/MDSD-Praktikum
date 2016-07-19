@@ -32,6 +32,7 @@ public class ComponentBasedSystemTests extends TestSuite {
 	public static Test suite() {
 		TestSuite suite = new ComponentBasedSystemTests("componentBasedSystem Tests");
 		suite.addTestSuite(ComponentBasedSystemTest.class);
+		suite.addTestSuite(InterfaceTest.class);
 		suite.addTestSuite(EnvironmentTest.class);
 		return suite;
 	}

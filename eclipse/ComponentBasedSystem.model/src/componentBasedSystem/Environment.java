@@ -59,6 +59,9 @@ public interface Environment extends EObject {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * operation IsLinked(c1 : Container[?], c2 : Container[?]) : Boolean[?]
+	 * <!-- end-model-doc -->
 	 * @model annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot body='link->exists( l | (l.container->first() = c1 and l.container->last() =c2) or \n\t\t\t\t\t\t\t\t\t\t\t   ( l.container->first() = c2 and l.container->last() =c1))'"
 	 * @generated
 	 */

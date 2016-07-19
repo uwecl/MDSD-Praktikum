@@ -410,6 +410,24 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getInterface_Inherited() {
+		return (EReference)interfaceEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getInterface__IsInterfaceInInherited__EList_EList() {
+		return interfaceEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getCompositeComponent() {
 		return compositeComponentEClass;
 	}
@@ -769,6 +787,8 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		interfaceEClass = createEClass(INTERFACE);
 		createEAttribute(interfaceEClass, INTERFACE__NAME);
 		createEReference(interfaceEClass, INTERFACE__SIGNATURE);
+		createEReference(interfaceEClass, INTERFACE__INHERITED);
+		createEOperation(interfaceEClass, INTERFACE___IS_INTERFACE_IN_INHERITED__ELIST_ELIST);
 
 		compositeComponentEClass = createEClass(COMPOSITE_COMPONENT);
 		createEReference(compositeComponentEClass, COMPOSITE_COMPONENT__ASSEMBLYCONTEXT);
@@ -882,6 +902,11 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		initEClass(interfaceEClass, Interface.class, "Interface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getInterface_Name(), ecorePackage.getEString(), "name", null, 0, 1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getInterface_Signature(), this.getSignature(), null, "signature", null, 0, -1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInterface_Inherited(), this.getInterface(), null, "inherited", null, 0, -1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		op = initEOperation(getInterface__IsInterfaceInInherited__EList_EList(), ecorePackage.getEBoolean(), "isInterfaceInInherited", 0, 1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getInterface(), "list", 0, -1, IS_UNIQUE, IS_ORDERED);
+		addEParameter(op, this.getInterface(), "items", 0, -1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(compositeComponentEClass, CompositeComponent.class, "CompositeComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCompositeComponent_Assemblycontext(), this.getAssemblyContext(), null, "assemblycontext", null, 2, -1, CompositeComponent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -966,6 +991,12 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 			 "constraints", "SameParentContainerOrLinkedContainerOfconnectedAssemblyContexts"
 		   });	
 		addAnnotation
+		  (interfaceEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "InterfaceInheritanceCyclicDependency"
+		   });	
+		addAnnotation
 		  (compositeComponentEClass, 
 		   source, 
 		   new String[] {
@@ -1011,6 +1042,18 @@ public class ComponentBasedSystemPackageImpl extends EPackageImpl implements Com
 		   source, 
 		   new String[] {
 			 "body", "\n\t\t \tif  self.allocation.allocationcontext->any(a | a.assemblycontext = context).container.oclIsInvalid() then\n\t\t \t /* if AssemblyContext is nested and therefore not directly allocated */ \n\t\t \t\t/* get CompositeComponents */\n\t\t \t\tlet composites : Collection(CompositeComponent) = \n\t\t\t\t\tself.allocation.allocationcontext->select(a | a.assemblycontext.component.oclIsTypeOf(CompositeComponent)).assemblycontext.component.oclAsType(CompositeComponent)in\n\t\t \t\tlet composite : CompositeComponent = composites->any(c | c.assemblycontext->includes(context)) in\n\t\t \t\tlet parentContext : AssemblyContext = self.assemblycontext->any(a | a.component = composite) in\t\t\n\t\t \t\tself.allocation.allocationcontext->any(a | a.assemblycontext = parentContext).container\n\t\t \telse self.allocation.allocationcontext->any(a | a.assemblycontext = context).container\n\t\t  \tendif"
+		   });	
+		addAnnotation
+		  (interfaceEClass, 
+		   source, 
+		   new String[] {
+			 "InterfaceInheritanceCyclicDependency", "\n\t\tself.isInterfaceInInherited(inherited, self->asOrderedSet()) = false"
+		   });	
+		addAnnotation
+		  (getInterface__IsInterfaceInInherited__EList_EList(), 
+		   source, 
+		   new String[] {
+			 "body", "\n\t\t\tif list->size() = 0 then false\n\t\t\telse\n\t\t\t\tif (items->exists( i | list->includes(i)))  then true\n\t\t\t\telse \n\t\t\t\t/* call operation and append current interface to items, thus preventing a nested loop */\n\t\t\t\tlist->exists(inter | isInterfaceInInherited(inter.inherited,items->append(inter)))\n\t\t\t\tendif\n\t\t\tendif"
 		   });	
 		addAnnotation
 		  (compositeComponentEClass, 

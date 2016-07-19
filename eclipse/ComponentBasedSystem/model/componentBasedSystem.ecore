@@ -56,9 +56,27 @@
         upperBound="-1" eType="#//roles/ProvidedRole" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Interface">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+      <details key="constraints" value="InterfaceInheritanceCyclicDependency"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+      <details key="InterfaceInheritanceCyclicDependency" value="&#xA;&#x9;&#x9;self.isInterfaceInInherited(inherited, self->asOrderedSet()) = false"/>
+    </eAnnotations>
+    <eOperations name="isInterfaceInInherited" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="recursive operation to check whether any of the interfaces in 'items' is in the interface array 'list'"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
+        <details key="body" value="&#xA;&#x9;&#x9;&#x9;if list->size() = 0 then false&#xA;&#x9;&#x9;&#x9;else&#xA;&#x9;&#x9;&#x9;&#x9;if (items->exists( i | list->includes(i)))  then true&#xA;&#x9;&#x9;&#x9;&#x9;else &#xA;&#x9;&#x9;&#x9;&#x9;/* call operation and append current interface to items, thus preventing a nested loop */&#xA;&#x9;&#x9;&#x9;&#x9;list->exists(inter | isInterfaceInInherited(inter.inherited,items->append(inter)))&#xA;&#x9;&#x9;&#x9;&#x9;endif&#xA;&#x9;&#x9;&#x9;endif"/>
+      </eAnnotations>
+      <eParameters name="list" upperBound="-1" eType="#//Interface"/>
+      <eParameters name="items" upperBound="-1" eType="#//Interface"/>
+    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="signature" upperBound="-1"
         eType="#//Signature" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inherited" upperBound="-1"
+        eType="#//Interface"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CompositeComponent" eSuperTypes="#//Component">
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
@@ -124,6 +142,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Environment">
     <eOperations name="IsLinked" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="operation IsLinked(c1 : Container[?], c2 : Container[?]) : Boolean[?]"/>
+      </eAnnotations>
       <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
         <details key="body" value="link->exists( l | (l.container->first() = c1 and l.container->last() =c2) or &#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;   ( l.container->first() = c2 and l.container->last() =c1))"/>
       </eAnnotations>

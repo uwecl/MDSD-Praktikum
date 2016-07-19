@@ -21,6 +21,14 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
+        <edgeMappings name="InheritedInterface" deletionDescription="//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@toolSections.1/@ownedTools[name='deleteInheritance']" sourceMapping="//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']" targetMapping="//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@containerMappings[name='Interface']" targetFinderExpression="feature:inherited">
+          <style lineStyle="dash" sizeComputationExpression="2" routingStyle="manhattan">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription showIcon="false" labelExpression="«includes» ">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
         <containerMappings name="Interface" labelDirectEdit="//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@toolSections.0/@ownedTools[name='editName']" semanticCandidatesExpression="feature:interface" domainClass="componentBasedSystem.Interface" childrenPresentation="VerticalStack">
           <subContainerMappings name="Signature" semanticCandidatesExpression="feature:signature" domainClass="componentBasedSystem.Signature" childrenPresentation="List">
             <subNodeMappings name="Parameter" semanticCandidatesExpression="feature:parameter" domainClass="componentBasedSystem.Parameter">
@@ -119,7 +127,7 @@
           </ownedTools>
         </toolSections>
         <toolSections name="Edges">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createProvidedRole" label="«provides» Beziehung hinzu." forceRefresh="true" edgeMappings="//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createProvidedRole" label="«provides» Beziehung hinzufügen" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='ProvidedRole']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
             <sourceViewVariable name="sourceView"/>
@@ -164,6 +172,27 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
                 <subModelOperations xsi:type="tool_1:RemoveElement"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="createInheritance" label="«includes» Beziehung hinzufügen" forceRefresh="true" edgeMappings="//@ownedViewpoints[name='cbs']/@ownedRepresentations[name='Repository%20diagram']/@defaultLayer/@edgeMappings[name='InheritedInterface']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var: self">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="inherited" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:DeleteElementDescription" name="deleteInheritance" label="«includes» Beziehung entfernen" forceRefresh="true">
+            <element name="element"/>
+            <elementView name="elementView"/>
+            <containerView name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:element">
+                <subModelOperations xsi:type="tool_1:Unset" featureName="inherited" elementExpression="aql:self.inherited->select(i | i &lt;>elementView.target)"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>

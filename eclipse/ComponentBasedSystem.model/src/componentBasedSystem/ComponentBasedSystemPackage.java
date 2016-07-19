@@ -269,13 +269,31 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int INTERFACE__SIGNATURE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Inherited</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE__INHERITED = 2;
+
+	/**
 	 * The number of structural features of the '<em>Interface</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FEATURE_COUNT = 2;
+	int INTERFACE_FEATURE_COUNT = 3;
+
+	/**
+	 * The operation id for the '<em>Is Interface In Inherited</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE___IS_INTERFACE_IN_INHERITED__ELIST_ELIST = 0;
 
 	/**
 	 * The number of operations of the '<em>Interface</em>' class.
@@ -284,7 +302,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_OPERATION_COUNT = 0;
+	int INTERFACE_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link componentBasedSystem.impl.CompositeComponentImpl <em>Composite Component</em>}' class.
@@ -1083,6 +1101,27 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getInterface_Signature();
 
 	/**
+	 * Returns the meta object for the reference list '{@link componentBasedSystem.Interface#getInherited <em>Inherited</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Inherited</em>'.
+	 * @see componentBasedSystem.Interface#getInherited()
+	 * @see #getInterface()
+	 * @generated
+	 */
+	EReference getInterface_Inherited();
+
+	/**
+	 * Returns the meta object for the '{@link componentBasedSystem.Interface#isInterfaceInInherited(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList) <em>Is Interface In Inherited</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Interface In Inherited</em>' operation.
+	 * @see componentBasedSystem.Interface#isInterfaceInInherited(org.eclipse.emf.common.util.EList, org.eclipse.emf.common.util.EList)
+	 * @generated
+	 */
+	EOperation getInterface__IsInterfaceInInherited__EList_EList();
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.CompositeComponent <em>Composite Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1634,6 +1673,22 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference INTERFACE__SIGNATURE = eINSTANCE.getInterface_Signature();
+
+		/**
+		 * The meta object literal for the '<em><b>Inherited</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERFACE__INHERITED = eINSTANCE.getInterface_Inherited();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Interface In Inherited</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation INTERFACE___IS_INTERFACE_IN_INHERITED__ELIST_ELIST = eINSTANCE.getInterface__IsInterfaceInInherited__EList_EList();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.CompositeComponentImpl <em>Composite Component</em>}' class.
