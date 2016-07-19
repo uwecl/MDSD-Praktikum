@@ -123,7 +123,7 @@ Component_Impl returns componentBasedSystem::Component:
 		('behaviourdescription' '{' behaviourdescription+=BehaviourDescription ( "," behaviourdescription+=BehaviourDescription)* '}' )?
 		'service' '{' service+=Service ( "," service+=Service)* '}' 
 		('requiredrole' '{' requiredrole+=RequiredRole ( "," requiredrole+=RequiredRole)* '}' )?
-		'providedrole' providedrole=ProvidedRole
+		'providedrole' '{' providedrole+=ProvidedRole ( "," providedrole+=ProvidedRole)* '}' 
 	'}';
 
 BehaviourDescription returns behaviourDescription::BehaviourDescription:
@@ -146,7 +146,7 @@ CompositeComponent returns componentBasedSystem::CompositeComponent:
 		('behaviourdescription' '{' behaviourdescription+=BehaviourDescription ( "," behaviourdescription+=BehaviourDescription)* '}' )?
 		'service' '{' service+=Service ( "," service+=Service)* '}' 
 		('requiredrole' '{' requiredrole+=RequiredRole ( "," requiredrole+=RequiredRole)* '}' )?
-		'providedrole' providedrole=ProvidedRole
+		'providedrole' '{' providedrole+=ProvidedRole ( "," providedrole+=ProvidedRole)* '}' 
 		'assemblycontext' '{' assemblycontext+=AssemblyContext ( "," assemblycontext+=AssemblyContext)* '}' 
 		'delegationconnector' '{' delegationconnector+=DelegationConnector ( "," delegationconnector+=DelegationConnector)* '}' 
 	'}';

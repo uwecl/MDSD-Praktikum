@@ -12,14 +12,18 @@ import componentBasedSystem.dataTypes.Type;
 import componentBasedSystem.roles.AssemblyConnector;
 import componentBasedSystem.roles.ProvidedRole;
 import componentBasedSystem.roles.RequiredRole;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -229,6 +233,30 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 	}
 
 	/**
+	 * The cached invocation delegate for the '{@link #GetContainerOfContext(componentBasedSystem.AssemblyContext) <em>Get Container Of Context</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #GetContainerOfContext(componentBasedSystem.AssemblyContext)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate GET_CONTAINER_OF_CONTEXT_ASSEMBLY_CONTEXT__EINVOCATION_DELEGATE = ((EOperation.Internal)ComponentBasedSystemPackage.Literals.COMPONENT_BASED_SYSTEM___GET_CONTAINER_OF_CONTEXT__ASSEMBLYCONTEXT).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public componentBasedSystem.Container GetContainerOfContext(AssemblyContext context) {
+		try {
+			return (componentBasedSystem.Container)GET_CONTAINER_OF_CONTEXT_ASSEMBLY_CONTEXT__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(1, new Object[]{context}));
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
+	}
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -250,49 +278,6 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 			assemblyconnector = new EObjectContainmentEList<AssemblyConnector>(AssemblyConnector.class, this, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR);
 		}
 		return assemblyconnector;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Allocation getAllocation() {
-		return allocation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetAllocation(Allocation newAllocation, NotificationChain msgs) {
-		Allocation oldAllocation = allocation;
-		allocation = newAllocation;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION, oldAllocation, newAllocation);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAllocation(Allocation newAllocation) {
-		if (newAllocation != allocation) {
-			NotificationChain msgs = null;
-			if (allocation != null)
-				msgs = ((InternalEObject)allocation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION, null, msgs);
-			if (newAllocation != null)
-				msgs = ((InternalEObject)newAllocation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION, null, msgs);
-			msgs = basicSetAllocation(newAllocation, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION, newAllocation, newAllocation));
 	}
 
 	/**
@@ -336,6 +321,49 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 		}
 		else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__REPOSITORY, newRepository, newRepository));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Allocation getAllocation() {
+		return allocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetAllocation(Allocation newAllocation, NotificationChain msgs) {
+		Allocation oldAllocation = allocation;
+		allocation = newAllocation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION, oldAllocation, newAllocation);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAllocation(Allocation newAllocation) {
+		if (newAllocation != allocation) {
+			NotificationChain msgs = null;
+			if (allocation != null)
+				msgs = ((InternalEObject)allocation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION, null, msgs);
+			if (newAllocation != null)
+				msgs = ((InternalEObject)newAllocation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION, null, msgs);
+			msgs = basicSetAllocation(newAllocation, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM__ALLOCATION, newAllocation, newAllocation));
 	}
 
 	/**
@@ -494,6 +522,20 @@ public class ComponentBasedSystemImpl extends MinimalEObjectImpl.Container imple
 				return requiredrole != null && !requiredrole.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ComponentBasedSystemPackage.COMPONENT_BASED_SYSTEM___GET_CONTAINER_OF_CONTEXT__ASSEMBLYCONTEXT:
+				return GetContainerOfContext((AssemblyContext)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ComponentBasedSystemImpl

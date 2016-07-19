@@ -4,6 +4,7 @@ package componentBasedSystem;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -149,13 +150,22 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPONENT_BASED_SYSTEM_FEATURE_COUNT = 8;
 
 	/**
+	 * The operation id for the '<em>Get Container Of Context</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_BASED_SYSTEM___GET_CONTAINER_OF_CONTEXT__ASSEMBLYCONTEXT = 0;
+
+	/**
 	 * The number of operations of the '<em>Component Based System</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_BASED_SYSTEM_OPERATION_COUNT = 0;
+	int COMPONENT_BASED_SYSTEM_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link componentBasedSystem.impl.ComponentImpl <em>Component</em>}' class.
@@ -204,7 +214,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPONENT__REQUIREDROLE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Providedrole</b></em>' containment reference.
+	 * The feature id for the '<em><b>Providedrole</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -323,7 +333,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int COMPOSITE_COMPONENT__REQUIREDROLE = COMPONENT__REQUIREDROLE;
 
 	/**
-	 * The feature id for the '<em><b>Providedrole</b></em>' containment reference.
+	 * The feature id for the '<em><b>Providedrole</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -727,13 +737,22 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	int ENVIRONMENT_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Is Linked</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENVIRONMENT___IS_LINKED__CONTAINER_CONTAINER = 0;
+
+	/**
 	 * The number of operations of the '<em>Environment</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENVIRONMENT_OPERATION_COUNT = 0;
+	int ENVIRONMENT_OPERATION_COUNT = 1;
 
 	/**
 	 * The meta object id for the '{@link componentBasedSystem.impl.RepositoryImpl <em>Repository</em>}' class.
@@ -913,6 +932,16 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getComponentBasedSystem_Requiredrole();
 
 	/**
+	 * Returns the meta object for the '{@link componentBasedSystem.ComponentBasedSystem#GetContainerOfContext(componentBasedSystem.AssemblyContext) <em>Get Container Of Context</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Container Of Context</em>' operation.
+	 * @see componentBasedSystem.ComponentBasedSystem#GetContainerOfContext(componentBasedSystem.AssemblyContext)
+	 * @generated
+	 */
+	EOperation getComponentBasedSystem__GetContainerOfContext__AssemblyContext();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.ComponentBasedSystem#getType <em>Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -935,17 +964,6 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getComponentBasedSystem_Assemblyconnector();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Allocation</em>'.
-	 * @see componentBasedSystem.ComponentBasedSystem#getAllocation()
-	 * @see #getComponentBasedSystem()
-	 * @generated
-	 */
-	EReference getComponentBasedSystem_Allocation();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link componentBasedSystem.ComponentBasedSystem#getRepository <em>Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -955,6 +973,17 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComponentBasedSystem_Repository();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link componentBasedSystem.ComponentBasedSystem#getAllocation <em>Allocation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Allocation</em>'.
+	 * @see componentBasedSystem.ComponentBasedSystem#getAllocation()
+	 * @see #getComponentBasedSystem()
+	 * @generated
+	 */
+	EReference getComponentBasedSystem_Allocation();
 
 	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.Component <em>Component</em>}'.
@@ -1000,10 +1029,10 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getComponent_Service();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link componentBasedSystem.Component#getProvidedrole <em>Providedrole</em>}'.
+	 * Returns the meta object for the containment reference list '{@link componentBasedSystem.Component#getProvidedrole <em>Providedrole</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Providedrole</em>'.
+	 * @return the meta object for the containment reference list '<em>Providedrole</em>'.
 	 * @see componentBasedSystem.Component#getProvidedrole()
 	 * @see #getComponent()
 	 * @generated
@@ -1342,6 +1371,16 @@ public interface ComponentBasedSystemPackage extends EPackage {
 	EReference getEnvironment_Link();
 
 	/**
+	 * Returns the meta object for the '{@link componentBasedSystem.Environment#IsLinked(componentBasedSystem.Container, componentBasedSystem.Container) <em>Is Linked</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Is Linked</em>' operation.
+	 * @see componentBasedSystem.Environment#IsLinked(componentBasedSystem.Container, componentBasedSystem.Container)
+	 * @generated
+	 */
+	EOperation getEnvironment__IsLinked__Container_Container();
+
+	/**
 	 * Returns the meta object for class '{@link componentBasedSystem.Repository <em>Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1481,6 +1520,14 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference COMPONENT_BASED_SYSTEM__REQUIREDROLE = eINSTANCE.getComponentBasedSystem_Requiredrole();
 
 		/**
+		 * The meta object literal for the '<em><b>Get Container Of Context</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation COMPONENT_BASED_SYSTEM___GET_CONTAINER_OF_CONTEXT__ASSEMBLYCONTEXT = eINSTANCE.getComponentBasedSystem__GetContainerOfContext__AssemblyContext();
+
+		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1497,20 +1544,20 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference COMPONENT_BASED_SYSTEM__ASSEMBLYCONNECTOR = eINSTANCE.getComponentBasedSystem_Assemblyconnector();
 
 		/**
-		 * The meta object literal for the '<em><b>Allocation</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT_BASED_SYSTEM__ALLOCATION = eINSTANCE.getComponentBasedSystem_Allocation();
-
-		/**
 		 * The meta object literal for the '<em><b>Repository</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference COMPONENT_BASED_SYSTEM__REPOSITORY = eINSTANCE.getComponentBasedSystem_Repository();
+
+		/**
+		 * The meta object literal for the '<em><b>Allocation</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_BASED_SYSTEM__ALLOCATION = eINSTANCE.getComponentBasedSystem_Allocation();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.ComponentImpl <em>Component</em>}' class.
@@ -1547,7 +1594,7 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		EReference COMPONENT__SERVICE = eINSTANCE.getComponent_Service();
 
 		/**
-		 * The meta object literal for the '<em><b>Providedrole</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Providedrole</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1821,6 +1868,14 @@ public interface ComponentBasedSystemPackage extends EPackage {
 		 * @generated
 		 */
 		EReference ENVIRONMENT__LINK = eINSTANCE.getEnvironment_Link();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Linked</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ENVIRONMENT___IS_LINKED__CONTAINER_CONTAINER = eINSTANCE.getEnvironment__IsLinked__Container_Container();
 
 		/**
 		 * The meta object literal for the '{@link componentBasedSystem.impl.RepositoryImpl <em>Repository</em>}' class.

@@ -1645,28 +1645,61 @@ ruleComponent_Impl returns [EObject current=null]
 		{
 			newLeafNode(otherlv_21, grammarAccess.getComponent_ImplAccess().getProvidedroleKeyword_10());
 		}
+		otherlv_22='{'
+		{
+			newLeafNode(otherlv_22, grammarAccess.getComponent_ImplAccess().getLeftCurlyBracketKeyword_11());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getComponent_ImplAccess().getProvidedroleProvidedRoleParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getComponent_ImplAccess().getProvidedroleProvidedRoleParserRuleCall_12_0());
 				}
-				lv_providedrole_22_0=ruleProvidedRole
+				lv_providedrole_23_0=ruleProvidedRole
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getComponent_ImplRule());
 					}
-					set(
+					add(
 						$current,
 						"providedrole",
-						lv_providedrole_22_0,
+						lv_providedrole_23_0,
 						"edu.kit.ipd.sdq.mdsdpc.system.System.ProvidedRole");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_23='}'
+		(
+			otherlv_24=','
+			{
+				newLeafNode(otherlv_24, grammarAccess.getComponent_ImplAccess().getCommaKeyword_13_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getComponent_ImplAccess().getProvidedroleProvidedRoleParserRuleCall_13_1_0());
+					}
+					lv_providedrole_25_0=ruleProvidedRole
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getComponent_ImplRule());
+						}
+						add(
+							$current,
+							"providedrole",
+							lv_providedrole_25_0,
+							"edu.kit.ipd.sdq.mdsdpc.system.System.ProvidedRole");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)*
+		otherlv_26='}'
 		{
-			newLeafNode(otherlv_23, grammarAccess.getComponent_ImplAccess().getRightCurlyBracketKeyword_12());
+			newLeafNode(otherlv_26, grammarAccess.getComponent_ImplAccess().getRightCurlyBracketKeyword_14());
+		}
+		otherlv_27='}'
+		{
+			newLeafNode(otherlv_27, grammarAccess.getComponent_ImplAccess().getRightCurlyBracketKeyword_15());
 		}
 	)
 ;
@@ -2067,39 +2100,72 @@ ruleCompositeComponent returns [EObject current=null]
 		{
 			newLeafNode(otherlv_21, grammarAccess.getCompositeComponentAccess().getProvidedroleKeyword_10());
 		}
+		otherlv_22='{'
+		{
+			newLeafNode(otherlv_22, grammarAccess.getCompositeComponentAccess().getLeftCurlyBracketKeyword_11());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCompositeComponentAccess().getProvidedroleProvidedRoleParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getCompositeComponentAccess().getProvidedroleProvidedRoleParserRuleCall_12_0());
 				}
-				lv_providedrole_22_0=ruleProvidedRole
+				lv_providedrole_23_0=ruleProvidedRole
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCompositeComponentRule());
 					}
-					set(
+					add(
 						$current,
 						"providedrole",
-						lv_providedrole_22_0,
+						lv_providedrole_23_0,
 						"edu.kit.ipd.sdq.mdsdpc.system.System.ProvidedRole");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_23='assemblycontext'
+		(
+			otherlv_24=','
+			{
+				newLeafNode(otherlv_24, grammarAccess.getCompositeComponentAccess().getCommaKeyword_13_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getCompositeComponentAccess().getProvidedroleProvidedRoleParserRuleCall_13_1_0());
+					}
+					lv_providedrole_25_0=ruleProvidedRole
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getCompositeComponentRule());
+						}
+						add(
+							$current,
+							"providedrole",
+							lv_providedrole_25_0,
+							"edu.kit.ipd.sdq.mdsdpc.system.System.ProvidedRole");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)*
+		otherlv_26='}'
 		{
-			newLeafNode(otherlv_23, grammarAccess.getCompositeComponentAccess().getAssemblycontextKeyword_12());
+			newLeafNode(otherlv_26, grammarAccess.getCompositeComponentAccess().getRightCurlyBracketKeyword_14());
 		}
-		otherlv_24='{'
+		otherlv_27='assemblycontext'
 		{
-			newLeafNode(otherlv_24, grammarAccess.getCompositeComponentAccess().getLeftCurlyBracketKeyword_13());
+			newLeafNode(otherlv_27, grammarAccess.getCompositeComponentAccess().getAssemblycontextKeyword_15());
+		}
+		otherlv_28='{'
+		{
+			newLeafNode(otherlv_28, grammarAccess.getCompositeComponentAccess().getLeftCurlyBracketKeyword_16());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCompositeComponentAccess().getAssemblycontextAssemblyContextParserRuleCall_14_0());
+					newCompositeNode(grammarAccess.getCompositeComponentAccess().getAssemblycontextAssemblyContextParserRuleCall_17_0());
 				}
-				lv_assemblycontext_25_0=ruleAssemblyContext
+				lv_assemblycontext_29_0=ruleAssemblyContext
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCompositeComponentRule());
@@ -2107,23 +2173,23 @@ ruleCompositeComponent returns [EObject current=null]
 					add(
 						$current,
 						"assemblycontext",
-						lv_assemblycontext_25_0,
+						lv_assemblycontext_29_0,
 						"edu.kit.ipd.sdq.mdsdpc.system.System.AssemblyContext");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_26=','
+			otherlv_30=','
 			{
-				newLeafNode(otherlv_26, grammarAccess.getCompositeComponentAccess().getCommaKeyword_15_0());
+				newLeafNode(otherlv_30, grammarAccess.getCompositeComponentAccess().getCommaKeyword_18_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCompositeComponentAccess().getAssemblycontextAssemblyContextParserRuleCall_15_1_0());
+						newCompositeNode(grammarAccess.getCompositeComponentAccess().getAssemblycontextAssemblyContextParserRuleCall_18_1_0());
 					}
-					lv_assemblycontext_27_0=ruleAssemblyContext
+					lv_assemblycontext_31_0=ruleAssemblyContext
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCompositeComponentRule());
@@ -2131,31 +2197,31 @@ ruleCompositeComponent returns [EObject current=null]
 						add(
 							$current,
 							"assemblycontext",
-							lv_assemblycontext_27_0,
+							lv_assemblycontext_31_0,
 							"edu.kit.ipd.sdq.mdsdpc.system.System.AssemblyContext");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_28='}'
+		otherlv_32='}'
 		{
-			newLeafNode(otherlv_28, grammarAccess.getCompositeComponentAccess().getRightCurlyBracketKeyword_16());
+			newLeafNode(otherlv_32, grammarAccess.getCompositeComponentAccess().getRightCurlyBracketKeyword_19());
 		}
-		otherlv_29='delegationconnector'
+		otherlv_33='delegationconnector'
 		{
-			newLeafNode(otherlv_29, grammarAccess.getCompositeComponentAccess().getDelegationconnectorKeyword_17());
+			newLeafNode(otherlv_33, grammarAccess.getCompositeComponentAccess().getDelegationconnectorKeyword_20());
 		}
-		otherlv_30='{'
+		otherlv_34='{'
 		{
-			newLeafNode(otherlv_30, grammarAccess.getCompositeComponentAccess().getLeftCurlyBracketKeyword_18());
+			newLeafNode(otherlv_34, grammarAccess.getCompositeComponentAccess().getLeftCurlyBracketKeyword_21());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getCompositeComponentAccess().getDelegationconnectorDelegationConnectorParserRuleCall_19_0());
+					newCompositeNode(grammarAccess.getCompositeComponentAccess().getDelegationconnectorDelegationConnectorParserRuleCall_22_0());
 				}
-				lv_delegationconnector_31_0=ruleDelegationConnector
+				lv_delegationconnector_35_0=ruleDelegationConnector
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getCompositeComponentRule());
@@ -2163,23 +2229,23 @@ ruleCompositeComponent returns [EObject current=null]
 					add(
 						$current,
 						"delegationconnector",
-						lv_delegationconnector_31_0,
+						lv_delegationconnector_35_0,
 						"edu.kit.ipd.sdq.mdsdpc.system.System.DelegationConnector");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_32=','
+			otherlv_36=','
 			{
-				newLeafNode(otherlv_32, grammarAccess.getCompositeComponentAccess().getCommaKeyword_20_0());
+				newLeafNode(otherlv_36, grammarAccess.getCompositeComponentAccess().getCommaKeyword_23_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getCompositeComponentAccess().getDelegationconnectorDelegationConnectorParserRuleCall_20_1_0());
+						newCompositeNode(grammarAccess.getCompositeComponentAccess().getDelegationconnectorDelegationConnectorParserRuleCall_23_1_0());
 					}
-					lv_delegationconnector_33_0=ruleDelegationConnector
+					lv_delegationconnector_37_0=ruleDelegationConnector
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getCompositeComponentRule());
@@ -2187,20 +2253,20 @@ ruleCompositeComponent returns [EObject current=null]
 						add(
 							$current,
 							"delegationconnector",
-							lv_delegationconnector_33_0,
+							lv_delegationconnector_37_0,
 							"edu.kit.ipd.sdq.mdsdpc.system.System.DelegationConnector");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)*
-		otherlv_34='}'
+		otherlv_38='}'
 		{
-			newLeafNode(otherlv_34, grammarAccess.getCompositeComponentAccess().getRightCurlyBracketKeyword_21());
+			newLeafNode(otherlv_38, grammarAccess.getCompositeComponentAccess().getRightCurlyBracketKeyword_24());
 		}
-		otherlv_35='}'
+		otherlv_39='}'
 		{
-			newLeafNode(otherlv_35, grammarAccess.getCompositeComponentAccess().getRightCurlyBracketKeyword_22());
+			newLeafNode(otherlv_39, grammarAccess.getCompositeComponentAccess().getRightCurlyBracketKeyword_25());
 		}
 	)
 ;

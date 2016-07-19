@@ -13,6 +13,12 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Environment</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following operations are tested:
+ * <ul>
+ *   <li>{@link componentBasedSystem.Environment#IsLinked(componentBasedSystem.Container, componentBasedSystem.Container) <em>Is Linked</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class EnvironmentTest extends TestCase {
@@ -84,6 +90,19 @@ public class EnvironmentTest extends TestCase {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link componentBasedSystem.Environment#IsLinked(componentBasedSystem.Container, componentBasedSystem.Container) <em>Is Linked</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see componentBasedSystem.Environment#IsLinked(componentBasedSystem.Container, componentBasedSystem.Container)
+	 * @generated
+	 */
+	public void testIsLinked__Container_Container() {
+		// TODO: implement this operation test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //EnvironmentTest

@@ -49,6 +49,10 @@ ComponentBasedSystem {
 			AllocationContext {
 				container "ApplicationServer"
 				assemblycontext WebGUI
+			},
+			AllocationContext {
+				container ApplicationServer
+				assemblycontext MediaStore
 			}
 		}
 	}
@@ -107,8 +111,10 @@ ComponentBasedSystem {
 						interface MediaStore
 					}
 				}
-				providedrole ProvidedRole WebGUI_HTTP {
-					interface HTTP
+				providedrole {
+					ProvidedRole  WebGUI_HTTP {
+						interface HTTP
+					}
 				}
 			},
 			Component PoolingAudioDB {
@@ -120,8 +126,10 @@ ComponentBasedSystem {
 						correspondingSignatures("AudioDB.addFile")
 					}	
 				}
-				providedrole ProvidedRole PoolingAudioDB_AudioDB {
-					interface AudioDB
+				providedrole {
+					ProvidedRole PoolingAudioDB_AudioDB {
+						interface AudioDB
+					}
 				}
 			},
 			Component MediaManager {
@@ -141,8 +149,10 @@ ComponentBasedSystem {
 						interface AudioDB
 					}
 				}
-				providedrole ProvidedRole MediaManager_MediaStore {
-					interface MediaStore
+				providedrole {
+					ProvidedRole MediaManager_MediaStore {
+						interface MediaStore
+					}
 				}
 			},
 			Component DigitalWatermarking {
@@ -151,8 +161,10 @@ ComponentBasedSystem {
 						correspondingSignatures("Sound.watermark")
 					}
 				}
-				providedrole ProvidedRole DigitalWatermarking_Sound {
-					interface Sound
+				providedrole {
+					ProvidedRole DigitalWatermarking_Sound {
+						interface Sound
+					}
 				}
 			},
 			Component DBCache {
@@ -169,8 +181,10 @@ ComponentBasedSystem {
 						interface AudioDB
 					}
 				}
-				providedrole ProvidedRole DBCache_AudioDB {
-					interface AudioDB
+				providedrole {
+					ProvidedRole DBCache_AudioDB {
+						interface AudioDB
+					}
 				}		
 			},
 			CompositeComponent MediaStore {
@@ -187,8 +201,10 @@ ComponentBasedSystem {
 						interface AudioDB
 					}
 				}
-				providedrole ProvidedRole MediaStore_MediaStore {
-					interface MediaStore				
+				providedrole {
+					ProvidedRole MediaStore_MediaStore {
+						interface MediaStore				
+					}
 				}
 				assemblycontext {
 					AssemblyContext MediaManager {

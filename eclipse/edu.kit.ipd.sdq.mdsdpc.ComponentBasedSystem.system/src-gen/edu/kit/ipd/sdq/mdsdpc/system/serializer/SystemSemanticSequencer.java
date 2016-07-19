@@ -334,7 +334,8 @@ public class SystemSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         service+=Service 
 	 *         service+=Service* 
 	 *         (requiredrole+=RequiredRole requiredrole+=RequiredRole*)? 
-	 *         providedrole=ProvidedRole
+	 *         providedrole+=ProvidedRole 
+	 *         providedrole+=ProvidedRole*
 	 *     )
 	 */
 	protected void sequence_Component_Impl(ISerializationContext context, Component semanticObject) {
@@ -354,7 +355,8 @@ public class SystemSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *         service+=Service 
 	 *         service+=Service* 
 	 *         (requiredrole+=RequiredRole requiredrole+=RequiredRole*)? 
-	 *         providedrole=ProvidedRole 
+	 *         providedrole+=ProvidedRole 
+	 *         providedrole+=ProvidedRole* 
 	 *         assemblycontext+=AssemblyContext 
 	 *         assemblycontext+=AssemblyContext* 
 	 *         delegationconnector+=DelegationConnector 

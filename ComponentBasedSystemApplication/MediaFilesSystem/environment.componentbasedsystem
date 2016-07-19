@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<componentBasedSystem:Environment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:componentBasedSystem="edu.kit.ipd.sdq.mdsdpc.componentBasedSystem">
-  <container name="Application Server"/>
-  <container name="Database Server"/>
-  <link name="applicationToDatabase" container="//@container.0 //@container.1"/>
-</componentBasedSystem:Environment>

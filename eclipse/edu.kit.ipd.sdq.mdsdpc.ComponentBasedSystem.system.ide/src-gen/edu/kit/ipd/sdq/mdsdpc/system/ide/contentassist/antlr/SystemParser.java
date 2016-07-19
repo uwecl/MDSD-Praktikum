@@ -76,6 +76,7 @@ public class SystemParser extends AbstractContentAssistParser {
 					put(grammarAccess.getComponent_ImplAccess().getGroup_7(), "rule__Component_Impl__Group_7__0");
 					put(grammarAccess.getComponent_ImplAccess().getGroup_9(), "rule__Component_Impl__Group_9__0");
 					put(grammarAccess.getComponent_ImplAccess().getGroup_9_3(), "rule__Component_Impl__Group_9_3__0");
+					put(grammarAccess.getComponent_ImplAccess().getGroup_13(), "rule__Component_Impl__Group_13__0");
 					put(grammarAccess.getBehaviourDescriptionAccess().getGroup(), "rule__BehaviourDescription__Group__0");
 					put(grammarAccess.getBehaviourDescriptionAccess().getGroup_3(), "rule__BehaviourDescription__Group_3__0");
 					put(grammarAccess.getBehaviourDescriptionAccess().getGroup_3_3(), "rule__BehaviourDescription__Group_3_3__0");
@@ -87,8 +88,9 @@ public class SystemParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCompositeComponentAccess().getGroup_7(), "rule__CompositeComponent__Group_7__0");
 					put(grammarAccess.getCompositeComponentAccess().getGroup_9(), "rule__CompositeComponent__Group_9__0");
 					put(grammarAccess.getCompositeComponentAccess().getGroup_9_3(), "rule__CompositeComponent__Group_9_3__0");
-					put(grammarAccess.getCompositeComponentAccess().getGroup_15(), "rule__CompositeComponent__Group_15__0");
-					put(grammarAccess.getCompositeComponentAccess().getGroup_20(), "rule__CompositeComponent__Group_20__0");
+					put(grammarAccess.getCompositeComponentAccess().getGroup_13(), "rule__CompositeComponent__Group_13__0");
+					put(grammarAccess.getCompositeComponentAccess().getGroup_18(), "rule__CompositeComponent__Group_18__0");
+					put(grammarAccess.getCompositeComponentAccess().getGroup_23(), "rule__CompositeComponent__Group_23__0");
 					put(grammarAccess.getDescriptionElement_ImplAccess().getGroup(), "rule__DescriptionElement_Impl__Group__0");
 					put(grammarAccess.getInternalActionAccess().getGroup(), "rule__InternalAction__Group__0");
 					put(grammarAccess.getExternalCallAccess().getGroup(), "rule__ExternalCall__Group__0");
@@ -161,7 +163,8 @@ public class SystemParser extends AbstractContentAssistParser {
 					put(grammarAccess.getComponent_ImplAccess().getServiceAssignment_7_1(), "rule__Component_Impl__ServiceAssignment_7_1");
 					put(grammarAccess.getComponent_ImplAccess().getRequiredroleAssignment_9_2(), "rule__Component_Impl__RequiredroleAssignment_9_2");
 					put(grammarAccess.getComponent_ImplAccess().getRequiredroleAssignment_9_3_1(), "rule__Component_Impl__RequiredroleAssignment_9_3_1");
-					put(grammarAccess.getComponent_ImplAccess().getProvidedroleAssignment_11(), "rule__Component_Impl__ProvidedroleAssignment_11");
+					put(grammarAccess.getComponent_ImplAccess().getProvidedroleAssignment_12(), "rule__Component_Impl__ProvidedroleAssignment_12");
+					put(grammarAccess.getComponent_ImplAccess().getProvidedroleAssignment_13_1(), "rule__Component_Impl__ProvidedroleAssignment_13_1");
 					put(grammarAccess.getBehaviourDescriptionAccess().getDescriptionelementAssignment_3_2(), "rule__BehaviourDescription__DescriptionelementAssignment_3_2");
 					put(grammarAccess.getBehaviourDescriptionAccess().getDescriptionelementAssignment_3_3_1(), "rule__BehaviourDescription__DescriptionelementAssignment_3_3_1");
 					put(grammarAccess.getServiceAccess().getCorrespondingSignaturesAssignment_4(), "rule__Service__CorrespondingSignaturesAssignment_4");
@@ -173,11 +176,12 @@ public class SystemParser extends AbstractContentAssistParser {
 					put(grammarAccess.getCompositeComponentAccess().getServiceAssignment_7_1(), "rule__CompositeComponent__ServiceAssignment_7_1");
 					put(grammarAccess.getCompositeComponentAccess().getRequiredroleAssignment_9_2(), "rule__CompositeComponent__RequiredroleAssignment_9_2");
 					put(grammarAccess.getCompositeComponentAccess().getRequiredroleAssignment_9_3_1(), "rule__CompositeComponent__RequiredroleAssignment_9_3_1");
-					put(grammarAccess.getCompositeComponentAccess().getProvidedroleAssignment_11(), "rule__CompositeComponent__ProvidedroleAssignment_11");
-					put(grammarAccess.getCompositeComponentAccess().getAssemblycontextAssignment_14(), "rule__CompositeComponent__AssemblycontextAssignment_14");
-					put(grammarAccess.getCompositeComponentAccess().getAssemblycontextAssignment_15_1(), "rule__CompositeComponent__AssemblycontextAssignment_15_1");
-					put(grammarAccess.getCompositeComponentAccess().getDelegationconnectorAssignment_19(), "rule__CompositeComponent__DelegationconnectorAssignment_19");
-					put(grammarAccess.getCompositeComponentAccess().getDelegationconnectorAssignment_20_1(), "rule__CompositeComponent__DelegationconnectorAssignment_20_1");
+					put(grammarAccess.getCompositeComponentAccess().getProvidedroleAssignment_12(), "rule__CompositeComponent__ProvidedroleAssignment_12");
+					put(grammarAccess.getCompositeComponentAccess().getProvidedroleAssignment_13_1(), "rule__CompositeComponent__ProvidedroleAssignment_13_1");
+					put(grammarAccess.getCompositeComponentAccess().getAssemblycontextAssignment_17(), "rule__CompositeComponent__AssemblycontextAssignment_17");
+					put(grammarAccess.getCompositeComponentAccess().getAssemblycontextAssignment_18_1(), "rule__CompositeComponent__AssemblycontextAssignment_18_1");
+					put(grammarAccess.getCompositeComponentAccess().getDelegationconnectorAssignment_22(), "rule__CompositeComponent__DelegationconnectorAssignment_22");
+					put(grammarAccess.getCompositeComponentAccess().getDelegationconnectorAssignment_23_1(), "rule__CompositeComponent__DelegationconnectorAssignment_23_1");
 					put(grammarAccess.getLoopAccess().getDescriptionelementAssignment_3_2(), "rule__Loop__DescriptionelementAssignment_3_2");
 					put(grammarAccess.getLoopAccess().getDescriptionelementAssignment_3_3_1(), "rule__Loop__DescriptionelementAssignment_3_3_1");
 					put(grammarAccess.getBranchAccess().getDescriptionelementAssignment_3_2(), "rule__Branch__DescriptionelementAssignment_3_2");

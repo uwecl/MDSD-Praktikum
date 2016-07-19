@@ -6,11 +6,13 @@ import org.eclipse.xtext.xtext.generator.model.project.*
 var rootPath = ".."
 
 Workflow {
+	
 	bean = org.eclipse.emf.mwe.utils.StandaloneSetup {
         scanClassPath = true
         platformUri = rootPath
         registerGenModelFile = "platform:/resource/ComponentBasedSystem/model/ComponentBasedSystem.genmodel"
     }
+	
 	component = XtextGenerator {
 		configuration = {
 			project = StandardProjectConfig {

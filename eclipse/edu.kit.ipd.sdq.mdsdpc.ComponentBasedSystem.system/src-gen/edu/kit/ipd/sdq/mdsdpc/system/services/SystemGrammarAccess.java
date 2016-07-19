@@ -1101,9 +1101,15 @@ public class SystemGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRequiredroleRequiredRoleParserRuleCall_9_3_1_0 = (RuleCall)cRequiredroleAssignment_9_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9_4 = (Keyword)cGroup_9.eContents().get(4);
 		private final Keyword cProvidedroleKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Assignment cProvidedroleAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cProvidedroleProvidedRoleParserRuleCall_11_0 = (RuleCall)cProvidedroleAssignment_11.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Keyword cLeftCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cProvidedroleAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cProvidedroleProvidedRoleParserRuleCall_12_0 = (RuleCall)cProvidedroleAssignment_12.eContents().get(0);
+		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
+		private final Keyword cCommaKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
+		private final Assignment cProvidedroleAssignment_13_1 = (Assignment)cGroup_13.eContents().get(1);
+		private final RuleCall cProvidedroleProvidedRoleParserRuleCall_13_1_0 = (RuleCall)cProvidedroleAssignment_13_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Keyword cRightCurlyBracketKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
 		//Component_Impl componentBasedSystem::Component:
 		//	'Component'
@@ -1112,14 +1118,14 @@ public class SystemGrammarAccess extends AbstractGrammarElementFinder {
 		//	behaviourdescription+=BehaviourDescription)* '}')?
 		//	'service' '{' service+=Service ("," service+=Service)* '}' ('requiredrole' '{' requiredrole+=RequiredRole (","
 		//	requiredrole+=RequiredRole)* '}')?
-		//	'providedrole' providedrole=ProvidedRole
+		//	'providedrole' '{' providedrole+=ProvidedRole ("," providedrole+=ProvidedRole)* '}'
 		//	'}'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'Component' name=EString '{' ('behaviourdescription' '{' behaviourdescription+=BehaviourDescription (","
 		//behaviourdescription+=BehaviourDescription)* '}')? 'service' '{' service+=Service ("," service+=Service)* '}'
-		//('requiredrole' '{' requiredrole+=RequiredRole ("," requiredrole+=RequiredRole)* '}')? 'providedrole'
-		//providedrole=ProvidedRole '}'
+		//('requiredrole' '{' requiredrole+=RequiredRole ("," requiredrole+=RequiredRole)* '}')? 'providedrole' '{'
+		//providedrole+=ProvidedRole ("," providedrole+=ProvidedRole)* '}' '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'Component'
@@ -1225,14 +1231,32 @@ public class SystemGrammarAccess extends AbstractGrammarElementFinder {
 		//'providedrole'
 		public Keyword getProvidedroleKeyword_10() { return cProvidedroleKeyword_10; }
 		
-		//providedrole=ProvidedRole
-		public Assignment getProvidedroleAssignment_11() { return cProvidedroleAssignment_11; }
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_11() { return cLeftCurlyBracketKeyword_11; }
+		
+		//providedrole+=ProvidedRole
+		public Assignment getProvidedroleAssignment_12() { return cProvidedroleAssignment_12; }
 		
 		//ProvidedRole
-		public RuleCall getProvidedroleProvidedRoleParserRuleCall_11_0() { return cProvidedroleProvidedRoleParserRuleCall_11_0; }
+		public RuleCall getProvidedroleProvidedRoleParserRuleCall_12_0() { return cProvidedroleProvidedRoleParserRuleCall_12_0; }
+		
+		//("," providedrole+=ProvidedRole)*
+		public Group getGroup_13() { return cGroup_13; }
+		
+		//","
+		public Keyword getCommaKeyword_13_0() { return cCommaKeyword_13_0; }
+		
+		//providedrole+=ProvidedRole
+		public Assignment getProvidedroleAssignment_13_1() { return cProvidedroleAssignment_13_1; }
+		
+		//ProvidedRole
+		public RuleCall getProvidedroleProvidedRoleParserRuleCall_13_1_0() { return cProvidedroleProvidedRoleParserRuleCall_13_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
+		public Keyword getRightCurlyBracketKeyword_14() { return cRightCurlyBracketKeyword_14; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_15() { return cRightCurlyBracketKeyword_15; }
 	}
 	public class BehaviourDescriptionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.system.System.BehaviourDescription");
@@ -1415,27 +1439,33 @@ public class SystemGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRequiredroleRequiredRoleParserRuleCall_9_3_1_0 = (RuleCall)cRequiredroleAssignment_9_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9_4 = (Keyword)cGroup_9.eContents().get(4);
 		private final Keyword cProvidedroleKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Assignment cProvidedroleAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cProvidedroleProvidedRoleParserRuleCall_11_0 = (RuleCall)cProvidedroleAssignment_11.eContents().get(0);
-		private final Keyword cAssemblycontextKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Keyword cLeftCurlyBracketKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Assignment cAssemblycontextAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cAssemblycontextAssemblyContextParserRuleCall_14_0 = (RuleCall)cAssemblycontextAssignment_14.eContents().get(0);
-		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
-		private final Keyword cCommaKeyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
-		private final Assignment cAssemblycontextAssignment_15_1 = (Assignment)cGroup_15.eContents().get(1);
-		private final RuleCall cAssemblycontextAssemblyContextParserRuleCall_15_1_0 = (RuleCall)cAssemblycontextAssignment_15_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
-		private final Keyword cDelegationconnectorKeyword_17 = (Keyword)cGroup.eContents().get(17);
-		private final Keyword cLeftCurlyBracketKeyword_18 = (Keyword)cGroup.eContents().get(18);
-		private final Assignment cDelegationconnectorAssignment_19 = (Assignment)cGroup.eContents().get(19);
-		private final RuleCall cDelegationconnectorDelegationConnectorParserRuleCall_19_0 = (RuleCall)cDelegationconnectorAssignment_19.eContents().get(0);
-		private final Group cGroup_20 = (Group)cGroup.eContents().get(20);
-		private final Keyword cCommaKeyword_20_0 = (Keyword)cGroup_20.eContents().get(0);
-		private final Assignment cDelegationconnectorAssignment_20_1 = (Assignment)cGroup_20.eContents().get(1);
-		private final RuleCall cDelegationconnectorDelegationConnectorParserRuleCall_20_1_0 = (RuleCall)cDelegationconnectorAssignment_20_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_21 = (Keyword)cGroup.eContents().get(21);
-		private final Keyword cRightCurlyBracketKeyword_22 = (Keyword)cGroup.eContents().get(22);
+		private final Keyword cLeftCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cProvidedroleAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cProvidedroleProvidedRoleParserRuleCall_12_0 = (RuleCall)cProvidedroleAssignment_12.eContents().get(0);
+		private final Group cGroup_13 = (Group)cGroup.eContents().get(13);
+		private final Keyword cCommaKeyword_13_0 = (Keyword)cGroup_13.eContents().get(0);
+		private final Assignment cProvidedroleAssignment_13_1 = (Assignment)cGroup_13.eContents().get(1);
+		private final RuleCall cProvidedroleProvidedRoleParserRuleCall_13_1_0 = (RuleCall)cProvidedroleAssignment_13_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Keyword cAssemblycontextKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Keyword cLeftCurlyBracketKeyword_16 = (Keyword)cGroup.eContents().get(16);
+		private final Assignment cAssemblycontextAssignment_17 = (Assignment)cGroup.eContents().get(17);
+		private final RuleCall cAssemblycontextAssemblyContextParserRuleCall_17_0 = (RuleCall)cAssemblycontextAssignment_17.eContents().get(0);
+		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
+		private final Keyword cCommaKeyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
+		private final Assignment cAssemblycontextAssignment_18_1 = (Assignment)cGroup_18.eContents().get(1);
+		private final RuleCall cAssemblycontextAssemblyContextParserRuleCall_18_1_0 = (RuleCall)cAssemblycontextAssignment_18_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_19 = (Keyword)cGroup.eContents().get(19);
+		private final Keyword cDelegationconnectorKeyword_20 = (Keyword)cGroup.eContents().get(20);
+		private final Keyword cLeftCurlyBracketKeyword_21 = (Keyword)cGroup.eContents().get(21);
+		private final Assignment cDelegationconnectorAssignment_22 = (Assignment)cGroup.eContents().get(22);
+		private final RuleCall cDelegationconnectorDelegationConnectorParserRuleCall_22_0 = (RuleCall)cDelegationconnectorAssignment_22.eContents().get(0);
+		private final Group cGroup_23 = (Group)cGroup.eContents().get(23);
+		private final Keyword cCommaKeyword_23_0 = (Keyword)cGroup_23.eContents().get(0);
+		private final Assignment cDelegationconnectorAssignment_23_1 = (Assignment)cGroup_23.eContents().get(1);
+		private final RuleCall cDelegationconnectorDelegationConnectorParserRuleCall_23_1_0 = (RuleCall)cDelegationconnectorAssignment_23_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_24 = (Keyword)cGroup.eContents().get(24);
+		private final Keyword cRightCurlyBracketKeyword_25 = (Keyword)cGroup.eContents().get(25);
 		
 		//CompositeComponent componentBasedSystem::CompositeComponent:
 		//	'CompositeComponent'
@@ -1444,7 +1474,7 @@ public class SystemGrammarAccess extends AbstractGrammarElementFinder {
 		//	behaviourdescription+=BehaviourDescription)* '}')?
 		//	'service' '{' service+=Service ("," service+=Service)* '}' ('requiredrole' '{' requiredrole+=RequiredRole (","
 		//	requiredrole+=RequiredRole)* '}')?
-		//	'providedrole' providedrole=ProvidedRole
+		//	'providedrole' '{' providedrole+=ProvidedRole ("," providedrole+=ProvidedRole)* '}'
 		//	'assemblycontext' '{' assemblycontext+=AssemblyContext ("," assemblycontext+=AssemblyContext)* '}'
 		//	'delegationconnector' '{' delegationconnector+=DelegationConnector ("," delegationconnector+=DelegationConnector)*
 		//	'}'
@@ -1453,10 +1483,10 @@ public class SystemGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'CompositeComponent' name=EString '{' ('behaviourdescription' '{' behaviourdescription+=BehaviourDescription (","
 		//behaviourdescription+=BehaviourDescription)* '}')? 'service' '{' service+=Service ("," service+=Service)* '}'
-		//('requiredrole' '{' requiredrole+=RequiredRole ("," requiredrole+=RequiredRole)* '}')? 'providedrole'
-		//providedrole=ProvidedRole 'assemblycontext' '{' assemblycontext+=AssemblyContext (","
-		//assemblycontext+=AssemblyContext)* '}' 'delegationconnector' '{' delegationconnector+=DelegationConnector (","
-		//delegationconnector+=DelegationConnector)* '}' '}'
+		//('requiredrole' '{' requiredrole+=RequiredRole ("," requiredrole+=RequiredRole)* '}')? 'providedrole' '{'
+		//providedrole+=ProvidedRole ("," providedrole+=ProvidedRole)* '}' 'assemblycontext' '{'
+		//assemblycontext+=AssemblyContext ("," assemblycontext+=AssemblyContext)* '}' 'delegationconnector' '{'
+		//delegationconnector+=DelegationConnector ("," delegationconnector+=DelegationConnector)* '}' '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'CompositeComponent'
@@ -1562,68 +1592,86 @@ public class SystemGrammarAccess extends AbstractGrammarElementFinder {
 		//'providedrole'
 		public Keyword getProvidedroleKeyword_10() { return cProvidedroleKeyword_10; }
 		
-		//providedrole=ProvidedRole
-		public Assignment getProvidedroleAssignment_11() { return cProvidedroleAssignment_11; }
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_11() { return cLeftCurlyBracketKeyword_11; }
+		
+		//providedrole+=ProvidedRole
+		public Assignment getProvidedroleAssignment_12() { return cProvidedroleAssignment_12; }
 		
 		//ProvidedRole
-		public RuleCall getProvidedroleProvidedRoleParserRuleCall_11_0() { return cProvidedroleProvidedRoleParserRuleCall_11_0; }
+		public RuleCall getProvidedroleProvidedRoleParserRuleCall_12_0() { return cProvidedroleProvidedRoleParserRuleCall_12_0; }
+		
+		//("," providedrole+=ProvidedRole)*
+		public Group getGroup_13() { return cGroup_13; }
+		
+		//","
+		public Keyword getCommaKeyword_13_0() { return cCommaKeyword_13_0; }
+		
+		//providedrole+=ProvidedRole
+		public Assignment getProvidedroleAssignment_13_1() { return cProvidedroleAssignment_13_1; }
+		
+		//ProvidedRole
+		public RuleCall getProvidedroleProvidedRoleParserRuleCall_13_1_0() { return cProvidedroleProvidedRoleParserRuleCall_13_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_14() { return cRightCurlyBracketKeyword_14; }
 		
 		//'assemblycontext'
-		public Keyword getAssemblycontextKeyword_12() { return cAssemblycontextKeyword_12; }
+		public Keyword getAssemblycontextKeyword_15() { return cAssemblycontextKeyword_15; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_13() { return cLeftCurlyBracketKeyword_13; }
+		public Keyword getLeftCurlyBracketKeyword_16() { return cLeftCurlyBracketKeyword_16; }
 		
 		//assemblycontext+=AssemblyContext
-		public Assignment getAssemblycontextAssignment_14() { return cAssemblycontextAssignment_14; }
+		public Assignment getAssemblycontextAssignment_17() { return cAssemblycontextAssignment_17; }
 		
 		//AssemblyContext
-		public RuleCall getAssemblycontextAssemblyContextParserRuleCall_14_0() { return cAssemblycontextAssemblyContextParserRuleCall_14_0; }
+		public RuleCall getAssemblycontextAssemblyContextParserRuleCall_17_0() { return cAssemblycontextAssemblyContextParserRuleCall_17_0; }
 		
 		//("," assemblycontext+=AssemblyContext)*
-		public Group getGroup_15() { return cGroup_15; }
+		public Group getGroup_18() { return cGroup_18; }
 		
 		//","
-		public Keyword getCommaKeyword_15_0() { return cCommaKeyword_15_0; }
+		public Keyword getCommaKeyword_18_0() { return cCommaKeyword_18_0; }
 		
 		//assemblycontext+=AssemblyContext
-		public Assignment getAssemblycontextAssignment_15_1() { return cAssemblycontextAssignment_15_1; }
+		public Assignment getAssemblycontextAssignment_18_1() { return cAssemblycontextAssignment_18_1; }
 		
 		//AssemblyContext
-		public RuleCall getAssemblycontextAssemblyContextParserRuleCall_15_1_0() { return cAssemblycontextAssemblyContextParserRuleCall_15_1_0; }
+		public RuleCall getAssemblycontextAssemblyContextParserRuleCall_18_1_0() { return cAssemblycontextAssemblyContextParserRuleCall_18_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_16() { return cRightCurlyBracketKeyword_16; }
+		public Keyword getRightCurlyBracketKeyword_19() { return cRightCurlyBracketKeyword_19; }
 		
 		//'delegationconnector'
-		public Keyword getDelegationconnectorKeyword_17() { return cDelegationconnectorKeyword_17; }
+		public Keyword getDelegationconnectorKeyword_20() { return cDelegationconnectorKeyword_20; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_18() { return cLeftCurlyBracketKeyword_18; }
+		public Keyword getLeftCurlyBracketKeyword_21() { return cLeftCurlyBracketKeyword_21; }
 		
 		//delegationconnector+=DelegationConnector
-		public Assignment getDelegationconnectorAssignment_19() { return cDelegationconnectorAssignment_19; }
+		public Assignment getDelegationconnectorAssignment_22() { return cDelegationconnectorAssignment_22; }
 		
 		//DelegationConnector
-		public RuleCall getDelegationconnectorDelegationConnectorParserRuleCall_19_0() { return cDelegationconnectorDelegationConnectorParserRuleCall_19_0; }
+		public RuleCall getDelegationconnectorDelegationConnectorParserRuleCall_22_0() { return cDelegationconnectorDelegationConnectorParserRuleCall_22_0; }
 		
 		//("," delegationconnector+=DelegationConnector)*
-		public Group getGroup_20() { return cGroup_20; }
+		public Group getGroup_23() { return cGroup_23; }
 		
 		//","
-		public Keyword getCommaKeyword_20_0() { return cCommaKeyword_20_0; }
+		public Keyword getCommaKeyword_23_0() { return cCommaKeyword_23_0; }
 		
 		//delegationconnector+=DelegationConnector
-		public Assignment getDelegationconnectorAssignment_20_1() { return cDelegationconnectorAssignment_20_1; }
+		public Assignment getDelegationconnectorAssignment_23_1() { return cDelegationconnectorAssignment_23_1; }
 		
 		//DelegationConnector
-		public RuleCall getDelegationconnectorDelegationConnectorParserRuleCall_20_1_0() { return cDelegationconnectorDelegationConnectorParserRuleCall_20_1_0; }
+		public RuleCall getDelegationconnectorDelegationConnectorParserRuleCall_23_1_0() { return cDelegationconnectorDelegationConnectorParserRuleCall_23_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_21() { return cRightCurlyBracketKeyword_21; }
+		public Keyword getRightCurlyBracketKeyword_24() { return cRightCurlyBracketKeyword_24; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_22() { return cRightCurlyBracketKeyword_22; }
+		public Keyword getRightCurlyBracketKeyword_25() { return cRightCurlyBracketKeyword_25; }
 	}
 	public class DescriptionElement_ImplElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "edu.kit.ipd.sdq.mdsdpc.system.System.DescriptionElement_Impl");
@@ -2985,7 +3033,7 @@ public class SystemGrammarAccess extends AbstractGrammarElementFinder {
 	//	behaviourdescription+=BehaviourDescription)* '}')?
 	//	'service' '{' service+=Service ("," service+=Service)* '}' ('requiredrole' '{' requiredrole+=RequiredRole (","
 	//	requiredrole+=RequiredRole)* '}')?
-	//	'providedrole' providedrole=ProvidedRole
+	//	'providedrole' '{' providedrole+=ProvidedRole ("," providedrole+=ProvidedRole)* '}'
 	//	'}'
 	public Component_ImplElements getComponent_ImplAccess() {
 		return pComponent_Impl;
@@ -3030,7 +3078,7 @@ public class SystemGrammarAccess extends AbstractGrammarElementFinder {
 	//	behaviourdescription+=BehaviourDescription)* '}')?
 	//	'service' '{' service+=Service ("," service+=Service)* '}' ('requiredrole' '{' requiredrole+=RequiredRole (","
 	//	requiredrole+=RequiredRole)* '}')?
-	//	'providedrole' providedrole=ProvidedRole
+	//	'providedrole' '{' providedrole+=ProvidedRole ("," providedrole+=ProvidedRole)* '}'
 	//	'assemblycontext' '{' assemblycontext+=AssemblyContext ("," assemblycontext+=AssemblyContext)* '}'
 	//	'delegationconnector' '{' delegationconnector+=DelegationConnector ("," delegationconnector+=DelegationConnector)*
 	//	'}'

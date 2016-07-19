@@ -6,13 +6,19 @@ import componentBasedSystem.ComponentBasedSystemPackage;
 import componentBasedSystem.Environment;
 import componentBasedSystem.Link;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.common.util.WrappedException;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -94,6 +100,30 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 			link = new EObjectContainmentEList<Link>(Link.class, this, ComponentBasedSystemPackage.ENVIRONMENT__LINK);
 		}
 		return link;
+	}
+
+	/**
+	 * The cached invocation delegate for the '{@link #IsLinked(componentBasedSystem.Container, componentBasedSystem.Container) <em>Is Linked</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #IsLinked(componentBasedSystem.Container, componentBasedSystem.Container)
+	 * @generated
+	 * @ordered
+	 */
+	protected static final EOperation.Internal.InvocationDelegate IS_LINKED_CONTAINER_CONTAINER__EINVOCATION_DELEGATE = ((EOperation.Internal)ComponentBasedSystemPackage.Literals.ENVIRONMENT___IS_LINKED__CONTAINER_CONTAINER).getInvocationDelegate();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean IsLinked(componentBasedSystem.Container c1, componentBasedSystem.Container c2) {
+		try {
+			return (Boolean)IS_LINKED_CONTAINER_CONTAINER__EINVOCATION_DELEGATE.dynamicInvoke(this, new BasicEList.UnmodifiableEList<Object>(2, new Object[]{c1, c2}));
+		}
+		catch (InvocationTargetException ite) {
+			throw new WrappedException(ite);
+		}
 	}
 
 	/**
@@ -181,6 +211,20 @@ public class EnvironmentImpl extends MinimalEObjectImpl.Container implements Env
 				return link != null && !link.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ComponentBasedSystemPackage.ENVIRONMENT___IS_LINKED__CONTAINER_CONTAINER:
+				return IsLinked((componentBasedSystem.Container)arguments.get(0), (componentBasedSystem.Container)arguments.get(1));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //EnvironmentImpl

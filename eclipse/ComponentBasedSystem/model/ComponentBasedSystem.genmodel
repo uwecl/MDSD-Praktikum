@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/ComponentBasedSystem.model/src" modelPluginID="ComponentBasedSystem"
     modelName="ComponentBasedSystem" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    classNamePattern="" operationReflection="true" importOrganizing="true">
+    operationReflection="true" importOrganizing="true">
   <foreignModel>componentBasedSystem.ecore</foreignModel>
   <genPackages prefix="ComponentBasedSystem" disposableProviderFactory="true" ecorePackage="componentBasedSystem.ecore#/">
     <genClasses ecoreClass="componentBasedSystem.ecore#//ComponentBasedSystem">
