@@ -59,7 +59,7 @@ mapping CBS::AllocationContext::toAllocationContext() : pcm::allocation::Allocat
 	eventChannel__AllocationContext := null;
 }
 
-mapping CBS::AssemblyContext::toAssemblyContext() : pcm::core::composition::AssemblyContext { //TODO
+mapping CBS::AssemblyContext::toAssemblyContext() : pcm::core::composition::AssemblyContext {
 	entityName := self.name;
 	parentStructure__AssemblyContext := getParentComposedStructure(self.component); 
 	encapsulatedComponent__AssemblyContext := self.component.late resolveoneIn(CBS::Component::toComponent, pcm::repository::RepositoryComponent);
@@ -93,7 +93,7 @@ mapping CBS::Link::toLinkingResource() : pcm::resourceenvironment::LinkingResour
 mapping CBS::Repository::toRepository() : PCM::repository::Repository {
 	
 	entityName := "Repository";
-	repositoryDescription := "This is an awesome repository for compontents and interfaces";
+	repositoryDescription := "This is an awesome repository for components and interfaces";
 	interfaces__Repository:=self.interface->map toOperationInterface();
 	components__Repository:=self.component->map toComponent();
 }
@@ -110,7 +110,7 @@ mapping CBS::Component::toBasicComponent() : pcm::repository::BasicComponent {
 	passiveResource_BasicComponent := null;
 }
 
-mapping CBS::roles::ProvidedRole::toOperationProvidedRole() : pcm::repository::OperationProvidedRole {//done
+mapping CBS::roles::ProvidedRole::toOperationProvidedRole() : pcm::repository::OperationProvidedRole {
 	entityName := self.name;
 	providedInterface__OperationProvidedRole := self.interface.resolveoneIn(CBS::Interface::toOperationInterface, pcm::repository::OperationInterface);
 }
@@ -140,14 +140,22 @@ mapping CBS::DelegationConnector::toRequiredDelegationConnector() : pcm::core::c
 
 mapping CBS::DelegationConnector::toProvidedDelegationConnector() : pcm::core::composition::ProvidedDelegationConnector {
 	var components : Set(CBS::Component) := cbs.objects()[CBS::Component];
+	var compositeComponents : Set(CBS::CompositeComponent) := cbs.objects()[CBS::CompositeComponent];
 	var assemblyContexts : Set(CBS::AssemblyContext) := cbs.objects()[CBS::AssemblyContext];
 	
 	result.entityName := self.name;
 	result.innerProvidedRole_ProvidedDelegationConnector := self.role->at(2).late resolveone(pcm::repository::OperationProvidedRole);
 	result.outerProvidedRole_ProvidedDelegationConnector := self.role->first().resolveone(pcm::repository::OperationProvidedRole);
 	
-	var component : CBS::Component := components->selectOne(c | c.providedrole = self->role->at(2));
+	var component : CBS::Component := components->selectOne(c | c.providedrole->includes(self.role->at(2)) or c.providedrole->includes(self.role->first()));
+	
+	if(component = null) then
+	{
+		component := compositeComponents->selectOne(c | c.providedrole->includes(self.role->at(2)) or c.providedrole->includes(self.role->first()));
+	}endif;
+
 	result.assemblyContext_ProvidedDelegationConnector := assemblyContexts->selectOne(a | a.component = component).late resolveone(pcm::core::composition::AssemblyContext);
+
 }
 
 mapping CBS::Interface::toOperationInterface() : PCM::repository::OperationInterface {
@@ -238,8 +246,7 @@ query getDelegationConnector(delegationConnector : OrderedSet(CBS::DelegationCon
 	var pcmDelegationConnector : OrderedSet(pcm::core::composition::Connector) := null;	
 	delegationConnector->forEach(d) {
 		if (d.role->first().oclIsTypeOf(CBS::roles::RequiredRole)) then {
-			pcmDelegationConnector += d.map toRequiredDelegationConnector();
-			
+			pcmDelegationConnector += d.map toRequiredDelegationConnector();			
 		} endif;
 		if (d.role->first().oclIsTypeOf(CBS::roles::ProvidedRole)) then {
 			pcmDelegationConnector += d.map toProvidedDelegationConnector();
